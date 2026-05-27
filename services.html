@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Moor Graphix services — Brand Foundation, Web &amp; Digital, Content &amp; AI Production. Logo design from $400. Web sites from $1,500. Douglasville, GA. Serving nationwide.">
+<title>Services | Moor Graphix — Cultural Alchemy + AI Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── SERVICES PAGE — additional styles ─────────────────────────────────── */
+
+/* Nav: mark current page */
+.nav-current a{color:#6AABFF !important}
+.nav-current a::after{width:100% !important}
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.svc-hero{padding:0}
+.svc-hero-inner{display:grid;grid-template-columns:1fr 1fr;min-height:580px}
+.svc-hero-left{padding:72px 44px 60px;display:flex;flex-direction:column;justify-content:space-between;border-right:0.5px solid rgba(80,140,255,0.1)}
+.svc-hero h1 em{font-style:italic;color:var(--blue-lt)}
+.svc-hero-sub{font-size:clamp(15px,1.35vw,18px);color:rgba(150,180,255,0.55);max-width:500px;margin:22px 0 0;line-height:1.85}
+.svc-hero-stats{border-top:0.5px solid rgba(80,140,255,0.1);padding-top:24px;margin-top:0}
+
+/* ── SECTION WRAPPER ────────────────────────────────────────── */
+.svc-section{padding:80px 44px}
+.svc-section-head{max-width:760px;margin-bottom:52px}
+.svc-section-intro{font-size:clamp(14px,1.3vw,16px);line-height:1.85;max-width:620px;margin-top:14px}
+.sec-light .svc-section-intro{color:var(--text-mid)}
+.sec-dark2 .svc-section-intro{color:rgba(150,180,255,0.55)}
+
+/* ── CARD GRID ──────────────────────────────────────────────── */
+.svc-card-grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc-card-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+/* ── SERVICE CARD ───────────────────────────────────────────── */
+.svc-card{border-radius:6px;padding:36px;display:flex;flex-direction:column;transition:all 0.28s;position:relative}
+.sec-light .svc-card{background:#fff;border:1px solid rgba(48,96,208,0.09)}
+.sec-light .svc-card:hover{border-color:var(--blue);box-shadow:0 8px 36px rgba(48,96,208,0.1);transform:translateY(-3px)}
+.sec-dark2 .svc-card{background:rgba(80,140,255,0.04);border:0.5px solid rgba(80,140,255,0.1)}
+.sec-dark2 .svc-card:hover{border-color:rgba(80,140,255,0.28);background:rgba(80,140,255,0.07);transform:translateY(-3px)}
+
+/* Popular badge */
+.svc-popular{position:absolute;top:-1px;right:20px;font-size:8px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;background:var(--blue);color:#fff;padding:4px 12px;border-radius:0 0 4px 4px}
+
+/* Card header */
+.svc-card-icon{font-size:28px;margin-bottom:14px;display:block}
+.sec-light .svc-card-icon{color:var(--blue)}
+.sec-dark2 .svc-card-icon{color:var(--blue-lt)}
+.svc-card-name{font-size:15px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+.sec-light .svc-card-name{color:var(--text-dark)}
+.sec-dark2 .svc-card-name{color:#fff}
+.svc-card-price{font-family:'DM Serif Display',serif;font-size:34px;line-height:1;margin-bottom:16px}
+.sec-light .svc-card-price{color:var(--blue)}
+.sec-dark2 .svc-card-price{color:var(--blue-lt)}
+.svc-card-desc{font-size:13.5px;line-height:1.78;flex-grow:1;margin-bottom:20px}
+.sec-light .svc-card-desc{color:var(--text-mid)}
+.sec-dark2 .svc-card-desc{color:rgba(150,180,255,0.55)}
+
+/* Includes */
+.svc-card-inc-label{font-size:8.5px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:11px}
+.sec-light .svc-card-inc-label{color:var(--blue)}
+.sec-dark2 .svc-card-inc-label{color:var(--blue-lt)}
+.svc-card-inc{list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:7px}
+.svc-card-inc li{font-size:12.5px;line-height:1.45;padding-left:18px;position:relative}
+.sec-light .svc-card-inc li{color:var(--text-mid)}
+.sec-dark2 .svc-card-inc li{color:rgba(140,170,255,0.5)}
+.svc-card-inc li::before{content:'✦';position:absolute;left:0;font-size:7px;top:4px}
+.sec-light .svc-card-inc li::before{color:var(--blue)}
+.sec-dark2 .svc-card-inc li::before{color:var(--blue-lt)}
+
+/* Get Started button at card bottom */
+.svc-card-cta{display:block;text-align:center;padding:13px 20px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;margin-top:auto}
+.sec-light .svc-card-cta{background:rgba(48,96,208,0.06);color:var(--blue);border:1px solid rgba(48,96,208,0.18)}
+.sec-light .svc-card-cta:hover{background:var(--blue);color:#fff}
+.sec-dark2 .svc-card-cta{background:rgba(80,140,255,0.07);color:var(--blue-lt);border:0.5px solid rgba(80,140,255,0.22)}
+.sec-dark2 .svc-card-cta:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Section divider line between svc sections */
+.svc-divider-dark{border:none;border-top:0.5px solid rgba(80,140,255,0.07);margin:0}
+.svc-divider-light{border:none;border-top:0.5px solid rgba(48,96,208,0.08);margin:0}
+
+/* ── BRAND BLUEPRINT PANEL ──────────────────────────────────── */
+.bp-wrap{padding:80px 44px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.bp-steps{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.bp-step{display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border-radius:4px;border:1px solid rgba(48,96,208,0.1);background:#fff;transition:all 0.28s;cursor:default}
+.bp-step:hover{border-color:var(--blue);transform:translateX(5px);box-shadow:0 4px 18px rgba(48,96,208,0.09)}
+.bp-step-num{width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.bp-step-title{font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:2px}
+.bp-step-sub{font-size:11.5px;color:var(--text-mid)}
+.bp-right{display:flex;flex-direction:column;gap:18px}
+.bp-stat{padding:24px 28px;border-radius:4px;background:var(--light2);border:1px solid rgba(48,96,208,0.08);transition:all 0.28s}
+.bp-stat:hover{border-color:var(--blue);transform:translateX(5px)}
+.bp-stat-n{font-family:'DM Serif Display',serif;font-size:44px;color:var(--blue);line-height:1;margin-bottom:5px}
+.bp-stat-l{font-size:11px;color:var(--text-mid);letter-spacing:0.14em;text-transform:uppercase}
+.bp-cta{display:inline-block;margin-top:8px}
+
+/* ── AI LAYERS PANEL ────────────────────────────────────────── */
+.ai-intro{padding:72px 44px 36px}
+.ai-intro h2{color:#fff}
+.ai-intro p{color:rgba(150,180,255,0.55);max-width:640px}
+.ai-layers-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:0 44px}
+.ai-layer{padding:36px 32px;background:#020408;border:0.5px solid rgba(80,140,255,0.07);position:relative;overflow:hidden;transition:border-color 0.3s}
+.ai-layer:hover{border-color:rgba(80,140,255,0.22)}
+.ai-layer::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--blue);transition:width 0.4s}
+.ai-layer:hover::before{width:100%}
+.ai-layer-num{font-size:9.5px;color:rgba(80,140,255,0.2);letter-spacing:0.3em;margin-bottom:12px;font-weight:700}
+.ai-layer-tag{font-size:8.5px;letter-spacing:0.3em;color:var(--blue-lt);text-transform:uppercase;margin-bottom:10px;font-weight:700}
+.ai-layer-name{font-family:'DM Serif Display',serif;font-size:23px;color:#fff;margin-bottom:13px;line-height:1.1}
+.ai-layer-desc{font-size:13px;color:rgba(150,180,255,0.5);line-height:1.75;margin-bottom:18px}
+.ai-layer-examples{display:flex;flex-direction:column;gap:7px;padding-top:14px;border-top:0.5px solid rgba(80,140,255,0.08)}
+.ai-layer-ex{font-size:12px;color:rgba(100,160,255,0.35);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.ai-layer-ex::before{content:'›';color:var(--blue-lt);flex-shrink:0}
+.ai-cta-row{padding:36px 44px 72px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.ai-cta-note{font-size:13px;color:rgba(100,160,255,0.35);margin-left:8px}
+
+/* Slideshow dots */
+.gallery-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:10;padding:5px 10px;background:rgba(2,4,8,0.5);border-radius:20px}
+.gallery-dot{width:5px;height:5px;border-radius:50%;background:rgba(80,140,255,0.28);cursor:pointer;transition:all 0.25s;border:none;padding:0;flex-shrink:0}
+.gallery-dot.active{background:rgba(106,171,255,0.9);transform:scale(1.45)}
+.gallery-dot:hover:not(.active){background:rgba(106,171,255,0.5)}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media(max-width:900px){
+  .svc-card-grid-4{grid-template-columns:1fr}
+  .svc-card-grid-3{grid-template-columns:1fr}
+  .bp-wrap{grid-template-columns:1fr;gap:44px}
+  .ai-layers-row{grid-template-columns:1fr;margin:0 24px}
+  .svc-section{padding:60px 24px}
+  .svc-hero-inner{grid-template-columns:1fr}
+  .svc-hero-left{padding:56px 24px 48px;border-right:none;border-bottom:0.5px solid rgba(80,140,255,0.1)}
+  .ai-intro{padding:56px 24px 28px}
+  .ai-cta-row{padding:28px 24px 56px}
+  .bp-wrap{padding:60px 24px}
+}
+@media(max-width:640px){
+  .svc-card-grid-4,.svc-card-grid-3{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li class="nav-current"><a href="services.html">Services</a></li>
+    <li><a href="index.html#videos">Videos</a></li>
+    <li><a href="ai-training.html">AI Lab</a></li>
+    <li><a href="index.html#workshops">Workshops</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art">
+    <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
+  </a>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">Pricing</div>
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span class="tick-item">✦ Logo Design — $400</span>
+      <span class="tick-item">✦ Brand Identity Package — $900</span>
+      <span class="tick-item">✦ Business Cards &amp; Stationery — $100–$250</span>
+      <span class="tick-item">✦ Mini Brand Strategy Session — $175</span>
+      <span class="tick-item">✦ Landing Page — $1,500</span>
+      <span class="tick-item">✦ Business Site — $2,500–$3,500</span>
+      <span class="tick-item">✦ E-Commerce — $3,500+</span>
+      <span class="tick-item">✦ Content Production System — $500–$1,500</span>
+      <span class="tick-item">✦ AI Video Creation — $750</span>
+      <span class="tick-item">✦ Social Media Content Kits — from $450</span>
+      <span class="tick-item">✦ Every Engagement Includes a Brand Blueprint</span>
+      <span class="tick-item">✦ Logo Design — $400</span>
+      <span class="tick-item">✦ Brand Identity Package — $900</span>
+      <span class="tick-item">✦ Business Cards &amp; Stationery — $100–$250</span>
+      <span class="tick-item">✦ Mini Brand Strategy Session — $175</span>
+      <span class="tick-item">✦ Landing Page — $1,500</span>
+      <span class="tick-item">✦ Business Site — $2,500–$3,500</span>
+      <span class="tick-item">✦ E-Commerce — $3,500+</span>
+      <span class="tick-item">✦ Content Production System — $500–$1,500</span>
+      <span class="tick-item">✦ AI Video Creation — $750</span>
+      <span class="tick-item">✦ Social Media Content Kits — from $450</span>
+      <span class="tick-item">✦ Every Engagement Includes a Brand Blueprint</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="sec-dark svc-hero" id="services-top">
+  <div class="svc-hero-inner">
+    <div class="svc-hero-left">
+      <div>
+        <div class="eyebrow eyebrow-dark">Services &amp; Pricing</div>
+        <h1>Every brand has a story.<br/><em>We tell it visually.</em></h1>
+        <p class="svc-hero-sub">30+ years of design discipline meets enterprise AI infrastructure. Three service families — Brand Foundation, Web &amp; Digital, and Content &amp; AI Production — each built to compound in value over time.</p>
+      </div>
+      <div class="stats-row svc-hero-stats">
+        <div class="stat"><div class="stat-n">30+</div><div class="stat-l">Years Experience</div></div>
+        <div class="stat"><div class="stat-n">$175</div><div class="stat-l">Starts From</div></div>
+        <div class="stat"><div class="stat-n">10</div><div class="stat-l">Service Tiers</div></div>
+        <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Blueprint Included</div></div>
+      </div>
+    </div>
+    <div class="gallery-wrap" id="svcGalleryWrap"></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 01 — BRAND FOUNDATION
+═════════════════════════════════════════════════════════════ -->
+<section class="sec-light svc-section" id="brand-foundation">
+  <div class="svc-section-head">
+    <div class="eyebrow eyebrow-light">Brand Foundation</div>
+    <h2 style="color:var(--text-dark)">Your heritage,<br/>forged into visual equity.</h2>
+    <p class="svc-section-intro">A logo is not a brand — it's the front door. A brand is a complete visual language built from your story, your culture, and the truth only you carry. Every tier below starts there.</p>
+  </div>
+
+  <div class="svc-card-grid-4">
+
+    <!-- Logo Design -->
+    <div class="svc-card">
+      <i class="ti ti-pentagon svc-card-icon"></i>
+      <div class="svc-card-name">Logo Design</div>
+      <div class="svc-card-price">$400</div>
+      <p class="svc-card-desc">A mark that means something. Not a stock symbol — a logo designed from your story, your cultural truth, and your competitive positioning. Delivered with a Brand Blueprint starter so you know exactly how to use it.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Brand discovery intake questionnaire</li>
+        <li>3 initial concept directions</li>
+        <li>2 revision rounds</li>
+        <li>Primary logo + horizontal layout version</li>
+        <li>PNG, SVG, PDF export pack</li>
+        <li>2–3 brand color palette</li>
+        <li>Font pairing recommendation</li>
+        <li>Brand Blueprint starter document</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+    <!-- Brand Identity Package -->
+    <div class="svc-card">
+      <i class="ti ti-layers-intersect svc-card-icon"></i>
+      <div class="svc-card-name">Brand Identity Package</div>
+      <div class="svc-card-price">$900</div>
+      <p class="svc-card-desc">The full system. Logo, color palette with psychology notes, typography system, brand voice, and the complete Brand Blueprint. Everything a brand needs to launch with confidence and stay consistent for years.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Everything in Logo Design</li>
+        <li>Full visual identity system</li>
+        <li>Color psychology notes</li>
+        <li>Typography system (2–3 pairings)</li>
+        <li>Business card design</li>
+        <li>Social media profile asset pack</li>
+        <li>Brand voice + tagline development</li>
+        <li>Usage guidelines document</li>
+        <li>Final files: PNG, SVG, PDF, EPS</li>
+        <li>Full Brand Blueprint delivery</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+    <!-- Business Cards & Stationery -->
+    <div class="svc-card">
+      <i class="ti ti-id-badge svc-card-icon"></i>
+      <div class="svc-card-name">Business Cards &amp; Stationery</div>
+      <div class="svc-card-price">$100–$250</div>
+      <p class="svc-card-desc">Your first physical impression. Business cards and stationery designed with the same visual discipline as a full brand system — hierarchy, weight, and finish that says something before you say a word.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Business card design (front + back)</li>
+        <li>Letterhead design</li>
+        <li>Envelope design (optional)</li>
+        <li>Digital stationery pack</li>
+        <li>Print-ready PDF to print specs</li>
+        <li>Vendor file spec guidance</li>
+        <li>2 revision rounds</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+    <!-- Mini Brand Strategy Session -->
+    <div class="svc-card">
+      <i class="ti ti-target-arrow svc-card-icon"></i>
+      <div class="svc-card-name">Mini Brand Strategy Session</div>
+      <div class="svc-card-price">$175</div>
+      <p class="svc-card-desc">60 focused minutes to diagnose your brand, identify the gaps, and map your next moves. Ideal for founders in transition or brands that need clarity before committing to a full redesign.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>60-minute 1-on-1 strategy call</li>
+        <li>Brand audit of existing assets</li>
+        <li>3 priority action items</li>
+        <li>Brand positioning statement draft</li>
+        <li>Session summary document</li>
+        <li>Follow-up email with recommendations</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+  </div><!-- /.svc-card-grid-4 -->
+</section>
+
+<hr class="svc-divider-light">
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 02 — WEB & DIGITAL
+═════════════════════════════════════════════════════════════ -->
+<section class="sec-dark2 svc-section" id="web-digital">
+  <div class="svc-section-head">
+    <div class="eyebrow eyebrow-dark">Web &amp; Digital</div>
+    <h2 style="color:#fff">Sites that look good<br/>and convert.</h2>
+    <p class="svc-section-intro">Most websites are digital brochures. Ours are digital storefronts — built on the platform that fits your business model, optimized for the audience you're actually trying to reach, and designed to earn money.</p>
+  </div>
+
+  <div class="svc-card-grid-3">
+
+    <!-- Landing Page -->
+    <div class="svc-card">
+      <i class="ti ti-layout-bottombar svc-card-icon"></i>
+      <div class="svc-card-name">Landing Page</div>
+      <div class="svc-card-price">$1,500</div>
+      <p class="svc-card-desc">One page. One goal. One clear path from visitor to conversion. Built for campaigns, product launches, events, or any moment that needs a focused entry point without a full site.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Strategy + copywriting consultation</li>
+        <li>Custom design (desktop + mobile)</li>
+        <li>1-page build (Wix, WP, or custom)</li>
+        <li>Lead capture form + CRM integration</li>
+        <li>On-page SEO setup</li>
+        <li>Mobile-responsive build</li>
+        <li>Speed optimization</li>
+        <li>Launch + 14-day post-launch support</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+    <!-- Business Site (Most Popular) -->
+    <div class="svc-card" style="border-color:rgba(80,140,255,0.3)">
+      <div class="svc-popular">Most Popular</div>
+      <i class="ti ti-world-www svc-card-icon"></i>
+      <div class="svc-card-name">Business Site</div>
+      <div class="svc-card-price">$2,500–$3,500</div>
+      <p class="svc-card-desc">Your full digital headquarters — the site that works for you 24/7. Custom-designed on the platform that fits your model. Mobile-responsive, SEO-optimized at launch, and built to convert.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Platform strategy consultation</li>
+        <li>Custom design — 5 to 8 pages</li>
+        <li>Full build + launch</li>
+        <li>Mobile-responsive</li>
+        <li>On-page SEO setup</li>
+        <li>Google Analytics integration</li>
+        <li>Contact + booking form setup</li>
+        <li>Client training session</li>
+        <li>30-day post-launch support</li>
+        <li>Brand Blueprint (if no existing brand)</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+    <!-- E-Commerce -->
+    <div class="svc-card">
+      <i class="ti ti-shopping-cart svc-card-icon"></i>
+      <div class="svc-card-name">E-Commerce</div>
+      <div class="svc-card-price">$3,500+</div>
+      <p class="svc-card-desc">A digital storefront built to sell. Product pages, payment gateway, checkout flow, and inventory management — all designed to match your brand and convert browsers into buyers.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Everything in Business Site</li>
+        <li>Product catalog setup (up to 25 products)</li>
+        <li>Payment gateway integration</li>
+        <li>Shopping cart + checkout flow</li>
+        <li>Inventory management setup</li>
+        <li>Email capture + abandoned cart</li>
+        <li>Performance optimization</li>
+        <li>E-commerce SEO foundations</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+  </div><!-- /.svc-card-grid-3 -->
+</section>
+
+<hr class="svc-divider-dark">
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 03 — CONTENT & AI PRODUCTION
+═════════════════════════════════════════════════════════════ -->
+<section class="sec-light svc-section" id="content-ai">
+  <div class="svc-section-head">
+    <div class="eyebrow eyebrow-light">Content &amp; AI Production</div>
+    <h2 style="color:var(--text-dark)">Content that works<br/>while you sleep.</h2>
+    <p class="svc-section-intro">Not one-time deliverables — systems. Branded templates, repeatable workflows, and AI-powered production pipelines that keep your content consistent and your voice intact across every platform.</p>
+  </div>
+
+  <div class="svc-card-grid-3">
+
+    <!-- Content Production System -->
+    <div class="svc-card">
+      <i class="ti ti-calendar-stats svc-card-icon"></i>
+      <div class="svc-card-name">Content Production System</div>
+      <div class="svc-card-price">$500–$1,500</div>
+      <p class="svc-card-desc">A repeatable system for content — not a one-time batch. Branded templates, a content calendar, and a batch workflow that keeps your social media consistent without starting from scratch every week.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Content strategy session</li>
+        <li>Content calendar template (3 months)</li>
+        <li>10 branded post templates</li>
+        <li>Caption writing frameworks</li>
+        <li>Hashtag research + strategy</li>
+        <li>Brand voice guide for content</li>
+        <li>Monthly content batch workflow setup</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+    <!-- AI Video Creation -->
+    <div class="svc-card">
+      <i class="ti ti-device-tv svc-card-icon"></i>
+      <div class="svc-card-name">AI Video Creation</div>
+      <div class="svc-card-price">$750</div>
+      <p class="svc-card-desc">Scripted, voiced, produced, and delivered. AI-generated video content calibrated to your brand voice — for YouTube, Reels, TikTok, or wherever your audience lives. No camera required.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>AI video script development</li>
+        <li>Voiceover generation + brand calibration</li>
+        <li>Video production (up to 60 seconds)</li>
+        <li>Captions + subtitle overlay</li>
+        <li>Platform-optimized export (YT, Reels, TikTok)</li>
+        <li>2 revision rounds</li>
+        <li>Final files in MP4</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+    <!-- Social Media Content Kits -->
+    <div class="svc-card">
+      <i class="ti ti-photo-star svc-card-icon"></i>
+      <div class="svc-card-name">Social Media Content Kits</div>
+      <div class="svc-card-price">From $450</div>
+      <p class="svc-card-desc">15 ready-to-post branded graphics with editable Canva templates. Drop in your copy, hit publish. Your feed stays on-brand even when you're not thinking about it.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>15 branded social media graphics</li>
+        <li>Canva template pack (fully editable)</li>
+        <li>3 story template designs</li>
+        <li>3 post template designs</li>
+        <li>Cover photo designs (2 platforms)</li>
+        <li>Brand colors + fonts applied throughout</li>
+        <li>Usage instruction guide</li>
+      </ul>
+      <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta">Get Started →</a>
+    </div>
+
+  </div><!-- /.svc-card-grid-3 -->
+</section>
+
+<hr class="div-line-light">
+
+
+<!-- ════════════════════════════════════════════════════════════
+     BRAND BLUEPRINT PANEL
+═════════════════════════════════════════════════════════════ -->
+<section class="sec-light2" id="brand-blueprint">
+  <div class="bp-wrap">
+    <div>
+      <div class="eyebrow eyebrow-light">Included With Every Engagement</div>
+      <h2 style="color:var(--text-dark)">The Brand Blueprint.</h2>
+      <p style="color:var(--text-mid);max-width:520px;line-height:1.8">Most designers hand you a logo file and call it done. We hand you a roadmap. The Brand Blueprint is a complete guide to your visual identity — how to use it, where to use it, and why every decision was made.</p>
+      <p style="color:var(--text-mid);max-width:520px;line-height:1.8">It's the document that keeps your brand consistent five years from now when you're handing it off to a vendor, a new team member, or a social media manager. Your brand equity, documented.</p>
+      <div class="bp-steps">
+        <div class="bp-step">
+          <div class="bp-step-num">1</div>
+          <div>
+            <div class="bp-step-title">Visual Identity Guide</div>
+            <div class="bp-step-sub">Logo usage rules, clear space, approved variations, and hard don'ts</div>
+          </div>
+        </div>
+        <div class="bp-step">
+          <div class="bp-step-num">2</div>
+          <div>
+            <div class="bp-step-title">Color + Typography System</div>
+            <div class="bp-step-sub">Hex, RGB, CMYK values + font pairings with usage hierarchy rationale</div>
+          </div>
+        </div>
+        <div class="bp-step">
+          <div class="bp-step-num">3</div>
+          <div>
+            <div class="bp-step-title">Brand Voice + Messaging</div>
+            <div class="bp-step-sub">Tone of voice, tagline options, key phrases, and words to avoid</div>
+          </div>
+        </div>
+        <div class="bp-step">
+          <div class="bp-step-num">4</div>
+          <div>
+            <div class="bp-step-title">Digital Presence Roadmap</div>
+            <div class="bp-step-sub">Recommended platforms, profile setup, and content direction by channel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bp-right">
+      <div class="bp-stat">
+        <div class="bp-stat-n">30+</div>
+        <div class="bp-stat-l">Years of Blueprint Thinking</div>
+      </div>
+      <div class="bp-stat">
+        <div class="bp-stat-n">100%</div>
+        <div class="bp-stat-l">Of Clients Receive One</div>
+      </div>
+      <div class="bp-stat">
+        <div class="bp-stat-n">∞</div>
+        <div class="bp-stat-l">Years of Brand Consistency</div>
+      </div>
+      <a href="https://www.moorgraphix.com/contact-us" class="bp-cta">
+        <button class="btn-primary-light" style="width:100%">Get Your Blueprint →</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     AI SYSTEMS — 3-LAYER PANEL
+═════════════════════════════════════════════════════════════ -->
+<section class="sec-mid" id="ai-stack">
+  <div class="ai-intro">
+    <div class="eyebrow eyebrow-dark">AI Infrastructure</div>
+    <h2>The 3-Layer AI Model.</h2>
+    <p>Enterprise organizations don't just install AI tools — they build AI systems. A People Layer, a Process Layer, and an Infrastructure Layer. The model is just the engine. Here's how we build the car.</p>
+  </div>
+  <div class="ai-layers-row">
+    <div class="ai-layer">
+      <div class="ai-layer-num">LAYER 01</div>
+      <div class="ai-layer-tag">People Layer</div>
+      <div class="ai-layer-name">Who Uses AI<br/>and How</div>
+      <div class="ai-layer-desc">Defining roles, responsibilities, and AI literacy across your team. Who prompts, who reviews, who owns each output. Without this layer, AI creates confusion — not efficiency.</div>
+      <div class="ai-layer-examples">
+        <div class="ai-layer-ex">AI role mapping for each team member</div>
+        <div class="ai-layer-ex">Prompt training + voice locking</div>
+        <div class="ai-layer-ex">Output review + approval workflows</div>
+        <div class="ai-layer-ex">AI policy + responsible use guidelines</div>
+      </div>
+    </div>
+    <div class="ai-layer">
+      <div class="ai-layer-num">LAYER 02</div>
+      <div class="ai-layer-tag">Process Layer</div>
+      <div class="ai-layer-name">What Gets<br/>Automated</div>
+      <div class="ai-layer-desc">Identifying and mapping the repeatable processes in your business that AI can own — content creation, client intake, scheduling, reporting, follow-up. The ROI lives in this layer.</div>
+      <div class="ai-layer-examples">
+        <div class="ai-layer-ex">Content automation workflows</div>
+        <div class="ai-layer-ex">Client intake + routing sequences</div>
+        <div class="ai-layer-ex">Weekly reporting + briefing agents</div>
+        <div class="ai-layer-ex">Social media scheduling pipelines</div>
+      </div>
+    </div>
+    <div class="ai-layer">
+      <div class="ai-layer-num">LAYER 03</div>
+      <div class="ai-layer-tag">Infrastructure Layer</div>
+      <div class="ai-layer-name">The Agents, Tools,<br/>and Integrations</div>
+      <div class="ai-layer-desc">The technical stack: custom AI agents, orchestration systems, tool integrations, and the connections between them. This is what runs 24/7 when you're not in the room.</div>
+      <div class="ai-layer-examples">
+        <div class="ai-layer-ex">Custom AI agent design + deployment</div>
+        <div class="ai-layer-ex">Orchestration layer (routes between agents)</div>
+        <div class="ai-layer-ex">CRM + platform integrations</div>
+        <div class="ai-layer-ex">Make.com + API workflow builds</div>
+      </div>
+    </div>
+  </div>
+  <div class="ai-cta-row">
+    <a href="https://www.moorgraphix.com/contact-us">
+      <button class="btn-primary">Book AI Consult</button>
+    </a>
+    <a href="https://www.moorgraphix.com/ai-training">
+      <button class="btn-ghost">View AI Workshops →</button>
+    </a>
+    <span class="ai-cta-note">8+ agents live · 3 brand ecosystems · 0 generic chatbots</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FINAL CTA
+═════════════════════════════════════════════════════════════ -->
+<section class="final-cta sec-red" id="contact">
+  <div class="final-cta-eyebrow">Let's Build Your Digital Legacy</div>
+  <h2>Design is more than decoration.<br/><em>It's direction.</em></h2>
+  <p class="final-cta-sub">Every project is an opportunity to elevate your brand, inspire your audience, and design your future. Start with a free consultation.</p>
+  <div class="final-cta-btns">
+    <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art">
+      <button class="btn-primary" style="font-size:14px;padding:17px 34px">Book Free Consultation</button>
+    </a>
+    <a href="https://www.moorgraphix.com/contact-us">
+      <button class="btn-ghost" style="font-size:14px;padding:17px 30px">Send a Project Brief →</button>
+    </a>
+    <a href="index.html#portfolio">
+      <button class="btn-ghost" style="font-size:14px;padding:17px 30px">View Portfolio →</button>
+    </a>
+  </div>
+  <div class="cta-contact">
+    <div class="cta-info"><i class="ti ti-phone"></i><a href="tel:4704994407">(470) 499-4407</a></div>
+    <div class="cta-info"><i class="ti ti-mail"></i><a href="mailto:sidart@moorgraphix.com">sidart@moorgraphix.com</a></div>
+    <div class="cta-info"><i class="ti ti-map-pin"></i>Douglasville, GA — Serving Nationwide</div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="sec-dark">
+  <div class="foot-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.twitter.com/moorgraphix"><i class="ti ti-brand-x"></i></a>
+    <a href="https://www.linkedin.com/company/moor-graphix"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.youtube.com/@moorgraphix" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2046 Moor Graphix</div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+
+</div><!-- .page -->
+
+<script src="assets/js/images.js"></script>
+<script>
+// ── PARTICLE BACKGROUND ──
+const canvas=document.getElementById('bg'),ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+const stars=Array.from({length:180},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.2+0.2,o:Math.random()*Math.PI*2,s:Math.random()*0.25+0.07}));
+const nodes=Array.from({length:26},()=>({x:Math.random(),y:Math.random(),vx:(Math.random()-0.5)*0.00028,vy:(Math.random()-0.5)*0.00028}));
+function drawBg(){
+  ctx.clearRect(0,0,W,H);
+  stars.forEach(s=>{s.o+=s.s*0.014;ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(100,160,255,${0.07+0.07*Math.sin(s.o)})`;ctx.fill();});
+  nodes.forEach(n=>{n.x=(n.x+n.vx+1)%1;n.y=(n.y+n.vy+1)%1;});
+  for(let i=0;i<nodes.length;i++){
+    for(let j=i+1;j<nodes.length;j++){
+      const dx=(nodes[i].x-nodes[j].x)*W,dy=(nodes[i].y-nodes[j].y)*H,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<190){ctx.beginPath();ctx.moveTo(nodes[i].x*W,nodes[i].y*H);ctx.lineTo(nodes[j].x*W,nodes[j].y*H);ctx.strokeStyle=`rgba(48,96,208,${0.09*(1-d/190)})`;ctx.lineWidth=0.5;ctx.stroke();}
+    }
+    ctx.beginPath();ctx.arc(nodes[i].x*W,nodes[i].y*H,1.8,0,Math.PI*2);ctx.fillStyle='rgba(80,140,255,0.28)';ctx.fill();
+  }
+  requestAnimationFrame(drawBg);
+}
+drawBg();
+
+// ── HERO SLIDESHOW — NAMA Brand Blueprint pages ──
+(function(){
+  const slides = PROJECTS.filter(p => p.category === 'portfolio_slides');
+  if(!slides.length) return;
+  const gw = document.getElementById('svcGalleryWrap');
+  if(!gw) return;
+
+  // Build slides
+  slides.forEach((item, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'gallery-slide' + (i === 0 ? ' active' : '');
+    const img = document.createElement('img');
+    img.src = item.src;
+    img.alt = item.name;
+    img.loading = i === 0 ? 'eager' : 'lazy';
+    slide.appendChild(img);
+    gw.appendChild(slide);
+  });
+
+  // Prev / Next buttons
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'gallery-btn gallery-prev';
+  prevBtn.innerHTML = '&#8249;';
+  prevBtn.setAttribute('aria-label', 'Previous slide');
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'gallery-btn gallery-next';
+  nextBtn.innerHTML = '&#8250;';
+  nextBtn.setAttribute('aria-label', 'Next slide');
+
+  // Dot strip
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'gallery-dots';
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dotsWrap.appendChild(dot);
+  });
+
+  gw.appendChild(prevBtn);
+  gw.appendChild(nextBtn);
+  gw.appendChild(dotsWrap);
+
+  const slideEls = gw.querySelectorAll('.gallery-slide');
+  const dotEls   = dotsWrap.querySelectorAll('.gallery-dot');
+  let idx = 0, timer;
+
+  function goTo(n) {
+    slideEls[idx].classList.remove('active');
+    dotEls[idx].classList.remove('active');
+    idx = (n + slideEls.length) % slideEls.length;
+    slideEls[idx].classList.add('active');
+    dotEls[idx].classList.add('active');
+  }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(idx + 1), 3000);
+  }
+  startTimer();
+
+  prevBtn.addEventListener('click', e => { e.stopPropagation(); goTo(idx - 1); startTimer(); });
+  nextBtn.addEventListener('click', e => { e.stopPropagation(); goTo(idx + 1); startTimer(); });
+  dotEls.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startTimer(); });
+  });
+
+  // Pause on hover, resume on leave
+  gw.addEventListener('mouseenter', () => clearInterval(timer));
+  gw.addEventListener('mouseleave', startTimer);
+
+  // Keyboard nav when gallery is focused
+  document.addEventListener('keydown', e => {
+    if(e.key === 'ArrowLeft')  { goTo(idx - 1); startTimer(); }
+    if(e.key === 'ArrowRight') { goTo(idx + 1); startTimer(); }
+  });
+})();
+</script>
+</body>
+</html>

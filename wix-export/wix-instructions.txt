@@ -1,0 +1,210 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MOOR GRAPHIX — WIX EMBED INSTRUCTIONS
+  File: wix-export/wix-page.html  →  paste into Wix HTML Widget
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OVERVIEW
+────────
+wix-page.html contains the interior content sections of the Moor
+Graphix site (Origin, Services, Blueprint, AI, Social, Testimonials,
+CTA) as a self-contained HTML snippet. It is designed to be pasted
+into a Wix HTML iframe widget on a blank Wix page.
+
+All CSS is scoped with the .mg- prefix to avoid conflicts with Wix's
+own styles. There is no JavaScript — layout only.
+
+Five images are represented as {{PLACEHOLDER}} tokens and must be
+replaced with real Wix Media Manager URLs before publishing.
+
+
+────────────────────────────────────────────────────────────────
+STEP 1 — UPLOAD IMAGES TO WIX MEDIA MANAGER
+────────────────────────────────────────────────────────────────
+In your Wix dashboard go to:
+  Media Manager → Upload Media → From Computer
+
+Upload these 5 files from the local project:
+
+  TOKEN                  LOCAL FILE
+  ─────────────────────────────────────────────────────────────
+  {{LOGO}}               assets/images/branding/moor-graphix-logo.png
+  {{SOCIAL_FACEBOOK}}    assets/images/social/social-facebook.jpg
+  {{SOCIAL_INSTAGRAM}}   assets/images/social/social-instagram.jpg
+  {{SOCIAL_LINKEDIN}}    assets/images/social/social-linkedin.jpg
+  {{SOCIAL_TWITTER}}     assets/images/social/social-twitter.png
+  ─────────────────────────────────────────────────────────────
+
+After each upload, right-click the image in Media Manager →
+"Copy URL". It will look like:
+  https://static.wixstatic.com/media/xxxxxxx_yyyyyyy~mv2.png
+
+Save each URL — you'll need them in Step 3.
+
+
+────────────────────────────────────────────────────────────────
+STEP 2 — ADD FONTS TO YOUR WIX SITE
+────────────────────────────────────────────────────────────────
+The embed already loads fonts via @import inside its <style> block:
+  • Syne (400, 600, 700, 800)
+  • DM Serif Display (italic variants)
+  • Tabler Icons webfont (icons used in service panels)
+
+No action required — these load automatically inside the iframe.
+
+If Wix strips the @import rule (some versions do), add a Custom Code
+snippet instead:
+
+  Wix Dashboard → Settings → Custom Code → Add Code → Head
+
+  Paste:
+  ──────────────────────────────────────────────────────────────
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+  ──────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────────
+STEP 3 — REPLACE IMAGE PLACEHOLDERS
+────────────────────────────────────────────────────────────────
+Open wix-page.html in any text editor (VS Code, Notepad, TextEdit).
+
+Use Find & Replace (Cmd+H / Ctrl+H) to swap each token:
+
+  FIND                   REPLACE WITH
+  ─────────────────────────────────────────────────────────────
+  {{LOGO}}               https://static.wixstatic.com/media/...
+  {{SOCIAL_FACEBOOK}}    https://static.wixstatic.com/media/...
+  {{SOCIAL_INSTAGRAM}}   https://static.wixstatic.com/media/...
+  {{SOCIAL_LINKEDIN}}    https://static.wixstatic.com/media/...
+  {{SOCIAL_TWITTER}}     https://static.wixstatic.com/media/...
+  ─────────────────────────────────────────────────────────────
+
+Use the exact Wix Media Manager URLs you copied in Step 1.
+Save the file when done.
+
+
+────────────────────────────────────────────────────────────────
+STEP 4 — ADD AN HTML WIDGET TO YOUR WIX PAGE
+────────────────────────────────────────────────────────────────
+1. In Wix Editor, open (or create) the page where you want the
+   content to appear.
+
+2. Click the blue (+) Add button on the left panel.
+
+3. Navigate to: Embed Code → HTML iFrame  (or "Embed a Widget")
+
+4. A white box appears on the canvas. Drag it to fill the full
+   page width and set the height to at least 4000px (you can
+   adjust after seeing the rendered content).
+
+5. Click the widget → "Enter Code"
+
+6. Select ALL the default placeholder text and delete it.
+
+7. Open wix-page.html (the version you edited in Step 3),
+   select all (Cmd+A / Ctrl+A), copy, and paste into the
+   Wix code editor.
+
+8. Click "Update" or "Apply".
+
+
+────────────────────────────────────────────────────────────────
+STEP 5 — SET WIDGET HEIGHT
+────────────────────────────────────────────────────────────────
+Wix HTML widgets require a fixed height — they don't auto-expand.
+
+1. Preview the page (the "eye" icon top-right).
+2. Open browser DevTools (F12) → Console, paste:
+     document.body.scrollHeight
+   Note the number (e.g. 3840).
+3. Back in the editor, select the widget → Properties panel →
+   set height to that number + 80px buffer.
+4. Re-preview to confirm no scroll bar inside the widget.
+
+Alternatively: set height to 5000px and accept a small whitespace
+gap at the bottom — less precise but faster.
+
+
+────────────────────────────────────────────────────────────────
+STEP 6 — MOBILE ADJUSTMENTS
+────────────────────────────────────────────────────────────────
+Wix has separate mobile and desktop editor views. Switch to
+Mobile view (phone icon, top toolbar) and:
+
+• Resize the HTML widget to match full mobile width (320–390px).
+• Increase height if needed — mobile layout stacks columns,
+  so content is taller than desktop.
+• The .mg- CSS already includes responsive breakpoints
+  (@media max-width: 768px) that will handle stacking.
+
+
+────────────────────────────────────────────────────────────────
+STEP 7 — TEST AND PUBLISH
+────────────────────────────────────────────────────────────────
+1. Click Preview in the Wix editor.
+2. Verify:
+   □ Fonts load (Syne for headings, DM Serif Display for pull quotes)
+   □ Logo image appears in the Origin section
+   □ All 4 social preview images appear
+   □ Section backgrounds alternate correctly (dark / light)
+   □ No horizontal scroll on desktop or mobile
+   □ "Book a Call" and "Get a Quote" links go to correct URLs
+
+3. If images are broken:
+   • Check that no placeholder tokens remain (search for "{{")
+   • Confirm Wix Media Manager URLs are correct (paste one into
+     a new browser tab — it should show the image directly)
+
+4. When satisfied, click Publish.
+
+
+────────────────────────────────────────────────────────────────
+BOOKING & EXTERNAL LINKS IN THE HTML
+────────────────────────────────────────────────────────────────
+The following links are hardcoded in wix-page.html. Update them
+if your booking or social URLs change:
+
+  ELEMENT               CURRENT URL
+  ─────────────────────────────────────────────────────────────
+  All "Book a Call" CTAs    https://calendly.com/moorgraphix
+  All "Get a Quote" CTAs    mailto:sidart@moorgraphix.com
+  Facebook social link      https://facebook.com/moorgraphix
+  Instagram social link     https://instagram.com/moorgraphix
+  LinkedIn social link      https://linkedin.com/company/moorgraphix
+  Twitter/X social link     https://twitter.com/moorgraphix
+  ─────────────────────────────────────────────────────────────
+
+Search wix-page.html for any of these strings to find and update
+the href attributes.
+
+
+────────────────────────────────────────────────────────────────
+TROUBLESHOOTING
+────────────────────────────────────────────────────────────────
+Issue: Styles look broken / all text is the same font
+Fix:   The @import inside <style> may be blocked. Use the Custom
+       Code snippet from Step 2 instead.
+
+Issue: Widget shows scrollbar / content is cut off
+Fix:   Increase widget height (Step 5).
+
+Issue: Images show broken icon
+Fix:   Re-upload to Wix Media Manager. Make sure the URL in the
+       src attribute ends with the file extension (.png, .jpg).
+       Wix Media URLs do NOT require a query string.
+
+Issue: "Enter Code" button is grayed out
+Fix:   You may be in the wrong widget type. Delete and re-add an
+       HTML iFrame widget specifically (not a Velo code block).
+
+Issue: Section widths look narrow on desktop
+Fix:   In the widget settings, ensure "Stretch to full width" is
+       ON. Also check .mg-section has max-width:1200px — this is
+       intentional for readability.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Questions? sidart@moorgraphix.com | (470) 499-4407
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

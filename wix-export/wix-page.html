@@ -1,0 +1,329 @@
+<!--
+  MOOR GRAPHIX — WIX EXPORT
+  ─────────────────────────
+  This file contains the content sections of the Moor Graphix homepage
+  reformatted for pasting into Wix HTML embed elements.
+
+  LOCAL IMAGE PLACEHOLDERS:
+    {{LOGO}}                    → assets/images/branding/moor-graphix-logo.png
+    {{SOCIAL_FACEBOOK}}         → assets/images/social/social-facebook-preview.jpg
+    {{SOCIAL_INSTAGRAM}}        → assets/images/social/social-instagram-preview.png
+    {{SOCIAL_LINKEDIN}}         → assets/images/social/social-linkedin-preview.png
+    {{SOCIAL_TWITTER}}          → assets/images/social/social-twitter-preview.jpg
+
+  Replace each {{PLACEHOLDER}} with the full URL from your Wix Media Manager
+  after uploading those files. See wix-instructions.txt for the full workflow.
+-->
+
+<style>
+/* ── MOOR GRAPHIX WIX EMBED STYLES ─────────────────────────────────────── */
+/* Scoped under .mg- prefix to avoid conflicts with Wix's own styles.       */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css');
+
+:root{
+  --mg-blue:#3060D0;
+  --mg-blue-lt:#6AABFF;
+  --mg-dark:#020408;
+  --mg-dark2:#080D1A;
+  --mg-mid:#0D1628;
+  --mg-light1:#F0F4FF;
+  --mg-light2:#E8EEF8;
+  --mg-light3:#DDE5F5;
+  --mg-text-dark:#1A1F2E;
+  --mg-text-mid:#3A4560;
+}
+
+.mg-wrap *{box-sizing:border-box;margin:0;padding:0}
+.mg-wrap{font-family:'Syne',sans-serif;color:#d0deff;font-size:16px;line-height:1.7}
+.mg-wrap a{color:inherit;text-decoration:none}
+.mg-wrap img{display:block;max-width:100%}
+.mg-wrap h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.2vw,44px);line-height:1.1;font-weight:400;margin-bottom:14px}
+.mg-wrap h3{font-family:'DM Serif Display',serif;font-size:clamp(18px,2vw,26px);line-height:1.18;font-weight:400;margin-bottom:10px}
+.mg-wrap p{font-size:clamp(14px,1.2vw,16px);line-height:1.85;margin-bottom:14px}
+
+/* Sections */
+.mg-sec{padding:60px 44px}
+.mg-dark{background:rgba(2,4,8,0.97);color:#d0deff}
+.mg-dark2{background:rgba(8,13,26,0.97);color:#d0deff}
+.mg-mid{background:rgba(13,22,40,0.98);color:#d0deff}
+.mg-light{background:var(--mg-light1);color:var(--mg-text-dark)}
+.mg-light2{background:var(--mg-light2);color:var(--mg-text-dark)}
+.mg-red{background:#06000A;color:#d0deff;border-top:1px solid rgba(176,24,24,0.2)}
+
+/* Eyebrow */
+.mg-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.42em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.mg-eyebrow::before{content:'';display:block;width:20px;height:1px;background:currentColor;opacity:0.5}
+.mg-eyebrow-dark{color:var(--mg-blue-lt)}
+.mg-eyebrow-light{color:var(--mg-blue)}
+
+/* Grid helpers */
+.mg-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.mg-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.mg-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.mg-grid-2x2{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+
+/* Buttons */
+.mg-btn{display:inline-flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;padding:13px 26px;border-radius:4px;text-transform:uppercase;cursor:pointer;transition:all 0.25s;text-decoration:none;border:none}
+.mg-btn-primary{background:var(--mg-blue);color:#fff}
+.mg-btn-primary:hover{background:#4070E0;transform:translateY(-2px)}
+.mg-btn-ghost-light{background:transparent;color:var(--mg-blue);border:1px solid rgba(48,96,208,0.4)}
+.mg-btn-ghost-light:hover{background:rgba(48,96,208,0.08)}
+.mg-btn-ghost-dark{background:transparent;color:var(--mg-blue-lt);border:1px solid rgba(80,140,255,0.35)}
+.mg-btn-ghost-dark:hover{background:rgba(80,140,255,0.12)}
+
+/* Experience badge */
+.mg-exp-badge{background:var(--mg-blue);border-radius:4px;padding:22px 24px;display:flex;align-items:center;gap:18px;color:#fff}
+.mg-exp-num{font-family:'DM Serif Display',serif;font-size:56px;line-height:1;flex-shrink:0}
+.mg-exp-text{font-size:13px;line-height:1.65;opacity:0.85}
+
+/* Crest grid */
+.mg-crest-cell{background:#fff;border:1px solid rgba(48,96,208,0.1);padding:18px;border-radius:3px;transition:all 0.3s}
+.mg-crest-cell:hover{border-color:var(--mg-blue);box-shadow:0 4px 20px rgba(48,96,208,0.12)}
+.mg-crest-icon{font-size:22px;color:var(--mg-blue);margin-bottom:6px}
+.mg-crest-title{font-size:13px;font-weight:700;color:var(--mg-text-dark);margin-bottom:4px}
+.mg-crest-desc{font-size:12px;color:var(--mg-text-mid);line-height:1.55}
+
+/* Origin quote */
+.mg-quote{border-left:3px solid var(--mg-blue);padding-left:18px;margin:22px 0}
+.mg-quote p{font-family:'DM Serif Display',serif;font-size:17px;font-style:italic;color:var(--mg-text-dark);line-height:1.55;margin:0}
+
+/* Services grid */
+.mg-svc{background:#020408;padding:26px 22px;border:0.5px solid rgba(80,140,255,0.06);transition:all 0.35s;position:relative;overflow:hidden}
+.mg-svc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--mg-blue);transition:width 0.4s}
+.mg-svc:hover{border-color:rgba(80,140,255,0.28)}
+.mg-svc:hover::after{width:100%}
+.mg-svc-num{font-size:9px;color:rgba(80,140,255,0.28);letter-spacing:0.3em;margin-bottom:10px}
+.mg-svc-icon{font-size:22px;color:var(--mg-blue);margin-bottom:9px;display:block}
+.mg-svc-name{font-size:15px;font-weight:700;color:#d0deff;margin-bottom:6px}
+.mg-svc-desc{font-size:12px;color:rgba(100,160,255,0.38);line-height:1.7}
+.mg-svc-price{display:inline-block;margin-top:12px;font-size:9px;color:var(--mg-blue);border:0.5px solid rgba(48,96,208,0.3);padding:3px 9px;border-radius:2px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700}
+
+/* Blueprint strip */
+.mg-blueprint{padding:44px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.mg-bp-icon{width:56px;height:56px;background:var(--mg-blue);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;flex-shrink:0}
+.mg-bp-title{font-size:17px;font-weight:700;color:var(--mg-text-dark);margin-bottom:6px}
+.mg-bp-body{font-size:14px;color:var(--mg-text-mid);line-height:1.7;margin:0}
+
+/* AI section */
+.mg-ai-stat-row{display:flex;gap:0;margin-bottom:28px}
+.mg-ai-stat{padding:0 20px;border-right:0.5px solid rgba(80,140,255,0.1)}
+.mg-ai-stat:first-child{padding-left:0}
+.mg-ai-stat:last-child{border-right:none}
+.mg-ai-stat-n{font-family:'DM Serif Display',serif;font-size:32px;color:#fff}
+.mg-ai-stat-l{font-size:9px;color:rgba(100,160,255,0.4);letter-spacing:0.12em;text-transform:uppercase}
+.mg-os-layer{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:0.5px solid rgba(80,140,255,0.07)}
+.mg-os-layer:last-child{border-bottom:none}
+.mg-os-icon{width:34px;height:34px;border:0.5px solid rgba(80,140,255,0.25);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--mg-blue-lt);flex-shrink:0}
+.mg-os-name{font-size:13px;font-weight:700;color:#d0deff}
+.mg-os-desc{font-size:10px;color:rgba(100,160,255,0.38);margin-top:1px}
+.mg-os-status{margin-left:auto;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.mg-status-live{color:rgba(80,220,120,0.9);background:rgba(80,220,120,0.08);border:0.5px solid rgba(80,220,120,0.22)}
+.mg-status-build{color:rgba(255,180,60,0.9);background:rgba(255,180,60,0.08);border:0.5px solid rgba(255,180,60,0.22)}
+
+/* Testimonials */
+.mg-test-card{background:#fff;padding:26px 22px;border:1px solid rgba(48,96,208,0.08);border-radius:3px;transition:all 0.35s}
+.mg-test-card:hover{border-color:var(--mg-blue);box-shadow:0 8px 32px rgba(48,96,208,0.12)}
+.mg-test-stars{color:var(--mg-blue);font-size:13px;letter-spacing:3px;margin-bottom:14px}
+.mg-test-quote{font-family:'DM Serif Display',serif;font-size:15px;font-style:italic;color:var(--mg-text-dark);line-height:1.6;margin-bottom:16px}
+.mg-test-name{font-size:11px;font-weight:700;color:var(--mg-text-mid);letter-spacing:0.18em;text-transform:uppercase}
+.mg-test-role{font-size:10px;color:rgba(0,0,0,0.35);margin-top:2px}
+
+/* Social cards */
+.mg-social-card{background:#fff;border:1px solid rgba(48,96,208,0.1);border-radius:3px;overflow:hidden;transition:all 0.35s;display:block;text-decoration:none}
+.mg-social-card:hover{border-color:var(--mg-blue);box-shadow:0 6px 28px rgba(48,96,208,0.14);transform:translateY(-4px)}
+.mg-sc-header{padding:12px 15px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(0,0,0,0.06)}
+.mg-sc-platform{font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--mg-text-mid)}
+.mg-sc-icon{font-size:17px}
+.mg-sc-img{height:140px;overflow:hidden;background:var(--mg-light3)}
+.mg-sc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.mg-social-card:hover .mg-sc-img img{transform:scale(1.06)}
+.mg-sc-body{padding:12px 15px}
+.mg-sc-caption{font-size:12px;color:var(--mg-text-mid);line-height:1.6;margin-bottom:8px}
+.mg-sc-cta{font-size:10px;font-weight:700;color:var(--mg-blue);letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;gap:5px}
+
+/* Final CTA */
+.mg-final-cta{padding:72px 44px;text-align:center}
+.mg-final-cta-eyebrow{font-size:9px;letter-spacing:0.45em;color:rgba(80,140,255,0.5);text-transform:uppercase;margin-bottom:16px}
+.mg-final-cta h2{color:#fff;margin-bottom:16px}
+.mg-final-cta h2 em{font-style:italic;color:var(--mg-blue-lt)}
+.mg-final-cta-sub{font-size:16px;color:rgba(150,180,255,0.45);max-width:500px;margin:0 auto 36px;line-height:1.85}
+.mg-final-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.mg-cta-contact{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+.mg-cta-info{font-size:13px;color:rgba(100,160,255,0.45);display:flex;align-items:center;gap:7px}
+.mg-cta-info i{font-size:16px;color:var(--mg-blue)}
+.mg-cta-info a{color:inherit;text-decoration:none}
+
+/* Nationwide */
+.mg-nw-cities{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin-top:8px}
+.mg-nw-city{background:rgba(80,140,255,0.09);border:0.5px solid rgba(80,140,255,0.2);color:rgba(150,180,255,0.6);font-size:9px;letter-spacing:0.12em;padding:5px 12px;border-radius:20px;text-transform:uppercase}
+
+/* Dividers */
+.mg-hr{border:none;border-top:1px solid rgba(80,140,255,0.1);margin:0}
+.mg-hr-light{border:none;border-top:1px solid rgba(48,96,208,0.1);margin:0}
+
+@media(max-width:768px){
+  .mg-grid-2,.mg-grid-3,.mg-grid-4,.mg-grid-2x2{grid-template-columns:1fr}
+  .mg-sec{padding:48px 24px}
+  .mg-blueprint{grid-template-columns:1fr;text-align:center}
+  .mg-ai-stat-row{flex-wrap:wrap}
+}
+</style>
+
+<div class="mg-wrap">
+
+<!-- ══ ORIGIN STORY ══════════════════════════════════════════════════════ -->
+<section class="mg-sec mg-light" id="mg-about">
+  <div class="mg-grid-2">
+    <div>
+      <div class="mg-eyebrow mg-eyebrow-light">The Origin Story</div>
+      <h2 style="color:var(--mg-text-dark)">The name <span style="color:var(--mg-blue)">Moor</span> comes from the crest.</h2>
+      <p style="color:var(--mg-text-mid)">The word <strong>"Moor"</strong> traces directly from <strong>Morrison</strong> — Sid's grandfather's middle name. Researching that name led to <em>Fairbairn's Crest</em>, where the Morrison family crest was discovered to contain <strong>three faces of Moors</strong>. That crest became a personal symbol. That symbol became a company.</p>
+      <p style="color:var(--mg-text-mid)">This is what <strong style="color:var(--mg-blue)">Cultural Alchemy</strong> means in practice — extracting the hidden gold inside your heritage, your name, your story — and forging it into visual equity that no competitor can copy, because no competitor <em>is</em> you.</p>
+      <div class="mg-quote"><p>"Moor Graphix is the culmination of my life's work in design, teaching, and community activism."</p></div>
+      <p style="color:var(--mg-text-mid);margin:0">— Sid Washington, Founder &amp; Principal Designer</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;justify-content:center">
+      <div class="mg-exp-badge">
+        <div class="mg-exp-num">30+</div>
+        <div class="mg-exp-text">Years delivering visual graphic solutions — print and web — for individuals, small businesses, city agencies, think tanks, and corporations of all sizes. Nationwide.</div>
+      </div>
+      <div class="mg-grid-2x2">
+        <div class="mg-crest-cell"><div class="mg-crest-icon"><i class="ti ti-dna"></i></div><div class="mg-crest-title">Heritage First</div><div class="mg-crest-desc">Every brand starts with who you are, not what looks good right now.</div></div>
+        <div class="mg-crest-cell"><div class="mg-crest-icon"><i class="ti ti-flame"></i></div><div class="mg-crest-title">Cultural Alchemy</div><div class="mg-crest-desc">Your story, values, and community identity forged into visual systems.</div></div>
+        <div class="mg-crest-cell"><div class="mg-crest-icon"><i class="ti ti-cpu"></i></div><div class="mg-crest-title">AI Accelerated</div><div class="mg-crest-desc">Enterprise-grade AI infrastructure built for small business scale.</div></div>
+        <div class="mg-crest-cell"><div class="mg-crest-icon"><i class="ti ti-world"></i></div><div class="mg-crest-title">Nationwide</div><div class="mg-crest-desc">Based in Douglasville, GA. Serving clients from Atlanta to L.A.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="mg-hr-light">
+
+<!-- ══ SERVICES ═══════════════════════════════════════════════════════════ -->
+<section class="mg-sec mg-dark2" id="mg-services">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;flex-wrap:wrap;gap:14px">
+    <div>
+      <div class="mg-eyebrow mg-eyebrow-dark">What We Build</div>
+      <h2 style="color:#fff;margin:0">Services</h2>
+    </div>
+    <div style="font-size:14px;color:rgba(150,180,255,0.5);max-width:280px;text-align:right;line-height:1.65">Every engagement includes a <strong style="color:#6AABFF">Brand Blueprint</strong> — your visual, voice, and digital roadmap.</div>
+  </div>
+  <div class="mg-grid-3" style="background:rgba(80,140,255,0.06)">
+    <div class="mg-svc"><div class="mg-svc-num">01</div><i class="ti ti-pentagon mg-svc-icon"></i><div class="mg-svc-name">Brand Identity Systems</div><div class="mg-svc-desc">Custom logos, visual systems, and brand guides rooted in your cultural truth. Color psychology, symbolism, and visual balance — with Brand Blueprint delivery.</div><div class="mg-svc-price">From $350</div></div>
+    <div class="mg-svc"><div class="mg-svc-num">02</div><i class="ti ti-world-www mg-svc-icon"></i><div class="mg-svc-name">Web Design + Consulting</div><div class="mg-svc-desc">Platform strategy (Wix, Shopify, WordPress), custom builds, e-commerce, SEO optimization, and performance tuning. Sites that look good and convert.</div><div class="mg-svc-price">Custom Quote</div></div>
+    <div class="mg-svc"><div class="mg-svc-num">03</div><i class="ti ti-cpu mg-svc-icon"></i><div class="mg-svc-name">AI Integration + Agents</div><div class="mg-svc-desc">Custom AI agents, automated workflows, and AI operating systems for your brand. People layer, process layer, infrastructure layer. AI factories — not chatbots.</div><div class="mg-svc-price">Enterprise Pricing</div></div>
+    <div class="mg-svc"><div class="mg-svc-num">04</div><i class="ti ti-tshirt mg-svc-icon"></i><div class="mg-svc-name">Apparel + Print Graphics</div><div class="mg-svc-desc">Custom apparel graphics, wearable storytelling, and print design. Flyers, banners, merch — culture carried into the physical world.</div><div class="mg-svc-price">From $150</div></div>
+    <div class="mg-svc"><div class="mg-svc-num">05</div><i class="ti ti-speakerphone mg-svc-icon"></i><div class="mg-svc-name">Marketing Materials</div><div class="mg-svc-desc">Event flyers, sponsor decks, social media content, eBooks, workbooks, and campaign graphics built for real engagement and conversion.</div><div class="mg-svc-price">From $75</div></div>
+    <div class="mg-svc"><div class="mg-svc-num">06</div><i class="ti ti-brush mg-svc-icon"></i><div class="mg-svc-name">Digital Illustrations + Art</div><div class="mg-svc-desc">Commemorative coins, crests, heraldic marks, and custom illustrations. Unique pieces that tell your story visually and permanently.</div><div class="mg-svc-price">Custom Quote</div></div>
+  </div>
+</section>
+
+<!-- ══ BRAND BLUEPRINT ════════════════════════════════════════════════════ -->
+<div class="mg-blueprint mg-light2">
+  <div class="mg-bp-icon"><i class="ti ti-map"></i></div>
+  <div>
+    <div class="mg-bp-title">Every client receives a Brand Blueprint.</div>
+    <p class="mg-bp-body">Not just a logo file — a complete roadmap for your visual identity, brand voice, and digital presence. <strong style="color:var(--mg-blue)">How to use your brand consistently across every touchpoint</strong> so it compounds in value over time.</p>
+  </div>
+  <a href="https://www.moorgraphix.com/contact-us" target="_blank">
+    <span class="mg-btn mg-btn-primary">Get Your Blueprint</span>
+  </a>
+</div>
+<hr class="mg-hr-light">
+
+<!-- ══ AI SECTION ═════════════════════════════════════════════════════════ -->
+<section class="mg-sec mg-mid" id="mg-ai" style="padding:0">
+  <div class="mg-grid-2" style="padding:0">
+    <div style="padding:60px 44px;border-right:0.5px solid rgba(80,140,255,0.1)">
+      <div class="mg-eyebrow mg-eyebrow-dark">AI Systems</div>
+      <h2 style="color:#fff">We build AI factories.<br/>Not chatbot setups.</h2>
+      <p style="color:rgba(150,180,255,0.55)"><strong style="color:#6AABFF">92% of businesses see zero ROI from AI</strong> — not because the technology failed, but because they bought tools without building structure.</p>
+      <p style="color:rgba(150,180,255,0.55)">Moor Graphix builds your AI the way enterprise organizations do: a <strong style="color:#6AABFF">People Layer</strong>, a <strong style="color:#6AABFF">Process Layer</strong>, and an <strong style="color:#6AABFF">Infrastructure Layer</strong>. The model is just the engine. We build the car.</p>
+      <div class="mg-ai-stat-row">
+        <div class="mg-ai-stat"><div class="mg-ai-stat-n">8+</div><div class="mg-ai-stat-l">Agents Live</div></div>
+        <div class="mg-ai-stat"><div class="mg-ai-stat-n">3</div><div class="mg-ai-stat-l">Ecosystems</div></div>
+        <div class="mg-ai-stat"><div class="mg-ai-stat-n">92%</div><div class="mg-ai-stat-l">Avg Fail Rate</div></div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://www.moorgraphix.com/ai-training" target="_blank"><span class="mg-btn mg-btn-primary">AI Workshops</span></a>
+        <a href="https://www.moorgraphix.com/contact-us" target="_blank"><span class="mg-btn mg-btn-ghost-dark">Book AI Consult</span></a>
+      </div>
+    </div>
+    <div style="padding:60px 44px">
+      <div class="mg-eyebrow mg-eyebrow-dark">Live Agent Stack</div>
+      <div>
+        <div class="mg-os-layer"><div class="mg-os-icon"><i class="ti ti-robot"></i></div><div><div class="mg-os-name">MG Concierge Agent</div><div class="mg-os-desc">Client intake, brand discovery, and project routing</div></div><div class="mg-os-status mg-status-live">Live</div></div>
+        <div class="mg-os-layer"><div class="mg-os-icon"><i class="ti ti-git-merge"></i></div><div><div class="mg-os-name">MAAT Master Orchestrator</div><div class="mg-os-desc">Routes all 8 agents across 3 brand ecosystems</div></div><div class="mg-os-status mg-status-live">Live</div></div>
+        <div class="mg-os-layer"><div class="mg-os-icon"><i class="ti ti-chart-bar"></i></div><div><div class="mg-os-name">Sma Taui — Revenue Intel</div><div class="mg-os-desc">Weekly monetization briefings every Thursday</div></div><div class="mg-os-status mg-status-live">Live</div></div>
+        <div class="mg-os-layer"><div class="mg-os-icon"><i class="ti ti-shirt"></i></div><div><div class="mg-os-name">Amerukhan Culture Shop</div><div class="mg-os-desc">AI concierge for cultural apparel brand</div></div><div class="mg-os-status mg-status-live">Live</div></div>
+        <div class="mg-os-layer"><div class="mg-os-icon"><i class="ti ti-school"></i></div><div><div class="mg-os-name">MAAT Guide + Lab Onboarding</div><div class="mg-os-desc">Educational and incubator platform agents</div></div><div class="mg-os-status mg-status-live">Live</div></div>
+        <div class="mg-os-layer"><div class="mg-os-icon"><i class="ti ti-microphone"></i></div><div><div class="mg-os-name">Sid Ambassador — Voice AI</div><div class="mg-os-desc">AI voice agent trained on Sid's cadence</div></div><div class="mg-os-status mg-status-build">Expanding</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="mg-hr">
+
+<!-- ══ SOCIAL MEDIA ═══════════════════════════════════════════════════════ -->
+<section class="mg-sec mg-light2" id="mg-social">
+  <div class="mg-eyebrow mg-eyebrow-light">Social Media</div>
+  <h2 style="color:var(--mg-text-dark)">Follow the work.</h2>
+  <p style="color:var(--mg-text-mid)">Behind the scenes, client work, AI insights, and Cultural Alchemy in real time.</p>
+  <div class="mg-grid-4" style="margin-top:28px">
+    <a class="mg-social-card" href="https://www.facebook.com/moorthangraphics" target="_blank">
+      <div class="mg-sc-header"><i class="ti ti-brand-facebook mg-sc-icon" style="color:#1877F2"></i><div class="mg-sc-platform">Facebook</div></div>
+      <div class="mg-sc-img"><img src="{{SOCIAL_FACEBOOK}}" alt="Moor Graphix on Facebook"></div>
+      <div class="mg-sc-body"><div class="mg-sc-caption">Event graphics, brand launches, and behind-the-scenes design process.</div><div class="mg-sc-cta"><i class="ti ti-external-link"></i>Follow @moorthangraphics</div></div>
+    </a>
+    <a class="mg-social-card" href="https://www.instagram.com/moorgraphix" target="_blank">
+      <div class="mg-sc-header"><i class="ti ti-brand-instagram mg-sc-icon" style="color:#E1306C"></i><div class="mg-sc-platform">Instagram</div></div>
+      <div class="mg-sc-img"><img src="{{SOCIAL_INSTAGRAM}}" alt="Moor Graphix on Instagram"></div>
+      <div class="mg-sc-body"><div class="mg-sc-caption">Logo reveals, brand systems, apparel graphics, and Cultural Alchemy in motion.</div><div class="mg-sc-cta"><i class="ti ti-external-link"></i>Follow @moorgraphix</div></div>
+    </a>
+    <a class="mg-social-card" href="https://www.linkedin.com/company/moor-graphix" target="_blank">
+      <div class="mg-sc-header"><i class="ti ti-brand-linkedin mg-sc-icon" style="color:#0A66C2"></i><div class="mg-sc-platform">LinkedIn</div></div>
+      <div class="mg-sc-img"><img src="{{SOCIAL_LINKEDIN}}" alt="Moor Graphix on LinkedIn"></div>
+      <div class="mg-sc-body"><div class="mg-sc-caption">AI integration insights, business strategy, and how Cultural Alchemy scales.</div><div class="mg-sc-cta"><i class="ti ti-external-link"></i>Follow Moor Graphix</div></div>
+    </a>
+    <a class="mg-social-card" href="https://www.twitter.com/moorgraphix" target="_blank">
+      <div class="mg-sc-header"><i class="ti ti-brand-x mg-sc-icon" style="color:#111"></i><div class="mg-sc-platform">X / Twitter</div></div>
+      <div class="mg-sc-img"><img src="{{SOCIAL_TWITTER}}" alt="Moor Graphix on Twitter"></div>
+      <div class="mg-sc-body"><div class="mg-sc-caption">Design thinking, AI systems takes, and real talk on brand strategy for small business.</div><div class="mg-sc-cta"><i class="ti ti-external-link"></i>Follow @moorgraphix</div></div>
+    </a>
+  </div>
+</section>
+<hr class="mg-hr-light">
+
+<!-- ══ TESTIMONIALS ═══════════════════════════════════════════════════════ -->
+<section class="mg-sec mg-light" id="mg-testimonials">
+  <div class="mg-eyebrow mg-eyebrow-light">Client Reviews</div>
+  <h2 style="color:var(--mg-text-dark)">What clients say.</h2>
+  <div class="mg-grid-3" style="margin-top:28px">
+    <div class="mg-test-card"><div class="mg-test-stars">★★★★★</div><div class="mg-test-quote">"Moor Graphix is AWESOME! Timely, respectful, professional and excellent at their craft. I HIGHLY recommend Moor Graphix!"</div><div class="mg-test-name">William Glenn Bean</div><div class="mg-test-role">Client</div></div>
+    <div class="mg-test-card"><div class="mg-test-stars">★★★★★</div><div class="mg-test-quote">"Sid Washington successfully took what was a vision onto fruition. It is exactly what I wanted and so much more! I couldn't be more pleased."</div><div class="mg-test-name">Maria Furman</div><div class="mg-test-role">Client</div></div>
+    <div class="mg-test-card"><div class="mg-test-stars">★★★★★</div><div class="mg-test-quote">"Sid is ultra-responsive and quick — two qualities I look for and value. Integrity, knowledge, and quality craftsmanship. One-stop shop."</div><div class="mg-test-name">Wix Marketplace Client</div><div class="mg-test-role">Verified Review</div></div>
+    <div class="mg-test-card"><div class="mg-test-stars">★★★★★</div><div class="mg-test-quote">"Sid is a polite, competent, quick, and talented man who fixed my website in no time and did a great job!"</div><div class="mg-test-name">Sasscer Hill</div><div class="mg-test-role">Author</div></div>
+    <div class="mg-test-card"><div class="mg-test-stars">★★★★★</div><div class="mg-test-quote">"I love my website. Moor Graphix did a good job. Good communication, answers questions fast. I highly recommend."</div><div class="mg-test-name">Verified Client</div><div class="mg-test-role">Wix Marketplace</div></div>
+    <div class="mg-test-card"><div class="mg-test-stars">★★★★★</div><div class="mg-test-quote">"Easy and professional to work with. Understood my ideas and got them put together in a wonderful manner. Felt like talking to a friend."</div><div class="mg-test-name">Verified Client</div><div class="mg-test-role">Wix Marketplace</div></div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══════════════════════════════════════════════════════════ -->
+<section class="mg-final-cta mg-red" id="mg-contact">
+  <div class="mg-final-cta-eyebrow">Let's Build Your Digital Legacy</div>
+  <h2>Design is more than decoration.<br/><em>It's direction.</em></h2>
+  <p class="mg-final-cta-sub">Every project is an opportunity to elevate your brand, inspire your audience, and design your future. Start today.</p>
+  <div class="mg-final-cta-btns">
+    <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art" target="_blank"><span class="mg-btn mg-btn-primary" style="font-size:13px;padding:16px 32px">Book Free Consultation</span></a>
+    <a href="https://www.moorgraphix.com/portfolio" target="_blank"><span class="mg-btn mg-btn-ghost-dark" style="font-size:13px;padding:16px 28px">View Portfolio →</span></a>
+    <a href="https://www.moorgraphix.com/services" target="_blank"><span class="mg-btn mg-btn-ghost-dark" style="font-size:13px;padding:16px 28px">All Services →</span></a>
+  </div>
+  <div class="mg-cta-contact">
+    <div class="mg-cta-info"><i class="ti ti-phone"></i><a href="tel:4704994407">(470) 499-4407</a></div>
+    <div class="mg-cta-info"><i class="ti ti-mail"></i><a href="mailto:sidart@moorgraphix.com">sidart@moorgraphix.com</a></div>
+    <div class="mg-cta-info"><i class="ti ti-map-pin"></i>Douglasville, GA — Serving Nationwide</div>
+  </div>
+</section>
+
+</div><!-- .mg-wrap -->
