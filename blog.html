@@ -114,6 +114,18 @@
 .bl-card-placeholder.ph-ai{background:linear-gradient(135deg,#001830,#1050c0)}
 .bl-card-placeholder.ph-culture{background:linear-gradient(135deg,#001a10,#107850)}
 .bl-card-placeholder.ph-design{background:linear-gradient(135deg,#1a1000,#a06000)}
+.bl-card-placeholder.ph-seo{background:linear-gradient(135deg,#001830,#1050c0)}
+.bl-card-placeholder.ph-business{background:linear-gradient(135deg,#001a10,#107850)}
+.bl-card-placeholder.ph-organizing{background:linear-gradient(135deg,#00151a,#006080)}
+.bl-card-placeholder.ph-health{background:linear-gradient(135deg,#1a001a,#900040)}
+.bl-card-placeholder.ph-spotlight{background:linear-gradient(135deg,#1a1200,#806000)}
+/* ── Pagination ── */
+.bl-pagination{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:36px 0 8px}
+.pg-btn{background:transparent;border:1px solid rgba(48,96,208,0.22);color:var(--text-mid);font-size:11px;font-weight:700;letter-spacing:0.1em;padding:8px 14px;border-radius:4px;cursor:pointer;transition:all 0.22s;font-family:'Syne',sans-serif;min-width:40px}
+.pg-btn:hover:not(:disabled){background:rgba(48,96,208,0.12);border-color:var(--blue);color:var(--blue)}
+.pg-btn.pg-active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 4px 14px rgba(48,96,208,0.3)}
+.pg-btn:disabled{opacity:0.35;cursor:not-allowed}
+.pg-prev,.pg-next{letter-spacing:0.06em;padding:8px 18px}
 
 /* Category badge — sits above the image, never clipped */
 .bl-card-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:8px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;padding:4px 10px;border-radius:20px;backdrop-filter:blur(8px);white-space:nowrap}
@@ -354,7 +366,7 @@
   <!-- Featured Post -->
   <div class="bl-featured" data-cat="business">
     <div class="bl-feat-img">
-      <img src="assets/images/blog/spirit-airlines.svg" alt="Spirit Airlines collapse — essay on employee ownership and brand equity by Sid Washington">
+      <img src="assets/images/blog/spirit-collapse.jpg" alt="Spirit Airlines collapse — essay on employee ownership and brand equity by Sid Washington">
     </div>
     <div class="bl-feat-body">
       <div class="bl-feat-tag">Running Businesses</div>
@@ -446,7 +458,7 @@
     <!-- Post 6 — Running Businesses -->
     <div class="bl-card" data-cat="business">
       <div class="bl-card-img">
-        <img src="assets/images/blog/spirit-airlines.svg" alt="Spirit Airlines collapse — lessons in employee ownership and small business brand equity">
+        <img src="assets/images/blog/spirit-collapse.jpg" alt="Spirit Airlines collapse — lessons in employee ownership and small business brand equity">
         <span class="bl-card-badge bb-business">Running Businesses</span>
       </div>
       <div class="bl-card-body">
@@ -458,7 +470,379 @@
       </div>
     </div>
 
+
+    <!-- ═══ WIXPAGE 5 — Blog Page 2 ═══ -->
+
+    <!-- Card 7 -->
+    <div class="bl-card" data-cat="spotlight">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-spotlight"><span>🌆</span></div>
+        <span class="bl-card-badge bb-spotlight">Entrepreneur Spotlight</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-spotlight"><span>Entrepreneur Spotlight</span></div>
+        <div class="bl-card-title">From Harlem to Douglasville: Why Sid Washington Chose to Build Here</div>
+        <p class="bl-card-excerpt">The Harlem Renaissance wasn't just art — it was a master class in community-driven brand activation. Here's why that lineage matters in Douglas County, and what it means to build culture intentionally in a place people overlook.</p>
+        <div class="bl-card-meta"><span>March 2025 · Sid Washington</span><span>6 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/from-harlem-to-douglasville-why-sid-washington-chose-to-build-here" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="bl-card" data-cat="business">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-business"><span>📱</span></div>
+        <span class="bl-card-badge bb-business">Running Businesses</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-business"><span>Running Businesses</span></div>
+        <div class="bl-card-title">Social Media Business Page Creation: A Help Sheet for Small Business Owners</div>
+        <p class="bl-card-excerpt">Setting up a business social presence shouldn't be a mystery. This practical help sheet walks you through exactly what to fill in, what to avoid, and how to position your brand from day one on every major platform.</p>
+        <div class="bl-card-meta"><span>January 2025 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/social-media-business-page-creation-help-sheet" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand"><span>💎</span></div>
+        <span class="bl-card-badge bb-brand">Branding</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
+        <div class="bl-card-title">The True Value of a Professional Logo: Why Quality Design Matters</div>
+        <p class="bl-card-excerpt">That $5 logo is costing you more than you think. A professional logo isn't just an image — it's a first impression, a trust signal, and a long-term brand asset. Here's the full economic and strategic case for investing in quality design.</p>
+        <div class="bl-card-meta"><span>November 2024 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/the-true-value-of-a-professional-logo-why-quality-design-matters" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="bl-card" data-cat="seo">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-seo"><span>📲</span></div>
+        <span class="bl-card-badge bb-seo">SEO</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-seo"><span>SEO</span></div>
+        <div class="bl-card-title">Is Your Website Prepared for the Mobile Era?</div>
+        <p class="bl-card-excerpt">Over 60% of web traffic now comes from mobile devices — and Google ranks mobile-first. If your site isn't optimized for small screens, you're invisible to most of your audience. Here's how to audit and fix your mobile experience.</p>
+        <div class="bl-card-meta"><span>October 2024 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/is-your-website-prepared-for-the-mobile-era" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="bl-card" data-cat="spotlight">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-spotlight"><span>🏔️</span></div>
+        <span class="bl-card-badge bb-spotlight">Entrepreneur Spotlight</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-spotlight"><span>Entrepreneur Spotlight</span></div>
+        <div class="bl-card-title">Entrepreneurship Unveiled: Navigating the Path to Small Business Success</div>
+        <p class="bl-card-excerpt">The entrepreneurship journey looks different from the inside than it does on Instagram. Here's an honest breakdown of what it takes — the mental game, cash realities, and the strategic pivots that separate businesses that last from those that don't.</p>
+        <div class="bl-card-meta"><span>August 2024 · Sid Washington</span><span>7 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/entrepreneurship-unveiled-navigating-the-path-to-small-business-success" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="bl-card" data-cat="business">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-business"><span>🚀</span></div>
+        <span class="bl-card-badge bb-business">Running Businesses</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-business"><span>Running Businesses</span></div>
+        <div class="bl-card-title">Essential Steps to Starting a Business: A Comprehensive Guide</div>
+        <p class="bl-card-excerpt">Starting a business is less about inspiration and more about execution. This guide walks you through every foundational step — from validating your idea to registering your entity to launching with a strategy, not just hope.</p>
+        <div class="bl-card-meta"><span>June 2024 · Sid Washington</span><span>8 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/essential-steps-to-starting-a-business-a-comprehensive-guide" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- ═══ WIXPAGE 4 — Blog Page 3 ═══ -->
+
+    <!-- Card 13 -->
+    <div class="bl-card" data-cat="health">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-health"><span>🌿</span></div>
+        <span class="bl-card-badge bb-health">Health</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-health"><span>Health</span></div>
+        <div class="bl-card-title">The Benefits of Mullein and My Battles with Asthma</div>
+        <p class="bl-card-excerpt">Mullein has been used as a respiratory herb for centuries. After years of asthma medication cycles, Sid Washington started exploring the research — and what changed when the plant entered the picture.</p>
+        <div class="bl-card-meta"><span>April 2024 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/the-benefits-of-mullein-and-my-battles-with-asthma" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 14 -->
+    <div class="bl-card" data-cat="business">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-business"><span>🛍️</span></div>
+        <span class="bl-card-badge bb-business">Running Businesses</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-business"><span>Running Businesses</span></div>
+        <div class="bl-card-title">Campaign Ideas: From Black Friday to Black History Month</div>
+        <p class="bl-card-excerpt">The Q4 marketing window is the biggest opportunity small businesses overlook. Here are campaign frameworks that connect Black Friday urgency to Black History Month resonance — strategic, culturally informed, and built to convert.</p>
+        <div class="bl-card-meta"><span>November 2023 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/campaign-ideas-for-black-friday-to-black-history-month" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 15 -->
+    <div class="bl-card" data-cat="spotlight">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-spotlight"><span>👨‍👩‍👧‍👦</span></div>
+        <span class="bl-card-badge bb-spotlight">Entrepreneur Spotlight</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-spotlight"><span>Entrepreneur Spotlight</span></div>
+        <div class="bl-card-title">The Importance of Growing Family Businesses</div>
+        <p class="bl-card-excerpt">Family businesses are the backbone of local economies and generational wealth. Here's why investing in their growth — through better branding, operational systems, and succession planning — isn't just good business, it's community infrastructure.</p>
+        <div class="bl-card-meta"><span>October 2023 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/the-importance-of-growing-family-businesses" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 16 -->
+    <div class="bl-card" data-cat="business">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-business"><span>🌐</span></div>
+        <span class="bl-card-badge bb-business">Running Businesses</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-business"><span>Running Businesses</span></div>
+        <div class="bl-card-title">10 Reasons to Build Your Website Using Wix</div>
+        <p class="bl-card-excerpt">Not every business needs a custom-coded site from day one. Wix offers a powerful, flexible platform for small businesses ready to establish a professional online presence without developer dependency. Here are 10 reasons to start there.</p>
+        <div class="bl-card-meta"><span>October 2023 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/10-reasons-to-build-your-website-using-wix" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 17 -->
+    <div class="bl-card" data-cat="organizing">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-organizing"><span>🗂️</span></div>
+        <span class="bl-card-badge bb-organizing">Organizing</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-organizing"><span>Organizing</span></div>
+        <div class="bl-card-title">Organizing Your Business Documents: A Step-by-Step Guide</div>
+        <p class="bl-card-excerpt">Disorganized documentation doesn't just slow you down — it creates legal risk, tax headaches, and credibility problems. This step-by-step guide will save you hours every quarter and prepare your business for growth and audits.</p>
+        <div class="bl-card-meta"><span>September 2023 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/organizing-your-business-documents-a-step-by-step-guide" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 18 -->
+    <div class="bl-card" data-cat="seo">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-seo"><span>🔗</span></div>
+        <span class="bl-card-badge bb-seo">SEO</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-seo"><span>SEO</span></div>
+        <div class="bl-card-title">Backlinks and the Forward-Thinking Business Owner</div>
+        <p class="bl-card-excerpt">Backlinks are one of the most powerful — and most misunderstood — elements of SEO. Here's what small business owners need to know about link authority, earning quality backlinks without black-hat tactics, and why it matters long-term.</p>
+        <div class="bl-card-meta"><span>July 2023 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/backlinks-and-the-forward-thinking-business-owner" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- ═══ WIXPAGE 3 — Blog Page 4 ═══ -->
+
+    <!-- Card 19 -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand"><span>📁</span></div>
+        <span class="bl-card-badge bb-brand">Branding</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
+        <div class="bl-card-title">What Files to Expect When Hiring a Graphic Designer</div>
+        <p class="bl-card-excerpt">Logo? Check. But what about the SVG, EPS, PNG, and PDF versions? What's a brand guide, and why do you need one? This breakdown tells small business owners exactly what deliverables to expect — and demand — from a professional design engagement.</p>
+        <div class="bl-card-meta"><span>June 2023 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/what-files-to-expect-when-hiring-a-graphic-designer" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 20 -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand"><span>✨</span></div>
+        <span class="bl-card-badge bb-brand">Branding</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
+        <div class="bl-card-title">Revealing the Keys to Making Your Brand Stand Out</div>
+        <p class="bl-card-excerpt">Standing out in a saturated market requires more than a good logo. The brands that cut through have a clear point of view, a consistent voice, and a deep understanding of the cultural codes their audience lives by. Here are the keys.</p>
+        <div class="bl-card-meta"><span>May 2023 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/revealing-the-keys-to-making-your-brand-stand-out" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 21 -->
+    <div class="bl-card" data-cat="seo">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-seo"><span>🔮</span></div>
+        <span class="bl-card-badge bb-seo">SEO</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-seo"><span>SEO</span></div>
+        <div class="bl-card-title">The Future of Website Design: Exploring What Lies Ahead</div>
+        <p class="bl-card-excerpt">AI-generated layouts, voice interfaces, and immersive 3D web experiences — the next wave of website design is already here for early adopters. What small businesses and creative studios need to know to stay ahead of the curve.</p>
+        <div class="bl-card-meta"><span>May 2023 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/the-future-of-website-design-exploring-what-lies-ahead" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 22 -->
+    <div class="bl-card" data-cat="business">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-business"><span>💵</span></div>
+        <span class="bl-card-badge bb-business">Running Businesses</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-business"><span>Running Businesses</span></div>
+        <div class="bl-card-title">MONEY — The Benjamins, The Jones, and You</div>
+        <p class="bl-card-excerpt">Financial literacy isn't a luxury for creative business owners — it's survival. This breakdown covers pricing your work, separating personal and business finances, understanding cash flow, and building the money mindset your business actually needs.</p>
+        <div class="bl-card-meta"><span>March 2023 · Sid Washington</span><span>6 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/money-the-benjamins-the-jones-and-you" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 23 -->
+    <div class="bl-card" data-cat="organizing">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-organizing"><span>🧾</span></div>
+        <span class="bl-card-badge bb-organizing">Organizing</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-organizing"><span>Organizing</span></div>
+        <div class="bl-card-title">Small Business and Taxes: What You Need to Know</div>
+        <p class="bl-card-excerpt">Taxes for the self-employed creative are not taught in design school — but they should be. This guide covers quarterly estimates, home office deductions, contractor obligations, and the most common mistakes small business owners make at tax time.</p>
+        <div class="bl-card-meta"><span>March 2023 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/small-business-and-taxes" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 24 -->
+    <div class="bl-card" data-cat="seo">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-seo"><span>🔑</span></div>
+        <span class="bl-card-badge bb-seo">SEO</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-seo"><span>SEO</span></div>
+        <div class="bl-card-title">9 Methods to Earn Quality Backlinks to Your Website</div>
+        <p class="bl-card-excerpt">Not all backlinks are created equal — and shortcuts get you penalized. Here are nine legitimate, relationship-based methods to build a backlink profile that boosts your domain authority and drives real referral traffic to your business.</p>
+        <div class="bl-card-meta"><span>January 2023 · Sid Washington</span><span>6 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/9-methods-to-earn-quality-backlinks-to-your-website" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- ═══ WIXPAGE 2 + 1 — Blog Page 5 ═══ -->
+
+    <!-- Card 25 -->
+    <div class="bl-card" data-cat="seo">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-seo"><span>📈</span></div>
+        <span class="bl-card-badge bb-seo">SEO</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-seo"><span>SEO</span></div>
+        <div class="bl-card-title">8 Reasons Why SEO Helps Your Business</div>
+        <p class="bl-card-excerpt">Search engine optimization isn't just for tech companies — it's the most cost-effective long-game marketing strategy available to small businesses. Here are eight concrete reasons to invest in SEO before spending another dollar on ads.</p>
+        <div class="bl-card-meta"><span>July 2023 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/8-reasons-seo-helps-your-business" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 26 -->
+    <div class="bl-card" data-cat="seo">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-seo"><span>✍️</span></div>
+        <span class="bl-card-badge bb-seo">SEO</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-seo"><span>SEO</span></div>
+        <div class="bl-card-title">Great Content Is Your Best Sales Tool</div>
+        <p class="bl-card-excerpt">The best salespeople don't sell — they educate, entertain, and earn trust. Content that answers real questions, tells real stories, and demonstrates real expertise converts at a higher rate than any ad spend. Here's how to build a content strategy that sells.</p>
+        <div class="bl-card-meta"><span>July 2023 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/great-content-best-sales-tool" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 27 -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand"><span>📢</span></div>
+        <span class="bl-card-badge bb-brand">Branding</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
+        <div class="bl-card-title">Copywriting and Branding Essentials</div>
+        <p class="bl-card-excerpt">Copywriting is the voice of your brand strategy — the words that either connect with your audience or get ignored. Here's the breakdown of copy vs. content, how to write in your brand voice, and what good copy actually accomplishes.</p>
+        <div class="bl-card-meta"><span>December 2021 · Sid Washington</span><span>5 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/copywriting-and-branding-essentials" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 28 -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand"><span>💰</span></div>
+        <span class="bl-card-badge bb-brand">Branding</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
+        <div class="bl-card-title">What's My Logo Worth?</div>
+        <p class="bl-card-excerpt">Logo pricing confuses clients and designers alike. This breakdown examines what goes into professional logo pricing — time, expertise, research, revisions, and the true cost of getting it wrong — so you can have an informed conversation about value.</p>
+        <div class="bl-card-meta"><span>November 2023 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/whats-my-logos-worth" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 29 -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand"><span>🎨</span></div>
+        <span class="bl-card-badge bb-brand">Branding</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
+        <div class="bl-card-title">What's in Your Logo?</div>
+        <p class="bl-card-excerpt">A logo is never just an image. It's a compressed symbol that carries your brand's promise, personality, and positioning. A breakdown of the visual elements that make a logo work — typography, iconography, color, and the negative space between them.</p>
+        <div class="bl-card-meta"><span>November 2023 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/whats-in-your-logo" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Card 30 -->
+    <div class="bl-card" data-cat="business">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-business"><span>🏢</span></div>
+        <span class="bl-card-badge bb-business">Running Businesses</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-business"><span>Running Businesses</span></div>
+        <div class="bl-card-title">Why You Need a Website for Your Business</div>
+        <p class="bl-card-excerpt">Social media profiles are rented land. A website is owned property. The definitive case for why every small business — no matter how active on social — needs a professionally designed, SEO-optimized website that works around the clock.</p>
+        <div class="bl-card-meta"><span>October 2021 · Sid Washington</span><span>4 min read</span></div>
+        <a href="https://www.moorgraphix.com/post/why-you-need-a-website-1" target="_blank" rel="noopener noreferrer" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
   </div><!-- /#blogGrid -->
+  <!-- Pagination -->
+  <div id="blogPagination" class="bl-pagination"></div>
+
 
   <!-- Empty state -->
   <div class="bl-empty" id="blogEmpty">
@@ -511,30 +895,61 @@
 
 <script>
 // ── PARTICLE BG ──
-// ── BLOG FILTER ──
-const filters=document.querySelectorAll('.bl-filter');
-const cards=document.querySelectorAll('#blogGrid .bl-card');
-const featured=document.querySelector('.bl-featured');
-const emptyState=document.getElementById('blogEmpty');
+// ── BLOG FILTER + PAGINATION ──
+const CARDS_PER_PAGE = 6;
+let currentPage = 1;
+let currentCat = 'all';
 
-filters.forEach(btn=>{
-  btn.addEventListener('click',function(){
-    filters.forEach(b=>b.classList.remove('active'));
+const filters = document.querySelectorAll('.bl-filter');
+const allCards = Array.from(document.querySelectorAll('#blogGrid .bl-card'));
+const featured = document.querySelector('.bl-featured');
+const emptyState = document.getElementById('blogEmpty');
+const paginationEl = document.getElementById('blogPagination');
+
+function getFiltered() {
+  return currentCat === 'all' ? allCards : allCards.filter(c => c.dataset.cat === currentCat);
+}
+
+function renderPagination(total, page) {
+  const pages = Math.ceil(total / CARDS_PER_PAGE);
+  if (pages <= 1) { paginationEl.innerHTML = ''; return; }
+  let h = '';
+  h += `<button class="pg-btn pg-prev"${page===1?' disabled':''} onclick="goPage(${page-1})">← Prev</button>`;
+  for (let i = 1; i <= pages; i++) {
+    h += `<button class="pg-btn${i===page?' pg-active':''}" onclick="goPage(${i})">${i}</button>`;
+  }
+  h += `<button class="pg-btn pg-next"${page===pages?' disabled':''} onclick="goPage(${page+1})">Next →</button>`;
+  paginationEl.innerHTML = h;
+}
+
+function showPage(page) {
+  currentPage = page;
+  const filtered = getFiltered();
+  const start = (page - 1) * CARDS_PER_PAGE;
+  allCards.forEach(c => c.style.display = 'none');
+  filtered.slice(start, start + CARDS_PER_PAGE).forEach(c => c.style.display = 'flex');
+  renderPagination(filtered.length, page);
+  emptyState.style.display = filtered.length === 0 ? 'block' : 'none';
+}
+
+function goPage(page) {
+  showPage(page);
+  document.querySelector('.bl-grid-section').scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+filters.forEach(btn => {
+  btn.addEventListener('click', function() {
+    filters.forEach(b => b.classList.remove('active'));
     this.classList.add('active');
-    const cat=this.dataset.cat;
-    let visible=0;
-    cards.forEach(card=>{
-      const show=cat==='all'||card.dataset.cat===cat;
-      card.style.display=show?'flex':'none';
-      if(show) visible++;
-    });
-    if(featured){
-      const showFeat=cat==='all'||featured.dataset.cat===cat;
-      featured.style.display=showFeat?'grid':'none';
+    currentCat = this.dataset.cat;
+    if (featured) {
+      featured.style.display = (currentCat === 'all' || featured.dataset.cat === currentCat) ? 'grid' : 'none';
     }
-    emptyState.style.display=visible===0?'block':'none';
+    showPage(1);
   });
 });
+
+showPage(1);
 
 // ── NEWSLETTER FORM ──
 const nlForm=document.getElementById('nlForm');
