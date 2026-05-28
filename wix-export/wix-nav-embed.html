@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  MOOR GRAPHIX — Wix Nav Embed                                   ║
+  ║  File: wix-export/wix-nav-embed.html                            ║
+  ║                                                                  ║
+  ║  Drop this into a Wix HTML iFrame widget.                       ║
+  ║  Set the widget height to 108px (72px nav + 36px ticker).       ║
+  ║                                                                  ║
+  ║  BEFORE PUBLISHING — update the logo src on line ~105:          ║
+  ║    Replace the placeholder URL with the actual hosted image     ║
+  ║    URL from your Wix Media Manager or moorgraphix.com.          ║
+  ║                                                                  ║
+  ║  No JavaScript required. No external CSS files. Self-contained. ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moor Graphix — Nav</title>
+
+<!-- Fonts + Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+
+<style>
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #020408;
+  font-family: 'Syne', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── NAV ── */
+.nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 36px;
+  height: 72px;
+  background: rgba(2, 4, 8, 0.93);
+  border-bottom: 0.5px solid rgba(100, 160, 255, 0.12);
+}
+
+/* Logo lockup */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.nav-logo-text .logo-word {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.nav-logo-text .logo-sub {
+  font-size: 8.5px;
+  letter-spacing: 0.36em;
+  color: rgba(100, 160, 255, 0.45);
+  text-transform: uppercase;
+  margin-top: 3px;
+  white-space: nowrap;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+  color: rgba(100, 160, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 4px 0;
+  position: relative;
+}
+
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #6AABFF;
+  transition: width 0.3s;
+}
+
+.nav-links li:hover {
+  color: #6AABFF;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* CTA pill button */
+.nav-pill {
+  background: rgba(80, 140, 255, 0.15);
+  border: 0.5px solid rgba(80, 140, 255, 0.4);
+  color: #6AABFF;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.25s;
+  white-space: nowrap;
+  font-family: 'Syne', sans-serif;
+  text-transform: uppercase;
+}
+
+.nav-pill:hover {
+  background: rgba(80, 140, 255, 0.28);
+}
+
+/* Pulsing dot (used in badge + nav pill) */
+.bp {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6AABFF;
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.6); }
+}
+
+/* ── TICKER BAR ── */
+.ticker-bar {
+  overflow: hidden;
+  background: #04060F;
+  border-bottom: 1px solid rgba(80, 140, 255, 0.12);
+  padding: 9px 0;
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.ticker-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  color: #3060D0;
+  text-transform: uppercase;
+  padding: 0 20px;
+  white-space: nowrap;
+  border-right: 0.5px solid rgba(80, 140, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.ticker-inner {
+  overflow: hidden;
+  flex: 1;
+}
+
+.ticker-track {
+  display: flex;
+  animation: tick 60s linear infinite;
+  width: max-content;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tick {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.tick-item {
+  font-size: 12px;
+  color: rgba(150, 180, 255, 0.55);
+  white-space: nowrap;
+  padding: 0 32px;
+  border-right: 0.5px solid rgba(80, 140, 255, 0.1);
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  .nav {
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    display: none; /* Wix handles mobile nav separately */
+  }
+
+  .nav-pill {
+    padding: 8px 14px;
+    font-size: 9.5px;
+  }
+
+  .nav-logo-text .logo-sub {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .nav {
+    padding: 10px 16px;
+    height: 60px;
+  }
+
+  .nav-logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-logo-text .logo-word {
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     NAV BAR — 72px tall
+     Logo src: replace with your hosted image URL.
+     To get the URL: upload the file to Wix Media Manager,
+     right-click the image → Copy URL.
+     ══════════════════════════════════════════════════════ -->
+<nav class="nav">
+
+  <!-- Logo + Studio name -->
+  <div class="nav-logo">
+    <img
+      src="https://static.wixstatic.com/media/REPLACE_WITH_YOUR_WIX_MEDIA_URL.png"
+      alt="Moor Graphix Logo"
+    >
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+
+  <!-- Navigation links -->
+  <ul class="nav-links">
+    <li><a href="https://www.moorgraphix.com/#work">Work</a></li>
+    <li><a href="https://www.moorgraphix.com/services">Services</a></li>
+    <li><a href="https://www.moorgraphix.com/#videos">Videos</a></li>
+    <li><a href="https://www.moorgraphix.com/ai-training">AI Lab</a></li>
+    <li><a href="https://www.moorgraphix.com/ai-training">Workshops</a></li>
+    <li><a href="https://www.moorgraphix.com/#about">About</a></li>
+    <li><a href="https://www.moorgraphix.com/#contact">Contact</a></li>
+  </ul>
+
+  <!-- Book Free Consult CTA -->
+  <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art">
+    <div class="nav-pill">
+      <div class="bp"></div>
+      Book Free Consult
+    </div>
+  </a>
+
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     TICKER BAR — 36px tall
+     Items are duplicated to create a seamless loop.
+     The animation shifts exactly -50% (to the midpoint),
+     then jumps back to 0 — invisible because the second
+     half is identical to the first.
+     ══════════════════════════════════════════════════════ -->
+<div class="ticker-bar">
+  <div class="ticker-label">Live Work</div>
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <!-- First copy -->
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+      <!-- Duplicate copy — required for seamless infinite scroll -->
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
