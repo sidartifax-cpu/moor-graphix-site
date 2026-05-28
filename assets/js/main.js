@@ -106,6 +106,7 @@ showcaseItems.forEach(item=>{
 // ── PORTFOLIO GRID ──
 const wgf=document.getElementById('wgf');
 let currentFilter='all';
+const PAGE_SIZE=9; // cards shown per load
 
 // Per-category Tabler icon + human-readable label
 const CAT_CFG={
@@ -148,7 +149,8 @@ function buildGrid(cat){
 
     card.innerHTML=
       '<div class="wg-card-top">'+
-        '<img class="wg-card-img" src="" data-src="'+item.src+'" alt="'+item.name+'">'+
+        '<img class="wg-card-img" src="'+item.src+'" loading="lazy" alt="'+item.name+'">'+
+        '<div class="wg-card-img-ov"></div>'+
         '<div class="wg-card-monogram">'+
           '<div class="wg-card-initials">'+mono+'</div>'+
           '<div class="wg-card-cat-icon"><i class="ti '+cfg.icon+'"></i></div>'+
@@ -165,17 +167,62 @@ function buildGrid(cat){
         '<div class="wg-card-snippet">'+item.desc+'</div>'+
       '</div>';
 
-    // Lazy-load image on first hover only
-    card.addEventListener('mouseenter',function(){
-      const img=this.querySelector('.wg-card-img');
-      if(!img.getAttribute('src')) img.src=img.dataset.src;
-    },{passive:true});
-
     card.addEventListener('click',()=>openModal(origIdx,cat));
     wgf.appendChild(card);
-    cardIO.observe(card);
+    // Pagination: hide cards beyond PAGE_SIZE on "all" filter load
+    if(cat==='all'&&i>=PAGE_SIZE){
+      card.classList.add('hidden-project');
+      card.style.display='none';
+    } else {
+      cardIO.observe(card);
+    }
   });
+  updateLoadMore(filtered.length,cat);
 }
+
+// ── LOAD MORE ──
+function updateLoadMore(total,cat){
+  const wrap=document.getElementById('portLoadMoreWrap');
+  const btn=document.getElementById('portLoadMore');
+  if(!wrap||!btn) return;
+  if(cat!=='all'){wrap.style.display='none';return;}
+  wrap.style.display='block';
+  const hiddenCount=wgf.querySelectorAll('.hidden-project').length;
+  if(hiddenCount===0){
+    btn.textContent='All Work Shown';
+    btn.disabled=true;
+  } else {
+    btn.innerHTML='<i class="ti ti-chevrons-down"></i>Load More Work';
+    btn.disabled=false;
+  }
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  const btn=document.getElementById('portLoadMore');
+  if(!btn) return;
+  btn.addEventListener('click',function(){
+    const hidden=[...wgf.querySelectorAll('.hidden-project')];
+    const batch=hidden.slice(0,PAGE_SIZE);
+    batch.forEach(function(card,i){
+      card.classList.remove('hidden-project');
+      card.style.display='';
+      card.style.setProperty('--entry-delay',(i*0.07)+'s');
+      void card.offsetWidth; // force reflow for transition
+      card.classList.add('in-view');
+      // Load image now
+      const img=card.querySelector('.wg-card-img');
+      if(img&&!img.complete) img.loading='eager';
+    });
+    const stillHidden=wgf.querySelectorAll('.hidden-project').length;
+    if(stillHidden===0){
+      btn.textContent='All Work Shown';
+      btn.disabled=true;
+    }
+    // Scroll first new card into view
+    if(batch.length) batch[0].scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+});
+
 buildGrid('all');
 
 // Filter — click, filter, scroll to top of portfolio
@@ -185,7 +232,6 @@ document.querySelectorAll('.port-filter').forEach(btn=>{
     this.classList.add('active');
     currentFilter=this.dataset.cat;
     buildGrid(currentFilter);
-    // Scroll portfolio section into view
     document.getElementById('portfolio').scrollIntoView({behavior:'smooth',block:'start'});
   });
 });

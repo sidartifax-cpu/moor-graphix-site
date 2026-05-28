@@ -172,16 +172,18 @@ p{font-size:clamp(15px,1.3vw,17px);line-height:1.85;margin-bottom:14px}
 .wg-card[data-cat="web_design"] .wg-card-top{background:linear-gradient(135deg,#001830,#1050c0)}
 .wg-card[data-cat="event_print"] .wg-card-top{background:linear-gradient(135deg,#001a10,#107850)}
 .wg-card[data-cat="campaign"] .wg-card-top{background:linear-gradient(135deg,#1a0010,#900040)}
-/* Image overlay — lazy-loaded on first hover, renders at 0.15 opacity */
-.wg-card-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.4s ease 0.2s;z-index:1}
-.wg-card:hover .wg-card-img{opacity:0.15}
+/* Image: visible by default; dark overlay controls contrast state */
+.wg-card-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;z-index:1}
+/* Overlay: rgba(13,22,40,0.15) default — image clearly visible; rgba(13,22,40,0.75) hover — info readable */
+.wg-card-img-ov{position:absolute;inset:0;background:rgba(13,22,40,0.15);z-index:2;transition:background 0.4s ease;pointer-events:none}
+.wg-card:hover .wg-card-img-ov{background:rgba(13,22,40,0.75)}
 /* Monogram (initials + icon) */
-.wg-card-monogram{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;transition:opacity 0.3s,transform 0.35s}
+.wg-card-monogram{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;transition:opacity 0.3s,transform 0.35s}
 .wg-card:hover .wg-card-monogram{opacity:0;transform:scale(0.82)}
 .wg-card-initials{font-family:'DM Serif Display',serif;font-style:italic;font-size:80px;line-height:1;color:rgba(255,255,255,0.9);letter-spacing:-2px;text-shadow:0 4px 24px rgba(0,0,0,0.4)}
 .wg-card-cat-icon{font-size:20px;color:rgba(255,255,255,0.45);margin-top:10px}
-/* Hover overlay: full description + View Details */
-.wg-card-hover-info{position:absolute;bottom:0;left:0;right:0;padding:20px 22px;z-index:3;opacity:0;transform:translateY(10px);transition:opacity 0.3s ease 0.18s,transform 0.3s ease 0.18s;background:linear-gradient(transparent,rgba(0,0,0,0.75) 40%)}
+/* Hover info: slides up over darkened overlay */
+.wg-card-hover-info{position:absolute;bottom:0;left:0;right:0;padding:20px 22px;z-index:4;opacity:0;transform:translateY(10px);transition:opacity 0.3s ease 0.18s,transform 0.3s ease 0.18s;background:linear-gradient(transparent,rgba(0,0,0,0.75) 40%)}
 .wg-card:hover .wg-card-hover-info{opacity:1;transform:translateY(0)}
 .wg-card-hover-name{font-family:'DM Serif Display',serif;font-size:17px;color:#fff;margin-bottom:7px;line-height:1.2}
 .wg-card-hover-desc{font-size:12px;color:rgba(255,255,255,0.72);line-height:1.55;margin-bottom:14px;font-family:'Syne',sans-serif}
@@ -325,6 +327,12 @@ footer{padding:28px 44px;border-top:0.5px solid rgba(80,140,255,0.1);display:gri
 .foot-tagline{font-size:10px;color:rgba(80,140,255,0.2);font-style:italic}
 .div-line{border:none;border-top:1px solid rgba(80,140,255,0.1);margin:0}
 .div-line-light{border:none;border-top:1px solid rgba(48,96,208,0.1);margin:0}
+
+/* LOAD MORE BUTTON */
+.port-load-more-wrap{text-align:center;padding:28px 0 8px}
+.port-load-more{background:rgba(13,22,40,0.95);color:#6AABFF;font-family:'Syne',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.2em;padding:15px 38px;border-radius:4px;border:1px solid rgba(80,140,255,0.4);cursor:pointer;text-transform:uppercase;transition:all 0.3s;display:inline-flex;align-items:center;gap:9px}
+.port-load-more:hover:not(:disabled){background:rgba(48,96,208,0.12);border-color:rgba(80,140,255,0.7);transform:translateY(-2px);box-shadow:0 6px 22px rgba(48,96,208,0.2)}
+.port-load-more:disabled,.port-load-more[disabled]{opacity:0.38;cursor:not-allowed;transform:none;box-shadow:none}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
