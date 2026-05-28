@@ -50,18 +50,50 @@
 .nav-current a{color:#6AABFF !important}
 .nav-current::after{width:100% !important}
 
-/* HERO */
-.bl-hero{padding:80px 44px 72px;position:relative;overflow:hidden}
-.bl-hero::before{content:'';position:absolute;top:0;right:0;bottom:0;left:50%;background:linear-gradient(90deg,transparent,rgba(48,96,208,0.04));pointer-events:none}
-.bl-hero-inner{max-width:680px}
+/* HERO — 2-column layout */
+.bl-hero{padding:80px 44px 72px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.bl-hero::before{content:'';position:absolute;top:0;right:0;bottom:0;left:50%;background:linear-gradient(90deg,transparent,rgba(48,96,208,0.06));pointer-events:none}
+.bl-hero-inner{position:relative;z-index:1}
 .bl-hero h1 em{font-style:italic;color:var(--blue-lt)}
 .bl-hero-sub{font-size:clamp(15px,1.3vw,18px);color:rgba(150,180,255,0.55);max-width:480px;margin:20px 0 0;line-height:1.85}
 .bl-hero-cats{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
 .bl-hero-cat{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;padding:7px 16px;border-radius:20px;border:0.5px solid rgba(80,140,255,0.25);color:rgba(100,160,255,0.55)}
 .bl-hero-cat.bc-brand{border-color:rgba(96,32,192,0.35);color:rgba(180,140,255,0.7);background:rgba(96,32,192,0.07)}
-.bl-hero-cat.bc-ai{border-color:rgba(48,96,208,0.35);color:rgba(106,171,255,0.7);background:rgba(48,96,208,0.07)}
-.bl-hero-cat.bc-culture{border-color:rgba(16,120,80,0.35);color:rgba(80,200,140,0.7);background:rgba(16,120,80,0.07)}
-.bl-hero-cat.bc-design{border-color:rgba(185,120,0,0.35);color:rgba(220,165,50,0.7);background:rgba(185,120,0,0.07)}
+.bl-hero-cat.bc-seo{border-color:rgba(48,96,208,0.35);color:rgba(106,171,255,0.7);background:rgba(48,96,208,0.07)}
+.bl-hero-cat.bc-business{border-color:rgba(16,120,80,0.35);color:rgba(80,200,140,0.7);background:rgba(16,120,80,0.07)}
+.bl-hero-cat.bc-organizing{border-color:rgba(0,140,160,0.35);color:rgba(60,200,220,0.7);background:rgba(0,140,160,0.07)}
+.bl-hero-cat.bc-health{border-color:rgba(160,32,80,0.35);color:rgba(240,120,160,0.7);background:rgba(160,32,80,0.07)}
+.bl-hero-cat.bc-spotlight{border-color:rgba(185,120,0,0.35);color:rgba(220,165,50,0.7);background:rgba(185,120,0,0.07)}
+
+/* Hero right visual */
+.bl-hero-visual{position:relative;z-index:1}
+.bh-stats-row{display:flex;gap:28px;margin-bottom:28px}
+.bh-stat{display:flex;flex-direction:column;gap:3px;padding-right:28px;border-right:0.5px solid rgba(80,140,255,0.12)}
+.bh-stat:last-child{border-right:none}
+.bh-stat-n{font-family:'DM Serif Display',serif;font-size:36px;color:#fff;line-height:1}
+.bh-stat-l{font-size:9px;font-weight:700;letter-spacing:0.25em;color:rgba(100,160,255,0.4);text-transform:uppercase}
+.bh-recent{background:rgba(80,140,255,0.04);border:0.5px solid rgba(80,140,255,0.12);border-radius:6px;padding:20px 22px;margin-bottom:18px}
+.bh-recent-label{font-size:8px;font-weight:700;letter-spacing:0.35em;color:rgba(100,160,255,0.35);text-transform:uppercase;margin-bottom:14px}
+.bh-art-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:0.5px solid rgba(80,140,255,0.08)}
+.bh-art-row:last-child{border-bottom:none;padding-bottom:0}
+.bh-art-row:first-of-type{padding-top:0}
+.bh-cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.bh-dot-brand{background:rgba(180,140,255,0.7)}
+.bh-dot-seo{background:rgba(106,171,255,0.7)}
+.bh-dot-business{background:rgba(80,200,140,0.7)}
+.bh-dot-organizing{background:rgba(60,200,220,0.7)}
+.bh-dot-spotlight{background:rgba(220,165,50,0.7)}
+.bh-art-title{font-size:13px;font-weight:600;color:rgba(200,220,255,0.85);line-height:1.35;margin-bottom:3px}
+.bh-art-meta{font-size:10px;color:rgba(100,160,255,0.4);letter-spacing:0.06em}
+.bh-chips{display:flex;gap:8px;flex-wrap:wrap}
+.bh-chip{font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:5px 12px;border-radius:20px;border:0.5px solid}
+.bh-chip-brand{border-color:rgba(96,32,192,0.4);color:rgba(180,140,255,0.75);background:rgba(96,32,192,0.08)}
+.bh-chip-seo{border-color:rgba(48,96,208,0.4);color:rgba(106,171,255,0.75);background:rgba(48,96,208,0.08)}
+.bh-chip-business{border-color:rgba(16,120,80,0.4);color:rgba(80,200,140,0.75);background:rgba(16,120,80,0.08)}
+.bh-chip-organizing{border-color:rgba(0,140,160,0.4);color:rgba(60,200,220,0.75);background:rgba(0,140,160,0.08)}
+.bh-chip-health{border-color:rgba(160,32,80,0.4);color:rgba(240,120,160,0.75);background:rgba(160,32,80,0.08)}
+.bh-chip-spotlight{border-color:rgba(185,120,0,0.4);color:rgba(220,165,50,0.75);background:rgba(185,120,0,0.08)}
+@media(max-width:860px){.bl-hero{grid-template-columns:1fr}.bl-hero-visual{display:none}}
 
 /* BLOG GRID */
 .bl-grid-section{padding:72px 44px}
@@ -86,9 +118,11 @@
 /* Category badge — sits above the image, never clipped */
 .bl-card-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:8px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;padding:4px 10px;border-radius:20px;backdrop-filter:blur(8px);white-space:nowrap}
 .bl-card-badge.bb-brand{background:rgba(96,32,192,0.82);color:#d8c0ff}
-.bl-card-badge.bb-ai{background:rgba(48,96,208,0.82);color:#aaccff}
-.bl-card-badge.bb-culture{background:rgba(16,120,80,0.82);color:#80e0b0}
-.bl-card-badge.bb-design{background:rgba(185,120,0,0.82);color:#f0d070}
+.bl-card-badge.bb-seo{background:rgba(48,96,208,0.82);color:#aaccff}
+.bl-card-badge.bb-business{background:rgba(16,120,80,0.82);color:#80e0b0}
+.bl-card-badge.bb-organizing{background:rgba(0,140,160,0.82);color:#80e8f0}
+.bl-card-badge.bb-health{background:rgba(160,32,80,0.82);color:#ffaac8}
+.bl-card-badge.bb-spotlight{background:rgba(185,120,0,0.82);color:#f0d070}
 
 /* Bottom title overlay (used when text is overlaid on image) */
 .bl-card-img-title{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(transparent,rgba(8,12,24,0.78));z-index:2;overflow:hidden}
@@ -97,9 +131,11 @@
 .bl-card-body{padding:24px 24px 20px;flex:1;display:flex;flex-direction:column}
 .bl-card-eyebrow{font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .bl-card-eyebrow.ey-brand{color:rgba(96,32,192,0.6)}
-.bl-card-eyebrow.ey-ai{color:var(--blue)}
-.bl-card-eyebrow.ey-culture{color:rgba(16,120,80,0.7)}
-.bl-card-eyebrow.ey-design{color:rgba(185,120,0,0.7)}
+.bl-card-eyebrow.ey-seo{color:var(--blue)}
+.bl-card-eyebrow.ey-business{color:rgba(16,120,80,0.7)}
+.bl-card-eyebrow.ey-organizing{color:rgba(0,140,160,0.7)}
+.bl-card-eyebrow.ey-health{color:rgba(160,32,80,0.7)}
+.bl-card-eyebrow.ey-spotlight{color:rgba(185,120,0,0.7)}
 .bl-card-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--text-dark);margin-bottom:12px;line-height:1.25}
 .bl-card-excerpt{font-size:13.5px;color:var(--text-mid);line-height:1.7;flex:1;margin-bottom:18px}
 .bl-card-meta{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:rgba(58,69,96,0.45);margin-bottom:14px;letter-spacing:0.06em}
@@ -200,7 +236,7 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="https://calendly.com/moorwashington">
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
     <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
   </a>
 </nav>
@@ -233,12 +269,72 @@
     <h1>The Cultural<br/><em>Alchemy Blog.</em></h1>
     <p class="bl-hero-sub">Brand design insights, AI systems thinking, and cultural identity strategy — from 30+ years of building brands rooted in what's real.</p>
     <div class="bl-hero-cats">
-      <span class="bl-hero-cat bc-brand">Brand Identity</span>
-      <span class="bl-hero-cat bc-ai">AI Systems</span>
-      <span class="bl-hero-cat bc-culture">Cultural Strategy</span>
-      <span class="bl-hero-cat bc-design">Design Thinking</span>
+      <span class="bl-hero-cat bc-brand">Branding</span>
+      <span class="bl-hero-cat bc-seo">SEO</span>
+      <span class="bl-hero-cat bc-business">Running Businesses</span>
+      <span class="bl-hero-cat bc-organizing">Organizing</span>
+      <span class="bl-hero-cat bc-health">Health</span>
+      <span class="bl-hero-cat bc-spotlight">Entrepreneur Spotlight</span>
     </div>
   </div>
+
+  <!-- Hero right visual -->
+  <div class="bl-hero-visual">
+    <div class="bh-stats-row">
+      <div class="bh-stat">
+        <div class="bh-stat-n">38</div>
+        <div class="bh-stat-l">Essays</div>
+      </div>
+      <div class="bh-stat">
+        <div class="bh-stat-n">7</div>
+        <div class="bh-stat-l">Topics</div>
+      </div>
+      <div class="bh-stat">
+        <div class="bh-stat-n">5+</div>
+        <div class="bh-stat-l">Years</div>
+      </div>
+    </div>
+    <div class="bh-recent">
+      <div class="bh-recent-label">Latest Essays</div>
+      <div class="bh-art-row">
+        <span class="bh-cat-dot bh-dot-business"></span>
+        <div>
+          <div class="bh-art-title">What If the Employees Had Bought It?</div>
+          <div class="bh-art-meta">Running Businesses · 7 min</div>
+        </div>
+      </div>
+      <div class="bh-art-row">
+        <span class="bh-cat-dot bh-dot-brand"></span>
+        <div>
+          <div class="bh-art-title">The True Value of a Professional Logo</div>
+          <div class="bh-art-meta">Branding · 6 min</div>
+        </div>
+      </div>
+      <div class="bh-art-row">
+        <span class="bh-cat-dot bh-dot-seo"></span>
+        <div>
+          <div class="bh-art-title">8 Reasons Why SEO Helps Your Business</div>
+          <div class="bh-art-meta">SEO · 3 min</div>
+        </div>
+      </div>
+      <div class="bh-art-row">
+        <span class="bh-cat-dot bh-dot-spotlight"></span>
+        <div>
+          <div class="bh-art-title">From Harlem to Douglasville</div>
+          <div class="bh-art-meta">Entrepreneur Spotlight · 3 min</div>
+        </div>
+      </div>
+    </div>
+    <div class="bh-chips">
+      <span class="bh-chip bh-chip-brand">Branding</span>
+      <span class="bh-chip bh-chip-seo">SEO</span>
+      <span class="bh-chip bh-chip-business">Running Businesses</span>
+      <span class="bh-chip bh-chip-organizing">Organizing</span>
+      <span class="bh-chip bh-chip-health">Health</span>
+      <span class="bh-chip bh-chip-spotlight">Entrepreneur Spotlight</span>
+    </div>
+  </div>
+
 </section>
 
 <!-- ── BLOG GRID ── -->
@@ -247,14 +343,16 @@
   <!-- Filter Bar -->
   <div class="bl-filter-bar">
     <button class="bl-filter active" data-cat="all">All Posts</button>
-    <button class="bl-filter" data-cat="brand">Brand Identity</button>
-    <button class="bl-filter" data-cat="ai">AI Systems</button>
-    <button class="bl-filter" data-cat="culture">Cultural Strategy</button>
-    <button class="bl-filter" data-cat="design">Design Thinking</button>
+    <button class="bl-filter" data-cat="brand">Branding</button>
+    <button class="bl-filter" data-cat="seo">SEO</button>
+    <button class="bl-filter" data-cat="business">Running Businesses</button>
+    <button class="bl-filter" data-cat="organizing">Organizing</button>
+    <button class="bl-filter" data-cat="health">Health</button>
+    <button class="bl-filter" data-cat="spotlight">Entrepreneur Spotlight</button>
   </div>
 
   <!-- Featured Post -->
-  <div class="bl-featured" data-cat="culture">
+  <div class="bl-featured" data-cat="business">
     <div class="bl-feat-img">
       <img src="assets/images/blog/spirit-airlines.svg" alt="Spirit Airlines collapse — essay on employee ownership and brand equity by Sid Washington">
     </div>
@@ -274,10 +372,10 @@
     <div class="bl-card" data-cat="brand">
       <div class="bl-card-img">
         <img src="assets/images/blog/cultural-branding.jpg" alt="Cultural branding principles — how cultural alignment builds lasting brand identity">
-        <span class="bl-card-badge bb-brand">Brand Identity</span>
+        <span class="bl-card-badge bb-brand">Branding</span>
       </div>
       <div class="bl-card-body">
-        <div class="bl-card-eyebrow ey-brand"><span>Brand Identity</span></div>
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
         <div class="bl-card-title">Understanding the Concept of Cultural Branding Principles</div>
         <p class="bl-card-excerpt">Brands don't exist in isolation — they're embedded in the cultural milieu that shapes consumer behavior. Here's the 4-dimension framework and 5 C's for aligning your brand with the codes your audience actually lives by.</p>
         <div class="bl-card-meta"><span>May 4, 2026 · Sid Washington</span><span>5 min read</span></div>
@@ -286,13 +384,13 @@
     </div>
 
     <!-- Post 2 — Design Thinking -->
-    <div class="bl-card" data-cat="design">
+    <div class="bl-card" data-cat="brand">
       <div class="bl-card-img">
         <img src="assets/images/blog/color-psychology.jpg" alt="Color psychology in logo design — applying the 70-20-10 rule for memorable brand colors">
-        <span class="bl-card-badge bb-design">Design Thinking</span>
+        <span class="bl-card-badge bb-brand">Branding</span>
       </div>
       <div class="bl-card-body">
-        <div class="bl-card-eyebrow ey-design"><span>Design Thinking</span></div>
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
         <div class="bl-card-title">Applying Color Psychology in Logos: Harnessing Color Theory for Memorable Logos</div>
         <p class="bl-card-excerpt">Color selection is more than aesthetic preference — it's a communicative tool that encapsulates brand essence. Learn the 70-20-10 rule and why every color choice in your logo should be an intentional act.</p>
         <div class="bl-card-meta"><span>April 20, 2026 · Sid Washington</span><span>4 min read</span></div>
@@ -304,10 +402,10 @@
     <div class="bl-card" data-cat="brand">
       <div class="bl-card-img">
         <img src="assets/images/blog/digital-brand.jpg" alt="Digital brand management — seven strategies to protect and grow your brand online">
-        <span class="bl-card-badge bb-brand">Brand Identity</span>
+        <span class="bl-card-badge bb-brand">Branding</span>
       </div>
       <div class="bl-card-body">
-        <div class="bl-card-eyebrow ey-brand"><span>Brand Identity</span></div>
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
         <div class="bl-card-title">Building Your Digital Presence with Digital Brand Management Tips</div>
         <p class="bl-card-excerpt">The imperative to cultivate a robust digital presence has become unequivocal. Here are seven actionable strategies to manage your brand identity across every digital touchpoint — from social to search to reputation.</p>
         <div class="bl-card-meta"><span>April 13, 2026 · Sid Washington</span><span>5 min read</span></div>
@@ -319,10 +417,10 @@
     <div class="bl-card" data-cat="brand">
       <div class="bl-card-img">
         <img src="assets/images/blog/online-brand.jpg" alt="Online brand management — building digital reputation and brand trust">
-        <span class="bl-card-badge bb-brand">Brand Identity</span>
+        <span class="bl-card-badge bb-brand">Branding</span>
       </div>
       <div class="bl-card-body">
-        <div class="bl-card-eyebrow ey-brand"><span>Brand Identity</span></div>
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
         <div class="bl-card-title">Boost Your Digital Reputation with Online Brand Management</div>
         <p class="bl-card-excerpt">A brand's reputation is shaped as much by its online presence as by real-world actions. Businesses that invest deliberately in digital reputation enjoy stronger customer loyalty — and those that don't, don't last.</p>
         <div class="bl-card-meta"><span>April 12, 2026 · Sid Washington</span><span>4 min read</span></div>
@@ -331,13 +429,13 @@
     </div>
 
     <!-- Post 5 — Design Thinking -->
-    <div class="bl-card" data-cat="design">
+    <div class="bl-card" data-cat="brand">
       <div class="bl-card-img">
         <img src="assets/images/blog/creative-branding.jpg" alt="Creative branding solutions — transforming business identity into compelling visual assets">
-        <span class="bl-card-badge bb-design">Design Thinking</span>
+        <span class="bl-card-badge bb-brand">Branding</span>
       </div>
       <div class="bl-card-body">
-        <div class="bl-card-eyebrow ey-design"><span>Design Thinking</span></div>
+        <div class="bl-card-eyebrow ey-brand"><span>Branding</span></div>
         <div class="bl-card-title">Exploring the Creative World of Moor Graphix: Creative Branding Solutions</div>
         <p class="bl-card-excerpt">Creative branding is the imperative work of transforming abstract business ideas into compelling visual assets — through a blend of artistic ingenuity and strategic planning. Here's how Moor Graphix approaches it.</p>
         <div class="bl-card-meta"><span>April 21, 2026 · Sid Washington</span><span>5 min read</span></div>
@@ -346,13 +444,13 @@
     </div>
 
     <!-- Post 6 — Running Businesses -->
-    <div class="bl-card" data-cat="culture">
+    <div class="bl-card" data-cat="business">
       <div class="bl-card-img">
         <img src="assets/images/blog/spirit-airlines.svg" alt="Spirit Airlines collapse — lessons in employee ownership and small business brand equity">
-        <span class="bl-card-badge bb-culture">Running Businesses</span>
+        <span class="bl-card-badge bb-business">Running Businesses</span>
       </div>
       <div class="bl-card-body">
-        <div class="bl-card-eyebrow ey-culture"><span>Running Businesses</span></div>
+        <div class="bl-card-eyebrow ey-business"><span>Running Businesses</span></div>
         <div class="bl-card-title">What If the Employees Had Bought It? The Spirit Airlines Collapse Question Nobody Asked</div>
         <p class="bl-card-excerpt">17,000 workers had something nobody talked about — an ESOP path, a community crowdfunding floor, an ownership model that changes behavior because it changes the relationship between labor and outcome.</p>
         <div class="bl-card-meta"><span>May 5, 2026 · Sid Washington</span><span>7 min read</span></div>
@@ -392,18 +490,17 @@
 <!-- FOOTER -->
 <footer class="sec-dark">
   <a href="index.html" class="foot-logo">
-    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix">
     <div>
       <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
       <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
     </div>
-  </div>
+  </a>
   <div class="foot-social">
-    <a href="https://www.facebook.com/moorthangraphics"><i class="ti ti-brand-facebook"></i></a>
-    <a href="https://www.linkedin.com/in/moorgraphix/"><i class="ti ti-brand-linkedin"></i></a>
-    <a href="https://www.instagram.com/moorgraphix/"><i class="ti ti-brand-instagram"></i></a>
-    <a href="https://www.tiktok.com/@moorgraphix"><i class="ti ti-brand-tiktok"></i></a>
-    <a href="https://www.youtube.com/@sidartifax" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    <a href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.tiktok.com/@moorgraphix" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-tiktok"></i></a>
+    <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-youtube"></i></a>
   </div>
   <div class="foot-right">
     <div class="foot-copy">© 2046 Moor Graphix</div>
