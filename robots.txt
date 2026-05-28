@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sidartifax-cpu.github.io/moor-graphix-site/sitemap.xml
