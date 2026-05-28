@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Contact Moor Graphix — book a free consultation, start a project, or ask a question. Sid Washington, brand design and AI systems, Douglasville, GA.">
+<title>Contact | Moor Graphix — Cultural Alchemy + AI Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── CONTACT PAGE ── */
+.nav-current a{color:#6AABFF !important}
+.nav-current::after{width:100% !important}
+
+/* HERO */
+.ct-hero{padding:80px 44px 72px;min-height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden}
+.ct-hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(48,96,208,0.07) 0%,transparent 70%);pointer-events:none}
+.ct-hero h1 em{font-style:italic;color:var(--blue-lt)}
+.ct-hero-sub{font-size:clamp(15px,1.3vw,18px);color:rgba(150,180,255,0.55);max-width:520px;margin:20px auto 0;line-height:1.85}
+
+/* Contact info chips */
+.ct-chips{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.ct-chip{display:flex;align-items:center;gap:8px;background:rgba(80,140,255,0.09);border:0.5px solid rgba(80,140,255,0.25);color:rgba(150,180,255,0.7);font-size:13px;padding:10px 20px;border-radius:20px;transition:all 0.25s;text-decoration:none}
+.ct-chip:hover{background:rgba(80,140,255,0.18);border-color:rgba(80,140,255,0.5);color:#6AABFF}
+.ct-chip i{font-size:16px}
+
+/* FORM + INFO */
+.ct-form-section{padding:80px 44px}
+.ct-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+
+/* Form */
+.ct-form-title{font-family:'DM Serif Display',serif;font-size:28px;color:var(--text-dark);margin-bottom:28px}
+.ct-form{display:flex;flex-direction:column;gap:16px}
+.ct-field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ct-label{display:block;font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--text-mid);margin-bottom:7px}
+.ct-input,.ct-select,.ct-textarea{width:100%;padding:14px 18px;font-size:14px;font-family:'Syne',sans-serif;border:1.5px solid rgba(48,96,208,0.18);border-radius:4px;background:#fff;color:var(--text-dark);outline:none;transition:border-color 0.25s,box-shadow 0.25s;box-sizing:border-box}
+.ct-input:focus,.ct-select:focus,.ct-textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(48,96,208,0.08)}
+.ct-input::placeholder,.ct-textarea::placeholder{color:rgba(58,69,96,0.38)}
+.ct-textarea{resize:vertical;min-height:130px;line-height:1.6}
+.ct-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%233A4560' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px;cursor:pointer}
+.ct-submit{width:100%;padding:16px 24px;background:var(--blue);color:#fff;border:none;border-radius:4px;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.25s,box-shadow 0.25s;display:flex;align-items:center;justify-content:center;gap:8px}
+.ct-submit:hover{background:#1a4ab0;box-shadow:0 6px 20px rgba(48,96,208,0.35)}
+.ct-submit:disabled{opacity:0.6;cursor:not-allowed}
+.ct-form-note{font-size:12px;color:rgba(58,69,96,0.45);text-align:center;margin-top:4px}
+.ct-thanks{display:none;padding:24px 28px;background:rgba(0,160,80,0.08);border:1px solid rgba(0,160,80,0.22);border-radius:6px;color:#1a7040;font-size:15px;font-weight:600;text-align:center;line-height:1.6}
+
+/* Info panel */
+.ct-info-title{font-family:'DM Serif Display',serif;font-size:28px;color:var(--text-dark);margin-bottom:28px}
+.ct-info-list{display:flex;flex-direction:column;gap:20px;margin-bottom:36px}
+.ct-info-item{display:flex;gap:16px;align-items:flex-start}
+.ct-info-icon{width:44px;height:44px;border-radius:6px;background:rgba(48,96,208,0.08);border:1px solid rgba(48,96,208,0.12);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blue);flex-shrink:0}
+.ct-info-label{font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(58,69,96,0.5);margin-bottom:4px}
+.ct-info-value{font-size:15px;color:var(--text-dark);font-weight:600}
+.ct-info-sub{font-size:13px;color:var(--text-mid);margin-top:2px}
+.ct-info-value a{color:var(--text-dark);transition:color 0.2s}
+.ct-info-value a:hover{color:var(--blue)}
+
+/* Social row in info panel */
+.ct-social-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.ct-social-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-decoration:none;transition:all 0.25s;border:1px solid rgba(48,96,208,0.15);color:var(--text-mid);background:rgba(48,96,208,0.04)}
+.ct-social-btn:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+
+/* Hours / response panel */
+.ct-hours{margin-top:28px;padding:22px 24px;background:var(--light2);border:1px solid rgba(48,96,208,0.1);border-radius:6px}
+.ct-hours-title{font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.ct-hours-row{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--text-mid);padding:6px 0;border-bottom:0.5px solid rgba(48,96,208,0.07)}
+.ct-hours-row:last-child{border-bottom:none}
+.ct-hours-row strong{color:var(--text-dark)}
+
+/* FAQ */
+.ct-faq{padding:80px 44px}
+.ct-faq-list{display:flex;flex-direction:column;gap:2px;margin-top:40px;max-width:800px;margin-left:auto;margin-right:auto}
+
+/* FAQ accordion reuse from ai-training */
+.ct-faq .faq-item{border:0.5px solid rgba(80,140,255,0.12);border-radius:4px;overflow:hidden;transition:border-color 0.25s}
+.ct-faq .faq-item.open{border-color:rgba(80,140,255,0.38)}
+.ct-faq .faq-q{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;cursor:pointer;gap:16px;user-select:none}
+.ct-faq .faq-q-text{font-size:15px;font-weight:700;color:#e8f0ff;line-height:1.35}
+.ct-faq .faq-q-icon{font-size:20px;color:rgba(106,171,255,0.5);flex-shrink:0;transition:transform 0.3s,color 0.25s}
+.ct-faq .faq-item.open .faq-q-icon{transform:rotate(45deg);color:#6AABFF}
+.ct-faq .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(.4,0,.2,1)}
+.ct-faq .faq-item.open .faq-a{max-height:320px}
+.ct-faq .faq-a-inner{padding:0 28px 24px;font-size:14px;color:rgba(150,180,255,0.65);line-height:1.75;border-top:0.5px solid rgba(80,140,255,0.1)}
+
+/* PROMISE SECTION */
+.ct-promise{padding:72px 44px}
+.ct-promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:40px}
+.ct-promise-card{background:#fff;border:1px solid rgba(48,96,208,0.09);padding:36px 30px;border-radius:3px;transition:all 0.3s;text-align:center}
+.ct-promise-card:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(48,96,208,0.1);transform:translateY(-4px)}
+.ct-promise-icon{font-size:32px;color:var(--blue);margin-bottom:16px}
+.ct-promise-title{font-family:'DM Serif Display',serif;font-size:22px;color:var(--text-dark);margin-bottom:10px}
+.ct-promise-desc{font-size:13.5px;color:var(--text-mid);line-height:1.7}
+
+/* Responsive */
+@media(max-width:900px){
+  .ct-form-grid{grid-template-columns:1fr}
+  .ct-promise-grid{grid-template-columns:1fr}
+  .ct-field-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#portfolio">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-workshop.html">AI Workshop</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nav-current"><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art">
+    <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
+  </a>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">Live Work</div>
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section class="ct-hero sec-dark">
+  <div class="badge" style="margin-bottom:20px"><div class="bp"></div>Douglasville, GA — Serving Nationwide</div>
+  <h1>Let's Build<br/><em>Something.</em></h1>
+  <p class="ct-hero-sub">New project, quick question, or just want to talk brand strategy — every conversation starts here. Sid responds personally to every message.</p>
+  <div class="ct-chips">
+    <a class="ct-chip" href="tel:4704994407"><i class="ti ti-phone"></i>(470) 499-4407</a>
+    <a class="ct-chip" href="mailto:sidart@moorgraphix.com"><i class="ti ti-mail"></i>sidart@moorgraphix.com</a>
+    <a class="ct-chip" href="https://www.moorgraphix.com/booking-calendar/custom-wall-art"><i class="ti ti-calendar"></i>Book Free Consult</a>
+  </div>
+</section>
+
+<!-- ── FORM + INFO ── -->
+<section class="ct-form-section sec-light">
+  <div class="ct-form-grid">
+
+    <!-- LEFT — Contact Form -->
+    <div>
+      <div class="ct-form-title">Send a message.</div>
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID from formspree.io/register -->
+      <form class="ct-form" id="contactForm" action="https://formspree.io/f/mojbybnq" method="POST">
+      <input type="hidden" name="_subject" value="Contact Form - New Submission">
+      <input type="text" name="_gotcha" style="display:none">
+        <div class="ct-field-row">
+          <div>
+            <label class="ct-label" for="cf-first">First Name</label>
+            <input class="ct-input" type="text" id="cf-first" name="first_name" placeholder="First" required>
+          </div>
+          <div>
+            <label class="ct-label" for="cf-last">Last Name</label>
+            <input class="ct-input" type="text" id="cf-last" name="last_name" placeholder="Last" required>
+          </div>
+        </div>
+        <div>
+          <label class="ct-label" for="cf-email">Email Address</label>
+          <input class="ct-input" type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label class="ct-label" for="cf-phone">Phone (Optional)</label>
+          <input class="ct-input" type="tel" id="cf-phone" name="phone" placeholder="(___) ___-____">
+        </div>
+        <div>
+          <label class="ct-label" for="cf-service">Service Interest</label>
+          <select class="ct-select" id="cf-service" name="service">
+            <option value="" disabled selected>Select a service...</option>
+            <option value="Brand Identity">Brand Identity System</option>
+            <option value="Web Design">Web Design + Consulting</option>
+            <option value="AI Integration">AI Integration + Agents</option>
+            <option value="AI Workshop">AI Workshop</option>
+            <option value="Apparel + Print">Apparel + Print Graphics</option>
+            <option value="Marketing Materials">Marketing Materials</option>
+            <option value="Illustration">Digital Illustrations + Art</option>
+            <option value="Other">Other / Not Sure Yet</option>
+          </select>
+        </div>
+        <div>
+          <label class="ct-label" for="cf-message">Tell Me About Your Project</label>
+          <textarea class="ct-textarea" id="cf-message" name="message" placeholder="What are you building? What's the vision? What's the timeline? Share as much as you'd like." required></textarea>
+        </div>
+        <button type="submit" class="ct-submit" id="ctSubmit"><i class="ti ti-send"></i>Send Message</button>
+        <p class="ct-form-note">No spam. No pressure. Sid reads every message personally.</p>
+      </form>
+      <div class="ct-thanks" id="contactThanks">
+        <i class="ti ti-check" style="font-size:22px;display:block;margin-bottom:8px"></i>
+        Thank you! We'll be in touch soon.
+      </div>
+    </div>
+
+    <!-- RIGHT — Info + Hours -->
+    <div>
+      <div class="ct-info-title">Reach out directly.</div>
+      <div class="ct-info-list">
+        <div class="ct-info-item">
+          <div class="ct-info-icon"><i class="ti ti-phone"></i></div>
+          <div>
+            <div class="ct-info-label">Phone</div>
+            <div class="ct-info-value"><a href="tel:4704994407">(470) 499-4407</a></div>
+            <div class="ct-info-sub">Calls and texts welcome</div>
+          </div>
+        </div>
+        <div class="ct-info-item">
+          <div class="ct-info-icon"><i class="ti ti-mail"></i></div>
+          <div>
+            <div class="ct-info-label">Email</div>
+            <div class="ct-info-value"><a href="mailto:sidart@moorgraphix.com">sidart@moorgraphix.com</a></div>
+            <div class="ct-info-sub">Responses within 24 hours</div>
+          </div>
+        </div>
+        <div class="ct-info-item">
+          <div class="ct-info-icon"><i class="ti ti-map-pin"></i></div>
+          <div>
+            <div class="ct-info-label">Location</div>
+            <div class="ct-info-value">Douglasville, GA</div>
+            <div class="ct-info-sub">Serving clients nationwide — remote-first</div>
+          </div>
+        </div>
+        <div class="ct-info-item">
+          <div class="ct-info-icon"><i class="ti ti-calendar"></i></div>
+          <div>
+            <div class="ct-info-label">Free Consultation</div>
+            <div class="ct-info-value"><a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art">Book Online</a></div>
+            <div class="ct-info-sub">30-minute strategy call, no obligation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-mid);margin-bottom:12px">Follow the Work</div>
+      <div class="ct-social-row">
+        <a class="ct-social-btn" href="https://www.facebook.com/moorthangraphics"><i class="ti ti-brand-facebook"></i>Facebook</a>
+        <a class="ct-social-btn" href="https://www.instagram.com/moorgraphix"><i class="ti ti-brand-instagram"></i>Instagram</a>
+        <a class="ct-social-btn" href="https://www.linkedin.com/company/moor-graphix"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+        <a class="ct-social-btn" href="https://www.twitter.com/moorgraphix"><i class="ti ti-brand-x"></i>X</a>
+        <a class="ct-social-btn" href="https://www.youtube.com/@moorgraphix" target="_blank"><i class="ti ti-brand-youtube"></i>YouTube</a>
+      </div>
+
+      <!-- Hours -->
+      <div class="ct-hours">
+        <div class="ct-hours-title">Availability</div>
+        <div class="ct-hours-row"><span>Monday – Friday</span><strong>9 am – 6 pm ET</strong></div>
+        <div class="ct-hours-row"><span>Saturday</span><strong>By Appointment</strong></div>
+        <div class="ct-hours-row"><span>Sunday</span><strong>Closed</strong></div>
+        <div class="ct-hours-row"><span>Response Time</span><strong>Within 24 hours</strong></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- ── FAQ ── -->
+<section class="ct-faq sec-dark2">
+  <div class="eyebrow eyebrow-dark">Questions</div>
+  <h2 style="color:#fff">Before you reach out.</h2>
+
+  <div class="ct-faq-list">
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">How do I get started on a project?</span>
+        <i class="ti ti-plus faq-q-icon"></i>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">The easiest way is to book a free 30-minute consultation using the booking link above. We'll talk about your project, your goals, your timeline, and your budget. From there, Sid will put together a custom proposal — no templates, no generic pricing sheets. Every engagement is scoped specifically for you.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">Do you work with clients outside of Georgia?</span>
+        <i class="ti ti-plus faq-q-icon"></i>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">Absolutely. Moor Graphix is a remote-first studio. We've delivered projects for clients in New York, Los Angeles, Washington D.C., and cities across the country. All discovery, strategy, and design work happens digitally — which means wherever you are, we can serve you at the same level as any local client.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">What's included in the Brand Blueprint?</span>
+        <i class="ti ti-plus faq-q-icon"></i>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">Every engagement includes a Brand Blueprint — a complete roadmap for your visual identity, brand voice, and digital presence. It covers how to use your brand consistently across every touchpoint: social media, web, print, email, apparel, and AI. It's the operating manual for your brand, not just a style guide. This is how your investment compounds over time.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">How long does a typical project take?</span>
+        <i class="ti ti-plus faq-q-icon"></i>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">Timelines vary by scope. A logo + brand identity system typically runs 2–4 weeks. A full website project is usually 4–8 weeks depending on complexity and content readiness. AI agent builds and integrations are scoped individually. Rush timelines are available for select projects — ask about availability during your consultation.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-text">What if I don't know exactly what I need?</span>
+        <i class="ti ti-plus faq-q-icon"></i>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">That's exactly what the free consultation is for. Come with a direction — even a vague one — and Sid will help you clarify what makes the most sense given your goals, audience, and resources. You don't need a brief. You just need to show up and talk about your vision. We'll figure out the rest together.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PROMISE ── -->
+<section class="ct-promise sec-light">
+  <div class="eyebrow eyebrow-light">Our Commitment</div>
+  <h2 style="color:var(--text-dark)">What you can expect.</h2>
+  <p style="color:var(--text-mid);max-width:560px;margin-top:8px">Not promises — patterns. These are the things every Moor Graphix client experiences, confirmed by the reviews we've earned.</p>
+  <div class="ct-promise-grid">
+
+    <div class="ct-promise-card">
+      <div class="ct-promise-icon"><i class="ti ti-clock"></i></div>
+      <div class="ct-promise-title">Rapid Response</div>
+      <p class="ct-promise-desc">Every message gets a personal reply within 24 hours. Sid reads every inquiry himself — no intake forms that disappear into a queue.</p>
+    </div>
+
+    <div class="ct-promise-card">
+      <div class="ct-promise-icon"><i class="ti ti-ear"></i></div>
+      <div class="ct-promise-title">Deep Discovery</div>
+      <p class="ct-promise-desc">Before any design begins, we listen. Your story, your goals, your community, your cultural context — that's the raw material. We don't skip this step.</p>
+    </div>
+
+    <div class="ct-promise-card">
+      <div class="ct-promise-icon"><i class="ti ti-trophy"></i></div>
+      <div class="ct-promise-title">Craft Delivered</div>
+      <p class="ct-promise-desc">30+ years means knowing what "done right" looks like. Every deliverable is built to last — not just to look good in a screenshot at launch.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sec-dark">
+  <div class="foot-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.twitter.com/moorgraphix"><i class="ti ti-brand-x"></i></a>
+    <a href="https://www.linkedin.com/company/moor-graphix"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.youtube.com/@moorgraphix" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2046 Moor Graphix</div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+</div><!-- /.page -->
+
+<script>
+const canvas=document.getElementById('bg'),ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+const stars=Array.from({length:180},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.2+0.2,o:Math.random()*Math.PI*2,s:Math.random()*0.25+0.07}));
+const nodes=Array.from({length:26},()=>({x:Math.random(),y:Math.random(),vx:(Math.random()-0.5)*0.00028,vy:(Math.random()-0.5)*0.00028}));
+function drawBg(){
+  ctx.clearRect(0,0,W,H);
+  stars.forEach(s=>{s.o+=s.s*0.014;ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(100,160,255,${0.07+0.07*Math.sin(s.o)})`;ctx.fill();});
+  nodes.forEach(n=>{n.x=(n.x+n.vx+1)%1;n.y=(n.y+n.vy+1)%1;});
+  for(let i=0;i<nodes.length;i++){
+    for(let j=i+1;j<nodes.length;j++){
+      const dx=(nodes[i].x-nodes[j].x)*W,dy=(nodes[i].y-nodes[j].y)*H,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<190){ctx.beginPath();ctx.moveTo(nodes[i].x*W,nodes[i].y*H);ctx.lineTo(nodes[j].x*W,nodes[j].y*H);ctx.strokeStyle=`rgba(48,96,208,${0.09*(1-d/190)})`;ctx.lineWidth=0.5;ctx.stroke();}
+    }
+    ctx.beginPath();ctx.arc(nodes[i].x*W,nodes[i].y*H,1.8,0,Math.PI*2);ctx.fillStyle='rgba(80,140,255,0.28)';ctx.fill();
+  }
+  requestAnimationFrame(drawBg);
+}
+drawBg();
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',function(){
+    const item=this.closest('.faq-item');
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+
+// Contact form — async Formspree
+const cForm=document.getElementById('contactForm');
+const cThanks=document.getElementById('contactThanks');
+if(cForm){
+  cForm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btn=document.getElementById('ctSubmit');
+    const orig=btn.innerHTML;
+    btn.innerHTML='<i class="ti ti-loader-2"></i>Sending…';
+    btn.disabled=true;
+    try{
+      const res=await fetch(this.action,{
+        method:'POST',
+        body:new FormData(this),
+        headers:{Accept:'application/json'}
+      });
+      if(res.ok){
+        cForm.style.display='none';
+        cThanks.style.display='block';
+      }else{
+        btn.innerHTML='<i class="ti ti-alert-circle"></i>Try Again';
+        btn.disabled=false;
+      }
+    }catch{
+      btn.innerHTML='<i class="ti ti-alert-circle"></i>Try Again';
+      btn.disabled=false;
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="The Cultural Alchemy Blog — brand design insights, AI systems thinking, and cultural identity strategy from Moor Graphix founder Sid Washington.">
+<title>Blog | The Cultural Alchemy Blog — Moor Graphix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── BLOG PAGE ── */
+/*
+  ADD NEW POSTS:
+  1. Create a new .bl-card div in the blog grid below.
+  2. Set data-cat to one of: "brand" | "ai" | "culture" | "design"
+  3. Fill in the eyebrow, title, excerpt, date, and read-time.
+  4. Link to your post page or external URL in the .bl-card-cta anchor.
+  5. Replace bl-card-placeholder content with an img tag if you have a post image.
+*/
+
+.nav-current a{color:#6AABFF !important}
+.nav-current::after{width:100% !important}
+
+/* HERO */
+.bl-hero{padding:80px 44px 72px;position:relative;overflow:hidden}
+.bl-hero::before{content:'';position:absolute;top:0;right:0;bottom:0;left:50%;background:linear-gradient(90deg,transparent,rgba(48,96,208,0.04));pointer-events:none}
+.bl-hero-inner{max-width:680px}
+.bl-hero h1 em{font-style:italic;color:var(--blue-lt)}
+.bl-hero-sub{font-size:clamp(15px,1.3vw,18px);color:rgba(150,180,255,0.55);max-width:480px;margin:20px 0 0;line-height:1.85}
+.bl-hero-cats{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.bl-hero-cat{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;padding:7px 16px;border-radius:20px;border:0.5px solid rgba(80,140,255,0.25);color:rgba(100,160,255,0.55)}
+.bl-hero-cat.bc-brand{border-color:rgba(96,32,192,0.35);color:rgba(180,140,255,0.7);background:rgba(96,32,192,0.07)}
+.bl-hero-cat.bc-ai{border-color:rgba(48,96,208,0.35);color:rgba(106,171,255,0.7);background:rgba(48,96,208,0.07)}
+.bl-hero-cat.bc-culture{border-color:rgba(16,120,80,0.35);color:rgba(80,200,140,0.7);background:rgba(16,120,80,0.07)}
+.bl-hero-cat.bc-design{border-color:rgba(185,120,0,0.35);color:rgba(220,165,50,0.7);background:rgba(185,120,0,0.07)}
+
+/* BLOG GRID */
+.bl-grid-section{padding:72px 44px}
+.bl-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+.bl-filter{background:transparent;border:1px solid rgba(48,96,208,0.22);color:var(--text-mid);font-size:11px;font-weight:700;letter-spacing:0.15em;padding:8px 18px;border-radius:20px;cursor:pointer;transition:all 0.25s;text-transform:uppercase;font-family:'Syne',sans-serif}
+.bl-filter:hover,.bl-filter.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 4px 14px rgba(48,96,208,0.3)}
+.bl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bl-card{background:#fff;border:1px solid rgba(48,96,208,0.09);border-radius:6px;overflow:hidden;transition:all 0.35s;display:flex;flex-direction:column}
+.bl-card:hover{border-color:var(--blue);box-shadow:0 10px 36px rgba(48,96,208,0.1);transform:translateY(-4px)}
+.bl-card[style*="display:none"]{display:none !important}
+
+/* Card image / placeholder */
+.bl-card-img{height:180px;overflow:hidden;position:relative}
+.bl-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.bl-card:hover .bl-card-img img{transform:scale(1.05)}
+.bl-card-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:40px}
+.bl-card-placeholder.ph-brand{background:linear-gradient(135deg,#1a0a2e,#6020c0)}
+.bl-card-placeholder.ph-ai{background:linear-gradient(135deg,#001830,#1050c0)}
+.bl-card-placeholder.ph-culture{background:linear-gradient(135deg,#001a10,#107850)}
+.bl-card-placeholder.ph-design{background:linear-gradient(135deg,#1a1000,#a06000)}
+
+/* Category badge */
+.bl-card-badge{position:absolute;top:12px;left:12px;font-size:8px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;padding:4px 10px;border-radius:20px;backdrop-filter:blur(8px)}
+.bl-card-badge.bb-brand{background:rgba(96,32,192,0.75);color:#d8c0ff}
+.bl-card-badge.bb-ai{background:rgba(48,96,208,0.75);color:#aaccff}
+.bl-card-badge.bb-culture{background:rgba(16,120,80,0.75);color:#80e0b0}
+.bl-card-badge.bb-design{background:rgba(185,120,0,0.75);color:#f0d070}
+
+/* Card body */
+.bl-card-body{padding:24px 24px 20px;flex:1;display:flex;flex-direction:column}
+.bl-card-eyebrow{font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.bl-card-eyebrow.ey-brand{color:rgba(96,32,192,0.6)}
+.bl-card-eyebrow.ey-ai{color:var(--blue)}
+.bl-card-eyebrow.ey-culture{color:rgba(16,120,80,0.7)}
+.bl-card-eyebrow.ey-design{color:rgba(185,120,0,0.7)}
+.bl-card-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--text-dark);margin-bottom:12px;line-height:1.25}
+.bl-card-excerpt{font-size:13.5px;color:var(--text-mid);line-height:1.7;flex:1;margin-bottom:18px}
+.bl-card-meta{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:rgba(58,69,96,0.45);margin-bottom:14px;letter-spacing:0.06em}
+.bl-card-cta{display:block;text-align:center;padding:11px 18px;background:rgba(48,96,208,0.05);border:1px solid rgba(48,96,208,0.15);border-radius:4px;font-size:11.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);transition:all 0.22s;text-decoration:none}
+.bl-card-cta:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Featured post */
+.bl-featured{margin-bottom:36px;background:#fff;border:1px solid rgba(48,96,208,0.09);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;transition:all 0.35s}
+.bl-featured:hover{border-color:var(--blue);box-shadow:0 12px 44px rgba(48,96,208,0.1)}
+.bl-feat-img{height:100%;min-height:300px;position:relative;overflow:hidden}
+.bl-feat-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.bl-featured:hover .bl-feat-img img{transform:scale(1.04)}
+.bl-feat-placeholder{width:100%;height:100%;min-height:300px;display:flex;align-items:center;justify-content:center;font-size:60px;background:linear-gradient(135deg,#001830,#1050c0)}
+.bl-feat-body{padding:44px 40px;display:flex;flex-direction:column;justify-content:center}
+.bl-feat-tag{font-size:8px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.bl-feat-tag::before{content:'FEATURED';background:var(--blue);color:#fff;padding:3px 9px;border-radius:2px}
+.bl-feat-title{font-family:'DM Serif Display',serif;font-size:clamp(22px,2.8vw,32px);color:var(--text-dark);line-height:1.2;margin-bottom:16px}
+.bl-feat-excerpt{font-size:14px;color:var(--text-mid);line-height:1.75;margin-bottom:24px}
+.bl-feat-meta{font-size:11px;color:rgba(58,69,96,0.45);margin-bottom:20px;letter-spacing:0.06em}
+.bl-feat-cta{display:inline-block;padding:13px 26px;background:var(--blue);color:#fff;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.22s}
+.bl-feat-cta:hover{background:#1a4ab0;box-shadow:0 6px 20px rgba(48,96,208,0.35)}
+
+/* Empty state */
+.bl-empty{text-align:center;padding:60px 20px;display:none}
+.bl-empty-icon{font-size:40px;color:rgba(48,96,208,0.2);margin-bottom:16px}
+.bl-empty-text{font-size:15px;color:var(--text-mid)}
+
+/* NEWSLETTER */
+.bl-newsletter{padding:72px 44px;text-align:center}
+.bl-nl-inner{max-width:560px;margin:0 auto}
+.bl-nl-form{display:flex;gap:12px;max-width:440px;margin:28px auto 0;flex-wrap:wrap}
+.bl-nl-input{flex:1;min-width:200px;padding:14px 18px;font-size:14px;font-family:'Syne',sans-serif;background:rgba(80,140,255,0.07);border:0.5px solid rgba(80,140,255,0.25);border-radius:4px;color:#d0deff;outline:none;transition:border-color 0.25s;box-sizing:border-box}
+.bl-nl-input:focus{border-color:rgba(80,140,255,0.5)}
+.bl-nl-input::placeholder{color:rgba(100,160,255,0.35)}
+.bl-nl-btn{padding:14px 24px;background:var(--blue);color:#fff;border:none;border-radius:4px;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.25s;white-space:nowrap;display:flex;align-items:center;gap:7px}
+.bl-nl-btn:hover{background:#1a4ab0;box-shadow:0 4px 16px rgba(48,96,208,0.4)}
+.bl-nl-note{font-size:12px;color:rgba(100,160,255,0.35);margin-top:12px}
+.bl-nl-thanks{display:none;margin-top:20px;padding:16px 24px;background:rgba(80,140,255,0.1);border:0.5px solid rgba(80,140,255,0.3);border-radius:6px;color:#6AABFF;font-size:14px;font-weight:600}
+
+/* Responsive */
+@media(max-width:900px){
+  .bl-grid{grid-template-columns:repeat(2,1fr)}
+  .bl-featured{grid-template-columns:1fr}
+  .bl-feat-img{min-height:220px}
+}
+@media(max-width:600px){
+  .bl-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#portfolio">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-workshop.html">AI Workshop</a></li>
+    <li class="nav-current"><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art">
+    <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
+  </a>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">Latest Thinking</div>
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span class="tick-item">✦ Cultural Alchemy — Why Your Story Is Your Strategy</span>
+      <span class="tick-item">✦ AI Without Identity Is Just Noise</span>
+      <span class="tick-item">✦ The 3-Layer AI Framework for Small Business</span>
+      <span class="tick-item">✦ Why 92% of Businesses Fail with AI</span>
+      <span class="tick-item">✦ The Morrison Crest — How a Name Became a Company</span>
+      <span class="tick-item">✦ What a Brand Blueprint Actually Contains</span>
+      <span class="tick-item">✦ Cultural Alchemy — Why Your Story Is Your Strategy</span>
+      <span class="tick-item">✦ AI Without Identity Is Just Noise</span>
+      <span class="tick-item">✦ The 3-Layer AI Framework for Small Business</span>
+      <span class="tick-item">✦ Why 92% of Businesses Fail with AI</span>
+      <span class="tick-item">✦ The Morrison Crest — How a Name Became a Company</span>
+      <span class="tick-item">✦ What a Brand Blueprint Actually Contains</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section class="bl-hero sec-dark">
+  <div class="bl-hero-inner">
+    <div class="badge" style="margin-bottom:22px"><div class="bp"></div>Essays on Brand, Culture + AI</div>
+    <h1>The Cultural<br/><em>Alchemy Blog.</em></h1>
+    <p class="bl-hero-sub">Brand design insights, AI systems thinking, and cultural identity strategy — from 30+ years of building brands rooted in what's real.</p>
+    <div class="bl-hero-cats">
+      <span class="bl-hero-cat bc-brand">Brand Identity</span>
+      <span class="bl-hero-cat bc-ai">AI Systems</span>
+      <span class="bl-hero-cat bc-culture">Cultural Strategy</span>
+      <span class="bl-hero-cat bc-design">Design Thinking</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOG GRID ── -->
+<section class="bl-grid-section sec-light">
+
+  <!-- Filter Bar -->
+  <div class="bl-filter-bar">
+    <button class="bl-filter active" data-cat="all">All Posts</button>
+    <button class="bl-filter" data-cat="brand">Brand Identity</button>
+    <button class="bl-filter" data-cat="ai">AI Systems</button>
+    <button class="bl-filter" data-cat="culture">Cultural Strategy</button>
+    <button class="bl-filter" data-cat="design">Design Thinking</button>
+  </div>
+
+  <!-- Featured Post -->
+  <div class="bl-featured" data-cat="culture">
+    <div class="bl-feat-img">
+      <div class="bl-feat-placeholder">✦</div>
+    </div>
+    <div class="bl-feat-body">
+      <div class="bl-feat-tag">Cultural Strategy</div>
+      <div class="bl-feat-title">Your Story Is Your Strategy: Why Cultural Alchemy Wins</div>
+      <p class="bl-feat-excerpt">Every brand has a story hidden inside its name, its founder's lineage, and the community it serves. Most brands never excavate it. Cultural Alchemy is the method for finding that story and forging it into a visual system that no competitor can replicate — because no competitor is you.</p>
+      <div class="bl-feat-meta">May 2026 · 8 min read</div>
+      <a href="contact.html" class="bl-feat-cta">Read the Full Essay →</a>
+    </div>
+  </div>
+
+  <!-- Blog Grid -->
+  <div class="bl-grid" id="blogGrid">
+
+    <!-- Post 1 — AI -->
+    <div class="bl-card" data-cat="ai">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-ai">⚡</div>
+        <span class="bl-card-badge bb-ai">AI Systems</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-ai"><span>AI Systems</span></div>
+        <div class="bl-card-title">Why 92% of Businesses See Zero ROI From AI</div>
+        <p class="bl-card-excerpt">They bought tools without building structure. No system, no strategy, no cultural grounding. Here's what enterprise organizations do differently — and how small businesses can do it too.</p>
+        <div class="bl-card-meta"><span>April 2026</span><span>6 min read</span></div>
+        <a href="contact.html" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Post 2 — Brand -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand">◈</div>
+        <span class="bl-card-badge bb-brand">Brand Identity</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Brand Identity</span></div>
+        <div class="bl-card-title">What a Brand Blueprint Actually Contains</div>
+        <p class="bl-card-excerpt">It's not a style guide. It's an operating manual. Here's what every Moor Graphix client receives — and why it's the piece most designers never deliver.</p>
+        <div class="bl-card-meta"><span>March 2026</span><span>5 min read</span></div>
+        <a href="contact.html" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Post 3 — Culture -->
+    <div class="bl-card" data-cat="culture">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-culture">✦</div>
+        <span class="bl-card-badge bb-culture">Cultural Strategy</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-culture"><span>Cultural Strategy</span></div>
+        <div class="bl-card-title">The Morrison Crest: How a Name Became a Company</div>
+        <p class="bl-card-excerpt">The word "Moor" traces directly from Morrison — Sid's grandfather's middle name. Researching that name surfaced Fairbairn's Crest, where the Morrison family crest was found to contain three faces of Moors.</p>
+        <div class="bl-card-meta"><span>February 2026</span><span>7 min read</span></div>
+        <a href="about.html" class="bl-card-cta">Read the Origin →</a>
+      </div>
+    </div>
+
+    <!-- Post 4 — AI -->
+    <div class="bl-card" data-cat="ai">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-ai">◎</div>
+        <span class="bl-card-badge bb-ai">AI Systems</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-ai"><span>AI Systems</span></div>
+        <div class="bl-card-title">The 3-Layer AI Framework Every Small Business Needs</div>
+        <p class="bl-card-excerpt">People Layer. Process Layer. Infrastructure Layer. This is how enterprise organizations build AI that actually works — and it scales down to any business that has a story worth telling.</p>
+        <div class="bl-card-meta"><span>January 2026</span><span>9 min read</span></div>
+        <a href="ai-workshop.html" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Post 5 — Design -->
+    <div class="bl-card" data-cat="design">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-design">◐</div>
+        <span class="bl-card-badge bb-design">Design Thinking</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-design"><span>Design Thinking</span></div>
+        <div class="bl-card-title">Color Psychology Is Cultural — Not Universal</div>
+        <p class="bl-card-excerpt">The idea that blue means "trust" and red means "urgency" is a Western design convention, not a law of nature. Building a brand that resonates with your actual community requires going deeper.</p>
+        <div class="bl-card-meta"><span>December 2025</span><span>5 min read</span></div>
+        <a href="contact.html" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Post 6 — Brand -->
+    <div class="bl-card" data-cat="brand">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-brand">⬡</div>
+        <span class="bl-card-badge bb-brand">Brand Identity</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-brand"><span>Brand Identity</span></div>
+        <div class="bl-card-title">Why Logos Fail: The Problem with Generic Design</div>
+        <p class="bl-card-excerpt">A logo built from trends has an expiration date. A logo built from your actual story, your community's symbols, and your cultural truth — that one compounds. Here's the difference in practice.</p>
+        <div class="bl-card-meta"><span>November 2025</span><span>6 min read</span></div>
+        <a href="contact.html" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
+
+  </div><!-- /#blogGrid -->
+
+  <!-- Empty state -->
+  <div class="bl-empty" id="blogEmpty">
+    <div class="bl-empty-icon"><i class="ti ti-article"></i></div>
+    <p class="bl-empty-text">No posts in this category yet. Check back soon — or <a href="contact.html" style="color:var(--blue);text-decoration:underline">reach out directly</a>.</p>
+  </div>
+
+</section>
+<hr class="div-line-light">
+
+<!-- ── NEWSLETTER ── -->
+<section class="bl-newsletter sec-dark2">
+  <div class="bl-nl-inner">
+    <div class="eyebrow eyebrow-dark" style="justify-content:center">Cultural Alchemy Dispatches</div>
+    <h2 style="color:#fff">Get the essays<br/>in your inbox.</h2>
+    <p style="color:rgba(150,180,255,0.55);max-width:420px;margin:12px auto 0;line-height:1.75">Brand strategy, AI systems thinking, and cultural design insights. Sent when there's something worth saying — not on a forced schedule.</p>
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
+    <form class="bl-nl-form" id="nlForm" action="https://formspree.io/f/xzdwywvn" method="POST">
+      <input type="hidden" name="_subject" value="Newsletter Signup - New Submission">
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="email" name="email" class="bl-nl-input" placeholder="Your email address" required>
+      <button type="submit" class="bl-nl-btn" id="nlBtn"><i class="ti ti-mail"></i>Subscribe</button>
+    </form>
+    <p class="bl-nl-note">No spam. Unsubscribe anytime. Sid writes every issue personally.</p>
+    <div class="bl-nl-thanks" id="nlThanks">Thank you! We'll be in touch soon.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sec-dark">
+  <div class="foot-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.twitter.com/moorgraphix"><i class="ti ti-brand-x"></i></a>
+    <a href="https://www.linkedin.com/company/moor-graphix"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.youtube.com/@moorgraphix" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2046 Moor Graphix</div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+</div><!-- /.page -->
+
+<script>
+// ── PARTICLE BG ──
+const canvas=document.getElementById('bg'),ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+const stars=Array.from({length:180},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.2+0.2,o:Math.random()*Math.PI*2,s:Math.random()*0.25+0.07}));
+const nodes=Array.from({length:26},()=>({x:Math.random(),y:Math.random(),vx:(Math.random()-0.5)*0.00028,vy:(Math.random()-0.5)*0.00028}));
+function drawBg(){
+  ctx.clearRect(0,0,W,H);
+  stars.forEach(s=>{s.o+=s.s*0.014;ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(100,160,255,${0.07+0.07*Math.sin(s.o)})`;ctx.fill();});
+  nodes.forEach(n=>{n.x=(n.x+n.vx+1)%1;n.y=(n.y+n.vy+1)%1;});
+  for(let i=0;i<nodes.length;i++){
+    for(let j=i+1;j<nodes.length;j++){
+      const dx=(nodes[i].x-nodes[j].x)*W,dy=(nodes[i].y-nodes[j].y)*H,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<190){ctx.beginPath();ctx.moveTo(nodes[i].x*W,nodes[i].y*H);ctx.lineTo(nodes[j].x*W,nodes[j].y*H);ctx.strokeStyle=`rgba(48,96,208,${0.09*(1-d/190)})`;ctx.lineWidth=0.5;ctx.stroke();}
+    }
+    ctx.beginPath();ctx.arc(nodes[i].x*W,nodes[i].y*H,1.8,0,Math.PI*2);ctx.fillStyle='rgba(80,140,255,0.28)';ctx.fill();
+  }
+  requestAnimationFrame(drawBg);
+}
+drawBg();
+
+// ── BLOG FILTER ──
+const filters=document.querySelectorAll('.bl-filter');
+const cards=document.querySelectorAll('#blogGrid .bl-card');
+const featured=document.querySelector('.bl-featured');
+const emptyState=document.getElementById('blogEmpty');
+
+filters.forEach(btn=>{
+  btn.addEventListener('click',function(){
+    filters.forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+    const cat=this.dataset.cat;
+    let visible=0;
+    cards.forEach(card=>{
+      const show=cat==='all'||card.dataset.cat===cat;
+      card.style.display=show?'flex':'none';
+      if(show) visible++;
+    });
+    if(featured){
+      const showFeat=cat==='all'||featured.dataset.cat===cat;
+      featured.style.display=showFeat?'grid':'none';
+    }
+    emptyState.style.display=visible===0?'block':'none';
+  });
+});
+
+// ── NEWSLETTER FORM ──
+const nlForm=document.getElementById('nlForm');
+const nlThanks=document.getElementById('nlThanks');
+if(nlForm){
+  nlForm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btn=document.getElementById('nlBtn');
+    btn.innerHTML='<i class="ti ti-loader-2"></i>Sending…';
+    btn.disabled=true;
+    try{
+      const res=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
+      if(res.ok){
+        nlForm.style.display='none';
+        nlThanks.style.display='block';
+      }else{
+        btn.innerHTML='<i class="ti ti-alert-circle"></i>Try Again';
+        btn.disabled=false;
+      }
+    }catch{
+      btn.innerHTML='<i class="ti ti-alert-circle"></i>Try Again';
+      btn.disabled=false;
+    }
+  });
+}
+</script>
+</body>
+</html>

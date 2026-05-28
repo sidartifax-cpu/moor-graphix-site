@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="About Sid Washington — founder and principal designer of Moor Graphix. 30+ years of brand design, Cultural Alchemy, and AI systems. Douglasville, GA.">
+<title>About | Moor Graphix — Cultural Alchemy + AI Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── ABOUT PAGE ── */
+.nav-current a{color:#6AABFF !important}
+.nav-current::after{width:100% !important}
+
+/* HERO */
+.abt-hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.abt-hero-left{padding:72px 44px 60px;display:flex;flex-direction:column;justify-content:space-between;border-right:0.5px solid rgba(80,140,255,0.1)}
+.abt-hero-right{padding:72px 44px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+.abt-hero-stat-row{display:flex;gap:0;border-top:0.5px solid rgba(80,140,255,0.1);padding-top:26px;margin-top:auto}
+.abt-hero-stat{padding:0 24px;border-right:0.5px solid rgba(80,140,255,0.12)}
+.abt-hero-stat:first-child{padding-left:0}
+.abt-hero-stat:last-child{border-right:none}
+.abt-hero-stat-n{font-family:'DM Serif Display',serif;font-size:38px;color:#fff;line-height:1}
+.abt-hero-stat-l{font-size:11px;color:rgba(100,160,255,0.45);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px}
+
+/* Hero right — quote cards */
+.abt-quote-card{background:rgba(80,140,255,0.07);border:0.5px solid rgba(80,140,255,0.18);border-radius:6px;padding:22px 26px;transition:border-color 0.3s}
+.abt-quote-card:hover{border-color:rgba(80,140,255,0.38)}
+.abt-qc-text{font-family:'DM Serif Display',serif;font-size:16px;font-style:italic;color:#d0deff;line-height:1.55;margin-bottom:10px}
+.abt-qc-attr{font-size:10px;letter-spacing:0.22em;color:rgba(100,160,255,0.4);text-transform:uppercase}
+
+/* STORY SECTION */
+.abt-story{display:grid;grid-template-columns:1fr 1fr}
+.abt-story-left{padding:72px 44px;border-right:1px solid rgba(0,0,0,0.08)}
+.abt-story-right{padding:72px 44px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.abt-story-right p{color:var(--text-mid)}
+.abt-story-quote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0}
+.abt-story-quote p{font-family:'DM Serif Display',serif;font-size:19px;font-style:italic;color:var(--text-dark);line-height:1.55;margin:0}
+.abt-story-crest{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:20px}
+.abt-crest-cell{background:#fff;border:1px solid rgba(48,96,208,0.1);padding:20px;display:flex;flex-direction:column;gap:7px;border-radius:3px;transition:all 0.3s}
+.abt-crest-cell:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(48,96,208,0.12);transform:translateY(-3px)}
+.abt-crest-icon{font-size:24px;color:var(--blue)}
+.abt-crest-title{font-size:14px;font-weight:700;color:var(--text-dark)}
+.abt-crest-desc{font-size:13px;color:var(--text-mid);line-height:1.55}
+
+/* PHILOSOPHY — 3-STEP */
+.abt-philosophy{padding:80px 44px}
+.abt-phil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;background:rgba(80,140,255,0.05)}
+.abt-phil-card{background:rgba(2,4,8,0.97);padding:44px 36px;border:0.5px solid rgba(80,140,255,0.07);position:relative;overflow:hidden;transition:all 0.35s}
+.abt-phil-card:hover{border-color:rgba(80,140,255,0.25);background:#06090F}
+.abt-phil-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--blue);transition:width 0.4s}
+.abt-phil-card:hover::after{width:100%}
+.abt-phil-step{font-size:9px;letter-spacing:0.4em;color:rgba(80,140,255,0.28);text-transform:uppercase;margin-bottom:16px;font-weight:700}
+.abt-phil-num{font-family:'DM Serif Display',serif;font-size:72px;color:rgba(48,96,208,0.08);line-height:0.9;margin-bottom:20px;font-style:italic}
+.abt-phil-title{font-family:'DM Serif Display',serif;font-size:26px;color:#fff;margin-bottom:14px}
+.abt-phil-desc{font-size:14px;color:rgba(150,180,255,0.55);line-height:1.75}
+.abt-phil-icon{font-size:28px;color:var(--blue);margin-bottom:14px;display:block}
+
+/* SKILLS + TOOLS */
+.abt-skills{padding:80px 44px}
+.abt-skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start}
+.abt-skill-col-title{font-size:11px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--blue);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.abt-skill-col-title::before{content:'';display:block;width:16px;height:1px;background:var(--blue);opacity:0.5}
+.abt-skill-list{display:flex;flex-direction:column;gap:10px}
+.abt-skill-item{display:flex;align-items:center;gap:14px;padding:12px 16px;background:#fff;border:1px solid rgba(48,96,208,0.09);border-radius:3px;transition:all 0.25s}
+.abt-skill-item:hover{border-color:var(--blue);transform:translateX(5px);box-shadow:0 3px 14px rgba(48,96,208,0.09)}
+.abt-skill-icon{font-size:18px;color:var(--blue);flex-shrink:0}
+.abt-skill-name{font-size:14px;font-weight:700;color:var(--text-dark)}
+.abt-skill-sub{font-size:11.5px;color:var(--text-mid);margin-top:1px}
+.abt-tools-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.abt-tool-tag{background:rgba(48,96,208,0.07);border:1px solid rgba(48,96,208,0.18);color:var(--blue);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:7px 16px;border-radius:20px;transition:all 0.25s}
+.abt-tool-tag:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* BRAND ECOSYSTEMS */
+.abt-eco{padding:80px 44px}
+.abt-eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;background:rgba(80,140,255,0.04)}
+.abt-eco-card{background:rgba(8,13,26,0.97);padding:36px 32px;border:0.5px solid rgba(80,140,255,0.08);transition:all 0.35s;position:relative;overflow:hidden}
+.abt-eco-card:hover{border-color:rgba(80,140,255,0.25)}
+.abt-eco-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transition:transform 0.4s;transform-origin:left}
+.abt-eco-card:hover::before{transform:scaleX(1)}
+.abt-eco-icon{font-size:28px;color:var(--blue-lt);margin-bottom:18px}
+.abt-eco-name{font-family:'DM Serif Display',serif;font-size:22px;color:#fff;margin-bottom:10px}
+.abt-eco-desc{font-size:13.5px;color:rgba(150,180,255,0.55);line-height:1.7;margin-bottom:18px}
+.abt-eco-agents{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:0.5px solid rgba(80,140,255,0.08)}
+.abt-eco-agent{font-size:11.5px;color:rgba(100,160,255,0.38);display:flex;align-items:center;gap:8px}
+.abt-eco-agent::before{content:'';width:5px;height:5px;border-radius:50%;background:rgba(80,220,120,0.6);flex-shrink:0}
+.abt-eco-status{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(80,220,120,0.6);border:0.5px solid rgba(80,220,120,0.2);padding:3px 9px;border-radius:2px;width:fit-content;margin-bottom:16px}
+
+/* TESTIMONIALS */
+.abt-testimonials{padding:72px 44px}
+
+/* CTA */
+.abt-cta{padding:80px 44px;text-align:center;position:relative;overflow:hidden}
+.abt-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(176,24,24,0.07) 0%,transparent 70%);pointer-events:none}
+
+/* Responsive */
+@media(max-width:900px){
+  .abt-hero,.abt-story,.abt-skills-grid{grid-template-columns:1fr}
+  .abt-hero-right{display:none}
+  .abt-phil-grid,.abt-eco-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#portfolio">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-workshop.html">AI Workshop</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li class="nav-current"><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art">
+    <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
+  </a>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">Live Work</div>
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section class="abt-hero sec-dark">
+  <div class="abt-hero-left">
+    <div>
+      <div class="badge"><div class="bp"></div>Founder + Principal Designer</div>
+      <h1>30+ Years.<br/><em style="font-style:italic;color:#6AABFF">One Mission.</em></h1>
+      <p style="color:rgba(150,180,255,0.55);max-width:400px;margin-top:24px;font-size:clamp(15px,1.3vw,17px);line-height:1.85">Brand design rooted in cultural truth. Not trends. Not templates. Not imitation. The hidden gold in your story, your name, and your heritage — forged into visual equity no competitor can copy.</p>
+    </div>
+    <div class="abt-hero-stat-row">
+      <div class="abt-hero-stat"><div class="abt-hero-stat-n">30+</div><div class="abt-hero-stat-l">Years Experience</div></div>
+      <div class="abt-hero-stat"><div class="abt-hero-stat-n">8+</div><div class="abt-hero-stat-l">AI Agents Live</div></div>
+      <div class="abt-hero-stat"><div class="abt-hero-stat-n">3</div><div class="abt-hero-stat-l">Brand Ecosystems</div></div>
+    </div>
+  </div>
+  <div class="abt-hero-right">
+    <div class="abt-quote-card">
+      <p class="abt-qc-text">"Moor Graphix is the culmination of my life's work in design, teaching, and community activism."</p>
+      <div class="abt-qc-attr">— Sid Washington, Founder</div>
+    </div>
+    <div class="abt-quote-card">
+      <p class="abt-qc-text">"Cultural Alchemy isn't a tagline. It's the method. Extract the gold, forge it into form, let it compound forever."</p>
+      <div class="abt-qc-attr">— Sid Washington</div>
+    </div>
+    <div class="abt-quote-card">
+      <p class="abt-qc-text">"The best brand strategy you'll ever find is already inside you. Our job is to excavate it."</p>
+      <div class="abt-qc-attr">— Sid Washington</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ORIGIN STORY ── -->
+<section class="abt-story sec-light">
+  <div class="abt-story-left">
+    <div class="eyebrow eyebrow-light">The Origin Story</div>
+    <h2 style="color:var(--text-dark)">The name <span style="color:var(--blue)">Moor</span><br/>comes from the crest.</h2>
+    <p style="color:var(--text-mid)">The word <strong>"Moor"</strong> traces directly from <strong>Morrison</strong> — Sid's grandfather's middle name. Researching that name surfaced <em>Fairbairn's Crest</em>, the definitive British heraldic reference. Inside: the Morrison family crest — bearing <strong>three faces of Moors</strong>.</p>
+    <p style="color:var(--text-mid)">That crest became a personal symbol of ancestry, presence, and legacy. That symbol became a company. And the story of how one name connects to centuries of heritage became the founding proof of concept for <strong style="color:var(--blue)">Cultural Alchemy</strong>.</p>
+    <p style="color:var(--text-mid)">Sid grew up in graphic arts programs from middle school through college. He has worked in print shops, city agencies, think tanks, corporations, churches, nonprofits, and as a freelancer for over three decades. He has taught design. He has led community initiatives. He has been building visual systems his entire life — and Cultural Alchemy is the name for what that process has always been.</p>
+    <div class="abt-story-quote">
+      <p>"The most powerful brand you'll ever build is the one that tells the truth about who you are and where you come from."</p>
+    </div>
+    <p style="color:var(--text-mid);margin:0">— Sid Washington, Founder &amp; Principal Designer</p>
+  </div>
+  <div class="abt-story-right">
+    <div class="exp-badge">
+      <div class="exp-num">30+</div>
+      <div class="exp-text">Years delivering visual graphic solutions — print and web — for individuals, small businesses, city agencies, think tanks, and corporations of all sizes. Nationwide.</div>
+    </div>
+    <div class="abt-story-crest">
+      <div class="abt-crest-cell"><i class="ti ti-dna abt-crest-icon"></i><div class="abt-crest-title">Heritage First</div><div class="abt-crest-desc">Every brand starts with who you are, not what looks good right now.</div></div>
+      <div class="abt-crest-cell"><i class="ti ti-flame abt-crest-icon"></i><div class="abt-crest-title">Cultural Alchemy</div><div class="abt-crest-desc">Your story, values, and community identity forged into visual systems.</div></div>
+      <div class="abt-crest-cell"><i class="ti ti-cpu abt-crest-icon"></i><div class="abt-crest-title">AI Accelerated</div><div class="abt-crest-desc">Enterprise-grade AI infrastructure built for small business scale.</div></div>
+      <div class="abt-crest-cell"><i class="ti ti-world abt-crest-icon"></i><div class="abt-crest-title">Nationwide</div><div class="abt-crest-desc">Based in Douglasville, GA. Serving clients from Atlanta to L.A.</div></div>
+    </div>
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- ── PHILOSOPHY ── -->
+<section class="abt-philosophy sec-dark2">
+  <div class="eyebrow eyebrow-dark">The Method</div>
+  <h2 style="color:#fff">Cultural Alchemy:<br/>Three moves.</h2>
+  <p style="color:rgba(150,180,255,0.55);max-width:560px;margin-top:12px">This isn't a design trend. It's a framework built across 30 years of brand work, community engagement, and watching what actually compounds over time.</p>
+  <div class="abt-phil-grid">
+
+    <div class="abt-phil-card">
+      <div class="abt-phil-step">Step 01</div>
+      <div class="abt-phil-num">I</div>
+      <i class="ti ti-pickaxe abt-phil-icon"></i>
+      <div class="abt-phil-title">Extract</div>
+      <p class="abt-phil-desc">We go into your name, your story, your heritage, your community, and your values — and we pull out what's actually there. Not what sounds good in a pitch. What's <em>real</em>. The buried gold no marketing brief has ever captured.</p>
+    </div>
+
+    <div class="abt-phil-card">
+      <div class="abt-phil-step">Step 02</div>
+      <div class="abt-phil-num">II</div>
+      <i class="ti ti-anvil abt-phil-icon"></i>
+      <div class="abt-phil-title">Forge</div>
+      <p class="abt-phil-desc">We apply 30+ years of design craft, color psychology, symbolism, and visual balance to transform that raw material into a system. Logos. Brand guides. Visual language. Architecture that stands for something specific and holds its shape under pressure.</p>
+    </div>
+
+    <div class="abt-phil-card">
+      <div class="abt-phil-step">Step 03</div>
+      <div class="abt-phil-num">III</div>
+      <i class="ti ti-trend-up abt-phil-icon"></i>
+      <div class="abt-phil-title">Compound</div>
+      <p class="abt-phil-desc">A brand rooted in cultural truth compounds in value. Every new touchpoint reinforces it. Every year that passes makes it harder to copy. You don't maintain this brand — you <em>grow into it</em>. That's the difference between a logo and a legacy.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SKILLS + TOOLS ── -->
+<section class="abt-skills sec-light">
+  <div class="eyebrow eyebrow-light">Capabilities</div>
+  <h2 style="color:var(--text-dark)">What we know.<br/>How we work.</h2>
+  <div class="abt-skills-grid">
+
+    <div>
+      <div class="abt-skill-col-title">Design Disciplines</div>
+      <div class="abt-skill-list">
+        <div class="abt-skill-item">
+          <i class="ti ti-pentagon abt-skill-icon"></i>
+          <div><div class="abt-skill-name">Brand Identity Systems</div><div class="abt-skill-sub">Logos, visual guides, color systems, typography, iconography</div></div>
+        </div>
+        <div class="abt-skill-item">
+          <i class="ti ti-world-www abt-skill-icon"></i>
+          <div><div class="abt-skill-name">Web Design + Development</div><div class="abt-skill-sub">Wix, Shopify, WordPress, custom HTML/CSS/JS</div></div>
+        </div>
+        <div class="abt-skill-item">
+          <i class="ti ti-brush abt-skill-icon"></i>
+          <div><div class="abt-skill-name">Heraldic + Commemorative Art</div><div class="abt-skill-sub">Crests, coins, seals, custom illustrations</div></div>
+        </div>
+        <div class="abt-skill-item">
+          <i class="ti ti-speakerphone abt-skill-icon"></i>
+          <div><div class="abt-skill-name">Marketing + Print</div><div class="abt-skill-sub">Campaign graphics, flyers, sponsor decks, apparel</div></div>
+        </div>
+        <div class="abt-skill-item">
+          <i class="ti ti-cpu abt-skill-icon"></i>
+          <div><div class="abt-skill-name">AI Systems + Agent Design</div><div class="abt-skill-sub">People layer, process layer, infrastructure layer</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="abt-skill-col-title">Tools &amp; Platforms</div>
+      <div class="abt-tools-wrap">
+        <span class="abt-tool-tag">Adobe Illustrator</span>
+        <span class="abt-tool-tag">Photoshop</span>
+        <span class="abt-tool-tag">InDesign</span>
+        <span class="abt-tool-tag">Canva Pro</span>
+        <span class="abt-tool-tag">Wix Editor</span>
+        <span class="abt-tool-tag">Shopify</span>
+        <span class="abt-tool-tag">WordPress</span>
+        <span class="abt-tool-tag">Claude AI</span>
+        <span class="abt-tool-tag">Make.com</span>
+        <span class="abt-tool-tag">Notion</span>
+        <span class="abt-tool-tag">Zapier</span>
+        <span class="abt-tool-tag">Figma</span>
+        <span class="abt-tool-tag">Final Cut Pro</span>
+        <span class="abt-tool-tag">Procreate</span>
+      </div>
+
+      <div class="abt-skill-col-title" style="margin-top:36px">By the Numbers</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px">
+        <div style="background:var(--light2);border:1px solid rgba(48,96,208,0.1);border-radius:4px;padding:20px 22px">
+          <div style="font-family:'DM Serif Display',serif;font-size:38px;color:var(--blue);line-height:1">30+</div>
+          <div style="font-size:11px;color:var(--text-mid);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px">Years Experience</div>
+        </div>
+        <div style="background:var(--light2);border:1px solid rgba(48,96,208,0.1);border-radius:4px;padding:20px 22px">
+          <div style="font-family:'DM Serif Display',serif;font-size:38px;color:var(--blue);line-height:1">18+</div>
+          <div style="font-size:11px;color:var(--text-mid);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px">Portfolio Projects</div>
+        </div>
+        <div style="background:var(--light2);border:1px solid rgba(48,96,208,0.1);border-radius:4px;padding:20px 22px">
+          <div style="font-family:'DM Serif Display',serif;font-size:38px;color:var(--blue);line-height:1">8+</div>
+          <div style="font-size:11px;color:var(--text-mid);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px">AI Agents Live</div>
+        </div>
+        <div style="background:var(--light2);border:1px solid rgba(48,96,208,0.1);border-radius:4px;padding:20px 22px">
+          <div style="font-family:'DM Serif Display',serif;font-size:38px;color:var(--blue);line-height:1">100%</div>
+          <div style="font-size:11px;color:var(--text-mid);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px">Culturally Grounded</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- ── BRAND ECOSYSTEMS ── -->
+<section class="abt-eco sec-mid">
+  <div class="eyebrow eyebrow-dark">Live Infrastructure</div>
+  <h2 style="color:#fff">Three brand ecosystems.<br/>Running now.</h2>
+  <p style="color:rgba(150,180,255,0.55);max-width:560px;margin-top:12px">These aren't case studies. They're live AI-powered brand systems operating in the real world — proving the framework we teach and sell.</p>
+  <div class="abt-eco-grid">
+
+    <div class="abt-eco-card">
+      <div class="abt-eco-status">Live</div>
+      <i class="ti ti-building-community abt-eco-icon"></i>
+      <div class="abt-eco-name">Moor Graphix</div>
+      <p class="abt-eco-desc">The studio itself — brand design, AI integration, workshop delivery, and consultation. Powered by 6 live agents including client intake, revenue intelligence, and voice AI.</p>
+      <div class="abt-eco-agents">
+        <div class="abt-eco-agent">MG Concierge Agent — Client Intake</div>
+        <div class="abt-eco-agent">MAAT Master Orchestrator</div>
+        <div class="abt-eco-agent">Sma Taui Revenue Intel Agent</div>
+      </div>
+    </div>
+
+    <div class="abt-eco-card">
+      <div class="abt-eco-status">Live</div>
+      <i class="ti ti-shirt abt-eco-icon"></i>
+      <div class="abt-eco-name">Amerukhan Basics</div>
+      <p class="abt-eco-desc">A culturally-rooted apparel brand with a full AI-powered concierge serving customers. The brand identity system, including commemorative coins and cultural marks, was designed by Moor Graphix.</p>
+      <div class="abt-eco-agents">
+        <div class="abt-eco-agent">Amerukhan Culture Shop Agent</div>
+        <div class="abt-eco-agent">AI Customer Concierge</div>
+      </div>
+    </div>
+
+    <div class="abt-eco-card">
+      <div class="abt-eco-status">Live</div>
+      <i class="ti ti-school abt-eco-icon"></i>
+      <div class="abt-eco-name">MAAT Lab — Education</div>
+      <p class="abt-eco-desc">An AI education and brand incubator platform. The MAAT Guide and Lab Onboarding agents provide students with personalized AI education experiences rooted in cultural identity.</p>
+      <div class="abt-eco-agents">
+        <div class="abt-eco-agent">MAAT Guide Agent</div>
+        <div class="abt-eco-agent">Lab Onboarding Agent</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="abt-testimonials sec-light">
+  <div class="eyebrow eyebrow-light">Client Reviews</div>
+  <h2 style="color:var(--text-dark)">What clients say.</h2>
+  <div class="test-grid">
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Moor Graphix is AWESOME! Timely, respectful, professional and excellent at their craft. I HIGHLY recommend Moor Graphix!"</div><div class="test-name">William Glenn Bean</div><div class="test-role">Client</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Sid Washington successfully took what was a vision onto fruition. It is exactly what I wanted and so much more! I couldn't be more pleased."</div><div class="test-name">Maria Furman</div><div class="test-role">Client</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Sid is ultra-responsive and quick — two qualities I look for and value. Integrity, knowledge, and quality craftsmanship. One-stop shop."</div><div class="test-name">Wix Marketplace Client</div><div class="test-role">Verified Review</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Sid is a polite, competent, quick, and talented man who fixed my website in no time and did a great job!"</div><div class="test-name">Sasscer Hill</div><div class="test-role">Author</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"I love my website. Moor Graphix did a good job. Good communication, answers questions fast. I highly recommend."</div><div class="test-name">Verified Client</div><div class="test-role">Wix Marketplace</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Easy and professional to work with. Understood my ideas and got them put together in a wonderful manner. Felt like talking to a friend."</div><div class="test-name">Verified Client</div><div class="test-role">Wix Marketplace</div></div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="abt-cta sec-red">
+  <div class="final-cta-eyebrow">Work With Sid</div>
+  <h2 style="color:#fff">Your heritage is<br/><em style="font-style:italic;color:#6AABFF">your competitive moat.</em></h2>
+  <p class="final-cta-sub">Let's extract it, forge it, and build a brand that compounds forever. Start with a free consultation — no pressure, no template pitch. Just an honest conversation about your story and what it could become.</p>
+  <div class="final-cta-btns">
+    <a href="https://www.moorgraphix.com/booking-calendar/custom-wall-art"><button class="btn-primary" style="font-size:14px;padding:17px 34px"><i class="ti ti-calendar"></i>Book Free Consultation</button></a>
+    <a href="contact.html"><button class="btn-ghost" style="font-size:14px;padding:17px 30px">Contact Sid →</button></a>
+    <a href="index.html#portfolio"><button class="btn-ghost" style="font-size:14px;padding:17px 30px">View Portfolio →</button></a>
+  </div>
+  <div class="cta-contact">
+    <div class="cta-info"><i class="ti ti-phone"></i><a href="tel:4704994407">(470) 499-4407</a></div>
+    <div class="cta-info"><i class="ti ti-mail"></i><a href="mailto:sidart@moorgraphix.com">sidart@moorgraphix.com</a></div>
+    <div class="cta-info"><i class="ti ti-map-pin"></i>Douglasville, GA — Serving Nationwide</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sec-dark">
+  <div class="foot-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </div>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.twitter.com/moorgraphix"><i class="ti ti-brand-x"></i></a>
+    <a href="https://www.linkedin.com/company/moor-graphix"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.youtube.com/@moorgraphix" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2046 Moor Graphix</div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+</div><!-- /.page -->
+
+<script>
+const canvas=document.getElementById('bg'),ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+const stars=Array.from({length:180},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.2+0.2,o:Math.random()*Math.PI*2,s:Math.random()*0.25+0.07}));
+const nodes=Array.from({length:26},()=>({x:Math.random(),y:Math.random(),vx:(Math.random()-0.5)*0.00028,vy:(Math.random()-0.5)*0.00028}));
+function drawBg(){
+  ctx.clearRect(0,0,W,H);
+  stars.forEach(s=>{s.o+=s.s*0.014;ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(100,160,255,${0.07+0.07*Math.sin(s.o)})`;ctx.fill();});
+  nodes.forEach(n=>{n.x=(n.x+n.vx+1)%1;n.y=(n.y+n.vy+1)%1;});
+  for(let i=0;i<nodes.length;i++){
+    for(let j=i+1;j<nodes.length;j++){
+      const dx=(nodes[i].x-nodes[j].x)*W,dy=(nodes[i].y-nodes[j].y)*H,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<190){ctx.beginPath();ctx.moveTo(nodes[i].x*W,nodes[i].y*H);ctx.lineTo(nodes[j].x*W,nodes[j].y*H);ctx.strokeStyle=`rgba(48,96,208,${0.09*(1-d/190)})`;ctx.lineWidth=0.5;ctx.stroke();}
+    }
+    ctx.beginPath();ctx.arc(nodes[i].x*W,nodes[i].y*H,1.8,0,Math.PI*2);ctx.fillStyle='rgba(80,140,255,0.28)';ctx.fill();
+  }
+  requestAnimationFrame(drawBg);
+}
+drawBg();
+</script>
+</body>
+</html>
