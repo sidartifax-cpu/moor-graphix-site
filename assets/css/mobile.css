@@ -1,0 +1,230 @@
+/* ═══════════════════════════════════════════════════════════
+   MOOR GRAPHIX — Mobile Responsive Stylesheet
+   Loaded on every page. All rules scoped to max-width: 768px.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Desktop defaults: hide mobile-only elements ── */
+.hamburger    { display: none; }
+.mobile-menu  { display: none; }
+
+/* ══════════════════════════════════════════════
+   MOBILE BREAKPOINT — 768px and below
+   ══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ─── 1. NAV — HAMBURGER ─────────────────── */
+  .nav { padding: 12px 18px; gap: 0; }
+  .nav-links { display: none !important; }
+  .nav-pill  { display: none !important; }
+
+  /* Hamburger button — 3 bars */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 6px 4px;
+    z-index: 310;
+    flex-shrink: 0;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #6AABFF;
+    border-radius: 2px;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  /* Full-screen mobile menu overlay */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 4, 8, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 300;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+  }
+  .mobile-menu.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    background: none;
+    border: none;
+    color: rgba(100, 160, 255, 0.55);
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    transition: color 0.2s;
+  }
+  .mobile-menu-close:hover { color: #6AABFF; }
+  .mobile-menu a {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: rgba(190, 215, 255, 0.85);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: #6AABFF; }
+  .mobile-menu .mob-consult {
+    margin-top: 10px;
+    background: rgba(80, 140, 255, 0.15);
+    border: 0.5px solid rgba(80, 140, 255, 0.4);
+    color: #6AABFF !important;
+    font-size: 13px !important;
+    letter-spacing: 0.14em;
+    padding: 13px 28px;
+    border-radius: 4px;
+  }
+
+  /* ─── 2. HERO ────────────────────────────── */
+  .hero {
+    grid-template-columns: 1fr !important;
+    min-height: unset;
+  }
+  .hero-left {
+    padding: 44px 22px;
+    border-right: none !important;
+    border-bottom: 0.5px solid rgba(80,140,255,0.1);
+  }
+  .hero-right { display: none; }
+  .hero-btns  { flex-wrap: wrap; gap: 10px; }
+
+  /* ─── 3. ORIGIN STORY ───────────────────── */
+  .origin {
+    grid-template-columns: 1fr !important;
+  }
+  .origin-left {
+    padding: 44px 22px;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .origin-right { padding: 44px 22px; }
+  .crest-grid   { grid-template-columns: 1fr 1fr; }
+
+  /* ─── 4. SERVICES GRID ───────────────────── */
+  .svc-grid { grid-template-columns: 1fr !important; }
+  .blueprint {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+    padding: 36px 22px;
+    text-align: center;
+  }
+  .blueprint-actions { justify-content: center; flex-wrap: wrap; }
+
+  /* ─── 5. AI SECTION ──────────────────────── */
+  .ai-section {
+    grid-template-columns: 1fr !important;
+  }
+  .ai-left, .ai-right { padding: 44px 22px !important; }
+
+  /* ─── 6. WORKSHOP SECTION ────────────────── */
+  .workshop {
+    grid-template-columns: 1fr !important;
+  }
+  .workshop-left, .workshop-right { padding: 44px 22px !important; }
+
+  /* ─── 7. SHOWCASE STRIP ─────────────────── */
+  .showcase {
+    height: 110px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .sw-item {
+    flex: 0 0 120px;
+    min-width: 120px;
+    height: 110px;
+    scroll-snap-align: start;
+  }
+  .sw-lbl {
+    font-size: 6.5px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 4px;
+  }
+
+  /* ─── 8. VIDEO GRIDS ─────────────────────── */
+  .video-grid        { grid-template-columns: 1fr !important; }
+  .video-shorts-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* ─── 9. SOCIAL GRID ─────────────────────── */
+  .social-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* ─── 10. TESTIMONIALS ───────────────────── */
+  .test-grid  { grid-template-columns: 1fr !important; }
+  .test-quote { font-size: 14px !important; }
+
+  /* ─── 11. NATIONWIDE / STATS ─────────────── */
+  .nationwide {
+    grid-template-columns: 1fr !important;
+    padding: 44px 22px;
+    gap: 24px;
+  }
+
+  /* ─── 12. PORTFOLIO GRID ─────────────────── */
+  .work-grid-full { grid-template-columns: 1fr !important; gap: 14px; }
+  .wg-card        { height: 280px; }
+
+  /* ─── 13. FOOTER ─────────────────────────── */
+  footer {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    padding: 36px 22px;
+    gap: 22px;
+  }
+  .foot-social { justify-content: center; }
+  .foot-right  { text-align: center; }
+
+  /* ─── 14. TYPOGRAPHY CAPS ────────────────── */
+  h1 { font-size: clamp(28px, 9vw, 38px) !important; }
+  h2 { font-size: clamp(20px, 7vw, 28px) !important; }
+
+  /* ─── 15. GENERAL SECTION PADDING ──────── */
+  .sec-wrap { padding-left: 22px !important; padding-right: 22px !important; }
+  .svc-section,
+  .work-section,
+  .bl-grid-section,
+  .art-hero,
+  .art-body-section,
+  .art-more-section { padding-left: 22px !important; padding-right: 22px !important; }
+
+  /* ─── 16. BLOG PAGE SPECIFICS ───────────── */
+  .bl-hero      { grid-template-columns: 1fr !important; padding: 44px 22px; }
+  .bl-hero-visual { display: none; }
+  .bl-grid      { grid-template-columns: 1fr !important; }
+  .bl-featured  { grid-template-columns: 1fr !important; }
+  .bl-featured-img { max-height: 220px; }
+
+  /* ─── 17. CONTACT / ABOUT SPECIFICS ─────── */
+  .contact-grid,
+  .about-grid   { grid-template-columns: 1fr !important; }
+
+  /* ─── 18. TICKER / PILL OVERFLOW ────────── */
+  .ticker-bar   { font-size: 11px; padding: 8px 12px; }
+  .nav-logo-text .logo-sub { display: none; }
+}
