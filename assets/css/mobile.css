@@ -227,4 +227,48 @@
   /* ─── 18. TICKER / PILL OVERFLOW ────────── */
   .ticker-bar   { font-size: 11px; padding: 8px 12px; }
   .nav-logo-text .logo-sub { display: none; }
+
+  /* ─── 19. STATS ROWS — prevent horizontal overflow ── */
+  /* index.html / services.html hero stats */
+  .stats-row {
+    flex-wrap: wrap;
+    gap: 16px 0;
+    row-gap: 16px;
+  }
+  .stat {
+    border-right: none !important;
+    padding: 0 20px 0 0;
+    min-width: 90px;
+  }
+  .stat:first-child { padding-left: 0; }
+
+  /* index.html / ai-training / ai-workshop AI stats */
+  .ai-stat-row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .ai-stat {
+    border-right: none !important;
+    padding: 0 16px 0 0;
+    min-width: 80px;
+  }
+  .ai-stat:first-child { padding-left: 0; }
+
+  /* ai-training.html / ai-workshop.html hero stats */
+  .ait-hero-stats {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* about.html hero stat row */
+  .abt-hero-stat-row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .abt-hero-stat {
+    border-right: none !important;
+    padding: 0 16px 0 0;
+    min-width: 80px;
+  }
+  .abt-hero-stat:first-child { padding-left: 0; }
 }
