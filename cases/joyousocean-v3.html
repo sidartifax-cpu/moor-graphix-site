@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyous Ocean — Case Study | Moor Graphix</title>
+  <meta name="description" content="How Moor Graphix transformed Joyous Ocean — a teaching yogini finally got a platform that matched her practice, removed checkout friction, and made her proud to promote her work." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="Joyous Ocean Case Study — Moor Graphix" />
+  <meta property="og:description" content="Web redesign and commerce integration for a teaching yogini. Products, coaching, and direct checkout — unified in one platform." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/joyousocean.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --blue-glow: rgba(59,111,240,0.06);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8,12,20,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--blue-line); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1.2; }
+    .nav-brand .name { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.08em; color: var(--white); text-transform: uppercase; }
+    .nav-brand .tagline { font-size: 0.58rem; letter-spacing: 0.16em; color: var(--blue); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.76rem; letter-spacing: 0.06em; color: var(--muted); text-decoration: none; transition: color 0.3s var(--ease); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { color: #fff !important; background: var(--blue); padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 600 !important; font-size: 0.7rem !important; letter-spacing: 0.1em !important; text-transform: uppercase; transition: opacity 0.3s !important; }
+    .nav-cta:hover { opacity: 0.85 !important; }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; margin-top: 68px; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 28s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO — Z-Axis Cascade */
+    .hero {
+      min-height: 100dvh;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 7rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 58% 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+    }
+    /* Ambient glow */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(59,111,240,0.07) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-left { position: relative; z-index: 1; }
+
+    .pill-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--blue-line); border-radius: 9999px;
+      padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 2rem;
+      background: var(--blue-dim);
+    }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4rem, 7vw, 6.5rem);
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.75rem;
+    }
+    h1 em { font-style: italic; color: var(--blue); }
+
+    /* PSYCHOLOGY HOOK: Jobs-to-be-Done + Loss Aversion in hero copy */
+    .hero-deck {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 46ch;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      padding: 0.875rem 1.75rem; border-radius: 9999px;
+      font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
+      font-weight: 600; text-decoration: none;
+      transition: all 0.45s var(--ease);
+    }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; }
+    .btn-ghost:hover { color: var(--white); }
+
+    /* Hero right — Z-Axis stacked cards */
+    .hero-right { position: relative; z-index: 1; }
+    .z-stack { position: relative; height: 380px; }
+    .z-card {
+      position: absolute;
+      width: 100%;
+      background: var(--blue-dim);
+      border: 1px solid var(--blue-line);
+      border-radius: 1.5rem;
+      padding: 2px;
+      transition: transform 0.6s var(--ease);
+    }
+    .z-card-inner {
+      background: var(--bg-2);
+      border-radius: calc(1.5rem - 2px);
+      padding: 1.75rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .z-card:nth-child(1) { top: 0; transform: rotate(-2.5deg) translateY(0px); z-index: 1; }
+    .z-card:nth-child(2) { top: 24px; transform: rotate(1deg) translateY(0px); z-index: 2; }
+    .z-card:nth-child(3) { top: 52px; transform: rotate(-0.5deg) translateY(0px); z-index: 3; background: rgba(59,111,240,0.14); }
+    .z-stack:hover .z-card:nth-child(1) { transform: rotate(-3deg) translateY(-8px); }
+    .z-stack:hover .z-card:nth-child(2) { transform: rotate(1.5deg) translateY(-4px); }
+    .z-stack:hover .z-card:nth-child(3) { transform: rotate(0deg) translateY(0px); }
+    .z-stat { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--blue); line-height: 1; margin-bottom: 0.35rem; }
+    .z-label { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
+    .z-label strong { color: var(--white); font-weight: 500; display: block; font-size: 0.8rem; margin-bottom: 0.15rem; }
+
+    /* META ROW */
+    .meta-strip {
+      border-top: 1px solid var(--blue-line);
+      margin-top: 2.5rem; padding-top: 2rem;
+      display: flex; gap: 3rem; flex-wrap: wrap;
+    }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+    .meta-val a { color: var(--blue); text-decoration: none; }
+    .meta-val a:hover { text-decoration: underline; }
+
+    /* SECTION */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .two-col-flip { direction: rtl; }
+    .two-col-flip > * { direction: ltr; }
+
+    /* PSYCHOLOGY: Loss Aversion list — what they were LOSING before */
+    .loss-list { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.625rem; }
+    .loss-list li {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 1.1rem 1.4rem;
+      background: var(--bg-3); border: 1px solid var(--blue-line);
+      border-radius: 0.75rem; font-size: 0.83rem; color: var(--muted);
+      line-height: 1.55; transition: border-color 0.4s var(--ease), transform 0.4s var(--ease);
+    }
+    .loss-list li:hover { border-color: rgba(59,111,240,0.45); transform: translateX(5px); }
+    .loss-icon { font-size: 0.75rem; color: rgba(59,111,240,0.6); flex-shrink: 0; margin-top: 0.15rem; }
+
+    /* STEPS */
+    .steps-col { margin-top: 2rem; }
+    .step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .step:first-child { padding-top: 0; }
+    .step:last-child { border-bottom: none; }
+    .step:hover { transform: translateX(6px); }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .step h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .step p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* PROOF — Bento asymmetric grid */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: minmax(160px, auto); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.12); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .bento-card.featured .bento-inner { flex-direction: row; gap: 2.5rem; align-items: center; }
+    .big-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; flex: 1; }
+
+    /* PSYCHOLOGY CALLOUT — Availability Heuristic: make success vivid */
+    .insight-bar {
+      background: var(--blue-dim);
+      border: 1px solid var(--blue-line);
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    .insight-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .insight-text { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+    .insight-text strong { color: var(--white); font-weight: 500; }
+
+    /* QUOTE BREAK */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 1.5rem 4rem; }
+      .z-stack { height: 220px; }
+      .two-col, .two-col-flip { grid-template-columns: 1fr; gap: 3rem; }
+      .two-col-flip { direction: ltr; }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2, .bento-card.c3, .bento-card.c4, .bento-card.c6 { grid-column: span 2; }
+      .bento-card.featured .bento-inner { flex-direction: column; gap: 1.5rem; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wrap { padding: 5rem 1.5rem; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 520px) {
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2, .bento-card.c3, .bento-card.c4, .bento-card.c6 { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav-inner">
+      <a class="nav-brand" href="https://moorgraphix.com/index.html">
+        <span class="name">Moor Graphix</span>
+        <span class="tagline">Cultural Alchemy + AI Systems</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+        <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+        <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+        <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+        <li><a href="https://moorgraphix.com/about.html">About</a></li>
+        <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://calendly.com/moorwashington" target="_blank">Book Free Consult</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>✦ Joyous Ocean</span><span>✦ Web Redesign</span><span>✦ Brand Architecture</span><span>✦ Commerce Integration</span><span>✦ Teaching Yogini</span><span>✦ Yoga &amp; Wellness</span><span>✦ Cultural Alchemy</span>
+      <span>✦ Joyous Ocean</span><span>✦ Web Redesign</span><span>✦ Brand Architecture</span><span>✦ Commerce Integration</span><span>✦ Teaching Yogini</span><span>✦ Yoga &amp; Wellness</span><span>✦ Cultural Alchemy</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left reveal">
+      <div class="pill-label">Case Study — Web &amp; Brand Transformation</div>
+      <!-- PSYCHOLOGY: Cormorant italic on the tension word creates emotional pull -->
+      <h1>Her practice<br>was profound.<br>Her platform<br><em>wasn't.</em></h1>
+      <!-- PSYCHOLOGY: Jobs-to-Be-Done + Loss Aversion — she wasn't just losing sales, she was losing CREDIBILITY every day -->
+      <p class="hero-deck">Every time a student clicked "buy," they left her site. Every time a potential coaching client landed on her page, they couldn't find what they were looking for. <strong>A teaching yogini with 20+ years of practice was being undersold by her own digital presence.</strong> Moor Graphix changed that.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="https://joyousocean.com" target="_blank">
+          See the Live Site
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn btn-ghost" href="#proof">See the Results ↓</a>
+      </div>
+      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-lbl">Client</span><span class="meta-val">Joyous Ocean</span></div>
+        <div class="meta-item"><span class="meta-lbl">Industry</span><span class="meta-val">Yoga &amp; Holistic Wellness</span></div>
+        <div class="meta-item"><span class="meta-lbl">Deliverables</span><span class="meta-val">Web Redesign · Commerce · Brand Architecture</span></div>
+        <div class="meta-item"><span class="meta-lbl">Live Site</span><span class="meta-val"><a href="https://joyousocean.com" target="_blank">joyousocean.com ↗</a></span></div>
+      </div>
+    </div>
+
+    <!-- Z-Axis stacked outcome cards -->
+    <div class="hero-right reveal d2">
+      <div class="z-stack">
+        <div class="z-card">
+          <div class="z-card-inner">
+            <div class="z-stat">0</div>
+            <div class="z-label"><strong>Third-party redirects eliminated</strong>Customers now buy inside her ecosystem — no PayPal handoff, no broken trust.</div>
+          </div>
+        </div>
+        <div class="z-card">
+          <div class="z-card-inner">
+            <div class="z-stat">3×</div>
+            <div class="z-label"><strong>Revenue streams — one platform</strong>Products, coaching, and teaching: each with its own clear pathway.</div>
+          </div>
+        </div>
+        <div class="z-card">
+          <div class="z-card-inner">
+            <div class="z-stat">↑</div>
+            <div class="z-label"><strong>Client started promoting the site</strong>The real signal. She was proud to point people there — that never happened before.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROBLEM -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">01 — The Problem</div>
+        <!-- PSYCHOLOGY: Availability Heuristic — paint a vivid picture of the daily loss -->
+        <h2>Every sale she<br><em>almost made.</em></h2>
+        <p class="body-text">Imagine building a 20+ year practice in yoga — products developed from lived experience, coaching shaped by thousands of hours of teaching — and watching potential students land on your website, get confused, and leave.</p>
+        <p class="body-text">That was the reality for Joyous Ocean. The practice was deep. The knowledge was real. But the digital platform was creating friction at every point of potential connection — sending customers away to pay, burying the coaching offer, and projecting a credibility gap that didn't match who she actually was.</p>
+        <!-- PSYCHOLOGY: Insight bar uses Availability Heuristic to quantify the invisible cost -->
+        <div class="insight-bar">
+          <span class="insight-icon">⚡</span>
+          <p class="insight-text"><strong>The hidden cost of friction:</strong> Every PayPal redirect isn't just an inconvenience — it's a broken trust signal. Research shows checkout abandonment increases 70%+ when customers are sent to a third-party to complete a purchase. She was losing sales she never knew she had.</p>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <!-- PSYCHOLOGY: Loss Aversion framing — each bullet is a LOSS, not a "problem" -->
+        <ul class="loss-list">
+          <li><span class="loss-icon">—</span>Every purchase sent her customers away from her site through PayPal — destroying brand continuity and suppressing conversions</li>
+          <li><span class="loss-icon">—</span>Products, coaching, and teaching lived in one unstructured space — visitors couldn't identify which path was theirs</li>
+          <li><span class="loss-icon">—</span>No structured journey from awareness to action — first-time visitors had no clear next step</li>
+          <li><span class="loss-icon">—</span>The site's visual language didn't reflect 20+ years of practice — a credibility gap that cost her before anyone read a word</li>
+          <li><span class="loss-icon">—</span>She couldn't confidently promote the site — the platform didn't match the person behind it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROCESS -->
+  <div class="wrap">
+    <div class="two-col two-col-flip">
+      <div class="reveal">
+        <div class="sec-label">02 — The Process</div>
+        <!-- PSYCHOLOGY: Authority + First Principles — name the methodology -->
+        <h2>Cultural Alchemy<br><em>applied.</em></h2>
+        <p class="body-text">Moor Graphix doesn't start with templates. Every engagement starts with the Cultural Alchemy framework — a process of extracting the authentic truth of a brand and encoding it into every layer of the digital infrastructure.</p>
+        <p class="body-text">For Joyous Ocean, that meant one guiding question: <strong>what does her practice actually deserve?</strong> The answer drove every decision — the information architecture, the commerce integration, the visual language.</p>
+        <p class="body-text">The redesign wasn't cosmetic. It was structural. When the foundation is right, everything built on top of it compounds.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="steps-col">
+          <div class="step">
+            <div class="step-n">01</div>
+            <div>
+              <h3>Revenue Stream Architecture</h3>
+              <p>Mapped her three income streams — physical products, digital offerings, coaching services — and built distinct, purposeful site sections for each. No more guessing which path to take.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">02</div>
+            <div>
+              <h3>Native Commerce Integration</h3>
+              <p>Removed the PayPal redirect entirely. Customers now complete every purchase inside her ecosystem — building trust at every touchpoint, not breaking it.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">03</div>
+            <div>
+              <h3>Information Hierarchy Redesign</h3>
+              <p>Restructured every page so first-time visitors immediately understand who she is, what she offers, and what to do. Clarity converts. Confusion doesn't.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">04</div>
+            <div>
+              <h3>Visual Identity Alignment</h3>
+              <p>Brought the aesthetic in line with the depth of a 20+ year yogini practice — a digital presence that earns credibility before a single word is read.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROOF — Asymmetric Bento -->
+  <div class="wrap" id="proof">
+    <div class="reveal">
+      <div class="sec-label">03 — The Proof</div>
+      <!-- PSYCHOLOGY: Social Proof + Behavioral Signal — "she started promoting it" is stronger than any metric -->
+      <h2>The metric that matters<br>most: <em>did she use it?</em></h2>
+      <p class="body-text">Vanity metrics don't tell the real story. The most honest signal of a successful redesign is behavioral: <strong>did the client start promoting the site?</strong> Did the feedback change? Did the platform finally match the person? For Joyous Ocean — yes, yes, and yes.</p>
+    </div>
+    <div class="bento">
+      <!-- Featured wide card -->
+      <div class="bento-card c6 featured reveal d1">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">100%</div>
+            <div class="big-lbl">Customer Ownership Restored</div>
+          </div>
+          <div style="max-width: 52ch;">
+            <h4>Every transaction now stays inside her ecosystem</h4>
+            <p>Before the redesign, every sale sent customers away from her site to complete payment through PayPal. That handoff cost her trust, brand continuity, and conversion rate. Now every transaction — product purchase, coaching booking, digital download — happens inside her platform. She owns the customer experience end-to-end.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="bento-card c3 reveal d1">
+        <div class="bento-inner">
+          <h4>She started promoting it</h4>
+          <p>After launch, the client actively began pointing people to the site and gave direct positive feedback. That behavioral shift is the real success indicator — a platform she was previously unable to promote with confidence became one she was proud to share.</p>
+        </div>
+      </div>
+      <div class="bento-card c3 reveal d2">
+        <div class="bento-inner">
+          <h4>Clarity where there was confusion</h4>
+          <p>Products, coaching, and teaching now each have their own structured pathways. First-time visitors know immediately who she is and what step to take. The site finally answers the question every visitor brings: "What is this for me?"</p>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div class="bento-card c2 reveal d1">
+        <div class="bento-inner">
+          <div class="big-num">3×</div>
+          <div class="big-lbl">Revenue streams — one platform</div>
+        </div>
+      </div>
+      <div class="bento-card c4 reveal d2">
+        <div class="bento-inner">
+          <h4>Credibility that matches the practice</h4>
+          <p>A teaching yogini with 20+ years of embodied knowledge now has a digital home that reflects the depth of her expertise — not just a website, but a professional platform that earns trust before anyone reads a word. The visual identity and the person behind it finally match.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-break">
+    <div class="quote-inner">
+      <div class="reveal">
+        <!-- PSYCHOLOGY: Authority quote + First Principles signal -->
+        <blockquote>"When a brand finally fits, the owner starts to promote it. That behavioral shift is the only case study that matters."</blockquote>
+        <p class="quote-attr">— Sid Washington, Moor Graphix</p>
+      </div>
+      <div class="reveal d1">
+        <div class="sec-label">The Framework</div>
+        <h2>Cultural Alchemy:<br><em>The method behind every build.</em></h2>
+        <p class="body-text">Every Moor Graphix engagement is driven by one core belief: the most powerful brands are the ones most truthful about who they are. We don't impose a visual style — we extract the authentic identity and encode it into infrastructure that grows.</p>
+        <p class="body-text">For Joyous Ocean, that meant stripping the friction between her practice and her platform. The result wasn't just a better website. It was a platform she could finally build on.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-inner reveal">
+      <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Turn</div>
+      <!-- PSYCHOLOGY: Mimetic Desire + Loss Aversion in CTA headline -->
+      <h2>Your practice deserves a platform<br>that <em>matches</em> it.</h2>
+      <p class="body-text">Moor Graphix builds brand and commerce infrastructure for practitioners, entrepreneurs, and movement-builders ready to stop being undersold by their own digital presence.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank">
+          Book Free Consultation
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn-outline" href="https://moorgraphix.com/index.html#portfolio">← View All Work</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+      <a class="footer-back" href="https://moorgraphix.com/index.html#portfolio">← Back to Portfolio</a>
+      <span class="footer-copy">© 2046 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

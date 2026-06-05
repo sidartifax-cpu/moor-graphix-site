@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2 Sports Moms — Case Study | Moor Graphix</title>
+  <meta name="description" content="How Moor Graphix built the logo and website that gave 2 Sports Moms — a 501(c)(3) nonprofit — the brand identity and platform to carry their mission into year one." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="2 Sports Moms Case Study — Moor Graphix" />
+  <meta property="og:description" content="Logo design and website build for a 501(c)(3) nonprofit connecting student-athletes with opportunities and families with resources. Built from zero. Built to last." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/2sportsmoms.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8,12,20,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--blue-line); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1.2; }
+    .nav-brand .name { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.08em; color: var(--white); text-transform: uppercase; }
+    .nav-brand .tagline { font-size: 0.58rem; letter-spacing: 0.16em; color: var(--blue); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.76rem; letter-spacing: 0.06em; color: var(--muted); text-decoration: none; transition: color 0.3s var(--ease); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { color: #fff !important; background: var(--blue); padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 600 !important; font-size: 0.7rem !important; letter-spacing: 0.1em !important; text-transform: uppercase; transition: opacity 0.3s !important; }
+    .nav-cta:hover { opacity: 0.85 !important; }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; margin-top: 68px; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 32s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO — Asymmetrical editorial split */
+    .hero {
+      min-height: 100dvh;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 7rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 44%;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      right: -5%;
+      width: 45vw;
+      height: 45vw;
+      background: radial-gradient(circle, rgba(59,111,240,0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-left { position: relative; z-index: 1; }
+    .hero-right { position: relative; z-index: 1; }
+
+    .pill-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--blue-line); border-radius: 9999px;
+      padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 2rem;
+      background: var(--blue-dim);
+    }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.8rem, 6.5vw, 6rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
+    h1 em { font-style: italic; color: var(--blue); }
+
+    .hero-deck { font-size: 1.05rem; color: var(--muted); max-width: 48ch; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.45s var(--ease); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; }
+    .btn-ghost:hover { color: var(--white); }
+
+    /* Hero meta */
+    .meta-strip { border-top: 1px solid var(--blue-line); margin-top: 2.5rem; padding-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+    .meta-val a { color: var(--blue); text-decoration: none; }
+
+    /* Hero right — AIDA impact column */
+    /* PSYCHOLOGY: AIDA — Attention (big stat) → Interest (label) → Desire (impact) → Action (CTA below) */
+    .impact-col { display: flex; flex-direction: column; gap: 0.875rem; }
+    .impact-card {
+      background: var(--blue-dim); border: 1px solid var(--blue-line);
+      border-radius: 1.5rem; padding: 2px;
+      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    }
+    .impact-card:hover { transform: translateX(-5px); box-shadow: 0 8px 28px rgba(59,111,240,0.1); }
+    .impact-inner {
+      background: var(--bg-2); border-radius: calc(1.5rem - 2px);
+      padding: 1.5rem 1.75rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+    .impact-inner .i-num { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; line-height: 1; color: var(--blue); margin-bottom: 0.3rem; }
+    .impact-inner .i-head { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
+    .impact-inner .i-body { font-size: 0.76rem; color: var(--muted); line-height: 1.55; }
+
+    /* SECTION */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    /* PSYCHOLOGY: Authority signal bar */
+    .authority-bar {
+      background: var(--blue-dim); border: 1px solid var(--blue-line);
+      border-radius: 1rem; padding: 1.5rem 2rem; margin-top: 2rem;
+      display: flex; align-items: flex-start; gap: 1.25rem;
+    }
+    .auth-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .auth-text { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+    .auth-text strong { color: var(--white); font-weight: 500; }
+
+    /* LOSS LIST */
+    .loss-list { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.625rem; }
+    .loss-list li { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.4rem; background: var(--bg-3); border: 1px solid var(--blue-line); border-radius: 0.75rem; font-size: 0.83rem; color: var(--muted); line-height: 1.55; transition: border-color 0.4s var(--ease), transform 0.4s var(--ease); }
+    .loss-list li:hover { border-color: rgba(59,111,240,0.45); transform: translateX(5px); }
+    .loss-icon { font-size: 0.75rem; color: rgba(59,111,240,0.6); flex-shrink: 0; margin-top: 0.15rem; }
+
+    /* STEPS */
+    .steps-col { margin-top: 2rem; }
+    .step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .step:first-child { padding-top: 0; }
+    .step:last-child { border-bottom: none; }
+    .step:hover { transform: translateX(6px); }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .step h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .step p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* PROOF BENTO — asymmetric */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; min-height: 180px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .bento-card.tall .bento-inner { min-height: 260px; }
+    .bento-card.featured .bento-inner { flex-direction: row; gap: 2.5rem; align-items: center; min-height: auto; }
+    .big-num { font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* SOCIAL PROOF strip — Mimetic Desire psychology */
+    .social-strip { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .social-inner { max-width: 1280px; margin: 0 auto; padding: 3.5rem 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .social-stat { text-align: center; }
+    .social-stat .s-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--blue); line-height: 1; }
+    .social-stat .s-lbl { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.4rem; line-height: 1.4; }
+
+    /* QUOTE BREAK */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 1.5rem 4rem; }
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 2; }
+      .bento-card.featured .bento-inner { flex-direction: column; gap: 1.5rem; }
+      .social-inner { grid-template-columns: 1fr 1fr; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wrap { padding: 5rem 1.5rem; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 520px) {
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
+      .social-inner { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav-inner">
+      <a class="nav-brand" href="https://moorgraphix.com/index.html">
+        <span class="name">Moor Graphix</span>
+        <span class="tagline">Cultural Alchemy + AI Systems</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+        <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+        <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+        <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+        <li><a href="https://moorgraphix.com/about.html">About</a></li>
+        <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://calendly.com/moorwashington" target="_blank">Book Free Consult</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>✦ 2 Sports Moms</span><span>✦ 501(c)(3) Nonprofit</span><span>✦ Logo Design</span><span>✦ Website Build</span><span>✦ Student-Athlete Support</span><span>✦ Built From Zero</span><span>✦ Cultural Alchemy</span>
+      <span>✦ 2 Sports Moms</span><span>✦ 501(c)(3) Nonprofit</span><span>✦ Logo Design</span><span>✦ Website Build</span><span>✦ Student-Athlete Support</span><span>✦ Built From Zero</span><span>✦ Cultural Alchemy</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left reveal">
+      <div class="pill-label">Case Study — Logo Design + Website Build</div>
+      <!-- PSYCHOLOGY: Confirmation Bias — audience already believes nonprofits are underfunded/under-resourced. We confirm then subvert. -->
+      <h1>Two moms.<br>One mission.<br><em>No brand.</em><br>Until now.</h1>
+      <!-- PSYCHOLOGY: Mimetic Desire + Social Proof — a movement that earned its first year of operations -->
+      <p class="hero-deck">2 Sports Moms was founded by two mothers who had lived the student-athlete pipeline and seen the gap firsthand. They had the mission, the lived knowledge, and the drive. <strong>What they didn't have was a brand identity, a website, or a platform that could carry them into the community.</strong> Moor Graphix built all three — from zero.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="https://2sportsmoms.org" target="_blank">
+          See the Live Site
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn btn-ghost" href="#proof">See Year One Impact ↓</a>
+      </div>
+      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-lbl">Client</span><span class="meta-val">2 Sports Moms</span></div>
+        <div class="meta-item"><span class="meta-lbl">Type</span><span class="meta-val">501(c)(3) Nonprofit</span></div>
+        <div class="meta-item"><span class="meta-lbl">Deliverables</span><span class="meta-val">Logo · Website · Campaign Mark</span></div>
+        <div class="meta-item"><span class="meta-lbl">Live Site</span><span class="meta-val"><a href="https://2sportsmoms.org" target="_blank">2sportsmoms.org ↗</a></span></div>
+      </div>
+    </div>
+
+    <!-- PSYCHOLOGY: AIDA column — Attention→Interest→Desire progression through impact cards -->
+    <div class="hero-right reveal d2">
+      <div class="impact-col">
+        <div class="impact-card">
+          <div class="impact-inner">
+            <div class="i-num">0→</div>
+            <div class="i-head">Built from nothing</div>
+            <div class="i-body">No logo, no site, no visual identity before Moor Graphix. Everything that exists today started here.</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-inner">
+            <div class="i-num">2025</div>
+            <div class="i-head">First full year of documented impact</div>
+            <div class="i-body">Football camps, basketball jamborees, NIL education, ACE Bags, parent consultations — all documented on the platform we built.</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-inner">
+            <div class="i-num">501</div>
+            <div class="i-head">Grant and donor ready from day one</div>
+            <div class="i-body">A 501(c)(3) without a brand can't compete for serious funding. The identity we built opened those conversations immediately.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- SOCIAL PROOF STRIP -->
+  <!-- PSYCHOLOGY: Mimetic Desire + Social Proof — validate the scale of the problem they're solving -->
+  <div class="social-strip">
+    <div class="social-inner">
+      <div class="social-stat reveal">
+        <div class="s-num">70%</div>
+        <div class="s-lbl">of student-athletes lack structured academic + athletic guidance</div>
+      </div>
+      <div class="social-stat reveal d1">
+        <div class="s-num">NIL</div>
+        <div class="s-lbl">Education gap — most families navigate this without support</div>
+      </div>
+      <div class="social-stat reveal d2">
+        <div class="s-num">ACE</div>
+        <div class="s-lbl">Dignity-centered bags program — the "whole athlete" in action</div>
+      </div>
+      <div class="social-stat reveal d3">
+        <div class="s-num">Natl.</div>
+        <div class="s-lbl">Reach — serving student-athletes and families nationwide</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">01 — The Problem</div>
+        <!-- PSYCHOLOGY: Jobs-to-Be-Done + Confirmation Bias — nonprofits need credibility to operate -->
+        <h2>A mission can't move<br>without a <em>platform</em><br>to carry it.</h2>
+        <p class="body-text">Two mothers built 2 Sports Moms from lived experience — they had navigated the student-athlete pipeline themselves and understood the gap better than anyone. Student-athletes and their families were making high-stakes decisions without access to the "real-world playbook."</p>
+        <p class="body-text">But a mission without a brand can't be seen. Without a logo, you can't put your mark on anything. Without a website, you have nowhere to send the families who need you, the donors who want to give, or the community partners who want to connect.</p>
+        <!-- PSYCHOLOGY: Authority signal — quantify the stakes -->
+        <div class="authority-bar">
+          <span class="auth-icon">🎯</span>
+          <p class="auth-text"><strong>What a brand actually unlocks for a nonprofit:</strong> Grant applications require a professional digital presence. Corporate partnerships require credibility signals. Community trust requires visual consistency. Without a logo and website, none of these doors open — no matter how strong the mission is.</p>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <ul class="loss-list">
+          <li><span class="loss-icon">—</span>No logo — no mark to put on event materials, social media, grant applications, or anything the organization produced</li>
+          <li><span class="loss-icon">—</span>No website — nowhere to send parents, students, donors, partners, or press</li>
+          <li><span class="loss-icon">—</span>No consistent brand language — no way to communicate the mission without rebuilding context every time</li>
+          <li><span class="loss-icon">—</span>No credibility infrastructure for grant applications, corporate sponsorships, or institutional partnerships</li>
+          <li><span class="loss-icon">—</span>A mission with national potential and no vehicle to carry it beyond the founders' own networks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROCESS -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">02 — The Process</div>
+        <!-- PSYCHOLOGY: First Principles — go back to the truth of who they are -->
+        <h2>Identity first.<br><em>Infrastructure</em><br>second.</h2>
+        <p class="body-text">Moor Graphix applied the Cultural Alchemy framework — starting with the truth of who 2 Sports Moms actually is. Not a generic nonprofit. Not a youth sports program. Two women. Two sports. A lived-in, specific, earned perspective on what student-athletes and their families actually need.</p>
+        <p class="body-text">That truth drove the logo design: bold enough to build on, specific enough to be unmistakable, flexible enough to work everywhere. The site architecture was built to serve three different audiences simultaneously — student-athletes, parents, and institutional partners — without confusing any of them.</p>
+        <p class="body-text"><strong>A brand that tries to serve everyone says nothing. This brand says exactly who it's for — and to that audience, it says everything.</strong></p>
+      </div>
+      <div class="reveal d1">
+        <div class="steps-col">
+          <div class="step">
+            <div class="step-n">01</div>
+            <div>
+              <h3>Brand Discovery + Identity Extraction</h3>
+              <p>Extracted the core truth — two sports moms, two sports, one underserved community — and encoded it into a visual language built to carry a movement.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">02</div>
+            <div>
+              <h3>Logo Design + Campaign Mark</h3>
+              <p>Designed the primary logo and supporting campaign marks — built to scale across digital, print, apparel, event signage, and grant documentation from day one.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">03</div>
+            <div>
+              <h3>Multi-Audience Site Architecture</h3>
+              <p>Built the full site — About, Mission, Impact, Programs, Network, Donate, Blog — structured so student-athletes, parents, and institutional partners each find their path without friction.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">04</div>
+            <div>
+              <h3>Launch-Ready Brand Package</h3>
+              <p>Delivered the complete brand system — logo files, color system, typography, and a site the organization could update, grow, and use to support fundraising and partnerships from day one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROOF BENTO -->
+  <div class="wrap" id="proof">
+    <div class="reveal">
+      <div class="sec-label">03 — The Proof</div>
+      <!-- PSYCHOLOGY: Availability Heuristic — make year-one impact vivid and concrete -->
+      <h2>In year one,<br>they <em>operated.</em></h2>
+      <p class="body-text">2 Sports Moms published their 2025 Year in Review — documenting real programs, real events, real families served. <strong>That level of accountability and visibility starts with a platform that works.</strong> The logo and website Moor Graphix built gave the organization the infrastructure to operate, fundraise, and grow from the first day of their first full year.</p>
+    </div>
+    <div class="bento">
+      <!-- Featured full-width card -->
+      <div class="bento-card c6 featured reveal d1">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">Year 1</div>
+            <div class="big-lbl">Full Operations — Documented</div>
+          </div>
+          <div style="max-width: 50ch;">
+            <h4>From zero brand to published Year in Review</h4>
+            <p>2 Sports Moms launched into 2025 — their first full year — with a professional identity, a working website, and the infrastructure to tell their story publicly. Football camps, basketball jamborees, NIL education sessions, ACE Bags distributions, and parent consultations — all documented on the platform Moor Graphix built. That's not just a website. That's a movement with a home.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 — Bento asymmetric -->
+      <div class="bento-card c2 tall reveal d1">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">501</div>
+            <div class="big-lbl">c(3) Grant Ready</div>
+          </div>
+          <p>The brand identity gave the organization the professional signals required to pursue grants, corporate partnerships, and institutional relationships.</p>
+        </div>
+      </div>
+      <div class="bento-card c4 reveal d2">
+        <div class="bento-inner">
+          <h4>Multi-audience site — one platform</h4>
+          <p>The site serves student-athletes, parents, partners, and donors simultaneously — About, Impact, Network, Programs, Donate, and a MOM's Den blog — each audience finding their own path without confusion. Three distinct populations, one coherent platform.</p>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div class="bento-card c4 reveal d1">
+        <div class="bento-inner">
+          <h4>Identity built to scale — not be replaced</h4>
+          <p>The logo works across digital, print, apparel, event materials, and official documentation. It was designed to grow with the organization — not be the thing they eventually outgrow. As 2 Sports Moms expands nationally, the brand holds.</p>
+        </div>
+      </div>
+      <div class="bento-card c2 reveal d2">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">ACE</div>
+            <div class="big-lbl">Bags Program — Live &amp; Documented</div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 4 -->
+      <div class="bento-card c3 reveal d1">
+        <div class="bento-inner">
+          <h4>The "whole athlete" in practice</h4>
+          <p>The site architecture reflects the organization's philosophy — athlete readiness, academic support, mental wellness, and parent guidance are all visible, structured, and findable. The platform doesn't just list programs. It communicates a framework.</p>
+        </div>
+      </div>
+      <div class="bento-card c3 reveal d2">
+        <div class="bento-inner">
+          <h4>Built for the families who needed it most</h4>
+          <p>Low-income families. First-generation student-athletes. Parents who never had a playbook. The site speaks directly to them — in plain language, with clear pathways — because the founders know exactly who they're serving.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-break">
+    <div class="quote-inner">
+      <div class="reveal">
+        <!-- PSYCHOLOGY: Mimetic Desire — people want to be part of something that's already working -->
+        <blockquote>"Your heritage is your competitive moat — we forge it into visual systems that compound forever."</blockquote>
+        <p class="quote-attr">— Sid Washington, Moor Graphix</p>
+      </div>
+      <div class="reveal d1">
+        <div class="sec-label">The Framework</div>
+        <h2>Cultural Alchemy:<br><em>Identity as infrastructure.</em></h2>
+        <p class="body-text">For 2 Sports Moms, Cultural Alchemy meant recognizing that the founders' lived experience was the brand. Not a tagline. Not a color palette. The actual brand — two women who had navigated the pipeline and come out the other side with hard-won knowledge.</p>
+        <p class="body-text">The logo and site we built encoded that truth into a visual system that could carry a movement into the community, into grant offices, and into the lives of the families they were built to serve.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-inner reveal">
+      <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Turn</div>
+      <!-- PSYCHOLOGY: Mimetic Desire + Loss Aversion CTA — what happens if they don't build it -->
+      <h2>Your mission deserves a brand<br>that <em>carries</em> it forward.</h2>
+      <p class="body-text">A mission without a brand stays inside the founders' networks. A mission with the right brand becomes a movement. Moor Graphix builds the logo, the platform, and the AI infrastructure to make it compound.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank">
+          Book Free Consultation
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn-outline" href="https://moorgraphix.com/index.html#portfolio">← View All Work</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+      <a class="footer-back" href="https://moorgraphix.com/index.html#portfolio">← Back to Portfolio</a>
+      <span class="footer-copy">© 2046 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
