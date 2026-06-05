@@ -37,6 +37,112 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── CASE STUDIES SECTION — inserted between showcase strip and origin ── */
+.cs-section {
+  padding: 80px 44px;
+  background: var(--dark2, #08101c);
+  border-top: 0.5px solid rgba(80,140,255,0.1);
+  border-bottom: 0.5px solid rgba(80,140,255,0.1);
+}
+.cs-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 48px;
+}
+.cs-head-left {}
+.cs-head-left .eyebrow { margin-bottom: 10px; }
+.cs-head-left h2 { color: #fff; margin: 0; }
+.cs-view-all {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: opacity 0.25s;
+}
+.cs-view-all:hover { opacity: 0.7; }
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cs-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(80,140,255,0.04);
+  border: 0.5px solid rgba(80,140,255,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.cs-card:hover {
+  border-color: rgba(106,171,255,0.4);
+  transform: translateY(-4px);
+}
+.cs-card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  background: rgba(80,140,255,0.06);
+}
+.cs-card-body {
+  padding: 22px 24px 26px;
+}
+.cs-card-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  margin-bottom: 8px;
+}
+.cs-card-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+.cs-card-desc {
+  font-size: 13px;
+  color: rgba(150,180,255,0.55);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.cs-card-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  background: rgba(106,171,255,0.08);
+  border: 0.5px solid rgba(106,171,255,0.2);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+.cs-card-result i { font-size: 12px; }
+@media(max-width:900px){
+  .cs-section { padding: 60px 24px; }
+  .cs-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+@media(max-width:640px){
+  .cs-grid { grid-template-columns: 1fr; }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -217,6 +323,7 @@
       <p class="hero-sub">Brand strategy and graphic design studio powered by Cultural Alchemy and enterprise-grade AI. Your heritage is your competitive moat — we forge it into visual systems that compound forever.</p>
       <div class="btn-row">
         <a href="#portfolio"><button class="btn-primary"><i class="ti ti-eye"></i>View Portfolio</button></a>
+        <a href="#case-studies"><button class="btn-ghost"><i class="ti ti-file-text"></i>Case Studies →</button></a>
         <a href="#ai"><button class="btn-ghost">AI Systems →</button></a>
       </div>
     </div>
@@ -231,6 +338,55 @@
 
 <!-- SHOWCASE STRIP -->
 <div class="showcase sec-dark" id="sw"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CASE STUDIES SECTION — featured work with full narratives
+═══════════════════════════════════════════════════════════ -->
+<section class="cs-section" id="case-studies">
+  <div class="cs-head">
+    <div class="cs-head-left">
+      <div class="eyebrow eyebrow-dark">Case Studies</div>
+      <h2>The work that <em style="font-style:italic;color:#6AABFF">speaks.</em></h2>
+    </div>
+    <a href="#portfolio" class="cs-view-all">View Full Portfolio <i class="ti ti-arrow-right"></i></a>
+  </div>
+  <div class="cs-grid">
+
+    <!-- Evans Guild — ANCHOR case study -->
+    <a class="cs-card" href="cases/evansguild.html">
+      <img class="cs-card-img" src="assets/images/portfolio/web-design/evans-guild-website.jpg" alt="The Evans Guild — brand ecosystem by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Brand Ecosystem · Logo · Website</div>
+        <div class="cs-card-name">The Evans Guild</div>
+        <div class="cs-card-desc">Four brands built from zero for Celebrity Designer Etu Evans — whose shoes have been worn by Beyoncé, Halle Berry, and Solange, and featured in German Vogue, GQ, and Harper's Bazaar.</div>
+        <div class="cs-card-result"><i class="ti ti-microphone"></i>Result: TED Talk</div>
+      </div>
+    </a>
+
+    <!-- Joyous Ocean -->
+    <a class="cs-card" href="cases/joyousocean.html">
+      <img class="cs-card-img" src="assets/images/portfolio/web-design/joyous-ocean-website.jpg" alt="Joyous Ocean website redesign by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Web Redesign · Commerce Integration</div>
+        <div class="cs-card-name">Joyous Ocean</div>
+        <div class="cs-card-desc">A teaching yogini's scattered digital presence became a unified platform — products, coaching, and direct checkout in one ecosystem she could finally promote with confidence.</div>
+        <div class="cs-card-result"><i class="ti ti-circle-check"></i>Result: 0 Third-Party Redirects</div>
+      </div>
+    </a>
+
+    <!-- 2 Sports Moms -->
+    <a class="cs-card" href="cases/2sportsmoms.html">
+      <img class="cs-card-img" src="assets/images/portfolio/web-design/2-sports-moms-full-site.jpg" alt="2 Sports Moms website by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Logo Design · Website Build · Nonprofit</div>
+        <div class="cs-card-name">2 Sports Moms</div>
+        <div class="cs-card-desc">A 501(c)(3) nonprofit connecting opportunities to student-athletes and resources to families — built from zero with the logo and platform to carry their mission into year one.</div>
+        <div class="cs-card-result"><i class="ti ti-trophy"></i>Result: Year-One Impact Documented</div>
+      </div>
+    </a>
+
+  </div>
+</section>
 
 <!-- ORIGIN -->
 <section class="origin sec-light" id="about">
@@ -457,9 +613,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-
-
 <!-- FAQ SECTION (AEO) -->
 <section class="sec-dark" style="padding:80px 44px" id="faq">
   <div class="eyebrow eyebrow-dark">Quick Answers</div>
@@ -532,7 +685,7 @@
 </section>
 <hr class="div-line-dark">
 
-<!-- GEO CONTENT BLOCK — Douglasville + Atlanta -->
+<!-- GEO CONTENT BLOCK -->
 <section class="sec-dark2" style="padding:60px 44px;text-align:center">
   <div class="eyebrow eyebrow-dark">Rooted in Georgia. Built for the World.</div>
   <h2 style="color:#fff;margin:16px 0 12px">Douglasville &amp; Atlanta Brand Design Studio</h2>

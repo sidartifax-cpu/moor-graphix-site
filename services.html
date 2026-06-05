@@ -39,7 +39,6 @@
 <style>
 /* ── SERVICES PAGE — additional styles ─────────────────────────────────── */
 
-/* Nav: mark current page */
 .nav-current a{color:#6AABFF !important}
 .nav-current a::after{width:100% !important}
 
@@ -69,10 +68,8 @@
 .sec-dark2 .svc-card{background:rgba(80,140,255,0.04);border:0.5px solid rgba(80,140,255,0.1)}
 .sec-dark2 .svc-card:hover{border-color:rgba(80,140,255,0.28);background:rgba(80,140,255,0.07);transform:translateY(-3px)}
 
-/* Popular badge */
 .svc-popular{position:absolute;top:-1px;right:20px;font-size:8px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;background:var(--blue);color:#fff;padding:4px 12px;border-radius:0 0 4px 4px}
 
-/* Card header */
 .svc-card-icon{font-size:28px;margin-bottom:14px;display:block}
 .sec-light .svc-card-icon{color:var(--blue)}
 .sec-dark2 .svc-card-icon{color:var(--blue-lt)}
@@ -86,7 +83,6 @@
 .sec-light .svc-card-desc{color:var(--text-mid)}
 .sec-dark2 .svc-card-desc{color:rgba(150,180,255,0.55)}
 
-/* Includes */
 .svc-card-inc-label{font-size:8.5px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:11px}
 .sec-light .svc-card-inc-label{color:var(--blue)}
 .sec-dark2 .svc-card-inc-label{color:var(--blue-lt)}
@@ -98,14 +94,12 @@
 .sec-light .svc-card-inc li::before{color:var(--blue)}
 .sec-dark2 .svc-card-inc li::before{color:var(--blue-lt)}
 
-/* Get Started button at card bottom */
 .svc-card-cta{display:block;text-align:center;padding:13px 20px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;margin-top:auto}
 .sec-light .svc-card-cta{background:rgba(48,96,208,0.06);color:var(--blue);border:1px solid rgba(48,96,208,0.18)}
 .sec-light .svc-card-cta:hover{background:var(--blue);color:#fff}
 .sec-dark2 .svc-card-cta{background:rgba(80,140,255,0.07);color:var(--blue-lt);border:0.5px solid rgba(80,140,255,0.22)}
 .sec-dark2 .svc-card-cta:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
 
-/* Section divider line between svc sections */
 .svc-divider-dark{border:none;border-top:0.5px solid rgba(80,140,255,0.07);margin:0}
 .svc-divider-light{border:none;border-top:0.5px solid rgba(48,96,208,0.08);margin:0}
 
@@ -123,6 +117,108 @@
 .bp-stat-n{font-family:'DM Serif Display',serif;font-size:44px;color:var(--blue);line-height:1;margin-bottom:5px}
 .bp-stat-l{font-size:11px;color:var(--text-mid);letter-spacing:0.14em;text-transform:uppercase}
 .bp-cta{display:inline-block;margin-top:8px}
+
+/* ── CASE STUDIES STRIP — services page ─────────────────────── */
+.svc-cs-section {
+  padding: 80px 44px;
+  background: #050d18;
+  border-top: 0.5px solid rgba(80,140,255,0.1);
+  border-bottom: 0.5px solid rgba(80,140,255,0.1);
+}
+.svc-cs-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 48px;
+}
+.svc-cs-intro {
+  font-size: 15px;
+  color: rgba(150,180,255,0.5);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-top: 10px;
+}
+.svc-cs-view-all {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: opacity 0.25s;
+  flex-shrink: 0;
+}
+.svc-cs-view-all:hover { opacity: 0.7; }
+.svc-cs-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.svc-cs-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(80,140,255,0.04);
+  border: 0.5px solid rgba(80,140,255,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.svc-cs-card:hover {
+  border-color: rgba(106,171,255,0.4);
+  transform: translateY(-4px);
+}
+.svc-cs-card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  background: rgba(80,140,255,0.06);
+}
+.svc-cs-card-body { padding: 20px 22px 24px; }
+.svc-cs-card-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  margin-bottom: 7px;
+}
+.svc-cs-card-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 7px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+.svc-cs-card-desc {
+  font-size: 12.5px;
+  color: rgba(150,180,255,0.5);
+  line-height: 1.65;
+  margin-bottom: 15px;
+}
+.svc-cs-card-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  background: rgba(106,171,255,0.07);
+  border: 0.5px solid rgba(106,171,255,0.2);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.svc-cs-card-result i { font-size: 11px; }
 
 /* ── AI LAYERS PANEL ────────────────────────────────────────── */
 .ai-intro{padding:72px 44px 36px}
@@ -143,7 +239,6 @@
 .ai-cta-row{padding:36px 44px 72px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .ai-cta-note{font-size:13px;color:rgba(100,160,255,0.35);margin-left:8px}
 
-/* Slideshow dots */
 .gallery-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:10;padding:5px 10px;background:rgba(2,4,8,0.5);border-radius:20px}
 .gallery-dot{width:5px;height:5px;border-radius:50%;background:rgba(80,140,255,0.28);cursor:pointer;transition:all 0.25s;border:none;padding:0;flex-shrink:0}
 .gallery-dot.active{background:rgba(106,171,255,0.9);transform:scale(1.45)}
@@ -161,9 +256,12 @@
   .ai-intro{padding:56px 24px 28px}
   .ai-cta-row{padding:28px 24px 56px}
   .bp-wrap{padding:60px 24px}
+  .svc-cs-section{padding:60px 24px}
+  .svc-cs-grid{grid-template-columns:1fr}
 }
 @media(max-width:640px){
   .svc-card-grid-4,.svc-card-grid-3{grid-template-columns:1fr}
+  .svc-cs-grid{grid-template-columns:1fr}
 }
 </style>
 <script type="application/ld+json">
@@ -349,7 +447,6 @@
 
   <div class="svc-card-grid-4">
 
-    <!-- Logo Design -->
     <div class="svc-card">
       <i class="ti ti-pentagon svc-card-icon"></i>
       <div class="svc-card-name">Logo Design</div>
@@ -369,7 +466,6 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-    <!-- Brand Identity Package -->
     <div class="svc-card">
       <i class="ti ti-layers-intersect svc-card-icon"></i>
       <div class="svc-card-name">Brand Identity Package</div>
@@ -391,7 +487,6 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-    <!-- Business Cards & Stationery -->
     <div class="svc-card">
       <i class="ti ti-id-badge svc-card-icon"></i>
       <div class="svc-card-name">Business Cards &amp; Stationery</div>
@@ -410,7 +505,6 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-    <!-- Mini Brand Strategy Session -->
     <div class="svc-card">
       <i class="ti ti-target-arrow svc-card-icon"></i>
       <div class="svc-card-name">Mini Brand Strategy Session</div>
@@ -428,7 +522,7 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-  </div><!-- /.svc-card-grid-4 -->
+  </div>
 </section>
 
 <hr class="svc-divider-light">
@@ -446,7 +540,6 @@
 
   <div class="svc-card-grid-3">
 
-    <!-- Landing Page -->
     <div class="svc-card">
       <i class="ti ti-layout-bottombar svc-card-icon"></i>
       <div class="svc-card-name">Landing Page</div>
@@ -466,7 +559,6 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-    <!-- Business Site (Most Popular) -->
     <div class="svc-card" style="border-color:rgba(80,140,255,0.3)">
       <div class="svc-popular">Most Popular</div>
       <i class="ti ti-world-www svc-card-icon"></i>
@@ -489,7 +581,6 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-    <!-- E-Commerce -->
     <div class="svc-card">
       <i class="ti ti-shopping-cart svc-card-icon"></i>
       <div class="svc-card-name">E-Commerce</div>
@@ -509,7 +600,7 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-  </div><!-- /.svc-card-grid-3 -->
+  </div>
 </section>
 
 <hr class="svc-divider-dark">
@@ -527,7 +618,6 @@
 
   <div class="svc-card-grid-3">
 
-    <!-- Content Production System -->
     <div class="svc-card">
       <i class="ti ti-calendar-stats svc-card-icon"></i>
       <div class="svc-card-name">Content Production System</div>
@@ -546,7 +636,6 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-    <!-- AI Video Creation -->
     <div class="svc-card">
       <i class="ti ti-device-tv svc-card-icon"></i>
       <div class="svc-card-name">AI Video Creation</div>
@@ -565,7 +654,6 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-    <!-- Social Media Content Kits -->
     <div class="svc-card">
       <i class="ti ti-photo-star svc-card-icon"></i>
       <div class="svc-card-name">Social Media Content Kits</div>
@@ -584,7 +672,7 @@
       <a href="https://www.moorgraphix.com/contact-us" class="svc-card-cta" target="_blank" rel="noopener noreferrer">Get Started →</a>
     </div>
 
-  </div><!-- /.svc-card-grid-3 -->
+  </div>
 </section>
 
 <hr class="div-line-light">
@@ -653,6 +741,57 @@
 
 
 <!-- ════════════════════════════════════════════════════════════
+     CASE STUDIES STRIP — see the work in practice
+═════════════════════════════════════════════════════════════ -->
+<section class="svc-cs-section" id="case-studies">
+  <div class="svc-cs-head">
+    <div>
+      <div class="eyebrow eyebrow-dark">See It In Practice</div>
+      <h2 style="color:#fff;margin:10px 0 0">These services<br/><em style="font-style:italic;color:#6AABFF">built these results.</em></h2>
+      <p class="svc-cs-intro">Every service tier listed above has been delivered for real clients — with documented outcomes. These case studies show what Cultural Alchemy looks like when it goes to work.</p>
+    </div>
+    <a href="index.html#case-studies" class="svc-cs-view-all">All Case Studies <i class="ti ti-arrow-right"></i></a>
+  </div>
+  <div class="svc-cs-grid">
+
+    <!-- Evans Guild — ANCHOR / featured wide card -->
+    <a class="svc-cs-card" href="cases/evansguild.html">
+      <img class="svc-cs-card-img" src="assets/images/portfolio/web-design/evans-guild-website.jpg" alt="The Evans Guild — brand ecosystem by Moor Graphix" loading="lazy">
+      <div class="svc-cs-card-body">
+        <div class="svc-cs-card-tag">Brand Ecosystem · 4 Logos · 2 Websites</div>
+        <div class="svc-cs-card-name">The Evans Guild — Celebrity Designer Etu Evans</div>
+        <div class="svc-cs-card-desc">Four brands built from zero for a Harlem-born designer whose shoes have been worn by Beyoncé, Halle Berry, Solange, and Sharon Stone — and featured in German Vogue, Harper's Bazaar, and GQ. The ecosystem Moor Graphix built helped earn him a TED Talk.</div>
+        <div class="svc-cs-card-result"><i class="ti ti-microphone"></i>Result: TED Talk</div>
+      </div>
+    </a>
+
+    <!-- Joyous Ocean -->
+    <a class="svc-cs-card" href="cases/joyousocean.html">
+      <img class="svc-cs-card-img" src="assets/images/portfolio/web-design/joyous-ocean-website.jpg" alt="Joyous Ocean — web redesign by Moor Graphix" loading="lazy">
+      <div class="svc-cs-card-body">
+        <div class="svc-cs-card-tag">Web Design · Commerce</div>
+        <div class="svc-cs-card-name">Joyous Ocean</div>
+        <div class="svc-cs-card-desc">Teaching yogini's platform rebuilt — products, coaching, and checkout unified.</div>
+        <div class="svc-cs-card-result"><i class="ti ti-circle-check"></i>Result: 0 Redirects</div>
+      </div>
+    </a>
+
+    <!-- 2 Sports Moms -->
+    <a class="svc-cs-card" href="cases/2sportsmoms.html">
+      <img class="svc-cs-card-img" src="assets/images/portfolio/web-design/2-sports-moms-full-site.jpg" alt="2 Sports Moms — website by Moor Graphix" loading="lazy">
+      <div class="svc-cs-card-body">
+        <div class="svc-cs-card-tag">Logo · Website · Nonprofit</div>
+        <div class="svc-cs-card-name">2 Sports Moms</div>
+        <div class="svc-cs-card-desc">501(c)(3) built from zero — logo, website, and year-one operations.</div>
+        <div class="svc-cs-card-result"><i class="ti ti-trophy"></i>Result: Year-One Impact</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
      AI SYSTEMS — 3-LAYER PANEL
 ═════════════════════════════════════════════════════════════ -->
 <section class="sec-mid" id="ai-stack">
@@ -711,9 +850,7 @@
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════════
-     FINAL CTA
-═════════════════════════════════════════════════════════════ -->
+<!-- FINAL CTA -->
 <section class="final-cta sec-red" id="contact">
   <div class="final-cta-eyebrow">Let's Build Your Digital Legacy</div>
   <h2>Design is more than decoration.<br/><em>It's direction.</em></h2>
@@ -762,15 +899,12 @@
 
 <script src="assets/js/images.js"></script>
 <script>
-// ── PARTICLE BACKGROUND ──
-// ── HERO SLIDESHOW — NAMA Brand Blueprint pages ──
 (function(){
   const slides = PROJECTS.filter(p => p.category === 'portfolio_slides');
   if(!slides.length) return;
   const gw = document.getElementById('svcGalleryWrap');
   if(!gw) return;
 
-  // Build slides
   slides.forEach((item, i) => {
     const slide = document.createElement('div');
     slide.className = 'gallery-slide' + (i === 0 ? ' active' : '');
@@ -782,7 +916,6 @@
     gw.appendChild(slide);
   });
 
-  // Prev / Next buttons
   const prevBtn = document.createElement('button');
   prevBtn.className = 'gallery-btn gallery-prev';
   prevBtn.innerHTML = '&#8249;';
@@ -792,7 +925,6 @@
   nextBtn.innerHTML = '&#8250;';
   nextBtn.setAttribute('aria-label', 'Next slide');
 
-  // Dot strip
   const dotsWrap = document.createElement('div');
   dotsWrap.className = 'gallery-dots';
   slides.forEach((_, i) => {
@@ -830,11 +962,9 @@
     dot.addEventListener('click', () => { goTo(i); startTimer(); });
   });
 
-  // Pause on hover, resume on leave
   gw.addEventListener('mouseenter', () => clearInterval(timer));
   gw.addEventListener('mouseleave', startTimer);
 
-  // Keyboard nav when gallery is focused
   document.addEventListener('keydown', e => {
     if(e.key === 'ArrowLeft')  { goTo(idx - 1); startTimer(); }
     if(e.key === 'ArrowRight') { goTo(idx + 1); startTimer(); }

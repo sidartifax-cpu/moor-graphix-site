@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Evans Guild — Case Study | Moor Graphix</title>
+  <meta name="description" content="How Moor Graphix built a four-brand digital empire for Celebrity Designer Etu Evans — from zero to TED Talk. Logo design, website, and complete brand ecosystem for The Evans Guild, Tu Media, Book of Etu, and Solesville Foundation." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="The Evans Guild Case Study — Moor Graphix" />
+  <meta property="og:description" content="Four brands. One ecosystem. One TED Talk. How Moor Graphix built the complete brand infrastructure for Celebrity Designer Etu Evans." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/evansguild.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8,12,20,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--blue-line); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1.2; }
+    .nav-brand .name { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.08em; color: var(--white); text-transform: uppercase; }
+    .nav-brand .tagline { font-size: 0.58rem; letter-spacing: 0.16em; color: var(--blue); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.76rem; letter-spacing: 0.06em; color: var(--muted); text-decoration: none; transition: color 0.3s var(--ease); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { color: #fff !important; background: var(--blue); padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 600 !important; font-size: 0.7rem !important; letter-spacing: 0.1em !important; text-transform: uppercase; transition: opacity 0.3s !important; }
+    .nav-cta:hover { opacity: 0.85 !important; }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; margin-top: 68px; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 35s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO */
+    .hero {
+      min-height: 100dvh;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 7rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 56% 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 15%; right: -8%;
+      width: 55vw; height: 55vw;
+      background: radial-gradient(circle, rgba(59,111,240,0.06) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero-left { position: relative; z-index: 1; }
+    .hero-right { position: relative; z-index: 1; }
+
+    .pill-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--blue-line); border-radius: 9999px;
+      padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 2rem;
+      background: var(--blue-dim);
+    }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.8rem, 6.5vw, 6rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
+    h1 em { font-style: italic; color: var(--blue); }
+
+    .hero-deck { font-size: 1.05rem; color: var(--muted); max-width: 48ch; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.45s var(--ease); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; }
+    .btn-ghost:hover { color: var(--white); }
+
+    .meta-strip { border-top: 1px solid var(--blue-line); margin-top: 2.5rem; padding-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+    .meta-val a { color: var(--blue); text-decoration: none; }
+
+    /* HERO RIGHT — TED Talk feature card + brand count */
+    .hero-right-stack { display: flex; flex-direction: column; gap: 1rem; }
+
+    /* TED Talk feature — the headline proof point gets its own premium card */
+    .ted-card {
+      background: var(--blue-dim);
+      border: 1px solid rgba(59,111,240,0.35);
+      border-radius: 1.5rem;
+      padding: 2px;
+    }
+    .ted-inner {
+      background: var(--bg-2);
+      border-radius: calc(1.5rem - 2px);
+      padding: 2rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .ted-eyebrow { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+    .ted-headline { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 0.5rem; }
+    .ted-headline em { font-style: italic; color: var(--blue); }
+    .ted-sub { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+    .brand-count-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .bc-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1rem; padding: 2px; transition: transform 0.45s var(--ease); }
+    .bc-card:hover { transform: translateY(-3px); }
+    .bc-inner { background: var(--bg-2); border-radius: calc(1rem - 2px); padding: 1.25rem 1.5rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); }
+    .bc-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--blue); line-height: 1; margin-bottom: 0.25rem; }
+    .bc-lbl { font-size: 0.7rem; color: var(--muted); line-height: 1.45; }
+
+    /* SECTIONS */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    /* CELEBRITY PRESS STRIP — Social Proof / Authority psychology */
+    .press-strip { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .press-inner { max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .press-label { font-size: 0.55rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; }
+    .press-scroll { display: flex; gap: 0.625rem; flex-wrap: wrap; }
+    .press-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--blue-dim); border: 1px solid var(--blue-line);
+      border-radius: 9999px; padding: 0.3rem 0.875rem;
+      font-size: 0.68rem; color: var(--muted); white-space: nowrap;
+      transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+    }
+    .press-pill:hover { border-color: rgba(59,111,240,0.5); color: var(--white); }
+    .press-pill::before { content: '✦'; font-size: 0.4rem; color: var(--blue); }
+
+    /* 4-BRAND BREAKDOWN */
+    .brand-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 3rem; }
+    .brand-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .brand-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .brand-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 2rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); height: 100%; }
+    .brand-num { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: rgba(59,111,240,0.4); margin-bottom: 0.5rem; letter-spacing: 0.1em; }
+    .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 0.25rem; line-height: 1.2; }
+    .brand-name em { font-style: italic; color: var(--blue); }
+    .brand-type { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.875rem; }
+    .brand-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+    .brand-deliverable { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .del-tag { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.7rem; border: 1px solid var(--blue-line); border-radius: 9999px; color: var(--muted); }
+
+    /* PROOF BENTO */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; min-height: 180px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .bento-card.featured .bento-inner { flex-direction: row; gap: 2.5rem; align-items: center; min-height: auto; }
+    .big-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* STEPS */
+    .steps-col { margin-top: 2rem; }
+    .step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .step:first-child { padding-top: 0; }
+    .step:last-child { border-bottom: none; }
+    .step:hover { transform: translateX(6px); }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .step h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .step p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* QUOTE */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 1.5rem 4rem; }
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .brand-grid { grid-template-columns: 1fr; }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 2; }
+      .bento-card.featured .bento-inner { flex-direction: column; gap: 1.5rem; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .brand-count-row { grid-template-columns: 1fr 1fr; }
+      .wrap { padding: 5rem 1.5rem; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 520px) {
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav-inner">
+      <a class="nav-brand" href="https://moorgraphix.com/index.html">
+        <span class="name">Moor Graphix</span>
+        <span class="tagline">Cultural Alchemy + AI Systems</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+        <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+        <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+        <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+        <li><a href="https://moorgraphix.com/about.html">About</a></li>
+        <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://calendly.com/moorwashington" target="_blank">Book Free Consult</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>✦ The Evans Guild</span><span>✦ 4-Brand Ecosystem</span><span>✦ Logo Design</span><span>✦ Website Build</span><span>✦ TED Talk</span><span>✦ Fashion &amp; Lifestyle</span><span>✦ Harlem NY</span><span>✦ Cultural Alchemy</span>
+      <span>✦ The Evans Guild</span><span>✦ 4-Brand Ecosystem</span><span>✦ Logo Design</span><span>✦ Website Build</span><span>✦ TED Talk</span><span>✦ Fashion &amp; Lifestyle</span><span>✦ Harlem NY</span><span>✦ Cultural Alchemy</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left reveal">
+      <div class="pill-label">Case Study — Brand Ecosystem Build</div>
+      <!-- PSYCHOLOGY: Mimetic Desire — celebrity association + TED Talk signals extreme desirability -->
+      <h1>Four brands.<br>One <em>ecosystem.</em><br>One TED Talk.</h1>
+      <!-- PSYCHOLOGY: Authority + Social Proof — lead with the result before explaining the process -->
+      <p class="hero-deck">Celebrity Designer Etu Evans — whose shoes have been worn by Beyoncé, Halle Berry, and Solange, and featured in German Vogue, Harper's Bazaar, and GQ — needed a brand infrastructure that matched his stature. <strong>Moor Graphix built the complete digital ecosystem: four brands, from zero, that helped earn him a TED Talk.</strong></p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="https://www.theevansguild.com" target="_blank">
+          See the Live Site
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn btn-ghost" href="#proof">See the Results ↓</a>
+      </div>
+      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-lbl">Client</span><span class="meta-val">The Evans Guild / Etu Evans</span></div>
+        <div class="meta-item"><span class="meta-lbl">Industry</span><span class="meta-val">Fashion · Lifestyle · Media</span></div>
+        <div class="meta-item"><span class="meta-lbl">Deliverables</span><span class="meta-val">4 Logos · 2 Websites · Brand System</span></div>
+        <div class="meta-item"><span class="meta-lbl">Live Site</span><span class="meta-val"><a href="https://www.theevansguild.com" target="_blank">theevansguild.com ↗</a></span></div>
+      </div>
+    </div>
+
+    <div class="hero-right reveal d2">
+      <div class="hero-right-stack">
+        <!-- TED Talk card — the headline proof point -->
+        <div class="ted-card">
+          <div class="ted-inner">
+            <div class="ted-eyebrow">✦ Headline Result</div>
+            <div class="ted-headline">TED <em>Talk</em></div>
+            <p class="ted-sub">The brand infrastructure Moor Graphix built contributed directly to the visibility and credibility that earned Etu Evans a TED Talk — one of the most coveted stages in the world.</p>
+          </div>
+        </div>
+        <!-- Brand count mini grid -->
+        <div class="brand-count-row">
+          <div class="bc-card">
+            <div class="bc-inner">
+              <div class="bc-num">4</div>
+              <div class="bc-lbl">Brand identities built from zero</div>
+            </div>
+          </div>
+          <div class="bc-card">
+            <div class="bc-inner">
+              <div class="bc-num">2</div>
+              <div class="bc-lbl">Full websites designed and launched</div>
+            </div>
+          </div>
+          <div class="bc-card">
+            <div class="bc-inner">
+              <div class="bc-num">Press</div>
+              <div class="bc-lbl">New media opportunities secured</div>
+            </div>
+          </div>
+          <div class="bc-card">
+            <div class="bc-inner">
+              <div class="bc-num">Natl.</div>
+              <div class="bc-lbl">Exposure expanded nationally</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELEBRITY + PRESS SOCIAL PROOF STRIP -->
+  <!-- PSYCHOLOGY: Authority + Social Proof — name-dropping celebrities and publications builds instant credibility transfer -->
+  <div class="press-strip">
+    <div class="press-inner">
+      <div class="press-label reveal">The Etu Evans Universe — celebrities who wear his work, publications that covered him</div>
+      <div class="press-scroll reveal d1">
+        <span class="press-pill">Beyoncé</span>
+        <span class="press-pill">Halle Berry</span>
+        <span class="press-pill">Solange Knowles</span>
+        <span class="press-pill">Sharon Stone</span>
+        <span class="press-pill">Queen Latifah</span>
+        <span class="press-pill">Cynthia Bailey</span>
+        <span class="press-pill">Michael B. Jordan</span>
+        <span class="press-pill">Aretha Franklin</span>
+        <span class="press-pill">Lil Kim</span>
+        <span class="press-pill">Tyra Banks</span>
+        <span class="press-pill">German Vogue</span>
+        <span class="press-pill">Harper's Bazaar</span>
+        <span class="press-pill">GQ</span>
+        <span class="press-pill">Essence</span>
+        <span class="press-pill">Black Enterprise</span>
+        <span class="press-pill">NY Daily News</span>
+        <span class="press-pill">NY Post</span>
+        <span class="press-pill">Good Morning America</span>
+        <span class="press-pill">The View</span>
+        <span class="press-pill">Access Hollywood</span>
+        <span class="press-pill">America's Next Top Model</span>
+        <span class="press-pill">Tim Gunn</span>
+        <span class="press-pill">TED Talk</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROBLEM -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">01 — The Challenge</div>
+        <!-- PSYCHOLOGY: Jobs-to-Be-Done — his job wasn't "get a website," it was "match his digital presence to his real-world stature" -->
+        <h2>A world-class designer<br>with a <em>fragmented</em><br>digital presence.</h2>
+        <p class="body-text">Etu Evans isn't just a designer — he's a Lifestyle Architect. A Harlem-born celebrity shoe designer whose Purple Bottoms have graced the feet of Beyoncé. Whose work has been published in German Vogue, Harper's Bazaar, and GQ. Whose talent Tim Gunn described in one word: "Fabulous."</p>
+        <p class="body-text">But talent doesn't build infrastructure. Celebrity connections don't create a coherent brand system. Etu had built an empire of creative energy across fashion, media, philanthropy, and streetwear — and none of it was connected in a way that matched the scale of who he had become.</p>
+        <p class="body-text"><strong>The digital presence needed to match the person. The brand needed to match the body of work. The ecosystem needed to be built from the ground up.</strong></p>
+      </div>
+      <div class="reveal d1">
+        <div class="steps-col">
+          <div class="step">
+            <div class="step-n">—</div>
+            <div>
+              <h3>No unified parent brand identity</h3>
+              <p>The Evans Guild — his lifestyle design, manufacturing, and media agency — had no logo, no visual language, and no digital home to anchor everything else.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">—</div>
+            <div>
+              <h3>Sub-brands operating in isolation</h3>
+              <p>Tu Media, Book of Etu, and Solesville Foundation each needed their own identity — but none of them existed as coherent, visual brands that could stand alone and connect to the whole.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">—</div>
+            <div>
+              <h3>Celebrity-level credibility, startup-level infrastructure</h3>
+              <p>Press features in global publications were driving people to a digital presence that couldn't hold the weight of that attention or convert it into real business relationships.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">—</div>
+            <div>
+              <h3>No platform for the philanthropic mission</h3>
+              <p>The Solesville Foundation — "Saving Soles one step at a time" through shoe drives, art therapy, and anti-trafficking advocacy — had a powerful mission with no digital platform to carry it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- 4-BRAND ECOSYSTEM BREAKDOWN -->
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-label">02 — The Build</div>
+      <!-- PSYCHOLOGY: IKEA Effect — showing the complexity of what was built increases perceived value -->
+      <h2>One client.<br><em>Four brands.</em><br>One coherent system.</h2>
+      <p class="body-text">Moor Graphix applied the Cultural Alchemy framework across the entire Evans ecosystem — extracting the authentic identity of each brand and encoding it into a visual language that could stand alone and connect to the whole. Every mark. Every page. Every sub-brand. Built from zero.</p>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-card reveal d1">
+        <div class="brand-inner">
+          <div class="brand-num">01</div>
+          <div class="brand-name">The Evans <em>Guild</em></div>
+          <div class="brand-type">Parent Agency — Lifestyle Design · Manufacturing · Media</div>
+          <p class="brand-desc">The umbrella brand. A lifestyle design, manufacturing, and media agency covering Fashion, Beauty, Fragrances, and Furniture. Also provides interior staging for galas, events, and private residences. Built to project luxury, authority, and cultural sophistication — Create. Produce. Brand.</p>
+          <div class="brand-deliverable">
+            <span class="del-tag">Logo Design</span>
+            <span class="del-tag">Full Website</span>
+            <span class="del-tag">Brand Architecture</span>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card reveal d2">
+        <div class="brand-inner">
+          <div class="brand-num">02</div>
+          <div class="brand-name">Tu <em>Media</em></div>
+          <div class="brand-type">Media Division — TV · Film · Magazine · PR</div>
+          <p class="brand-desc">Born in Harlem to control the narrative. A boutique multi-media firm handling placements, red carpet correspondent work, high-profile event hosting, and PR for entrepreneurs, fashion designers, athletes, and nonprofits. Clients include the National Black Caucus of State Legislators, HBCU TV, multiplatinum record producers, and celebrity chefs.</p>
+          <div class="brand-deliverable">
+            <span class="del-tag">Logo Design</span>
+            <span class="del-tag">Sub-Brand Identity</span>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card reveal d1">
+        <div class="brand-inner">
+          <div class="brand-num">03</div>
+          <div class="brand-name">Book of <em>Etu</em></div>
+          <div class="brand-type">Streetwear Sub-Brand — "Concrete Couture"</div>
+          <p class="brand-desc">A culturally-infused streetwear collection best described as Concrete Couture. A separate brand expression — street credibility nested inside a luxury ecosystem. Required its own mark that could live independently while remaining clearly part of the Evans universe.</p>
+          <div class="brand-deliverable">
+            <span class="del-tag">Logo Design</span>
+            <span class="del-tag">Sub-Brand Identity</span>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card reveal d2">
+        <div class="brand-inner">
+          <div class="brand-num">04</div>
+          <div class="brand-name">Solesville <em>Foundation</em></div>
+          <div class="brand-type">Philanthropic Arm — Shoe Drives · Art Therapy · Advocacy</div>
+          <p class="brand-desc">"Saving Soles one step at a time." The philanthropic arm of the Evans Guild — committed to global shoe drives, art therapy exhibitions, and advocacy against the sexual abuse and trafficking of children and youth. Required a brand identity that communicated warmth, urgency, and mission clarity distinct from the fashion world of the parent brand.</p>
+          <div class="brand-deliverable">
+            <span class="del-tag">Logo Design</span>
+            <span class="del-tag">Website Build</span>
+            <span class="del-tag">Brand Identity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROOF BENTO -->
+  <div class="wrap" id="proof">
+    <div class="reveal">
+      <div class="sec-label">03 — The Proof</div>
+      <!-- PSYCHOLOGY: Availability Heuristic — make the results as vivid and concrete as possible -->
+      <h2>From Harlem to the<br><em>TED stage.</em></h2>
+      <p class="body-text">The brand infrastructure Moor Graphix built gave Etu Evans the platform, credibility, and visibility to step into rooms that require proof of stature. Press opportunities multiplied. New partnerships opened. And the brand that had always matched his talent finally matched his digital presence.</p>
+    </div>
+    <div class="bento">
+      <!-- TED Talk anchor card -->
+      <div class="bento-card c6 featured reveal d1">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">TED</div>
+            <div class="big-lbl">Talk Secured</div>
+          </div>
+          <div style="max-width:52ch;">
+            <h4>The platform that built the platform</h4>
+            <p>A TED Talk isn't booked through cold outreach. It's earned through a body of work, a coherent public presence, and the kind of credibility that makes curators take notice. The Evans Guild ecosystem — built by Moor Graphix — gave Etu Evans the digital infrastructure to carry his ideas to one of the most watched stages in the world.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="bento-card c3 reveal d1">
+        <div class="bento-inner">
+          <h4>Press and media opportunities expanded</h4>
+          <p>The new brand infrastructure opened doors to new press placements and media opportunities. A coherent, premium digital presence signals to editors, bookers, and producers that a subject is ready for the next level of visibility.</p>
+        </div>
+      </div>
+      <div class="bento-card c3 reveal d2">
+        <div class="bento-inner">
+          <h4>Client is ever grateful — and publicly attributed</h4>
+          <p>The footer of theevansguild.com reads: "Proudly created by Moor Graphix." That attribution is a statement of trust — a client who wants the world to know who built their brand. That doesn't happen unless every inch of the work earned it.</p>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div class="bento-card c2 reveal d1">
+        <div class="bento-inner">
+          <div class="big-num">4</div>
+          <div class="big-lbl">Brands — one ecosystem</div>
+        </div>
+      </div>
+      <div class="bento-card c2 reveal d2">
+        <div class="bento-inner">
+          <div class="big-num">2</div>
+          <div class="big-lbl">Full websites launched</div>
+        </div>
+      </div>
+      <div class="bento-card c2 reveal d3">
+        <div class="bento-inner">
+          <div class="big-num">0→</div>
+          <div class="big-lbl">Every mark built from zero</div>
+        </div>
+      </div>
+      <!-- Row 4 -->
+      <div class="bento-card c4 reveal d1">
+        <div class="bento-inner">
+          <h4>A system that proves scale</h4>
+          <p>Most designers build a logo. Moor Graphix built a brand operating system — four distinct identities nested inside a coherent parent brand, each able to stand alone and grow independently. For corporate buyers asking "can they handle our complexity?", this engagement answers that question completely.</p>
+        </div>
+      </div>
+      <div class="bento-card c2 reveal d2">
+        <div class="bento-inner">
+          <h4>National exposure through Solesville</h4>
+          <p>The philanthropic arm's identity and platform helped amplify a mission-driven narrative that extended the Evans brand beyond fashion into cultural leadership.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE BREAK -->
+  <div class="quote-break">
+    <div class="quote-inner">
+      <div class="reveal">
+        <!-- PSYCHOLOGY: Social proof quote from client — direct gratitude is more powerful than any stat -->
+        <blockquote>"He is ever grateful for the work — loves every inch of the website including the logos. It has helped him gain more exposure."</blockquote>
+        <p class="quote-attr">— Etu Evans, on working with Moor Graphix</p>
+      </div>
+      <div class="reveal d1">
+        <div class="sec-label">The Framework</div>
+        <h2>Cultural Alchemy:<br><em>The ecosystem method.</em></h2>
+        <p class="body-text">Every Moor Graphix engagement starts with a single question: what does this brand actually deserve? For Etu Evans — a celebrity designer with a 20+ year body of work, a roster of A-list clients, and a mission that extends from luxury fashion to global philanthropy — the answer was: an ecosystem that could hold all of it.</p>
+        <p class="body-text">Cultural Alchemy extracted the authentic identity of each brand in the Evans universe and encoded it into visual systems that work together. The result isn't four logos and two websites. It's a brand empire with infrastructure that compounds.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-inner reveal">
+      <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Turn</div>
+      <!-- PSYCHOLOGY: Mimetic Desire — if it worked for Etu Evans, it can work for you -->
+      <h2>Ready to build a brand<br>that <em>earns</em> the room?</h2>
+      <p class="body-text">From a single logo to a four-brand ecosystem — Moor Graphix builds the brand infrastructure that matches who you are, and the platform that carries it into every room you need to be in.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank">
+          Book Free Consultation
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn-outline" href="https://moorgraphix.com/index.html#portfolio">← View All Work</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+      <a class="footer-back" href="https://moorgraphix.com/index.html#portfolio">← Back to Portfolio</a>
+      <span class="footer-copy">© 2046 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

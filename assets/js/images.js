@@ -167,7 +167,8 @@ const PROJECTS = [
     name:     "The Evans Guild",
     cat:      "Web Design",
     category: "showcase_strip",
-    desc:     "Premium brand aesthetics website for The Evans Guild. Deep purple palette with gold heraldic crest. Fashion-forward editorial grid."
+    desc:     "Premium brand aesthetics website for The Evans Guild. Deep purple palette with gold heraldic crest. Fashion-forward editorial grid.",
+    link:     "cases/evansguild.html"
   },
   {
     src:      "assets/images/showcase-strip/hinson-security-website.jpg",
@@ -608,7 +609,8 @@ const PROJECTS = [
     name:     "The Evans Guild",
     cat:      "Web Design",
     category: "web_design",
-    desc:     "Premium brand aesthetics website for The Evans Guild. Deep purple palette with gold heraldic crest. Fashion-forward editorial grid with mood imagery and Create · Produce · Brand positioning."
+    desc:     "Premium brand aesthetics website for The Evans Guild. Deep purple palette with gold heraldic crest. Fashion-forward editorial grid with mood imagery and Create · Produce · Brand positioning.",
+    link:     "cases/evansguild.html"
   },
   {
     src:      "assets/images/portfolio/web-design/hinson-security-website.jpg",
