@@ -31,6 +31,8 @@
 //                logos | brand_identity | web_design | event_print | campaign |
 //                portfolio_slides
 //   desc     — 1–3 sentences for the modal detail view
+//   link     — (optional) URL to a case study page; if set, clicking the card
+//              navigates to the case study instead of opening the modal
 // ─────────────────────────────────────────────────────────────────────────────
 
 const PROJECTS = [
@@ -157,7 +159,8 @@ const PROJECTS = [
     name:     "Joyous Ocean — Dionne Monsanto",
     cat:      "Web Design",
     category: "showcase_strip",
-    desc:     "Warm, vibrant website for Joyous Ocean — life transformation coach, author, and performer Dionne C. Monsanto. Full-bleed photography hero, playful serif typography."
+    desc:     "Warm, vibrant website for Joyous Ocean — life transformation coach, author, and performer Dionne C. Monsanto. Full-bleed photography hero, playful serif typography.",
+    link:     "cases/joyousocean.html"
   },
   {
     src:      "assets/images/showcase-strip/evans-guild-website.jpg",
@@ -199,7 +202,8 @@ const PROJECTS = [
     name:     "2 Sports Moms — Full Site",
     cat:      "Web Design",
     category: "showcase_strip",
-    desc:     "Full organizational website for 2 Sports Moms — a 501(c)(3) non-profit connecting opportunities to student-athletes and resources to families."
+    desc:     "Full organizational website for 2 Sports Moms — a 501(c)(3) non-profit connecting opportunities to student-athletes and resources to families.",
+    link:     "cases/2sportsmoms.html"
   },
   {
     src:      "assets/images/showcase-strip/nama-harlem-website.jpg",
@@ -596,7 +600,8 @@ const PROJECTS = [
     name:     "Joyous Ocean — Dionne Monsanto",
     cat:      "Web Design",
     category: "web_design",
-    desc:     "Warm, vibrant website for Joyous Ocean — life transformation coach, author, and performer Dionne C. Monsanto. Full-bleed photography hero, playful serif typography, and side-panel quick links. Live Life JOYously!"
+    desc:     "Warm, vibrant website for Joyous Ocean — life transformation coach, author, and performer Dionne C. Monsanto. Full-bleed photography hero, playful serif typography, and side-panel quick links. Live Life JOYously!",
+    link:     "cases/joyousocean.html"
   },
   {
     src:      "assets/images/portfolio/web-design/evans-guild-website.jpg",
@@ -638,7 +643,8 @@ const PROJECTS = [
     name:     "2 Sports Moms — Full Site",
     cat:      "Web Design",
     category: "web_design",
-    desc:     "Full organizational website for 2 Sports Moms — a 501(c)(3) non-profit connecting opportunities to student-athletes and resources to families. Full-bleed team photography, impact stats, and donation CTAs."
+    desc:     "Full organizational website for 2 Sports Moms — a 501(c)(3) non-profit connecting opportunities to student-athletes and resources to families. Full-bleed team photography, impact stats, and donation CTAs.",
+    link:     "cases/2sportsmoms.html"
   },
   {
     src:      "assets/images/portfolio/web-design/nama-harlem-website.jpg",

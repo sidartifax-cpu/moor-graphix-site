@@ -71,10 +71,16 @@ showcaseItems.forEach(item=>{
   const img=document.createElement('img');img.src=item.src;img.alt=item.name;
   const ov=document.createElement('div');ov.className='sw-ov';
   const lb=document.createElement('div');lb.className='sw-lbl';lb.textContent=item.name;
-  const hint=document.createElement('div');hint.className='sw-click-hint';hint.textContent='View Details';
+  const hint=document.createElement('div');hint.className='sw-click-hint';
+  // If showcase item has a case study link, update hint text
+  hint.textContent=item.link?'View Case Study':'View Details';
   d.appendChild(img);d.appendChild(ov);d.appendChild(lb);d.appendChild(hint);
-  // Find matching portfolio entry by name for modal navigation
   d.addEventListener('click',()=>{
+    // If item has a case study link, navigate there
+    if(item.link){
+      window.location.href=item.link;
+      return;
+    }
     const pi=projects.findIndex(p=>p.name===item.name);
     if(pi>=0) openModal(pi);
   });
@@ -118,17 +124,24 @@ function buildGrid(cat){
     const cfg=CAT_CFG[item.category]||{icon:'ti-photo',label:item.cat};
     const mono=getInitials(item.name);
     const origIdx=projects.indexOf(item);
+    const hasCaseStudy=!!item.link;
 
     const card=document.createElement('div');
-    card.className='wg-card';
+    card.className='wg-card'+(hasCaseStudy?' has-case-study':'');
     card.dataset.cat=item.category;
     card.dataset.origIdx=origIdx;
     card.style.setProperty('--entry-delay',(i%3)*0.1+'s');
+
+    // Case study badge — shown on cards that link to a case study
+    const csBadge=hasCaseStudy
+      ? '<div class="wg-card-cs-badge">Case Study ↗</div>'
+      : '';
 
     card.innerHTML=
       '<div class="wg-card-top">'+
         '<img class="wg-card-img" src="'+item.src+'" loading="lazy" alt="'+item.name+'">'+
         '<div class="wg-card-img-ov"></div>'+
+        csBadge+
         '<div class="wg-card-monogram">'+
           '<div class="wg-card-initials">'+mono+'</div>'+
           '<div class="wg-card-cat-icon"><i class="ti '+cfg.icon+'"></i></div>'+
@@ -136,7 +149,7 @@ function buildGrid(cat){
         '<div class="wg-card-hover-info">'+
           '<div class="wg-card-hover-name">'+item.name+'</div>'+
           '<p class="wg-card-hover-desc">'+item.desc+'</p>'+
-          '<button class="wg-card-view-btn" tabindex="-1">View Details</button>'+
+          '<button class="wg-card-view-btn" tabindex="-1">'+(hasCaseStudy?'View Case Study':'View Details')+'</button>'+
         '</div>'+
       '</div>'+
       '<div class="wg-card-bottom">'+
@@ -145,7 +158,15 @@ function buildGrid(cat){
         '<div class="wg-card-snippet">'+item.desc+'</div>'+
       '</div>';
 
-    card.addEventListener('click',()=>openModal(origIdx,cat));
+    // Click: case study link navigates to page; otherwise opens modal
+    card.addEventListener('click',()=>{
+      if(hasCaseStudy){
+        window.location.href=item.link;
+      } else {
+        openModal(origIdx,cat);
+      }
+    });
+
     wgf.appendChild(card);
     // Pagination: hide cards beyond PAGE_SIZE on "all" filter load
     if(cat==='all'&&i>=PAGE_SIZE){
