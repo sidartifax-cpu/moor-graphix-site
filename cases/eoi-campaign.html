@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrepreneur of Impact — Case Study | Moor Graphix</title>
+  <meta name="description" content="93 entrepreneurs entered. Moor Graphix made the Top 3. No ad spend. No agency. One studio, one vision, and a community that showed up. The EOI Campaign case study." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="93 to 3 — EOI Campaign Case Study | Moor Graphix" />
+  <meta property="og:description" content="Top 3 out of 93 national competitors. No ad budget. No outside creative team. This is what happens when your brand has something real to say and the creative to back it up." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/eoi-campaign.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8,12,20,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--blue-line); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1.2; }
+    .nav-brand .name { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.08em; color: var(--white); text-transform: uppercase; }
+    .nav-brand .tagline { font-size: 0.58rem; letter-spacing: 0.16em; color: var(--blue); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.76rem; letter-spacing: 0.06em; color: var(--muted); text-decoration: none; transition: color 0.3s var(--ease); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { color: #fff !important; background: var(--blue); padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 600 !important; font-size: 0.7rem !important; letter-spacing: 0.1em !important; text-transform: uppercase; transition: opacity 0.3s !important; }
+    .nav-cta:hover { opacity: 0.85 !important; }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; margin-top: 68px; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 32s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO — split stat layout */
+    .hero {
+      min-height: 100dvh;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 7rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 56% 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 10%; left: -8%;
+      width: 50vw; height: 50vw;
+      background: radial-gradient(circle, rgba(59,111,240,0.07) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero-left { position: relative; z-index: 1; }
+    .hero-right { position: relative; z-index: 1; }
+
+    .pill-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--blue-line); border-radius: 9999px;
+      padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 2rem;
+      background: var(--blue-dim);
+    }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem, 7vw, 7rem); font-weight: 300; line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
+    h1 em { font-style: italic; color: var(--blue); }
+
+    .hero-deck { font-size: 1.05rem; color: var(--muted); max-width: 48ch; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.45s var(--ease); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; }
+    .btn-ghost:hover { color: var(--white); }
+
+    .meta-strip { border-top: 1px solid var(--blue-line); margin-top: 2.5rem; padding-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+
+    /* Hero right — big number feature */
+    .hero-number-feature {
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .number-card {
+      background: var(--blue-dim); border: 1px solid var(--blue-line);
+      border-radius: 1.5rem; padding: 2px;
+      transition: transform 0.5s var(--ease);
+    }
+    .number-card:hover { transform: translateX(-5px); }
+    .number-inner {
+      background: var(--bg-2); border-radius: calc(1.5rem - 2px);
+      padding: 1.75rem 2rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .big-number { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; color: var(--blue); margin-bottom: 0.35rem; }
+    .number-label { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
+    .number-sub { font-size: 0.76rem; color: var(--muted); line-height: 1.5; }
+
+    /* SECTIONS */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    /* BRANDS INVOLVED */
+    .brand-row { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
+    .brand-item { display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.25rem 1.5rem; background: var(--bg-3); border: 1px solid var(--blue-line); border-radius: 0.875rem; transition: border-color 0.4s var(--ease), transform 0.4s var(--ease); }
+    .brand-item:hover { border-color: rgba(59,111,240,0.45); transform: translateX(5px); }
+    .brand-num { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: rgba(59,111,240,0.4); flex-shrink: 0; line-height: 1; }
+    .brand-item-name { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .brand-item-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+    /* STRATEGY PRINCIPLES */
+    .principles { display: flex; flex-direction: column; gap: 0; margin-top: 2rem; }
+    .principle { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .principle:first-child { padding-top: 0; }
+    .principle:last-child { border-bottom: none; }
+    .principle:hover { transform: translateX(6px); }
+    .p-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .principle h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .principle p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* ASSETS PRODUCED — BENTO */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; min-height: 160px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .bento-card.featured .bento-inner { flex-direction: row; gap: 2.5rem; align-items: center; min-height: auto; }
+    .big-num-b { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* SHARK MOMENT — special callout */
+    .shark-callout {
+      background: var(--blue-dim);
+      border: 1px solid rgba(59,111,240,0.3);
+      border-radius: 1.5rem;
+      padding: 2px;
+      margin-top: 3rem;
+    }
+    .shark-inner {
+      background: var(--bg-2);
+      border-radius: calc(1.5rem - 2px);
+      padding: 2.5rem 3rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .shark-tag { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+    .shark-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; line-height: 1.15; color: var(--white); margin-bottom: 1.25rem; }
+    .shark-headline em { font-style: italic; color: var(--blue); }
+    .hashtag {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      background: rgba(59,111,240,0.1);
+      border: 1px solid var(--blue-line);
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      margin-top: 1rem;
+    }
+
+    /* LESSONS TABLE */
+    .lessons-table { width: 100%; border-collapse: collapse; margin-top: 2.5rem; }
+    .lessons-table thead tr { border-bottom: 1px solid var(--blue-line); }
+    .lessons-table th { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); padding: 0 0 1rem; text-align: left; font-weight: 600; }
+    .lessons-table tbody tr { border-bottom: 1px solid rgba(59,111,240,0.08); transition: background 0.3s; }
+    .lessons-table tbody tr:last-child { border-bottom: none; }
+    .lessons-table tbody tr:hover { background: rgba(59,111,240,0.04); }
+    .lessons-table td { font-size: 0.84rem; color: var(--muted); padding: 1.25rem 0; line-height: 1.6; vertical-align: top; }
+    .lessons-table td:first-child { color: var(--white); font-weight: 500; padding-right: 2rem; width: 40%; }
+
+    /* ASSETS LIST */
+    .assets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.625rem; margin-top: 2rem; }
+    .asset-pill { display: flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.25rem; background: var(--bg-3); border: 1px solid var(--blue-line); border-radius: 0.75rem; font-size: 0.82rem; color: var(--muted); transition: border-color 0.3s var(--ease); }
+    .asset-pill:hover { border-color: rgba(59,111,240,0.45); }
+    .asset-pill::before { content: '✦'; font-size: 0.55rem; color: var(--blue); flex-shrink: 0; }
+
+    /* PROOF — dark section */
+    .proof-dark { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .proof-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+
+    /* QUOTE BREAK */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 1.5rem 4rem; }
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 2; }
+      .bento-card.featured .bento-inner { flex-direction: column; gap: 1.5rem; }
+      .shark-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .assets-grid { grid-template-columns: 1fr; }
+      .wrap { padding: 5rem 1.5rem; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 520px) {
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav-inner">
+      <a class="nav-brand" href="https://moorgraphix.com/index.html">
+        <span class="name">Moor Graphix</span>
+        <span class="tagline">Cultural Alchemy + AI Systems</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+        <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+        <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+        <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+        <li><a href="https://moorgraphix.com/about.html">About</a></li>
+        <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://calendly.com/moorwashington" target="_blank">Book Free Consult</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>✦ EOI Campaign 2026</span><span>✦ 93 Entered</span><span>✦ Top 3</span><span>✦ Zero Ad Spend</span><span>✦ Multi-Platform Campaign</span><span>✦ #DestinedForTheShark</span><span>✦ Entrepreneur of Impact</span><span>✦ Cultural Alchemy</span>
+      <span>✦ EOI Campaign 2026</span><span>✦ 93 Entered</span><span>✦ Top 3</span><span>✦ Zero Ad Spend</span><span>✦ Multi-Platform Campaign</span><span>✦ #DestinedForTheShark</span><span>✦ Entrepreneur of Impact</span><span>✦ Cultural Alchemy</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left reveal">
+      <div class="pill-label">Case Study — Campaign Design + Strategy</div>
+      <!-- PSYCHOLOGY: Loss Aversion + Social Proof — lead with the stakes, then the result -->
+      <h1>93<br>to<br><em>3.</em></h1>
+      <p class="hero-deck"><strong>93 entrepreneurs. One cash prize. One Entrepreneur Magazine feature. One mentorship with Daymond John.</strong> Moor Graphix entered the 2026 Entrepreneur of Impact competition representing 3 brands — and finished in the Top 3 nationally. Zero ad spend. Zero outside agency. One studio. One vision. A community that showed up.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="#proof">
+          See the Results
+          <span class="btn-icon">↓</span>
+        </a>
+        <a class="btn-ghost" href="#strategy">The Strategy →</a>
+      </div>
+      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-lbl">Competition</span><span class="meta-val">Entrepreneur of Impact 2026</span></div>
+        <div class="meta-item"><span class="meta-lbl">Campaign Type</span><span class="meta-val">Multi-Platform Brand Campaign</span></div>
+        <div class="meta-item"><span class="meta-lbl">Production</span><span class="meta-val">100% In-House · Moor Graphix</span></div>
+        <div class="meta-item"><span class="meta-lbl">Ad Spend</span><span class="meta-val">$0</span></div>
+      </div>
+    </div>
+
+    <!-- Hero right — key numbers -->
+    <div class="hero-right reveal d2">
+      <div class="hero-number-feature">
+        <div class="number-card">
+          <div class="number-inner">
+            <div class="big-number">Top 3</div>
+            <div class="number-label">Out of 93 national competitors</div>
+            <div class="number-sub">Competing for a cash prize, Entrepreneur Magazine feature, and mentorship with Daymond John</div>
+          </div>
+        </div>
+        <div class="number-card">
+          <div class="number-inner">
+            <div class="big-number">$0</div>
+            <div class="number-label">Ad spend — zero</div>
+            <div class="number-sub">No PR agency. No paid media. No outside creative team. Pure strategy, story, and community.</div>
+          </div>
+        </div>
+        <div class="number-card">
+          <div class="number-inner">
+            <div class="big-number">3</div>
+            <div class="number-label">Brands represented</div>
+            <div class="number-sub">Moor Graphix · Amerukhan Basics · Scrolls of MAAT — one campaign, one unified voice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- 01 THE CONTEXT -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">01 — The Context</div>
+        <!-- PSYCHOLOGY: Confirmation Bias subversion — reader expects big budget = big result. We flip it. -->
+        <h2>The competition<br>wasn't built for<br><em>this kind of brand.</em></h2>
+        <p class="body-text">The 2026 Entrepreneur of Impact competition drew 93 entrepreneurs from across the country — all competing for one prize package that included cash, an Entrepreneur Magazine feature, and a mentorship session with Daymond John.</p>
+        <p class="body-text">Sid Washington entered representing not just himself, but three brands built on purpose, cultural identity, and a philosophy most competitions aren't designed to hold. The goal wasn't just to accumulate votes. The goal was to demonstrate what happens when a purpose-driven brand runs a real campaign — with real strategy, real creative, and a real community behind it.</p>
+        <p class="body-text"><strong>Every asset built. Every word written. Every graphic deployed — all produced inside the Moor Graphix production house.</strong></p>
+      </div>
+      <div class="reveal d1">
+        <div class="sec-label" style="margin-bottom:1rem;">The Brands Behind the Campaign</div>
+        <div class="brand-row">
+          <div class="brand-item">
+            <div class="brand-num">01</div>
+            <div>
+              <div class="brand-item-name">Moor Graphix</div>
+              <div class="brand-item-desc">Purpose-driven creative design studio. 30+ years of brand strategy, visual identity, and AI systems. The production engine behind the entire campaign.</div>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="brand-num">02</div>
+            <div>
+              <div class="brand-item-name">Amerukhan Basics</div>
+              <div class="brand-item-desc">Culture-first apparel for people who know who they are. Rooted in Indigenous Moorish heritage. The community brand that mobilized the most energy.</div>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="brand-num">03</div>
+            <div>
+              <div class="brand-item-name">Scrolls of MAAT</div>
+              <div class="brand-item-desc">Sovereignty and legacy platform rooted in ancestral wisdom. The educational and philosophical spine that gave the campaign its deepest layer of meaning.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- 02 THE STRATEGY -->
+  <div class="wrap" id="strategy">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">02 — The Strategy</div>
+        <!-- PSYCHOLOGY: Authority + First Principles — 3 rules that drove everything -->
+        <h2>Three principles.<br><em>One campaign.</em></h2>
+        <p class="body-text">Most competition campaigns run on the same playbook: ask your network, post a link, hope for numbers. Moor Graphix ran a different campaign — one built on three strategic principles that reframed what a vote meant and who the audience was.</p>
+        <p class="body-text">The result wasn't just a higher vote count. It was a community that didn't just vote — they recruited.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="principles">
+          <div class="principle">
+            <div class="p-num">01</div>
+            <div>
+              <!-- PSYCHOLOGY: JTBD framing — what the audience is hiring the content to do -->
+              <h3>Narrative over ask</h3>
+              <p>Every post led with story and community identity. The vote request came second — always. People don't respond to asks. They respond to something worth being part of.</p>
+            </div>
+          </div>
+          <div class="principle">
+            <div class="p-num">02</div>
+            <div>
+              <!-- PSYCHOLOGY: Availability Heuristic — the shark photo made success feel vivid and real -->
+              <h3>Literal truth over clever metaphor</h3>
+              <p>The campaign's most powerful asset wasn't designed — it was discovered. A childhood photo of Sid holding a baby shark became the emotional anchor of the entire campaign. He didn't manufacture symbolism. He found it in real life. The hashtag: <strong style="color:var(--blue)">#DestinedForTheShark.</strong></p>
+            </div>
+          </div>
+          <div class="principle">
+            <div class="p-num">03</div>
+            <div>
+              <!-- PSYCHOLOGY: Mimetic Desire — reframe the audience as co-builders, not favor-granters -->
+              <h3>Community as proof of concept</h3>
+              <p>Votes were never framed as a personal favor. They were framed as collective investment in something being built. That shift in language changed everything — people didn't just vote, they became ambassadors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- SHARK MOMENT -->
+  <div class="wrap" style="padding-top:0; padding-bottom:0;">
+    <div class="shark-callout reveal">
+      <div class="shark-inner">
+        <div>
+          <div class="shark-tag">✦ The Campaign's Emotional Anchor</div>
+          <!-- PSYCHOLOGY: Availability Heuristic — the most vivid, specific story always wins -->
+          <div class="shark-headline">He's been holding<br>the shark his<br><em>whole life.</em></div>
+          <p class="body-text" style="max-width:42ch;">A childhood photograph. Sid as a kid, holding a baby shark. Competing 30 years later for mentorship from Daymond John — The Shark. Real life told the story before the campaign did. The creative team just had to find it.</p>
+          <p class="body-text" style="max-width:42ch;"><strong>The lesson:</strong> Your most powerful brand story is probably already in your real life. You just need someone to help you see it. That's the work Moor Graphix does for every client.</p>
+        </div>
+        <div>
+          <div style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;">The Hashtag That Moved the Campaign</div>
+          <div class="hashtag">#DestinedForTheShark</div>
+          <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--blue-line);">
+            <div style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:0.75rem;">What This Unlocked</div>
+            <p class="body-text" style="font-size:0.82rem;">A single authentic image — a childhood photo most people would scroll past — became the most-engaged piece of creative in the entire campaign. Authenticity rooted in real life always outperforms manufactured symbolism.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" style="margin-top:7rem;" />
+
+  <!-- 03 THE ASSETS -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">03 — The Assets</div>
+        <h2>A full production<br>suite. <em>In-house.</em></h2>
+        <p class="body-text">Every deliverable was produced inside the Moor Graphix studio — from concept through deployment. No outside vendors. No stock templates. No generic creative. The campaign demonstrated exactly what Moor Graphix builds for clients: a complete, platform-specific creative ecosystem with one unified voice across every touchpoint.</p>
+        <p class="body-text"><strong>Platform-specific tuning was built into every asset.</strong> The same message executed differently for Instagram, Facebook, LinkedIn, Twitter/X, TikTok/Reels — because a one-size-fits-all campaign performs like one.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="assets-grid">
+          <div class="asset-pill">Instagram Feed Graphics</div>
+          <div class="asset-pill">Instagram Stories</div>
+          <div class="asset-pill">Facebook Stories</div>
+          <div class="asset-pill">Facebook Cover Banners</div>
+          <div class="asset-pill">Web Banners</div>
+          <div class="asset-pill">Platform Caption Copy</div>
+          <div class="asset-pill">Video Scripts</div>
+          <div class="asset-pill">AI Avatar Videos</div>
+          <div class="asset-pill">HTML Campaign Pages</div>
+          <div class="asset-pill">Email Templates</div>
+          <div class="asset-pill">Gratitude / Pivot Post</div>
+          <div class="asset-pill">Scrolls of MAAT eBook</div>
+        </div>
+        <div style="margin-top:1.5rem; padding:1.25rem 1.5rem; background:var(--bg-3); border:1px solid var(--blue-line); border-radius:0.875rem;">
+          <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:0.5rem;">Production Stack</div>
+          <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;margin:0;">Dark/gold editorial aesthetic · Syne typography system · HeyGen avatar video · ElevenLabs voiceover · In-house copywriting · Multi-platform optimization</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- 04 THE PROOF -->
+  <div class="proof-dark" id="proof">
+    <div class="proof-inner">
+      <div class="reveal">
+        <div class="sec-label">04 — The Proof</div>
+        <!-- PSYCHOLOGY: Social Proof + Loss Aversion — quantify what was at stake and what was won -->
+        <h2>Top 3.<br><em>No budget.</em><br>No agency.</h2>
+        <p class="body-text">The final result was a Top 3 finish out of 93 national competitors — competing for a prize package that included cash, an Entrepreneur Magazine feature, and mentorship from Daymond John. The campaign produced that result with zero paid media, zero outside creative support, and zero PR infrastructure.</p>
+      </div>
+      <div class="bento" style="margin-top:3rem;">
+        <!-- Featured card -->
+        <div class="bento-card c6 featured reveal d1">
+          <div class="bento-inner">
+            <div>
+              <div class="big-num-b">Top 3</div>
+              <div class="big-lbl">Out of 93 Nationally</div>
+            </div>
+            <div style="max-width:52ch;">
+              <h4>The result that proves the framework</h4>
+              <p>A small brand with the right strategy, a clear voice, and production-quality creative can compete at any level. Moor Graphix didn't just compete — it demonstrated its own methodology in public, under competitive pressure, with the result documented for every future client to see.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="bento-card c2 reveal d1">
+          <div class="bento-inner">
+            <div class="big-num-b">$0</div>
+            <div class="big-lbl">Ad Spend</div>
+          </div>
+        </div>
+        <div class="bento-card c4 reveal d2">
+          <div class="bento-inner">
+            <h4>Community investment — not personal favors</h4>
+            <p>By framing votes as collective investment in something being built, the campaign unlocked a different energy. People didn't just vote — they recruited. The language shift from "help me" to "join something" made every supporter an extension of the campaign.</p>
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="bento-card c3 reveal d1">
+          <div class="bento-inner">
+            <h4>100% in-house production</h4>
+            <p>Every graphic, caption, video script, email template, and campaign page was built inside the Moor Graphix studio. The campaign is a live demonstration of the full-service production capability Moor Graphix deploys for clients.</p>
+          </div>
+        </div>
+        <div class="bento-card c3 reveal d2">
+          <div class="bento-inner">
+            <h4>Multi-platform execution</h4>
+            <p>Instagram, Facebook, LinkedIn, Twitter/X, TikTok/Reels, email, and web — each platform received platform-specific creative and copy tuned for its audience and algorithm. One message. Four different executions. Zero generic posts.</p>
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div class="bento-card c2 reveal d1">
+          <div class="bento-inner">
+            <div class="big-num-b">3</div>
+            <div class="big-lbl">Brands · One Voice</div>
+          </div>
+        </div>
+        <div class="bento-card c4 reveal d2">
+          <div class="bento-inner">
+            <h4>The campaign becomes evergreen IP</h4>
+            <p>The case study, social series, and one-pager produced from this campaign now serve as credibility assets for Moor Graphix — deployed before every sales call, embedded on the website, and running as evergreen content that works without active management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- 05 KEY LESSONS -->
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-label">05 — Key Lessons</div>
+      <!-- PSYCHOLOGY: JTBD + Confirmation Bias subversion — lessons that challenge what clients think they know -->
+      <h2>What this campaign<br>proves about <em>yours.</em></h2>
+      <p class="body-text">Every lesson learned in the EOI campaign is directly applicable to client brand strategy. This is what Cultural Alchemy in practice looks like — and what Moor Graphix builds into every engagement.</p>
+    </div>
+    <table class="lessons-table reveal d1">
+      <thead>
+        <tr>
+          <th>What We Learned</th>
+          <th>What It Means For Your Brand</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Story moves people — asks don't</td>
+          <td>Lead with identity before CTA. Your audience needs to know why it matters before they're asked to act. The ask is the last sentence, never the first.</td>
+        </tr>
+        <tr>
+          <td>Authentic specificity beats clever concepts</td>
+          <td>Your real story — the childhood photo, the family name, the specific moment — is your most powerful brand asset. We find it and forge it into creative.</td>
+        </tr>
+        <tr>
+          <td>Community investment &gt; personal favor</td>
+          <td>Position your audience as co-builders, not favor-granters. When people feel like they're part of something being built, they don't just convert — they recruit.</td>
+        </tr>
+        <tr>
+          <td>Platform-specific tuning matters</td>
+          <td>One message needs four different executions. The same post doesn't work on LinkedIn that works on TikTok. Platform-specific creative is the difference between ignored and shared.</td>
+        </tr>
+        <tr>
+          <td>Visual consistency builds trust faster than copy</td>
+          <td>Your aesthetic is your first impression. Before anyone reads a word, they've already made a judgment about your brand. Consistency across every touchpoint makes that judgment work for you.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-break">
+    <div class="quote-inner">
+      <div class="reveal">
+        <!-- PSYCHOLOGY: Authority + First Principles quote -->
+        <blockquote>"A small brand with the right strategy, a clear voice, and production-quality creative can compete at any level. That's what Moor Graphix builds for every client."</blockquote>
+        <p class="quote-attr">— Sid Washington, Moor Graphix</p>
+      </div>
+      <div class="reveal d1">
+        <div class="sec-label">The Framework</div>
+        <h2>Cultural Alchemy:<br><em>Proven under pressure.</em></h2>
+        <p class="body-text">The EOI campaign wasn't just a competition entry. It was a live test of the Moor Graphix methodology — Cultural Alchemy executed under real competitive conditions with a documented result.</p>
+        <p class="body-text">The same principles that moved a community to vote drove a small brand into the Top 3 nationally. Those same principles are what we bring to every client engagement. The difference between brands that win and brands that post is strategy, story, and production quality. All three are what Moor Graphix delivers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-inner reveal">
+      <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Campaign</div>
+      <!-- PSYCHOLOGY: Mimetic Desire — if it worked for us, it works for you -->
+      <h2>Your brand has a story<br>worth <em>fighting for.</em></h2>
+      <p class="body-text">If you watched what Moor Graphix built for this campaign and thought "I need that for my brand" — that's exactly the work we do. We don't just build pretty things. We build campaigns that move people.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank">
+          Book Free Consultation
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn-outline" href="https://moorgraphix.com/index.html#case-studies">← View All Case Studies</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+      <a class="footer-back" href="https://moorgraphix.com/index.html#case-studies">← Back to Case Studies</a>
+      <span class="footer-copy">© 2046 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
