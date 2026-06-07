@@ -263,6 +263,7 @@
   </style>
 </head>
 <body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
 
   <!-- NAV -->
   <header>
@@ -484,10 +485,19 @@
         <div class="cm-showcase reveal d2">
           <div class="cm-inner">
             <div>
-              
+              <div class="cm-label">✦ The Production Engine</div>
+              <div class="cm-title">Scrolls of MAAT<br><em>Content Machine</em></div>
+              <p class="cm-desc">Five specialized AI agents working in sequence — built by Moor Graphix, deployed on the Scrolls of MAAT platform. Every caption, script, and platform-tuned post for the EOI campaign ran through this system.</p>
+              <div class="cm-scribes">
+                <span class="cm-scribe"><i class="ti ti-search" style="font-size:0.7rem;"></i> Trend Spotter</span>
+                <span class="cm-scribe"><i class="ti ti-pencil" style="font-size:0.7rem;"></i> Scriptwriter</span>
+                <span class="cm-scribe"><i class="ti ti-calendar" style="font-size:0.7rem;"></i> Content Employee</span>
+                <span class="cm-scribe"><i class="ti ti-photo" style="font-size:0.7rem;"></i> Image Prompt</span>
+                <span class="cm-scribe"><i class="ti ti-building-bank" style="font-size:0.7rem;"></i> Sales Agent</span>
+              </div>
             </div>
             <div class="cm-img-wrap">
-              <img class="cm-img" src="../assets/images/content-creator.png" alt="Scrolls of MAAT Content Machine — AI content production system used in the EOI Campaign" loading="lazy">
+              <img class="cm-img" src="../assets/images/content-creator.png" alt="Scrolls of MAAT Content Machine — AI content production system" loading="lazy">
             </div>
           </div>
         </div>
@@ -655,5 +665,6 @@
     );
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
+<script src="../assets/js/particles.js"></script>
 </body>
 </html>
