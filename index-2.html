@@ -38,6 +38,38 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
+
+/* ── MORRISON CREST — origin section ── */
+.morrison-crest-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.morrison-crest-img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 32px rgba(48,96,208,0.25));
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), filter 0.5s;
+}
+.morrison-crest-img:hover {
+  transform: scale(1.04) rotate(-1deg);
+  filter: drop-shadow(0 16px 48px rgba(48,96,208,0.38));
+}
+.morrison-crest-caption {
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-mid, #7a8aaa);
+  text-align: center;
+  line-height: 1.6;
+}
+.morrison-crest-caption strong {
+  color: var(--blue, #3b6ff0);
+}
+
 /* ── CASE STUDIES SECTION — inserted between showcase strip and origin ── */
 .cs-section {
   padding: 80px 44px;
@@ -72,7 +104,7 @@
 .cs-view-all:hover { opacity: 0.7; }
 .cs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .cs-card {
@@ -137,7 +169,7 @@
 .cs-card-result i { font-size: 12px; }
 @media(max-width:900px){
   .cs-section { padding: 60px 24px; }
-  .cs-grid { grid-template-columns: 1fr; gap: 16px; }
+  .cs-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
 }
 @media(max-width:640px){
   .cs-grid { grid-template-columns: 1fr; }
@@ -385,6 +417,18 @@
       </div>
     </a>
 
+
+    <!-- EOI Campaign -->
+    <a class="cs-card" href="cases/eoi-campaign.html">
+      <img class="cs-card-img" src="assets/images/portfolio/campaign/sid-harlem-douglasville.png" alt="Entrepreneur of Impact Campaign — Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Campaign Design · Multi-Platform · Strategy</div>
+        <div class="cs-card-name">EOI Campaign — 93 to 3</div>
+        <div class="cs-card-desc">93 entrepreneurs entered the 2026 Entrepreneur of Impact competition. Moor Graphix made the Top 3 nationally — zero ad spend, zero outside agency, one studio, one vision.</div>
+        <div class="cs-card-result"><i class="ti ti-trophy"></i>Result: Top 3 of 93 National Competitors</div>
+      </div>
+    </a>
+
   </div>
 </section>
 
@@ -399,6 +443,18 @@
     <p style="color:var(--text-mid);margin:0">— Sid Washington, Founder &amp; Principal Designer</p>
   </div>
   <div class="origin-right">
+    <div class="morrison-crest-wrap">
+      <img
+        class="morrison-crest-img"
+        src="assets/images/branding/morrison-logo.png"
+        alt="Morrison Family Crest — three faces of Moors — the origin of the Moor Graphix name"
+      >
+      <div class="morrison-crest-caption">
+        The <strong>Morrison Family Crest</strong><br>
+        Three faces of Moors — Fairbairn's Crest<br>
+        The origin of the name.
+      </div>
+    </div>
     <div class="exp-badge"><div class="exp-num">30+</div><div class="exp-text">Years delivering visual graphic solutions — print and web — for individuals, small businesses, city agencies, think tanks, and corporations of all sizes. Nationwide.</div></div>
     <div class="crest-grid">
       <div class="crest-cell"><i class="ti ti-dna crest-icon"></i><div class="crest-title">Heritage First</div><div class="crest-desc">Every brand starts with who you are, not what looks good right now.</div></div>
