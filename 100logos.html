@@ -1028,8 +1028,9 @@ document.querySelectorAll('.form-wrapper, .section-tag, section h2, section .lea
 
 // ── FORM SUBMIT → APPLICATION CAPTURE → STRIPE REDIRECT ──
 const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/9B6cN6g1k4Bya8F0Qz9fW01';
-// Existing Formspree endpoint used by the site. Replace with a dedicated
-// 100 Logos endpoint later if you want this campaign separated in Formspree.
+// Dedicated 100 Logos Formspree endpoint (separate from the main contact form).
+// After Stripe payment, configure the payment link success URL in Stripe dashboard to:
+// https://moorgraphix.com/100logos-thank-you.html
 const APPLICATION_ENDPOINT = 'https://formspree.io/f/xykvlvpq';
 
 function createApplicationId(){
@@ -1130,8 +1131,10 @@ document.getElementById('app-form').addEventListener('submit', async function(e)
       throw new Error('Application capture failed');
     }
 
-    setSubmitStatus('Application saved. Redirecting to secure checkout...', 'success');
-    window.location.href = buildPaymentUrl(STRIPE_PAYMENT_LINK, applicationId, application.email);
+    setSubmitStatus('Application saved! Redirecting to secure checkout in 2 seconds...', 'success');
+    setTimeout(function(){
+      window.location.href = buildPaymentUrl(STRIPE_PAYMENT_LINK, applicationId, application.email);
+    }, 2000);
   } catch(err){
     submitBtn.disabled = false;
     submitBtn.style.opacity = '';
