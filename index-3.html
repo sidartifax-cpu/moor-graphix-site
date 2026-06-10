@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/branding/moor-graphix-favicon.png">
+<meta name="description" content="Moor Graphix — Cultural Alchemy brand design and AI systems studio in Douglasville, GA. 30+ years. Serving nationwide.">
+<meta name="keywords" content="brand design, cultural branding, AI systems, logo design, Douglasville GA, Moor Graphix, Cultural Alchemy, brand identity, web design">
+<meta name="author" content="Sid Washington">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="pHpDOIDQ36O6ibRaPKSbPfhvsGijtdPZ1T1rHZWGqt4">
+<meta name="geo.region" content="US-GA">
+<meta name="geo.placename" content="Douglasville, Georgia">
+<meta name="geo.position" content="33.7490;-84.7441">
+<meta name="ICBM" content="33.7490, -84.7441">
+<link rel="canonical" href="https://sidartifax-cpu.github.io/moor-graphix-site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moor Graphix">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://sidartifax-cpu.github.io/moor-graphix-site/">
+<meta property="og:title" content="Moor Graphix | Cultural Alchemy + AI Design Studio">
+<meta property="og:description" content="Moor Graphix — Cultural Alchemy brand design and AI systems studio in Douglasville, GA. 30+ years. Serving nationwide.">
+<meta property="og:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Moor Graphix — Cultural Alchemy + AI Design Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@moorgraphix">
+<meta name="twitter:creator" content="@moorgraphix">
+<meta name="twitter:title" content="Moor Graphix | Cultural Alchemy + AI Design Studio">
+<meta name="twitter:description" content="Moor Graphix — Cultural Alchemy brand design and AI systems studio in Douglasville, GA. 30+ years. Serving nationwide.">
+<meta name="twitter:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<meta name="twitter:image:alt" content="Moor Graphix — Cultural Alchemy + AI Design Studio">
+<title>Moor Graphix | Cultural Alchemy + AI Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+
+/* ── MORRISON CREST — origin section ── */
+.morrison-crest-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.morrison-crest-img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 32px rgba(48,96,208,0.25));
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), filter 0.5s;
+}
+.morrison-crest-img:hover {
+  transform: scale(1.04) rotate(-1deg);
+  filter: drop-shadow(0 16px 48px rgba(48,96,208,0.38));
+}
+.morrison-crest-caption {
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-mid, #7a8aaa);
+  text-align: center;
+  line-height: 1.6;
+}
+.morrison-crest-caption strong {
+  color: var(--blue, #3b6ff0);
+}
+
+/* ── CASE STUDIES SECTION — inserted between showcase strip and origin ── */
+.cs-section {
+  padding: 80px 44px;
+  background: var(--dark2, #08101c);
+  border-top: 0.5px solid rgba(80,140,255,0.1);
+  border-bottom: 0.5px solid rgba(80,140,255,0.1);
+}
+.cs-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 48px;
+}
+.cs-head-left {}
+.cs-head-left .eyebrow { margin-bottom: 10px; }
+.cs-head-left h2 { color: #fff; margin: 0; }
+.cs-view-all {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: opacity 0.25s;
+}
+.cs-view-all:hover { opacity: 0.7; }
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.cs-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(80,140,255,0.04);
+  border: 0.5px solid rgba(80,140,255,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.cs-card:hover {
+  border-color: rgba(106,171,255,0.4);
+  transform: translateY(-4px);
+}
+.cs-card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  background: rgba(80,140,255,0.06);
+}
+.cs-card-body {
+  padding: 22px 24px 26px;
+}
+.cs-card-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  margin-bottom: 8px;
+}
+.cs-card-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+.cs-card-desc {
+  font-size: 13px;
+  color: rgba(150,180,255,0.55);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.cs-card-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6AABFF;
+  background: rgba(106,171,255,0.08);
+  border: 0.5px solid rgba(106,171,255,0.2);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+.cs-card-result i { font-size: 12px; }
+.cs-card-img-top { object-position: top; }
+@media(max-width:900px){
+  .cs-section { padding: 60px 24px; }
+  .cs-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+@media(max-width:640px){
+  .cs-grid { grid-template-columns: 1fr; }
+}
+
+/* ── GIVEBACK BANNER ── */
+.giveback-wrap {
+  padding: 40px 44px;
+  background: #08101c;
+  border-top: 0.5px solid rgba(80,140,255,0.1);
+}
+.giveback-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(59,111,240,0.12) 0%, rgba(8,12,20,0.9) 60%);
+  border: 1px solid rgba(59,111,240,0.28);
+  border-radius: 20px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s cubic-bezier(0.32,0.72,0,1),
+              box-shadow 0.3s cubic-bezier(0.32,0.72,0,1),
+              transform 0.2s cubic-bezier(0.32,0.72,0,1);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.giveback-card::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(59,111,240,0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+.giveback-card:hover {
+  border-color: rgba(59,111,240,0.55);
+  box-shadow: 0 0 60px rgba(59,111,240,0.12);
+  transform: translateY(-2px);
+}
+.giveback-card .gc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(212,168,67,0.15);
+  border: 1px solid rgba(212,168,67,0.35);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d4a843;
+  margin-bottom: 10px;
+}
+.giveback-card .gc-badge .dot {
+  width: 5px; height: 5px;
+  background: #d4a843;
+  border-radius: 50%;
+  animation: gc-pulse 2s infinite;
+}
+@keyframes gc-pulse { 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
+.giveback-card .gc-headline {
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #f0f4ff;
+  margin-bottom: 6px;
+}
+.giveback-card .gc-headline .blue { color: #3b6ff0; }
+.giveback-card .gc-sub {
+  font-size: 13px;
+  color: #8896b0;
+  max-width: 380px;
+  line-height: 1.55;
+}
+.giveback-card .gc-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.giveback-card .gc-price {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #3b6ff0, #7aa0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.giveback-card .gc-price small {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  -webkit-text-fill-color: #8896b0;
+  color: #8896b0;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+  background: none;
+}
+.giveback-card .gc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #3b6ff0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s cubic-bezier(0.32,0.72,0,1), transform 0.15s;
+  white-space: nowrap;
+}
+.giveback-card .gc-btn .ic {
+  width: 22px; height: 22px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  transition: transform 0.2s;
+}
+.giveback-card .gc-btn:hover { background: #2d5de0; transform: scale(0.98); }
+.giveback-card .gc-btn:hover .ic { transform: translateX(2px) translateY(-1px); }
+.giveback-card .gc-deadline {
+  font-size: 11px;
+  color: #d4a843;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+@media (max-width: 640px) {
+  .giveback-wrap { padding: 28px 20px; }
+  .giveback-card { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .giveback-card .gc-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .giveback-card .gc-deadline { text-align: left; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://moorgraphix.com",
+  "name": "Moor Graphix",
+  "description": "Cultural Alchemy brand design and AI systems studio. Logo design, brand identity, web design, and AI content production.",
+  "url": "https://moorgraphix.com",
+  "logo": "https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png",
+  "image": "https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png",
+  "telephone": "+14704994407",
+  "email": "sidart@moorgraphix.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rocky Ridge Blvd",
+    "addressLocality": "Douglasville",
+    "addressRegion": "GA",
+    "postalCode": "30135",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.7490,
+    "longitude": -84.7441
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.facebook.com/moorthangraphics",
+    "https://www.instagram.com/moorgraphix/",
+    "https://www.linkedin.com/in/moorgraphix/",
+    "https://www.tiktok.com/@moorgraphix",
+    "https://www.youtube.com/@sidartifax"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Sid Washington"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Cultural Alchemy in brand design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cultural Alchemy is Moor Graphix's proprietary brand methodology that extracts your heritage, values, and cultural identity and forges them into visual equity — logos, systems, and AI tools that carry cultural weight, not just aesthetics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a logo design cost at Moor Graphix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Logo design at Moor Graphix starts at $400. Full brand identity packages — including logo, color palette, typography, and brand guidelines — start at $1,200. Custom web design starts at $1,500."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Moor Graphix work with clients outside of Georgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While Moor Graphix is based in Douglasville, GA (near Atlanta), we work with small businesses and brands nationwide. All consultations, strategy sessions, and project delivery happen remotely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Cultural AI Alchemy Workshop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Cultural AI Alchemy Workshop is a 4-week online program that teaches small business owners how to build AI systems rooted in their brand identity — not generic automation. The workshop covers brand voice training, content system building, and live cohort sessions. The program costs $197."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book a free consultation with Moor Graphix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book a free brand consultation directly through the scheduling link at https://calendly.com/moorwashington. Sid Washington will review your current brand and identify specific opportunities for Cultural Alchemy design work."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="assets/css/mobile.css">
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-workshop.html">AI Workshop</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
+    <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
+  </a>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
+  <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
+  <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+  <a href="about.html" onclick="toggleMobileMenu()">About</a>
+  <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="mob-consult" onclick="toggleMobileMenu()">Book Free Consult</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">Live Work</div>
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+      <span class="tick-item">✦ Amerukhan Basics — Cultural Brand Identity</span>
+      <span class="tick-item">✦ Scrolls of MAAT — Seal + Brand System</span>
+      <span class="tick-item">✦ Own the Song — Logo + Platform Identity</span>
+      <span class="tick-item">✦ 2 Sports Moms — Logo + Campaign</span>
+      <span class="tick-item">✦ NAMA — Heraldic Brand Identity + Website</span>
+      <span class="tick-item">✦ WSL4 — Commemorative Coin + Web Design</span>
+      <span class="tick-item">✦ African Dance Class — Event Flyer Series</span>
+      <span class="tick-item">✦ Roberts Law Group — Full Website</span>
+      <span class="tick-item">✦ Hinson Security — Brand + Web</span>
+      <span class="tick-item">✦ Black Man's Roundtable — Media Network Site</span>
+      <span class="tick-item">✦ 8 AI Agents Deployed — 3 Brand Ecosystems</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero sec-dark" id="work">
+  <div class="hero-left">
+    <div>
+      <div class="badge"><div class="bp"></div>Douglasville, GA — Serving Nationwide</div>
+      <h1>Where <em style="font-style:italic;color:#6AABFF">culture</em><br/>becomes<br/>the brand.</h1>
+      <p class="hero-sub">Brand strategy and graphic design studio powered by Cultural Alchemy and enterprise-grade AI. Your heritage is your competitive moat — we forge it into visual systems that compound forever.</p>
+      <div class="btn-row">
+        <a href="#portfolio"><button class="btn-primary"><i class="ti ti-eye"></i>View Portfolio</button></a>
+        <a href="#case-studies"><button class="btn-ghost"><i class="ti ti-file-text"></i>Case Studies →</button></a>
+        <a href="#ai"><button class="btn-ghost">AI Systems →</button></a>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-n">30+</div><div class="stat-l">Years Experience</div></div>
+      <div class="stat"><div class="stat-n">8+</div><div class="stat-l">AI Agents Live</div></div>
+      <div class="stat"><div class="stat-n">18+</div><div class="stat-l">Projects Shown</div></div>
+    </div>
+  </div>
+  <div class="gallery-wrap" id="galleryWrap"></div>
+</section>
+
+<!-- SHOWCASE STRIP -->
+<div class="showcase sec-dark" id="sw"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     COMMUNITY GIVEBACK BANNER — 100 Logos / $100
+═══════════════════════════════════════════════════════════ -->
+<div class="giveback-wrap">
+  <a href="/100logos.html" class="giveback-card">
+    <div class="gc-left">
+      <div class="gc-badge"><span class="dot"></span> Community Giveback — Limited Spots</div>
+      <div class="gc-headline">
+        <span class="blue">100 Logo Designs.</span><br>
+        100 Businesses Transformed.
+      </div>
+      <p class="gc-sub">Professional logo design or redesign — rooted in Cultural Alchemy. New businesses, nonprofits, and community orgs welcome.</p>
+    </div>
+    <div class="gc-right">
+      <div class="gc-price"><small>Only</small>$100</div>
+      <span class="gc-btn">Apply Now <span class="ic">→</span></span>
+      <div class="gc-deadline">⏳ Closes June 16, 2026</div>
+    </div>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CASE STUDIES SECTION — featured work with full narratives
+═══════════════════════════════════════════════════════════ -->
+<section class="cs-section" id="case-studies">
+  <div class="cs-head">
+    <div class="cs-head-left">
+      <div class="eyebrow eyebrow-dark">Case Studies</div>
+      <h2>The work that <em style="font-style:italic;color:#6AABFF">speaks.</em></h2>
+    </div>
+    <a href="#portfolio" class="cs-view-all">View Full Portfolio <i class="ti ti-arrow-right"></i></a>
+  </div>
+  <div class="cs-grid">
+
+    <!-- Harlem Business Directory -->
+    <a class="cs-card" href="cases/harlem-directory.html">
+      <img class="cs-card-img cs-card-img-top" src="assets/images/portfolio/campaign/harlem-directory.jpg" alt="Harlem Business Directory & Shopping Guide — designed by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Publication Design · Photography · Economic Development</div>
+        <div class="cs-card-name">Harlem Business Directory</div>
+        <div class="cs-card-desc">Before Google, before Yelp, before Instagram — 68 Black-owned Harlem businesses needed visibility. UMEZ, BRISC, and the Harlem Business Alliance commissioned Moor Graphix to build the platform they didn't have yet: a 10,000-copy shopping guide, photographed from the ground up, distributed across Harlem and Manhattan's hotel and theater districts.</div>
+        <div class="cs-card-result"><i class="ti ti-building-community"></i>10,000 Copies · 68 Businesses · 90% Original Photography</div>
+      </div>
+    </a>
+
+    <!-- Evans Guild — ANCHOR case study -->
+    <a class="cs-card" href="cases/evansguild.html">
+      <img class="cs-card-img" src="assets/images/portfolio/web-design/evans-guild-website.jpg" alt="The Evans Guild — brand ecosystem by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Brand Ecosystem · Logo · Website</div>
+        <div class="cs-card-name">The Evans Guild</div>
+        <div class="cs-card-desc">Four brands built from zero for Celebrity Designer Etu Evans — whose shoes have been worn by Beyoncé, Halle Berry, and Solange, and featured in German Vogue, GQ, and Harper's Bazaar.</div>
+        <div class="cs-card-result"><i class="ti ti-microphone"></i>Result: TED Talk</div>
+      </div>
+    </a>
+
+    <!-- Joyous Ocean -->
+    <a class="cs-card" href="cases/joyousocean.html">
+      <img class="cs-card-img" src="assets/images/portfolio/web-design/joyous-ocean-website.jpg" alt="Joyous Ocean website redesign by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Web Redesign · Commerce Integration</div>
+        <div class="cs-card-name">Joyous Ocean</div>
+        <div class="cs-card-desc">A teaching yogini's scattered digital presence became a unified platform — products, coaching, and direct checkout in one ecosystem she could finally promote with confidence.</div>
+        <div class="cs-card-result"><i class="ti ti-circle-check"></i>Result: 0 Third-Party Redirects</div>
+      </div>
+    </a>
+
+    <!-- 2 Sports Moms -->
+    <a class="cs-card" href="cases/2sportsmoms.html">
+      <img class="cs-card-img" src="assets/images/portfolio/web-design/2-sports-moms-full-site.jpg" alt="2 Sports Moms website by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Logo Design · Website Build · Nonprofit</div>
+        <div class="cs-card-name">2 Sports Moms</div>
+        <div class="cs-card-desc">A 501(c)(3) nonprofit connecting opportunities to student-athletes and resources to families — built from zero with the logo and platform to carry their mission into year one.</div>
+        <div class="cs-card-result"><i class="ti ti-trophy"></i>Result: Year-One Impact Documented</div>
+      </div>
+    </a>
+
+    <!-- EOI Campaign -->
+    <a class="cs-card" href="cases/eoi-campaign.html">
+      <img class="cs-card-img" src="assets/images/portfolio/campaign/sid-harlem-douglasville.png" alt="Entrepreneur of Impact Campaign — Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Campaign Design · Multi-Platform · Strategy</div>
+        <div class="cs-card-name">EOI Campaign — 93 to 3</div>
+        <div class="cs-card-desc">93 entrepreneurs entered the 2026 Entrepreneur of Impact competition. Moor Graphix made the Top 3 nationally — zero ad spend, zero outside agency, one studio, one vision.</div>
+        <div class="cs-card-result"><i class="ti ti-trophy"></i>Result: Top 3 of 93 National Competitors</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ORIGIN -->
+<section class="origin sec-light" id="about">
+  <div class="origin-left">
+    <div class="eyebrow eyebrow-light">The Origin Story</div>
+    <h2 style="color:var(--text-dark)">The name <span style="color:var(--blue)">Moor</span><br/>comes from<br/>the crest.</h2>
+    <p style="color:var(--text-mid)">The word <strong>"Moor"</strong> traces directly from Morrison—traditionally understood as "son of a Moor", and that discovery led Sid to research his family lineage. Sid's grandfather's middle name was Morrison and Sid's given name is Morrison. Researching that name led to Fairbairn's Crest, where the Morrison family crest was discovered to contain three faces of Moors. That crest became a personal symbol. That symbol became a company.</p>
+    <p style="color:var(--text-mid)">This is what <strong style="color:var(--blue)">Cultural Alchemy</strong> means in practice — extracting the hidden gold inside your heritage, your name, your story — and forging it into visual equity that no competitor can copy, because no competitor is you.</p>
+    <p style="color:var(--text-mid)"><em>"We don't create brands. We uncover them."</em></p>
+    <div class="origin-quote"><p>"Moor Graphix is the culmination of my life's work in design, teaching, and community activism."</p></div>
+    <p style="color:var(--text-mid);margin:0">— Sid Washington, Founder &amp; Principal Designer</p>
+  </div>
+  <div class="origin-right">
+    <div class="morrison-crest-wrap">
+      <img
+        class="morrison-crest-img"
+        src="assets/images/branding/morrison-logo.png"
+        alt="Morrison Family Crest — three faces of Moors — the origin of the Moor Graphix name"
+      >
+      <div class="morrison-crest-caption">
+        The <strong>Morrison Family Crest</strong><br>
+        Three faces of Moors — Fairbairn's Crest<br>
+        The origin of the name.
+      </div>
+    </div>
+    <div class="exp-badge"><div class="exp-num">30+</div><div class="exp-text">Years delivering visual graphic solutions — print and web — for individuals, small businesses, city agencies, think tanks, and corporations of all sizes. Nationwide.</div></div>
+    <div class="crest-grid">
+      <div class="crest-cell"><i class="ti ti-dna crest-icon"></i><div class="crest-title">Heritage First</div><div class="crest-desc">Every brand starts with who you are, not what looks good right now.</div></div>
+      <div class="crest-cell"><i class="ti ti-flame crest-icon"></i><div class="crest-title">Cultural Alchemy</div><div class="crest-desc">Your story, values, and community identity forged into visual systems.</div></div>
+      <div class="crest-cell"><i class="ti ti-cpu crest-icon"></i><div class="crest-title">AI Accelerated</div><div class="crest-desc">Enterprise-grade AI infrastructure built for small business scale.</div></div>
+      <div class="crest-cell"><i class="ti ti-world crest-icon"></i><div class="crest-title">Nationwide</div><div class="crest-desc">Based in Douglasville, GA. Serving clients from Atlanta to L.A.</div></div>
+    </div>
+  </div>
+</section>
+<hr class="div-line">
+
+<!-- SERVICES -->
+<section class="services sec-dark2" id="services">
+  <div class="services-head">
+    <div><div class="eyebrow eyebrow-dark">What We Build</div><h2 style="color:#fff;margin:0">Services</h2></div>
+    <div class="services-sub">Every engagement includes a <strong style="color:#6AABFF">Brand Blueprint</strong> — your visual, voice, and digital roadmap.</div>
+  </div>
+  <div class="svc-grid">
+    <div class="svc"><div class="svc-num">01</div><i class="ti ti-pentagon svc-icon"></i><div class="svc-name">Brand Identity Systems</div><div class="svc-desc">Custom logos, visual systems, and brand guides rooted in your cultural truth. Color psychology, symbolism, and visual balance — with Brand Blueprint delivery.</div><div class="svc-price">From $350</div></div>
+    <div class="svc"><div class="svc-num">02</div><i class="ti ti-world-www svc-icon"></i><div class="svc-name">Web Design + Consulting</div><div class="svc-desc">Platform strategy (Wix, Shopify, WordPress), custom builds, e-commerce, SEO optimization, and performance tuning. Sites that look good and convert.</div><div class="svc-price">Custom Quote</div></div>
+    <div class="svc"><div class="svc-num">03</div><i class="ti ti-cpu svc-icon"></i><div class="svc-name">AI Integration + Agents</div><div class="svc-desc">Custom AI agents, automated workflows, and AI operating systems for your brand. People layer, process layer, infrastructure layer. AI factories — not chatbots.</div><div class="svc-price">Enterprise Pricing</div></div>
+    <div class="svc"><div class="svc-num">04</div><i class="ti ti-tshirt svc-icon"></i><div class="svc-name">Apparel + Print Graphics</div><div class="svc-desc">Custom apparel graphics, wearable storytelling, and print design. Flyers, banners, merch — culture carried into the physical world.</div><div class="svc-price">From $150</div></div>
+    <div class="svc"><div class="svc-num">05</div><i class="ti ti-speakerphone svc-icon"></i><div class="svc-name">Marketing Materials</div><div class="svc-desc">Event flyers, sponsor decks, social media content, eBooks, workbooks, and campaign graphics built for real engagement and conversion.</div><div class="svc-price">From $75</div></div>
+    <div class="svc"><div class="svc-num">06</div><i class="ti ti-brush svc-icon"></i><div class="svc-name">Digital Illustrations + Art</div><div class="svc-desc">Commemorative coins, crests, heraldic marks, and custom illustrations. Unique pieces that tell your story visually and permanently.</div><div class="svc-price">Custom Quote</div></div>
+  </div>
+</section>
+
+<!-- BLUEPRINT -->
+<div class="blueprint sec-light2">
+  <div class="bp-icon-wrap"><i class="ti ti-map"></i></div>
+  <div>
+    <div class="bp-copy-title">Every client receives a Brand Blueprint.</div>
+    <p class="bp-copy-body" style="margin:0">Not just a logo file — a complete roadmap for your visual identity, brand voice, and digital presence. <strong style="color:var(--blue)">How to use your brand consistently across every touchpoint</strong> so it compounds in value over time.</p>
+  </div>
+  <a href="contact.html"><button class="btn-primary-light">Get Your Blueprint</button></a>
+</div>
+<hr class="div-line-light">
+
+<!-- PORTFOLIO -->
+<section class="portfolio-section sec-light" id="portfolio">
+  <div class="eyebrow eyebrow-light">Selected Work</div>
+  <h2 style="color:var(--text-dark)">The Portfolio</h2>
+  <p style="color:var(--text-mid);max-width:560px">Every project is Cultural Alchemy in practice — identity extracted, forged, and delivered. Click any piece to read the full story and navigate the full collection.</p>
+  <div class="port-filter-bar">
+    <button class="port-filter active" data-cat="all">All Work</button>
+    <button class="port-filter" data-cat="logos">Logo Design</button>
+    <button class="port-filter" data-cat="brand_identity">Brand Identity</button>
+    <button class="port-filter" data-cat="web_design">Web Design</button>
+    <button class="port-filter" data-cat="event_print">Event + Print</button>
+    <button class="port-filter" data-cat="campaign">Campaign</button>
+  </div>
+  <div class="work-grid-full" id="wgf"></div>
+  <div class="port-load-more-wrap" id="portLoadMoreWrap" style="display:none">
+    <button class="port-load-more" id="portLoadMore"><i class="ti ti-chevrons-down"></i>Load More Work</button>
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- VIDEOS -->
+<section class="video-section sec-dark2" id="videos">
+  <div class="eyebrow eyebrow-dark">Brand in Motion</div>
+  <h2 style="color:#fff">Design that moves.</h2>
+  <p style="color:rgba(150,180,255,0.5);max-width:560px">Motion graphics, brand reveals, client work, and behind-the-scenes process. Click any thumbnail to play directly on the page.</p>
+
+  <!-- FEATURED -->
+  <div class="yt-player wide" id="ytMain" data-id="9PKxsJIykxk">
+    <img class="yt-thumb" src="https://img.youtube.com/vi/9PKxsJIykxk/maxresdefault.jpg" alt="Moor Graphix featured brand design and motion graphics reel" onerror="this.src='https://img.youtube.com/vi/9PKxsJIykxk/hqdefault.jpg'">
+    <div class="yt-overlay"></div>
+    <div class="yt-play-btn"><div class="yt-play-triangle"></div></div>
+    <div class="yt-label">Moor Graphix — Featured Reel</div>
+    <div class="yt-iframe-wrap"><iframe src="" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe></div>
+  </div>
+
+  <div style="font-size:10px;letter-spacing:0.3em;color:rgba(80,140,255,0.4);text-transform:uppercase;margin-bottom:12px">More Videos</div>
+  <div class="video-grid" id="videoGrid"></div>
+
+  <div style="font-size:10px;letter-spacing:0.3em;color:rgba(80,140,255,0.4);text-transform:uppercase;margin:20px 0 12px">Shorts</div>
+  <div class="video-shorts-grid" id="shortsGrid"></div>
+
+  <div style="text-align:center;margin-top:28px">
+    <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener noreferrer"><button class="btn-ghost" style="font-size:13px;padding:14px 28px"><i class="ti ti-brand-youtube"></i> View All on YouTube</button></a>
+  </div>
+</section>
+
+<!-- AI -->
+<section class="ai-section sec-mid" id="ai">
+  <div class="ai-left">
+    <div class="eyebrow eyebrow-dark">AI Systems</div>
+    <h2 style="color:#fff">We build AI factories.<br/>Not chatbot setups.</h2>
+    <p><strong>92% of businesses see zero ROI from AI</strong> — not because the technology failed, but because they bought tools without building structure.</p>
+    <p>Moor Graphix builds your AI the way enterprise organizations do: a <strong>People Layer</strong>, a <strong>Process Layer</strong>, and an <strong>Infrastructure Layer</strong>. The model is just the engine. We build the car.</p>
+    <div class="ai-stat-row">
+      <div class="ai-stat"><div class="ai-stat-n">8+</div><div class="ai-stat-l">Agents Live</div></div>
+      <div class="ai-stat"><div class="ai-stat-n">3</div><div class="ai-stat-l">Ecosystems</div></div>
+      <div class="ai-stat"><div class="ai-stat-n">92%</div><div class="ai-stat-l">Avg Fail Rate</div></div>
+    </div>
+    <div class="btn-row">
+      <a href="ai-workshop.html"><button class="btn-primary">AI Workshops</button></a>
+      <a href="contact.html"><button class="btn-ghost">Book AI Consult</button></a>
+    </div>
+  </div>
+  <div class="ai-right">
+    <div class="eyebrow eyebrow-dark">Live Agent Stack</div>
+    <div class="os-stack">
+      <div class="os-layer"><div class="os-icon"><i class="ti ti-robot"></i></div><div><div class="os-name">MG Concierge Agent</div><div class="os-desc">Client intake, brand discovery, and project routing</div></div><div class="os-status status-live">Live</div></div>
+      <div class="os-layer"><div class="os-icon"><i class="ti ti-git-merge"></i></div><div><div class="os-name">MAAT Master Orchestrator</div><div class="os-desc">Routes all 8 agents across 3 brand ecosystems</div></div><div class="os-status status-live">Live</div></div>
+      <div class="os-layer"><div class="os-icon"><i class="ti ti-chart-bar"></i></div><div><div class="os-name">Sma Taui — Revenue Intel</div><div class="os-desc">Weekly monetization briefings every Thursday</div></div><div class="os-status status-live">Live</div></div>
+      <div class="os-layer"><div class="os-icon"><i class="ti ti-shirt"></i></div><div><div class="os-name">Amerukhan Culture Shop</div><div class="os-desc">AI concierge for cultural apparel brand</div></div><div class="os-status status-live">Live</div></div>
+      <div class="os-layer"><div class="os-icon"><i class="ti ti-school"></i></div><div><div class="os-name">MAAT Guide + Lab Onboarding</div><div class="os-desc">Educational and incubator platform agents</div></div><div class="os-status status-live">Live</div></div>
+      <div class="os-layer"><div class="os-icon"><i class="ti ti-microphone"></i></div><div><div class="os-name">Sid Ambassador — Voice AI</div><div class="os-desc">AI voice agent trained on Sid's cadence</div></div><div class="os-status status-build">Expanding</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP -->
+<section class="workshop sec-light" id="workshops">
+  <div class="ws-left">
+    <div class="eyebrow eyebrow-light">AI Education</div>
+    <h2 style="color:var(--text-dark)">Cultural AI Alchemy<br/>Workshop</h2>
+    <p>A hands-on curriculum teaching small business owners how to build <strong>AI systems rooted in cultural identity</strong> — not generic automation.</p>
+    <div class="ws-weeks">
+      <div class="ws-week"><div class="ws-week-num">W1</div>AI Foundations + Your Brand OS</div>
+      <div class="ws-week"><div class="ws-week-num">W2</div>Content Automation + Voice Locking</div>
+      <div class="ws-week"><div class="ws-week-num">W3</div>Agent Building + Workflow Design</div>
+      <div class="ws-week"><div class="ws-week-num" style="border-color:rgba(200,130,20,0.4);color:rgba(200,130,20,0.8)">W4</div><span style="color:rgba(180,120,20,0.8)">AI for Customer Experience — In Progress</span></div>
+    </div>
+    <a href="ai-workshop.html"><button class="btn-primary-light">Join the Workshop</button></a>
+  </div>
+  <div class="ws-right">
+    <div class="ws-stat"><div class="ws-stat-n">3</div><div class="ws-stat-l">Weeks Curriculum Built</div></div>
+    <div class="ws-stat"><div class="ws-stat-n">100%</div><div class="ws-stat-l">Culturally Grounded</div></div>
+    <div class="ws-stat"><div class="ws-stat-n">$0</div><div class="ws-stat-l">Enterprise Overhead Required</div></div>
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- SOCIAL -->
+<section class="social-section sec-light2" id="social">
+  <div class="eyebrow eyebrow-light">Social Media</div>
+  <h2 style="color:var(--text-dark)">Follow the work.</h2>
+  <p style="color:var(--text-mid)">Behind the scenes, client work, AI insights, and Cultural Alchemy in real time.</p>
+  <div class="social-grid">
+    <a class="social-card" href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener noreferrer">
+      <div class="sc-header"><i class="ti ti-brand-facebook sc-icon" style="color:#1877F2"></i><div class="sc-platform">Facebook</div></div>
+      <div class="sc-img-wrap"><img src="assets/images/social/social-facebook-preview.jpg" alt="Moor Graphix Facebook page — brand design and Cultural Alchemy content"></div>
+      <div class="sc-body"><div class="sc-caption">Event graphics, brand launches, and behind-the-scenes design process.</div><div class="sc-cta"><i class="ti ti-external-link"></i>Follow @moorthangraphics</div></div>
+    </a>
+    <a class="social-card" href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener noreferrer">
+      <div class="sc-header"><i class="ti ti-brand-instagram sc-icon" style="color:#E1306C"></i><div class="sc-platform">Instagram</div></div>
+      <div class="sc-img-wrap"><img src="assets/images/social/social-instagram-preview.png" alt="Moor Graphix Instagram feed — logo design, brand identity, and visual storytelling"></div>
+      <div class="sc-body"><div class="sc-caption">Logo reveals, brand systems, apparel graphics, and Cultural Alchemy in motion.</div><div class="sc-cta"><i class="ti ti-external-link"></i>Follow @moorgraphix</div></div>
+    </a>
+    <a class="social-card" href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener noreferrer">
+      <div class="sc-header"><i class="ti ti-brand-instagram sc-icon" style="color:#0A66C2"></i><div class="sc-platform">LinkedIn</div></div>
+      <div class="sc-img-wrap"><img src="assets/images/social/social-linkedin-preview.png" alt="Moor Graphix LinkedIn profile — professional brand design services"></div>
+      <div class="sc-body"><div class="sc-caption">AI integration insights, business strategy, and how Cultural Alchemy scales.</div><div class="sc-cta"><i class="ti ti-external-link"></i>Follow Moor Graphix</div></div>
+    </a>
+  </div>
+  <div class="social-follow-row">
+    <a class="follow-btn fb-fb" href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-facebook"></i>Facebook</a>
+    <a class="follow-btn fb-ig" href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-instagram"></i>Instagram</a>
+    <a class="follow-btn fb-li" href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+    <a class="follow-btn fb-tk" href="https://www.tiktok.com/@moorgraphix" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-tiktok"></i>TikTok</a>
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- NATIONWIDE -->
+<div class="nationwide sec-dark2">
+  <div>
+    <div class="eyebrow eyebrow-dark">Reach</div>
+    <h2 style="color:#fff;margin-bottom:12px">You don't have to be local.</h2>
+    <p>Moor Graphix is based in <strong>Douglasville, GA</strong> — but our digital design services are available nationwide. Submit your request online, share your goals, and we handle concept, design, and delivery. <strong>Fast, easy, and personalized.</strong></p>
+  </div>
+  <div>
+    <div class="nw-tag">Clients served across</div>
+    <div class="nw-cities">
+      <span class="nw-city">Atlanta</span><span class="nw-city">New York</span><span class="nw-city">Los Angeles</span>
+      <span class="nw-city">Washington D.C.</span><span class="nw-city">Douglasville</span><span class="nw-city">Nationwide</span>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials sec-light" id="reviews">
+  <div class="eyebrow eyebrow-light">Client Reviews</div>
+  <h2 style="color:var(--text-dark)">What clients say.</h2>
+  <div class="test-grid">
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Moor Graphix is AWESOME! Timely, respectful, professional and excellent at their craft. I HIGHLY recommend Moor Graphix!"</div><div class="test-name">William Glenn Bean</div><div class="test-role">Client</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Sid Washington successfully took what was a vision onto fruition. It is exactly what I wanted and so much more! I couldn't be more pleased."</div><div class="test-name">Maria Furman</div><div class="test-role">Client</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Sid is ultra-responsive and quick — two qualities I look for and value. Integrity, knowledge, and quality craftsmanship. One-stop shop."</div><div class="test-name">Wix Marketplace Client</div><div class="test-role">Verified Review</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Sid is a polite, competent, quick, and talented man who fixed my website in no time and did a great job!"</div><div class="test-name">Sasscer Hill</div><div class="test-role">Author</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"I love my website. Moor Graphix did a good job. Good communication, answers questions fast. I highly recommend."</div><div class="test-name">Verified Client</div><div class="test-role">Wix Marketplace</div></div>
+    <div class="test-card"><div class="test-stars">★★★★★</div><div class="test-quote">"Easy and professional to work with. Understood my ideas and got them put together in a wonderful manner. Felt like talking to a friend."</div><div class="test-name">Verified Client</div><div class="test-role">Wix Marketplace</div></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta sec-red" id="contact">
+  <div class="final-cta-eyebrow">Let's Build Your Digital Legacy</div>
+  <h2>Design is more than decoration.<br/><em>It's direction.</em></h2>
+  <p class="final-cta-sub">Every project is an opportunity to elevate your brand, inspire your audience, and design your future. Start today.</p>
+  <div class="final-cta-btns">
+    <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer"><button class="btn-primary" style="font-size:14px;padding:17px 34px">Book Free Consultation</button></a>
+    <a href="#portfolio"><button class="btn-ghost" style="font-size:14px;padding:17px 30px">View Portfolio →</button></a>
+    <a href="services.html"><button class="btn-ghost" style="font-size:14px;padding:17px 30px">All Services →</button></a>
+  </div>
+  <div class="cta-contact">
+    <div class="cta-info"><i class="ti ti-phone"></i><a href="tel:4704994407">(470) 499-4407</a></div>
+    <div class="cta-info"><i class="ti ti-mail"></i><a href="mailto:sidart@moorgraphix.com">sidart@moorgraphix.com</a></div>
+    <div class="cta-info"><i class="ti ti-map-pin"></i>Douglasville, GA — Serving Nationwide</div>
+  </div>
+</section>
+
+<!-- FAQ SECTION (AEO) -->
+<section class="sec-dark" style="padding:80px 44px" id="faq">
+  <div class="eyebrow eyebrow-dark">Quick Answers</div>
+  <h2 style="color:#fff;margin:16px 0 48px">Frequently asked.</h2>
+  <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:0">
+
+    <details style="border-top:0.5px solid rgba(80,140,255,0.15);padding:24px 0" open>
+      <summary style="font-size:17px;font-weight:700;color:#fff;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        What is Cultural Alchemy in brand design?
+        <i class="ti ti-chevron-down" style="color:#6AABFF;transition:transform 0.3s;font-size:18px"></i>
+      </summary>
+      <p style="color:rgba(150,180,255,0.65);margin:16px 0 0;line-height:1.8;font-size:16px">
+        Cultural Alchemy is Moor Graphix's proprietary brand methodology that extracts your heritage, values, and
+        cultural identity — then forges them into visual equity. Logos, systems, and AI tools that carry cultural
+        weight, not just aesthetics. It's the difference between a brand that looks good and a brand that
+        <em>means something</em>.
+      </p>
+    </details>
+
+    <details style="border-top:0.5px solid rgba(80,140,255,0.15);padding:24px 0">
+      <summary style="font-size:17px;font-weight:700;color:#fff;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        How much does logo design or brand identity cost?
+        <i class="ti ti-chevron-down" style="color:#6AABFF;transition:transform 0.3s;font-size:18px"></i>
+      </summary>
+      <p style="color:rgba(150,180,255,0.65);margin:16px 0 0;line-height:1.8;font-size:16px">
+        Logo design starts at <strong style="color:#fff">$400</strong>. Full brand identity packages —
+        logo, color palette, typography, and brand guidelines — start at <strong style="color:#fff">$1,200</strong>.
+        Custom web design starts at <strong style="color:#fff">$1,500</strong>. Every project gets a free
+        consultation first.
+      </p>
+    </details>
+
+    <details style="border-top:0.5px solid rgba(80,140,255,0.15);padding:24px 0">
+      <summary style="font-size:17px;font-weight:700;color:#fff;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        Does Moor Graphix work with clients outside of Georgia?
+        <i class="ti ti-chevron-down" style="color:#6AABFF;transition:transform 0.3s;font-size:18px"></i>
+      </summary>
+      <p style="color:rgba(150,180,255,0.65);margin:16px 0 0;line-height:1.8;font-size:16px">
+        Yes — we work with small businesses and brands <strong style="color:#fff">nationwide</strong>. While we're
+        based in Douglasville, GA (25 minutes west of Atlanta), all consultations, strategy sessions, and project
+        delivery happen remotely. Location is never a barrier.
+      </p>
+    </details>
+
+    <details style="border-top:0.5px solid rgba(80,140,255,0.15);padding:24px 0">
+      <summary style="font-size:17px;font-weight:700;color:#fff;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        What is the Cultural AI Alchemy Workshop?
+        <i class="ti ti-chevron-down" style="color:#6AABFF;transition:transform 0.3s;font-size:18px"></i>
+      </summary>
+      <p style="color:rgba(150,180,255,0.65);margin:16px 0 0;line-height:1.8;font-size:16px">
+        A 4-week online program that teaches small business owners how to build AI systems rooted in their brand
+        identity — not generic automation. Live cohort sessions, brand voice training, and a working AI content
+        system by the end of week four. The workshop is <strong style="color:#fff">$197</strong>.
+      </p>
+    </details>
+
+    <details style="border-top:0.5px solid rgba(80,140,255,0.15);border-bottom:0.5px solid rgba(80,140,255,0.15);padding:24px 0">
+      <summary style="font-size:17px;font-weight:700;color:#fff;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        How do I book a free consultation?
+        <i class="ti ti-chevron-down" style="color:#6AABFF;transition:transform 0.3s;font-size:18px"></i>
+      </summary>
+      <p style="color:rgba(150,180,255,0.65);margin:16px 0 0;line-height:1.8;font-size:16px">
+        Use the scheduling link at <a href="https://calendly.com/moorwashington" style="color:#6AABFF" target="_blank" rel="noopener noreferrer">calendly.com/moorwashington</a>.
+        Sid will review your current brand and identify specific opportunities for Cultural Alchemy design work.
+        No commitment, no pitch deck — just a real conversation.
+      </p>
+    </details>
+
+  </div>
+</section>
+<hr class="div-line-dark">
+
+<!-- GEO CONTENT BLOCK -->
+<section class="sec-dark2" style="padding:60px 44px;text-align:center">
+  <div class="eyebrow eyebrow-dark">Rooted in Georgia. Built for the World.</div>
+  <h2 style="color:#fff;margin:16px 0 12px">Douglasville &amp; Atlanta Brand Design Studio</h2>
+  <p style="color:rgba(150,180,255,0.55);max-width:600px;margin:0 auto 28px;font-size:16px;line-height:1.8">
+    Moor Graphix is headquartered in Douglasville, GA — 25 minutes west of Atlanta. We serve small businesses,
+    entrepreneurs, and brands across Metro Atlanta, the Southeast, and nationwide. Whether you're on
+    <strong style="color:rgba(150,180,255,0.8)">Campbellton Road, Buckhead, or anywhere in between</strong> —
+    Cultural Alchemy works at any distance.
+  </p>
+  <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap">
+    <div style="background:rgba(48,96,208,0.1);border:0.5px solid rgba(80,140,255,0.2);padding:16px 28px;border-radius:6px;min-width:160px">
+      <div style="font-size:22px;font-weight:800;color:#6AABFF">Douglasville</div>
+      <div style="font-size:11px;color:rgba(100,160,255,0.45);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px">Headquarters</div>
+    </div>
+    <div style="background:rgba(48,96,208,0.1);border:0.5px solid rgba(80,140,255,0.2);padding:16px 28px;border-radius:6px;min-width:160px">
+      <div style="font-size:22px;font-weight:800;color:#6AABFF">Atlanta Metro</div>
+      <div style="font-size:11px;color:rgba(100,160,255,0.45);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px">Service Area</div>
+    </div>
+    <div style="background:rgba(48,96,208,0.1);border:0.5px solid rgba(80,140,255,0.2);padding:16px 28px;border-radius:6px;min-width:160px">
+      <div style="font-size:22px;font-weight:800;color:#6AABFF">Nationwide</div>
+      <div style="font-size:11px;color:rgba(100,160,255,0.45);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px">Remote Ready</div>
+    </div>
+  </div>
+</section>
+<hr class="div-line-dark">
+<footer class="sec-dark">
+  <a href="index.html" class="foot-logo">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.tiktok.com/@moorgraphix" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-tiktok"></i></a>
+    <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2046 Moor Graphix</div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+</div>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose"><i class="ti ti-x"></i></button>
+    <div class="modal-img-wrap"><img class="modal-img" id="modalImg" src="" alt="" role="presentation"></div>
+    <div class="modal-body">
+      <div class="modal-cat" id="modalCat"></div>
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+    </div>
+    <div class="modal-nav">
+      <button id="modalPrev"><i class="ti ti-chevron-left"></i></button>
+      <button id="modalNext"><i class="ti ti-chevron-right"></i></button>
+    </div>
+    <div class="modal-counter" id="modalCounter"></div>
+  </div>
+</div>
+
+<script src="assets/js/images.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/particles.js"></script>
+<!-- Moor Graphix AI Concierge -->
+<elevenlabs-convai agent-id="agent_3001knwwzjm9ecw9m8ng3svxhs65"></elevenlabs-convai>
+<script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+<script src="assets/js/mobile-menu.js" defer></script>
+</body>
+</html>
