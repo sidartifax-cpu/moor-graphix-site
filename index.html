@@ -127,6 +127,38 @@
   display: block;
   background: rgba(80,140,255,0.06);
 }
+.cs-card.cs-featured {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: 42% 1fr;
+}
+.cs-card.cs-featured .cs-card-img {
+  aspect-ratio: unset;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+.cs-card.cs-featured .cs-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 36px;
+}
+.cs-card.cs-featured .cs-card-name {
+  font-size: 22px;
+}
+.cs-card.cs-featured .cs-card-desc {
+  font-size: 14px;
+  max-width: 52ch;
+}
+@media(max-width:900px){
+  .cs-card.cs-featured { grid-column: span 2; grid-template-columns: 1fr; }
+  .cs-card.cs-featured .cs-card-img { min-height: 220px; }
+  .cs-card.cs-featured .cs-card-body { padding: 22px 24px 26px; }
+}
+@media(max-width:640px){
+  .cs-card.cs-featured { grid-column: span 1; }
+}
 .cs-card-body {
   padding: 22px 24px 26px;
 }
@@ -547,6 +579,17 @@
     <a href="#portfolio" class="cs-view-all">View Full Portfolio <i class="ti ti-arrow-right"></i></a>
   </div>
   <div class="cs-grid">
+
+    <!-- Harlem Business Directory — featured historical anchor -->
+    <a class="cs-card cs-featured" href="cases/harlem-directory.html">
+      <img class="cs-card-img" src="assets/images/portfolio/campaign/harlem-directory.jpg" alt="Harlem Business Directory & Shopping Guide — designed by Moor Graphix" loading="lazy">
+      <div class="cs-card-body">
+        <div class="cs-card-tag">Publication Design · Photography · Economic Development</div>
+        <div class="cs-card-name">Harlem Business Directory</div>
+        <div class="cs-card-desc">Before Google, before Yelp, before Instagram — 68 Black-owned Harlem businesses needed visibility. UMEZ, BRISC, and the Harlem Business Alliance commissioned Moor Graphix to build the platform they didn't have yet: a 10,000-copy shopping guide, photographed from the ground up, distributed across Harlem and Manhattan's hotel and theater districts.</div>
+        <div class="cs-card-result"><i class="ti ti-building-community"></i>10,000 Copies · 68 Businesses · 90% Original Photography</div>
+      </div>
+    </a>
 
     <!-- Evans Guild — ANCHOR case study -->
     <a class="cs-card" href="cases/evansguild.html">

@@ -227,6 +227,14 @@ const PROJECTS = [
     category: "showcase_strip",
     desc:     "Full campaign design for the 2 Sports Moms Parent Playbook Series virtual event. Event banner, promotional graphics, and branded book mockup."
   },
+  {
+    src:      "assets/images/showcase-strip/harlem-directory.jpg",
+    name:     "Harlem Business Directory",
+    cat:      "Publication Design",
+    category: "showcase_strip",
+    desc:     "10,000-copy shopping guide for UMEZ, BRISC, and the Harlem Business Alliance — featuring 68 Black-owned Harlem businesses. Complete publication design, art direction, and 90% original photography by Moor Graphix. Distributed throughout Harlem and Manhattan's hotel and theater districts in 2001.",
+    link:     "cases/harlem-directory.html"
+  },
 
 
   // ══════════════════════════════════════════════════════════════════════════
@@ -868,6 +876,14 @@ const PROJECTS = [
     cat:      "Campaign Design",
     category: "campaign",
     desc:     "Full campaign design for the 2 Sports Moms Parent Playbook Series virtual event. Event banner, promotional graphics, and branded book mockup. Football field hero image with clean information hierarchy."
+  },
+  {
+    src:      "assets/images/portfolio/campaign/harlem-directory.jpg",
+    name:     "Harlem Business Directory",
+    cat:      "Publication Design",
+    category: "campaign",
+    desc:     "10,000-copy shopping guide for UMEZ, BRISC, and the Harlem Business Alliance — featuring 68 Black-owned businesses across Harlem. Complete publication design, art direction, and 90% original photography by Moor Graphix. Distributed throughout Harlem and Manhattan's hotel and theater districts in 2001, before Google, Yelp, or social media existed.",
+    link:     "cases/harlem-directory.html"
   },
 
 

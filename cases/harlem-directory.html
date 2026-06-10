@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harlem Business Directory — Case Study | Moor Graphix</title>
+  <meta name="description" content="How Moor Graphix designed and photographed a 10,000-copy shopping guide that gave 68 Black-owned Harlem businesses visibility before social media, search engines, or Google Business Profiles existed." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="Harlem Business Directory Case Study — Moor Graphix" />
+  <meta property="og:description" content="Publication design, art direction, and original photography for a 10,000-copy guide connecting Harlem's Black-owned businesses with residents, visitors, and tourists in 2001." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/harlem-directory.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8,12,20,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--blue-line); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1.2; }
+    .nav-brand .name { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.08em; color: var(--white); text-transform: uppercase; }
+    .nav-brand .tagline { font-size: 0.58rem; letter-spacing: 0.16em; color: var(--blue); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.76rem; letter-spacing: 0.06em; color: var(--muted); text-decoration: none; transition: color 0.3s var(--ease); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { color: #fff !important; background: var(--blue); padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 600 !important; font-size: 0.7rem !important; letter-spacing: 0.1em !important; text-transform: uppercase; transition: opacity 0.3s !important; }
+    .nav-cta:hover { opacity: 0.85 !important; }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; margin-top: 68px; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 32s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO */
+    .hero {
+      min-height: 100dvh;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 7rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 44%;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      right: -5%;
+      width: 45vw;
+      height: 45vw;
+      background: radial-gradient(circle, rgba(59,111,240,0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-left { position: relative; z-index: 1; }
+    .hero-right { position: relative; z-index: 1; }
+
+    .pill-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--blue-line); border-radius: 9999px;
+      padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 2rem;
+      background: var(--blue-dim);
+    }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.8rem, 6.5vw, 6rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
+    h1 em { font-style: italic; color: var(--blue); }
+
+    .hero-deck { font-size: 1.05rem; color: var(--muted); max-width: 48ch; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.45s var(--ease); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; }
+    .btn-ghost:hover { color: var(--white); }
+
+    .meta-strip { border-top: 1px solid var(--blue-line); margin-top: 2.5rem; padding-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+    .meta-val a { color: var(--blue); text-decoration: none; }
+
+    .impact-col { display: flex; flex-direction: column; gap: 0.875rem; }
+    .impact-card {
+      background: var(--blue-dim); border: 1px solid var(--blue-line);
+      border-radius: 1.5rem; padding: 2px;
+      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    }
+    .impact-card:hover { transform: translateX(-5px); box-shadow: 0 8px 28px rgba(59,111,240,0.1); }
+    .impact-inner {
+      background: var(--bg-2); border-radius: calc(1.5rem - 2px);
+      padding: 1.5rem 1.75rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+    .impact-inner .i-num { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; line-height: 1; color: var(--blue); margin-bottom: 0.3rem; }
+    .impact-inner .i-head { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
+    .impact-inner .i-body { font-size: 0.76rem; color: var(--muted); line-height: 1.55; }
+
+    /* SECTION */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    .authority-bar {
+      background: var(--blue-dim); border: 1px solid var(--blue-line);
+      border-radius: 1rem; padding: 1.5rem 2rem; margin-top: 2rem;
+      display: flex; align-items: flex-start; gap: 1.25rem;
+    }
+    .auth-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .auth-text { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+    .auth-text strong { color: var(--white); font-weight: 500; }
+
+    .loss-list { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.625rem; }
+    .loss-list li { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.4rem; background: var(--bg-3); border: 1px solid var(--blue-line); border-radius: 0.75rem; font-size: 0.83rem; color: var(--muted); line-height: 1.55; transition: border-color 0.4s var(--ease), transform 0.4s var(--ease); }
+    .loss-list li:hover { border-color: rgba(59,111,240,0.45); transform: translateX(5px); }
+    .loss-icon { font-size: 0.75rem; color: rgba(59,111,240,0.6); flex-shrink: 0; margin-top: 0.15rem; }
+
+    .steps-col { margin-top: 2rem; }
+    .step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .step:first-child { padding-top: 0; }
+    .step:last-child { border-bottom: none; }
+    .step:hover { transform: translateX(6px); }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .step h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .step p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* PROOF BENTO */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; min-height: 180px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .bento-card.tall .bento-inner { min-height: 260px; }
+    .bento-card.featured .bento-inner { flex-direction: row; gap: 2.5rem; align-items: center; min-height: auto; }
+    .big-num { font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* SOCIAL PROOF STRIP */
+    .social-strip { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .social-inner { max-width: 1280px; margin: 0 auto; padding: 3.5rem 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .social-stat { text-align: center; }
+    .social-stat .s-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--blue); line-height: 1; }
+    .social-stat .s-lbl { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.4rem; line-height: 1.4; }
+
+    /* QUOTE BREAK */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 1.5rem 4rem; }
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 2; }
+      .bento-card.featured .bento-inner { flex-direction: column; gap: 1.5rem; }
+      .social-inner { grid-template-columns: 1fr 1fr; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wrap { padding: 5rem 1.5rem; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 520px) {
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
+      .social-inner { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav-inner">
+      <a class="nav-brand" href="https://moorgraphix.com/index.html">
+        <span class="name">Moor Graphix</span>
+        <span class="tagline">Cultural Alchemy + AI Systems</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+        <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+        <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+        <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+        <li><a href="https://moorgraphix.com/about.html">About</a></li>
+        <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://calendly.com/moorwashington" target="_blank">Book Free Consult</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>✦ Harlem Business Directory</span><span>✦ 10,000 Copies</span><span>✦ 68 Black-Owned Businesses</span><span>✦ Publication Design</span><span>✦ Original Photography</span><span>✦ Economic Empowerment</span><span>✦ Cultural Alchemy</span><span>✦ 2001</span>
+      <span>✦ Harlem Business Directory</span><span>✦ 10,000 Copies</span><span>✦ 68 Black-Owned Businesses</span><span>✦ Publication Design</span><span>✦ Original Photography</span><span>✦ Economic Empowerment</span><span>✦ Cultural Alchemy</span><span>✦ 2001</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left reveal">
+      <div class="pill-label">Case Study — Publication Design + Photography</div>
+      <h1>68 businesses.<br>No algorithm.<br><em>Just design.</em></h1>
+      <p class="hero-deck">In 2001 — before Google Business Profiles, before Yelp, before Instagram — Harlem's Black-owned businesses had no digital infrastructure. Visibility meant print. <strong>UMEZ, BRISC, and the Harlem Business Alliance commissioned Moor Graphix to build the platform they didn't have yet: a 10,000-copy shopping guide, photographed from the ground up, that put 68 local businesses in front of residents, tourists, and visitors across Manhattan.</strong></p>
+      <div class="hero-cta-row">
+        <a class="btn btn-ghost" href="#proof">See the Impact ↓</a>
+      </div>
+      <div class="meta-strip">
+        <div class="meta-item"><span class="meta-lbl">Client</span><span class="meta-val">UMEZ · BRISC · Harlem Business Alliance</span></div>
+        <div class="meta-item"><span class="meta-lbl">Type</span><span class="meta-val">Publication Design + Photography</span></div>
+        <div class="meta-item"><span class="meta-lbl">Deliverables</span><span class="meta-val">Directory · Photography · Print Production</span></div>
+        <div class="meta-item"><span class="meta-lbl">Year</span><span class="meta-val">2001 — Harlem, New York</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right reveal d2">
+      <div class="impact-col">
+        <div class="impact-card">
+          <div class="impact-inner">
+            <div class="i-num">68</div>
+            <div class="i-head">Black-owned businesses featured</div>
+            <div class="i-body">Fashion boutiques, galleries, restaurants, wellness providers, retailers, professional services, and cultural institutions — all documented in one place for the first time.</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-inner">
+            <div class="i-num">10K</div>
+            <div class="i-head">Copies distributed across Manhattan</div>
+            <div class="i-body">Distributed through Harlem, uptown Manhattan, hotel districts, theater districts, and visitor information locations — reaching residents and tourists alike.</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-inner">
+            <div class="i-num">90%</div>
+            <div class="i-head">Original photography by Moor Graphix</div>
+            <div class="i-body">Real storefronts. Real entrepreneurs. Real Harlem. No stock imagery — every image captured on location to document the neighborhood exactly as it was.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- SOCIAL PROOF STRIP -->
+  <div class="social-strip">
+    <div class="social-inner">
+      <div class="social-stat reveal">
+        <div class="s-num">2001</div>
+        <div class="s-lbl">Years before social media solved the visibility problem for small business</div>
+      </div>
+      <div class="social-stat reveal d1">
+        <div class="s-num">68</div>
+        <div class="s-lbl">Businesses — one unified platform, one consistent visual language</div>
+      </div>
+      <div class="social-stat reveal d2">
+        <div class="s-num">10K</div>
+        <div class="s-lbl">Copies in circulation across Harlem and Manhattan's tourism corridors</div>
+      </div>
+      <div class="social-stat reveal d3">
+        <div class="s-num">20+</div>
+        <div class="s-lbl">Years later — still a primary visual record of Harlem's entrepreneurial era</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">01 — The Problem</div>
+        <h2>Visibility without<br>the internet requires<br><em>a different tool.</em></h2>
+        <p class="body-text">In 2001, Harlem's small business community was thriving — but largely invisible to anyone outside of local foot traffic and word-of-mouth networks. There was no central resource connecting the neighborhood's growing ecosystem of Black-owned businesses with the residents, visitors, and tourists who were already there.</p>
+        <p class="body-text">UMEZ, BRISC, and the Harlem Business Alliance understood the gap. The businesses existed. The customers existed. What was missing was the infrastructure to connect them — a credible, professional publication that would serve as a directory, a cultural ambassador, and a practical guide all at once.</p>
+        <div class="authority-bar">
+          <span class="auth-icon">📍</span>
+          <p class="auth-text"><strong>What a print guide actually did that nothing else could in 2001:</strong> It reached hotel guests before they left their rooms. It sat in theater lobbies alongside Broadway playbills. It traveled home with tourists as a keepsake. Digital didn't exist yet — but a well-designed publication in the right hands was the entire discovery funnel.</p>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <ul class="loss-list">
+          <li><span class="loss-icon">—</span>No unified directory — businesses operated in isolation with no shared platform connecting them to the broader community</li>
+          <li><span class="loss-icon">—</span>No tourism bridge — visitors arriving in Harlem had no accessible guide to local commerce beyond the most well-known destinations</li>
+          <li><span class="loss-icon">—</span>No affordable promotion — advertising in major publications was cost-prohibitive for most small business owners</li>
+          <li><span class="loss-icon">—</span>No consistent brand language — the neighborhood's entrepreneurial identity was fragmented without a shared visual voice</li>
+          <li><span class="loss-icon">—</span>No documentation — the history of who was building Harlem's economy in this era was at risk of going unrecorded</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROCESS -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">02 — The Process</div>
+        <h2>Ground-level.<br><em>Business by business.</em><br>Block by block.</h2>
+        <p class="body-text">Moor Graphix didn't design from a distance. The project required direct coordination with dozens of business owners across Harlem — gathering profiles, verifying information, and photographing storefronts and entrepreneurs in person. The guide was built from the neighborhood up, not from a boardroom down.</p>
+        <p class="body-text">Approximately 90% of the photography in the publication was captured by Moor Graphix on location. The decision was intentional: real businesses deserved real images. Stock photography would have undermined the authenticity that made the guide valuable as both a discovery tool and a cultural document.</p>
+        <p class="body-text"><strong>The design had to serve three audiences simultaneously — Harlem residents already connected to the community, first-time visitors exploring the neighborhood, and institutional partners who needed to see the economic ecosystem at a glance.</strong></p>
+      </div>
+      <div class="reveal d1">
+        <div class="steps-col">
+          <div class="step">
+            <div class="step-n">01</div>
+            <div>
+              <h3>Community Outreach + Business Coordination</h3>
+              <p>Worked directly with participating businesses across Harlem to gather profiles, contact information, service offerings, operating hours, and location data — building the directory's foundation from firsthand sources.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">02</div>
+            <div>
+              <h3>On-Location Photography</h3>
+              <p>Photographed approximately 90% of participating businesses on-site — capturing storefronts, interiors, and entrepreneurs as they actually appeared. Every image was original, creating an authentic visual record of Harlem's commercial landscape.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">03</div>
+            <div>
+              <h3>Publication Design + Art Direction</h3>
+              <p>Designed the multi-panel guide to balance visual storytelling, business information, community resources, and navigation tools — giving readers immediate findability by category and location without sacrificing the cultural energy of the neighborhood.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">04</div>
+            <div>
+              <h3>Print Production + Distribution Strategy</h3>
+              <p>Managed print production through 10,000 copies and coordinated distribution across Harlem, uptown Manhattan, hotel districts, theater corridors, and visitor information locations — maximizing reach to both residents and tourists.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- PROOF BENTO -->
+  <div class="wrap" id="proof">
+    <div class="reveal">
+      <div class="sec-label">03 — The Proof</div>
+      <h2>The guide that<br>became a <em>document.</em></h2>
+      <p class="body-text">When the publication launched, its primary job was practical: connect people with businesses. More than two decades later, it has become something else entirely — <strong>a primary visual record of Harlem's entrepreneurial ecosystem during one of the neighborhood's most significant periods of growth.</strong> Many of the businesses featured represent an important chapter of Harlem's economic and cultural history that might otherwise have gone undocumented.</p>
+    </div>
+    <div class="bento">
+      <!-- Featured full-width card -->
+      <div class="bento-card c6 featured reveal d1">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">10,000</div>
+            <div class="big-lbl">Copies — Residents, Visitors, and Tourists</div>
+          </div>
+          <div style="max-width: 50ch;">
+            <h4>Distributed where discovery actually happened</h4>
+            <p>The guide reached hotel guests before they left for the day, theater-goers between shows, and neighborhood residents who had never had a single resource to find everything their community offered. It traveled home as a souvenir. It sat on hotel concierge desks alongside Broadway programs. In the pre-Google era, physical distribution to high-traffic locations was the entire discovery funnel — and 10,000 copies made it work at scale.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="bento-card c2 tall reveal d1">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">68</div>
+            <div class="big-lbl">Businesses — One Voice</div>
+          </div>
+          <p>Fashion, food, galleries, wellness, professional services, cultural institutions — every category of Harlem's economy under one cover, unified by a single visual language.</p>
+        </div>
+      </div>
+      <div class="bento-card c4 reveal d2">
+        <div class="bento-inner">
+          <h4>90% original photography — no stock, no shortcuts</h4>
+          <p>Moor Graphix photographed the majority of participating businesses on location. The choice to shoot original imagery rather than rely on business-submitted photos or stock ensured visual consistency across all 68 entries and created an authentic document of Harlem's storefronts and entrepreneurs exactly as they appeared in 2001.</p>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div class="bento-card c4 reveal d1">
+        <div class="bento-inner">
+          <h4>A cultural ambassador — not just a directory</h4>
+          <p>The sponsoring organizations wanted more than a business listing. The publication was designed to communicate Harlem's energy, diversity, and entrepreneurial identity to visitors who had never explored beyond the neighborhood's most well-known destinations. Color, typography, photography, and illustration were deployed to create a guide that felt unmistakably connected to Harlem — and made visitors want to stay longer and spend locally.</p>
+        </div>
+      </div>
+      <div class="bento-card c2 reveal d2">
+        <div class="bento-inner">
+          <div>
+            <div class="big-num">3</div>
+            <div class="big-lbl">Sponsoring Organizations — UMEZ · BRISC · Harlem Business Alliance</div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 4 -->
+      <div class="bento-card c3 reveal d1">
+        <div class="bento-inner">
+          <h4>20+ years of historical value</h4>
+          <p>Many of the 68 businesses featured represent a chapter of Harlem's economic history that might otherwise have gone unrecorded. The publication is now a primary visual document of who was building the neighborhood's economy during one of its most transformative periods — a record that compounds in value every year.</p>
+        </div>
+      </div>
+      <div class="bento-card c3 reveal d2">
+        <div class="bento-inner">
+          <h4>Design as economic infrastructure</h4>
+          <p>Before Google Maps, before Yelp, before Instagram Stories — visibility required design. This project is proof that a well-executed publication in the right hands can do the work of an entire digital marketing ecosystem. The channel was analog. The strategy was sound. The impact was real.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-break">
+    <div class="quote-inner">
+      <div class="reveal">
+        <blockquote>"Your heritage is your competitive moat — we forge it into visual systems that compound forever."</blockquote>
+        <p class="quote-attr">— Sid Washington, Moor Graphix</p>
+      </div>
+      <div class="reveal d1">
+        <div class="sec-label">The Framework</div>
+        <h2>Cultural Alchemy:<br><em>Design as community<br>infrastructure.</em></h2>
+        <p class="body-text">For the Harlem Business Directory, Cultural Alchemy meant recognizing that the neighborhood's entrepreneurial identity was already there — in its storefronts, its founders, its blocks. The job was to document it faithfully, present it beautifully, and distribute it strategically.</p>
+        <p class="body-text">The publication didn't create Harlem's business community. It made it visible. And in 2001, visibility was the entire infrastructure gap. That's what design does when it's applied to community development — it doesn't invent. It reveals, amplifies, and carries forward what's already there.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-inner reveal">
+      <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Turn</div>
+      <h2>Your community's story<br>deserves a platform<br>built to <em>carry it.</em></h2>
+      <p class="body-text">The channels have changed. The principle hasn't. Whether it's a publication, a website, or an AI-powered brand system — visibility still requires design. Moor Graphix builds the identity, the platform, and the infrastructure that puts your community, your organization, or your business in front of the people who need to find you.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank">
+          Book Free Consultation
+          <span class="btn-icon">↗</span>
+        </a>
+        <a class="btn-outline" href="https://moorgraphix.com/index.html#portfolio">← View All Work</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+      <a class="footer-back" href="https://moorgraphix.com/index.html#portfolio">← Back to Portfolio</a>
+      <span class="footer-copy">© 2046 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+<script src="../assets/js/particles.js"></script>
+</body>
+</html>
