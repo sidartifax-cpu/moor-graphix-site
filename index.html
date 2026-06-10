@@ -127,12 +127,6 @@
   display: block;
   background: rgba(80,140,255,0.06);
 }
-.cs-card.cs-featured {
-  grid-column: span 2;
-}
-@media(max-width:640px){
-  .cs-card.cs-featured { grid-column: span 1; }
-}
 .cs-card-body {
   padding: 22px 24px 26px;
 }
@@ -173,6 +167,7 @@
   border-radius: 4px;
 }
 .cs-card-result i { font-size: 12px; }
+.cs-card-img-top { object-position: top; }
 @media(max-width:900px){
   .cs-section { padding: 60px 24px; }
   .cs-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -554,9 +549,9 @@
   </div>
   <div class="cs-grid">
 
-    <!-- Harlem Business Directory — featured historical anchor -->
-    <a class="cs-card cs-featured" href="cases/harlem-directory.html">
-      <img class="cs-card-img" src="assets/images/portfolio/campaign/harlem-directory.jpg" alt="Harlem Business Directory & Shopping Guide — designed by Moor Graphix" loading="lazy">
+    <!-- Harlem Business Directory -->
+    <a class="cs-card" href="cases/harlem-directory.html">
+      <img class="cs-card-img cs-card-img-top" src="assets/images/portfolio/campaign/harlem-directory.jpg" alt="Harlem Business Directory & Shopping Guide — designed by Moor Graphix" loading="lazy">
       <div class="cs-card-body">
         <div class="cs-card-tag">Publication Design · Photography · Economic Development</div>
         <div class="cs-card-name">Harlem Business Directory</div>
