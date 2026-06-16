@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/branding/moor-graphix-favicon.png">
+<meta name="description" content="SMS Compliance Kit — Moor Graphix helps businesses get compliant before they text. TCPA-ready Privacy Policies, SMS Terms &amp; Conditions, opt-in copy, and more. Starting at $297. 48–72 hour turnaround.">
+<meta name="keywords" content="SMS compliance, TCPA compliance, business texting compliance, SMS Terms and Conditions, opt-in copy, 10DLC registration, Moor Graphix, Atlanta GA">
+<meta name="author" content="Sid Washington">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="US-GA">
+<meta name="geo.placename" content="Douglasville, Georgia">
+<link rel="canonical" href="https://sidartifax-cpu.github.io/moor-graphix-site/sms-compliance.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moor Graphix">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://sidartifax-cpu.github.io/moor-graphix-site/sms-compliance.html">
+<meta property="og:title" content="SMS Compliance Kit — Protect Your Business Before You Text | Moor Graphix">
+<meta property="og:description" content="TCPA violations run up to $1,500 per text. Moor Graphix gets your website compliant in 48–72 hours. Starting at $297.">
+<meta property="og:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Moor Graphix — SMS Compliance Kit">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@moorgraphix">
+<meta name="twitter:creator" content="@moorgraphix">
+<meta name="twitter:title" content="SMS Compliance Kit — Protect Your Business Before You Text | Moor Graphix">
+<meta name="twitter:description" content="TCPA violations run up to $1,500 per text. Moor Graphix gets your website compliant in 48–72 hours. Starting at $297.">
+<meta name="twitter:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<title>SMS Compliance Kit — Protect Your Business Before You Text | Moor Graphix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── SMS COMPLIANCE PAGE — page-specific styles ── */
+
+/* HERO */
+.sms-hero{padding:80px 44px 72px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;min-height:520px;position:relative}
+.sms-hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:rgba(212,168,67,0.75);border:0.5px solid rgba(212,168,67,0.25);padding:7px 14px;border-radius:20px;margin-bottom:22px}
+.sms-hero h1{font-size:clamp(34px,4.2vw,58px);line-height:1.08;color:#fff;margin:0 0 20px}
+.sms-hero-sub{font-size:17px;color:rgba(150,180,255,0.65);line-height:1.75;max-width:480px;margin-bottom:34px}
+.sms-hero-stats{display:flex;gap:36px;margin-top:40px}
+.sms-stat{display:flex;flex-direction:column;gap:4px}
+.sms-stat-n{font-family:'DM Serif Display',serif;font-size:34px;color:#fff;line-height:1}
+.sms-stat-l{font-size:9px;font-weight:700;letter-spacing:0.28em;color:rgba(106,171,255,0.5);text-transform:uppercase}
+
+/* Hero right — compliance checklist preview */
+.sms-hero-right{display:flex;flex-direction:column;gap:10px}
+.sms-check-row{display:flex;align-items:center;gap:16px;padding:16px 20px;border-radius:6px;border:0.5px solid rgba(212,168,67,0.15);background:rgba(212,168,67,0.05);transition:border-color 0.3s}
+.sms-check-row.missing{border-color:rgba(176,24,24,0.2);background:rgba(176,24,24,0.05)}
+.sms-check-row:hover{border-color:rgba(212,168,67,0.35)}
+.sms-check-row.missing:hover{border-color:rgba(176,24,24,0.4)}
+.sms-check-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.sms-check-row .sms-check-icon{background:rgba(212,168,67,0.12);color:#d4a843}
+.sms-check-row.missing .sms-check-icon{background:rgba(176,24,24,0.12);color:rgba(220,80,80,0.8)}
+.sms-check-label{font-size:13px;font-weight:600;color:#e8f0ff;flex:1}
+.sms-check-status{font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:3px 10px;border-radius:20px;white-space:nowrap}
+.status-covered{background:rgba(212,168,67,0.12);color:#d4a843;border:0.5px solid rgba(212,168,67,0.3)}
+.status-missing{background:rgba(176,24,24,0.1);color:rgba(220,80,80,0.8);border:0.5px solid rgba(176,24,24,0.2)}
+
+/* RISK WARNING */
+.sms-risk{padding:72px 44px;position:relative;overflow:hidden}
+.sms-risk::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(176,24,24,0.07) 0%,transparent 70%);pointer-events:none}
+.sms-risk-stat{font-family:'DM Serif Display',serif;font-size:clamp(60px,9vw,120px);font-style:italic;color:rgba(200,50,50,0.85);line-height:1;margin:16px 0 4px}
+.sms-risk-label{font-size:12px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:rgba(200,50,50,0.55);margin-bottom:28px}
+.sms-risk-context{font-size:18px;color:rgba(220,235,255,0.55);max-width:620px;line-height:1.75;margin-bottom:48px}
+.sms-risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sms-risk-card{border-radius:6px;padding:28px 24px;border:0.5px solid rgba(176,24,24,0.18);background:rgba(176,24,24,0.04);transition:all 0.3s}
+.sms-risk-card:hover{border-color:rgba(176,24,24,0.35);transform:translateY(-3px)}
+.sms-risk-icon{width:44px;height:44px;border-radius:50%;background:rgba(176,24,24,0.1);border:1px solid rgba(176,24,24,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:rgba(200,70,70,0.75);margin-bottom:16px}
+.sms-risk-title{font-family:'DM Serif Display',serif;font-size:20px;color:#fff;margin-bottom:10px}
+.sms-risk-desc{font-size:13.5px;color:rgba(150,180,255,0.5);line-height:1.7}
+
+/* THE 5 REQUIREMENTS */
+.sms-reqs{padding:72px 44px}
+.sms-req-list{display:flex;flex-direction:column;gap:2px;margin-top:40px;max-width:860px}
+.sms-req-item{display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start;padding:28px 32px;border-radius:4px;border:0.5px solid rgba(48,96,208,0.12);background:#fff;transition:all 0.3s}
+.sms-req-item:hover{border-color:rgba(48,96,208,0.28);box-shadow:0 6px 28px rgba(48,96,208,0.08);transform:translateX(4px)}
+.sms-req-num{font-family:'DM Serif Display',serif;font-size:40px;font-style:italic;color:var(--blue);opacity:0.6;line-height:1;padding-top:2px}
+.sms-req-title{font-family:'DM Serif Display',serif;font-size:22px;color:var(--text-dark);margin-bottom:8px;line-height:1.2}
+.sms-req-desc{font-size:14px;color:var(--text-mid);line-height:1.72}
+.sms-req-tag{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(48,96,208,0.07);color:var(--blue);border:0.5px solid rgba(48,96,208,0.2);margin-top:10px}
+
+/* WHAT WE DELIVER — PRICING */
+.sms-pricing{padding:72px 44px}
+.sms-pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.sms-tier{border-radius:8px;overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(48,96,208,0.12);transition:all 0.3s;background:#fff;position:relative}
+.sms-tier:hover{border-color:rgba(48,96,208,0.3);box-shadow:0 10px 40px rgba(48,96,208,0.1);transform:translateY(-4px)}
+.sms-tier.tier-featured{border-color:var(--blue);box-shadow:0 8px 36px rgba(48,96,208,0.15)}
+.sms-tier-badge-top{position:absolute;top:0;right:20px;font-size:9px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;background:var(--blue);color:#fff;padding:5px 14px;border-radius:0 0 6px 6px}
+.sms-tier-head{padding:28px 28px 20px}
+.sms-tier-name{font-size:10px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:var(--text-mid);margin-bottom:8px}
+.sms-tier-label{font-family:'DM Serif Display',serif;font-size:24px;color:var(--text-dark);margin-bottom:16px}
+.sms-tier-price{font-family:'DM Serif Display',serif;font-size:48px;color:var(--blue);line-height:1;margin-bottom:4px}
+.sms-tier-price-note{font-size:12px;color:var(--text-mid)}
+.sms-tier-desc{font-size:13px;color:var(--text-mid);line-height:1.55;margin-top:12px;font-style:italic}
+.sms-tier-body{padding:0 28px 28px;flex:1;display:flex;flex-direction:column}
+.sms-tier-divider{border:none;border-top:1px solid rgba(48,96,208,0.08);margin:0 0 20px}
+.sms-tier-list{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.sms-tier-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid);line-height:1.5}
+.sms-tier-list li i{color:var(--blue);font-size:16px;flex-shrink:0;margin-top:1px}
+.sms-tier-cta{display:block;text-align:center;padding:13px 20px;border-radius:4px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.25s;text-decoration:none}
+.sms-tier-cta.cta-primary{background:var(--blue);color:#fff;border:1px solid var(--blue)}
+.sms-tier-cta.cta-primary:hover{background:#1a4ab0;box-shadow:0 4px 16px rgba(48,96,208,0.35)}
+.sms-tier-cta.cta-ghost{background:transparent;color:var(--blue);border:1px solid rgba(48,96,208,0.35)}
+.sms-tier-cta.cta-ghost:hover{background:rgba(48,96,208,0.07);border-color:var(--blue)}
+.sms-turnaround{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:rgba(0,160,80,0.75);background:rgba(0,160,80,0.07);border:0.5px solid rgba(0,160,80,0.2);border-radius:20px;padding:5px 14px;margin-top:16px}
+
+/* WHO THIS IS FOR */
+.sms-who{padding:72px 44px}
+.sms-who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.sms-who-card{border-radius:6px;padding:28px 24px;border:1px solid rgba(48,96,208,0.1);background:rgba(48,96,208,0.03);transition:all 0.3s}
+.sms-who-card:hover{border-color:rgba(48,96,208,0.25);transform:translateY(-3px);box-shadow:0 8px 28px rgba(48,96,208,0.07)}
+.sms-who-icon{width:44px;height:44px;border-radius:50%;background:rgba(48,96,208,0.1);border:1px solid rgba(48,96,208,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blue);margin-bottom:14px}
+.sms-who-title{font-size:14px;font-weight:700;color:var(--text-dark);margin-bottom:6px}
+.sms-who-desc{font-size:13px;color:var(--text-mid);line-height:1.6}
+.sms-who-tagline{text-align:center;margin-top:40px;font-family:'DM Serif Display',serif;font-style:italic;font-size:20px;color:var(--text-dark);padding:22px 40px;background:rgba(48,96,208,0.05);border-radius:4px;border:0.5px solid rgba(48,96,208,0.12);max-width:720px;margin-left:auto;margin-right:auto;line-height:1.5}
+
+/* HOW IT WORKS */
+.sms-steps{padding:72px 44px}
+.sms-steps-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;position:relative}
+.sms-steps-list::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(48,96,208,0.2) 20%,rgba(48,96,208,0.2) 80%,transparent);pointer-events:none}
+.sms-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 24px 32px;position:relative}
+.sms-step-num{width:56px;height:56px;border-radius:50%;border:1px solid rgba(48,96,208,0.25);background:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:24px;color:var(--blue);margin-bottom:20px;position:relative;z-index:1}
+.sms-step-title{font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px}
+.sms-step-desc{font-size:13px;color:var(--text-mid);line-height:1.65}
+
+/* TESTIMONIALS */
+.sms-reviews{padding:72px 44px}
+.sms-review-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px;max-width:860px}
+.sms-review-card{border-radius:8px;padding:36px 32px;border:1px solid rgba(48,96,208,0.1);background:#fff;transition:all 0.3s}
+.sms-review-card:hover{border-color:rgba(48,96,208,0.25);box-shadow:0 8px 28px rgba(48,96,208,0.08);transform:translateY(-3px)}
+.sms-review-mark{font-size:36px;font-family:'DM Serif Display',serif;color:var(--blue);opacity:0.25;line-height:1;margin-bottom:12px}
+.sms-review-text{font-size:15px;color:var(--text-mid);line-height:1.75;font-style:italic;margin-bottom:20px}
+.sms-review-author{font-size:12px;font-weight:700;color:var(--text-dark);letter-spacing:0.05em}
+.sms-review-role{font-size:11px;color:rgba(58,69,96,0.5);margin-top:2px}
+
+/* AUDIT FORM */
+.sms-audit{padding:72px 44px}
+.sms-audit-inner{max-width:580px}
+.sms-audit-eyebrow{font-size:9px;font-weight:700;letter-spacing:0.4em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.sms-audit-headline{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.8vw,48px);color:var(--text-dark);margin:0 0 12px;line-height:1.1}
+.sms-audit-sub{font-size:16px;color:var(--text-mid);line-height:1.7;margin-bottom:28px}
+.sms-audit-form{display:flex;flex-direction:column;gap:12px}
+.sms-audit-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sms-audit-input{width:100%;padding:14px 18px;font-size:14px;font-family:'Syne',sans-serif;border:1.5px solid rgba(48,96,208,0.18);border-radius:4px;background:#fff;color:var(--text-dark);outline:none;transition:border-color 0.25s;box-sizing:border-box}
+.sms-audit-input:focus{border-color:var(--blue)}
+.sms-audit-input::placeholder{color:rgba(58,69,96,0.38)}
+.sms-audit-btn{width:100%;padding:16px 24px;background:var(--blue);color:#fff;border:none;border-radius:4px;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.25s,box-shadow 0.25s;display:flex;align-items:center;justify-content:center;gap:8px}
+.sms-audit-btn:hover{background:#1a4ab0;box-shadow:0 6px 20px rgba(48,96,208,0.35)}
+.sms-audit-btn:disabled{opacity:0.6;cursor:not-allowed}
+.sms-audit-note{font-size:12px;color:rgba(58,69,96,0.42);margin-top:4px}
+.sms-audit-thanks{display:none;padding:28px 32px;background:rgba(0,160,80,0.07);border:1px solid rgba(0,160,80,0.2);border-radius:6px}
+.success-state h3{font-family:'DM Serif Display',serif;font-size:24px;color:#1a7040;margin:0 0 10px;line-height:1.2}
+.success-state p{font-size:15px;color:rgba(20,80,45,0.75);margin:0;line-height:1.65}
+/* AUDIT QUESTIONS */
+.audit-questions{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.q-label{font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:rgba(58,69,96,0.5);margin:0 0 2px}
+.q-item{display:flex;align-items:center;gap:10px;padding:13px 16px;border:1.5px solid rgba(48,96,208,0.14);border-radius:4px;background:#fff;flex-wrap:wrap;transition:border-color 0.2s}
+.q-item:has(input:checked){border-color:rgba(48,96,208,0.32)}
+.q-item>label:first-child{font-size:13.5px;color:var(--text-mid);line-height:1.4;flex:1;min-width:200px;cursor:default}
+.q-item>label:not(:first-child){display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border:1.5px solid rgba(48,96,208,0.18);border-radius:20px;font-size:12px;font-family:'Syne',sans-serif;font-weight:700;color:rgba(58,69,96,0.55);cursor:pointer;transition:all 0.18s;white-space:nowrap}
+.q-item>label:not(:first-child):hover{border-color:var(--blue);color:var(--blue)}
+.q-item input[type="radio"]{accent-color:var(--blue);width:14px;height:14px;cursor:pointer;flex-shrink:0}
+.q-item input[value="yes"]:checked~label,.q-item label:has(input[value="yes"]:checked){border-color:rgba(0,160,80,0.45)!important;color:#1a7040!important;background:rgba(0,160,80,0.07)}
+.q-item input[value="no"]:checked~label,.q-item label:has(input[value="no"]:checked){border-color:rgba(176,24,24,0.35)!important;color:rgba(160,30,30,0.85)!important;background:rgba(176,24,24,0.06)}
+.sms-audit-divider{display:flex;align-items:center;gap:14px;margin:4px 0}
+.sms-audit-divider span{font-size:11px;font-weight:600;color:rgba(58,69,96,0.35);letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap}
+.sms-audit-divider::before,.sms-audit-divider::after{content:'';flex:1;height:1px;background:rgba(48,96,208,0.1)}
+
+/* FLOATING AUDIT BAR */
+.sms-float-bar{position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(2,4,8,0.97);border-top:0.5px solid rgba(212,168,67,0.3);backdrop-filter:blur(12px);padding:14px 44px;display:flex;align-items:center;justify-content:space-between;gap:20px;transform:translateY(100%);transition:transform 0.4s cubic-bezier(.4,0,.2,1);box-shadow:0 -4px 32px rgba(0,0,0,0.45)}
+.sms-float-bar.visible{transform:translateY(0)}
+.sms-float-bar.dismissed{display:none}
+.sms-float-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.sms-float-dot{width:8px;height:8px;border-radius:50%;background:#d4a843;flex-shrink:0;animation:pulseGold 2s ease-in-out infinite}
+@keyframes pulseGold{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.72)}}
+.sms-float-label{font-size:14px;color:rgba(200,220,255,0.8);font-family:'Syne',sans-serif}
+.sms-float-label strong{color:#d4a843}
+.sms-float-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.sms-float-btn{padding:10px 22px;background:var(--blue);color:#fff;border:none;border-radius:4px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 0.2s,box-shadow 0.2s;white-space:nowrap}
+.sms-float-btn:hover{background:#1a4ab0;box-shadow:0 4px 14px rgba(48,96,208,0.4)}
+.sms-float-dismiss{background:none;border:none;color:rgba(150,180,255,0.38);font-size:22px;cursor:pointer;padding:4px 6px;line-height:1;transition:color 0.2s;flex-shrink:0}
+.sms-float-dismiss:hover{color:rgba(150,180,255,0.75)}
+
+/* responsive */
+@media(max-width:960px){
+  .sms-hero{grid-template-columns:1fr;gap:40px}
+  .sms-hero-right{display:none}
+  .sms-risk-grid,.sms-who-grid{grid-template-columns:1fr}
+  .sms-pricing-grid{grid-template-columns:1fr}
+  .sms-steps-list{grid-template-columns:1fr 1fr;gap:32px}
+  .sms-steps-list::before{display:none}
+  .sms-review-grid{grid-template-columns:1fr}
+  .sms-req-item{grid-template-columns:1fr;gap:8px}
+  .sms-req-num{font-size:28px}
+  .sms-audit-row{grid-template-columns:1fr}
+  .sms-float-bar{padding:12px 20px;flex-wrap:wrap}
+}
+@media(max-width:640px){
+  .sms-hero{padding:60px 20px 48px}
+  .sms-risk,.sms-reqs,.sms-pricing,.sms-who,.sms-steps,.sms-reviews,.sms-audit{padding:52px 20px}
+  .sms-steps-list{grid-template-columns:1fr}
+  .sms-hero-stats{gap:24px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SMS Compliance Kit",
+  "description": "A complete legal protection package for business websites that want to text their customers legally. Includes Privacy Policy update, SMS Terms & Conditions, opt-in copy, opt-out language, and frequency disclosures. Delivered in 48–72 hours.",
+  "url": "https://sidartifax-cpu.github.io/moor-graphix-site/sms-compliance.html",
+  "provider": {
+    "@type": "Organization",
+    "name": "Moor Graphix",
+    "url": "https://moorgraphix.com",
+    "telephone": "(470) 499-4407",
+    "email": "sidart@moorgraphix.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Douglasville",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": "US",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Starter",
+      "price": "297.00",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Growth",
+      "price": "497.00",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Full",
+      "price": "997.00",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "RecurringCharge",
+        "billingDuration": "P1M"
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="assets/css/mobile.css">
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#portfolio">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-workshop.html">AI Workshop</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="#audit">
+    <div class="nav-pill"><div class="bp"></div>Free Audit</div>
+  </a>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
+  <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
+  <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+  <a href="about.html" onclick="toggleMobileMenu()">About</a>
+  <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <a href="#audit" class="mob-consult" onclick="toggleMobileMenu()">Get Free Audit</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">SMS</div>
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span class="tick-item">✦ TCPA Violations — Up to $1,500 Per Text</span>
+      <span class="tick-item">✦ 48–72 Hour Turnaround</span>
+      <span class="tick-item">✦ 5-Point Compliance Check — Free</span>
+      <span class="tick-item">✦ 10DLC Registration Ready</span>
+      <span class="tick-item">✦ Privacy Policy · SMS Terms · Opt-In Copy</span>
+      <span class="tick-item">✦ Starter Package from $297</span>
+      <span class="tick-item">✦ TCPA Violations — Up to $1,500 Per Text</span>
+      <span class="tick-item">✦ 48–72 Hour Turnaround</span>
+      <span class="tick-item">✦ 5-Point Compliance Check — Free</span>
+      <span class="tick-item">✦ 10DLC Registration Ready</span>
+      <span class="tick-item">✦ Privacy Policy · SMS Terms · Opt-In Copy</span>
+      <span class="tick-item">✦ Starter Package from $297</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section class="sms-hero sec-dark" id="hero">
+  <div>
+    <div class="sms-hero-badge"><i class="ti ti-shield-check"></i>A Moor Graphix Service — SMS Compliance Kit</div>
+    <h1>Your customers want to hear from you<br/><em style="font-style:italic;color:#d4a843">by text.</em><br/>The law has requirements<br/>before you send the first one.</h1>
+    <p class="sms-hero-sub">Most business owners don't find out their website isn't compliant until after they've already started texting. By then, every message sent is a potential TCPA violation. The fix is straightforward, takes 48 to 72 hours, and positions your business to text legally, professionally, and confidently — starting now.</p>
+    <div class="btn-row">
+      <a href="#audit"><button class="btn-primary"><i class="ti ti-clipboard-check"></i>Get My Free Audit</button></a>
+      <a href="#pricing"><button class="btn-ghost">See Packages → Starting at $297</button></a>
+    </div>
+    <div class="sms-hero-stats">
+      <div class="sms-stat"><div class="sms-stat-n">$1,500</div><div class="sms-stat-l">Per Violation</div></div>
+      <div class="sms-stat"><div class="sms-stat-n">5</div><div class="sms-stat-l">Things Required</div></div>
+      <div class="sms-stat"><div class="sms-stat-n">48–72h</div><div class="sms-stat-l">Turnaround</div></div>
+    </div>
+  </div>
+  <div class="sms-hero-right">
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:rgba(106,171,255,0.4);margin-bottom:10px">5-Point Compliance Check</div>
+    <div class="sms-check-row">
+      <div class="sms-check-icon"><i class="ti ti-file-text"></i></div>
+      <div class="sms-check-label">Privacy Policy — SMS Coverage</div>
+      <span class="sms-check-status status-missing">Missing</span>
+    </div>
+    <div class="sms-check-row missing">
+      <div class="sms-check-icon"><i class="ti ti-file-description"></i></div>
+      <div class="sms-check-label">SMS Terms &amp; Conditions Page</div>
+      <span class="sms-check-status status-missing">Missing</span>
+    </div>
+    <div class="sms-check-row missing">
+      <div class="sms-check-icon"><i class="ti ti-forms"></i></div>
+      <div class="sms-check-label">Opt-In Copy on All Forms</div>
+      <span class="sms-check-status status-missing">Missing</span>
+    </div>
+    <div class="sms-check-row missing">
+      <div class="sms-check-icon"><i class="ti ti-message-off"></i></div>
+      <div class="sms-check-label">Opt-Out Instructions</div>
+      <span class="sms-check-status status-missing">Missing</span>
+    </div>
+    <div class="sms-check-row missing">
+      <div class="sms-check-icon"><i class="ti ti-clock"></i></div>
+      <div class="sms-check-label">Message Frequency Disclosure</div>
+      <span class="sms-check-status status-missing">Missing</span>
+    </div>
+    <div style="font-size:11px;color:rgba(220,80,80,0.55);margin-top:10px;font-style:italic;padding:0 4px">This is what the average business website looks like before we touch it.</div>
+  </div>
+</section>
+
+<!-- ── THE RISK ── -->
+<section class="sms-risk sec-dark2" id="risk">
+  <div class="eyebrow eyebrow-dark">What's at Stake</div>
+  <h2 style="color:#fff">That's not a scare tactic.<br/>That's the statute.</h2>
+  <div class="sms-risk-stat">$1,500</div>
+  <div class="sms-risk-label">Per Text. Per Violation. No cap on the number of violations per suit.</div>
+  <p class="sms-risk-context">A TCPA violation doesn't require intent. It requires a text — sent to someone whose written consent you can't document, at a number they didn't opt into on a compliant form. The FCC knows what compliant opt-in looks like. Plaintiff attorneys know what it looks like.</p>
+  <div class="sms-risk-grid">
+    <div class="sms-risk-card">
+      <div class="sms-risk-icon"><i class="ti ti-file-x"></i></div>
+      <div class="sms-risk-title">No Documented Consent</div>
+      <p class="sms-risk-desc">Verbal agreement means nothing under TCPA. If the opt-in language wasn't on a compliant form at the time they submitted — you don't have consent you can prove.</p>
+    </div>
+    <div class="sms-risk-card">
+      <div class="sms-risk-icon"><i class="ti ti-ban"></i></div>
+      <div class="sms-risk-title">10DLC Registration Denied</div>
+      <p class="sms-risk-desc">Carriers check for SMS Terms pages and Privacy Policy coverage during number registration. Missing either one and your application is rejected before you send a single message.</p>
+    </div>
+    <div class="sms-risk-card">
+      <div class="sms-risk-icon"><i class="ti ti-scale"></i></div>
+      <div class="sms-risk-title">Class Action Exposure</div>
+      <p class="sms-risk-desc">One violation is rare. But a list of 500 customers texted without proper opt-in is 500 violations in a single send. That math compounds fast — and plaintiff attorneys know it.</p>
+    </div>
+  </div>
+  <div style="margin-top:36px;padding:24px 32px;border:0.5px solid rgba(212,168,67,0.25);border-radius:6px;background:rgba(212,168,67,0.04);max-width:680px">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(212,168,67,0.6);margin-bottom:8px">The good news</div>
+    <div style="font-size:17px;color:rgba(220,235,255,0.7);line-height:1.7">One compliance page prevents all of it. The investment is <strong style="color:#d4a843">$297</strong>. The alternative is exposure every time you hit send.</div>
+  </div>
+</section>
+
+<!-- ── THE 5 REQUIREMENTS ── -->
+<section class="sms-reqs sec-light" id="requirements">
+  <div class="eyebrow eyebrow-light">What's Required by Law</div>
+  <h2 style="color:var(--text-dark)">Before you can legally send<br/>a single business text, your<br/>website needs 5 things.</h2>
+  <p style="color:var(--text-mid);max-width:540px;margin-top:12px">Miss any one of these and your 10DLC number registration can be denied. Miss them after you've already started texting, and you're exposed.</p>
+  <div class="sms-req-list">
+
+    <div class="sms-req-item">
+      <div class="sms-req-num">01</div>
+      <div>
+        <div class="sms-req-title">A Privacy Policy that mentions SMS</div>
+        <p class="sms-req-desc">Your existing Privacy Policy probably doesn't cover text messaging data. It needs to — specifically. Carriers and regulators look for explicit coverage of how SMS data is collected, stored, and used. A generic privacy policy doesn't pass the check.</p>
+        <span class="sms-req-tag"><i class="ti ti-file-text" style="font-size:11px"></i>Privacy Policy Update</span>
+      </div>
+    </div>
+
+    <div class="sms-req-item">
+      <div class="sms-req-num">02</div>
+      <div>
+        <div class="sms-req-title">A dedicated SMS Terms &amp; Conditions page</div>
+        <p class="sms-req-desc">This spells out what you'll text, how often, and what it costs recipients. Carriers check for this page during 10DLC number registration. Without it, your registration is denied. This is not a section on another page — it requires its own URL.</p>
+        <span class="sms-req-tag"><i class="ti ti-file-description" style="font-size:11px"></i>New Dedicated Page</span>
+      </div>
+    </div>
+
+    <div class="sms-req-item">
+      <div class="sms-req-num">03</div>
+      <div>
+        <div class="sms-req-title">Opt-in language on every form</div>
+        <p class="sms-req-desc">Every contact form, booking form, or lead capture on your site needs compliant opt-in copy before the submit button. "By submitting, you agree to receive texts from [Business] at the number provided…" — that language has to be there. Exactly. On every form that captures phone numbers.</p>
+        <span class="sms-req-tag"><i class="ti ti-forms" style="font-size:11px"></i>Form Copy — All Locations</span>
+      </div>
+    </div>
+
+    <div class="sms-req-item">
+      <div class="sms-req-num">04</div>
+      <div>
+        <div class="sms-req-title">Opt-out instructions visible to subscribers</div>
+        <p class="sms-req-desc">Customers must know how to stop receiving messages. "Reply STOP to unsubscribe" isn't just courtesy — it's a federal requirement under TCPA. This must appear where customers opt in and be included in initial messages sent after signup.</p>
+        <span class="sms-req-tag"><i class="ti ti-message-off" style="font-size:11px"></i>Opt-Out Language</span>
+      </div>
+    </div>
+
+    <div class="sms-req-item">
+      <div class="sms-req-num">05</div>
+      <div>
+        <div class="sms-req-title">Message frequency disclosure</div>
+        <p class="sms-req-desc">"Message frequency may vary" or the actual cadence you plan to text — this disclosure has to appear where customers opt in. Vague is okay, but absent is not. Carriers and compliance reviewers check for this during the registration process.</p>
+        <span class="sms-req-tag"><i class="ti ti-clock" style="font-size:11px"></i>Frequency Disclosure</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- ── WHAT WE DELIVER — PRICING ── -->
+<section class="sms-pricing sec-light2" id="pricing">
+  <div class="eyebrow eyebrow-light">What We Deliver</div>
+  <h2 style="color:var(--text-dark)">Complete legal protection<br/>for your website.</h2>
+  <p style="color:var(--text-mid);max-width:560px;margin-top:12px">We handle every piece so you're covered before you send message one. No forms to fill out, no legal jargon to decode. We write it, format it, and deliver it ready to publish.</p>
+  <div class="sms-pricing-grid">
+
+    <div class="sms-tier">
+      <div class="sms-tier-head">
+        <div class="sms-tier-name">One-Time</div>
+        <div class="sms-tier-label">Starter</div>
+        <div class="sms-tier-price">$297</div>
+        <div class="sms-tier-price-note">one-time · delivered in 48–72 hours</div>
+        <div class="sms-turnaround"><i class="ti ti-clock-check" style="font-size:14px"></i>48–72 Hour Delivery</div>
+        <p class="sms-tier-desc">Everything you need to get compliant and get your 10DLC number registered.</p>
+      </div>
+      <div class="sms-tier-body">
+        <hr class="sms-tier-divider">
+        <ul class="sms-tier-list">
+          <li><i class="ti ti-check"></i>Privacy Policy update — SMS data coverage added</li>
+          <li><i class="ti ti-check"></i>SMS Terms &amp; Conditions page — written and formatted for your site</li>
+          <li><i class="ti ti-check"></i>Opt-in copy written for up to 3 forms on your site</li>
+          <li><i class="ti ti-check"></i>Opt-out and frequency disclosure language</li>
+          <li><i class="ti ti-check"></i>Final confirmation checklist so you know it's done right</li>
+        </ul>
+        <a href="#audit" class="sms-tier-cta cta-ghost">Get Started →</a>
+      </div>
+    </div>
+
+    <div class="sms-tier tier-featured">
+      <div class="sms-tier-badge-top">Most Popular</div>
+      <div class="sms-tier-head">
+        <div class="sms-tier-name">One-Time</div>
+        <div class="sms-tier-label">Growth</div>
+        <div class="sms-tier-price">$497</div>
+        <div class="sms-tier-price-note">one-time · delivered in 48–72 hours</div>
+        <div class="sms-turnaround"><i class="ti ti-clock-check" style="font-size:14px"></i>48–72 Hour Delivery</div>
+        <p class="sms-tier-desc">Compliance plus setup — for businesses ready to launch their first SMS campaign right away.</p>
+      </div>
+      <div class="sms-tier-body">
+        <hr class="sms-tier-divider">
+        <ul class="sms-tier-list">
+          <li><i class="ti ti-check"></i>Everything in Starter</li>
+          <li><i class="ti ti-check"></i>Setup guide for Text Request (the platform we recommend)</li>
+          <li><i class="ti ti-check"></i>1 ready-to-send SMS campaign template written for your industry</li>
+          <li><i class="ti ti-check"></i>Compliance checklist you keep and reference going forward</li>
+        </ul>
+        <a href="#audit" class="sms-tier-cta cta-primary">Get Started →</a>
+      </div>
+    </div>
+
+    <div class="sms-tier">
+      <div class="sms-tier-head">
+        <div class="sms-tier-name">Monthly Retainer</div>
+        <div class="sms-tier-label">Full</div>
+        <div class="sms-tier-price" style="font-size:38px">$997<span style="font-size:18px;font-family:'Syne',sans-serif;font-weight:400;color:var(--text-mid)">/mo</span></div>
+        <div class="sms-tier-price-note">monthly · cancel anytime</div>
+        <div class="sms-turnaround"><i class="ti ti-refresh" style="font-size:14px"></i>Ongoing Protection</div>
+        <p class="sms-tier-desc">For businesses that want campaigns written and compliance handled as regulations evolve.</p>
+      </div>
+      <div class="sms-tier-body">
+        <hr class="sms-tier-divider">
+        <ul class="sms-tier-list">
+          <li><i class="ti ti-check"></i>Everything in Growth</li>
+          <li><i class="ti ti-check"></i>Moor Graphix writes 3 months of SMS campaigns for your business</li>
+          <li><i class="ti ti-check"></i>Monthly compliance review as regulations evolve</li>
+          <li><i class="ti ti-check"></i>Priority turnaround on all updates</li>
+        </ul>
+        <a href="#audit" class="sms-tier-cta cta-ghost">Apply Now →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- ── WHO THIS IS FOR ── -->
+<section class="sms-who sec-light" id="who">
+  <div class="eyebrow eyebrow-light">Who This Is For</div>
+  <h2 style="color:var(--text-dark)">You're ready.<br/>Your website just isn't.</h2>
+  <p style="color:var(--text-mid);max-width:580px;margin-top:12px">If you communicate with clients by phone — and you're ready to stop leaving voicemails nobody returns — this is for you. This service was built for:</p>
+  <div class="sms-who-grid">
+    <div class="sms-who-card">
+      <div class="sms-who-icon"><i class="ti ti-stethoscope"></i></div>
+      <div class="sms-who-title">Medical &amp; Wellness Offices</div>
+      <p class="sms-who-desc">Dental, medical, chiropractic, and wellness practices that need appointment reminders and patient follow-ups via text.</p>
+    </div>
+    <div class="sms-who-card">
+      <div class="sms-who-icon"><i class="ti ti-briefcase"></i></div>
+      <div class="sms-who-title">Law Firms &amp; Financial Services</div>
+      <p class="sms-who-desc">Attorneys, financial advisors, and insurance agents where client trust and regulatory compliance are non-negotiable.</p>
+    </div>
+    <div class="sms-who-card">
+      <div class="sms-who-icon"><i class="ti ti-home"></i></div>
+      <div class="sms-who-title">Real Estate &amp; Mortgage</div>
+      <p class="sms-who-desc">Agents and brokers who need to reach prospects fast and know their outreach is legally documented.</p>
+    </div>
+    <div class="sms-who-card">
+      <div class="sms-who-icon"><i class="ti ti-tool"></i></div>
+      <div class="sms-who-title">Home Services &amp; Auto Repair</div>
+      <p class="sms-who-desc">Contractors, HVAC, plumbing, and auto repair shops that need fast confirmation and follow-up with customers.</p>
+    </div>
+    <div class="sms-who-card">
+      <div class="sms-who-icon"><i class="ti ti-user-check"></i></div>
+      <div class="sms-who-title">Coaches &amp; Consultants</div>
+      <p class="sms-who-desc">Service businesses of all kinds where direct communication builds the relationship and text gets responses that email doesn't.</p>
+    </div>
+    <div class="sms-who-card">
+      <div class="sms-who-icon"><i class="ti ti-building-store"></i></div>
+      <div class="sms-who-title">Any Business That Texts Clients</div>
+      <p class="sms-who-desc">If your competitors are texting and you're not — or you already started and want to make sure you're protected — this is where you start.</p>
+    </div>
+  </div>
+  <div class="sms-who-tagline">"If you communicate with clients, this protects you."</div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="sms-steps sec-dark2" id="how-it-works">
+  <div class="eyebrow eyebrow-dark">The Process</div>
+  <h2 style="color:#fff">Done in 4 steps.<br/>Compliant in 48–72 hours.</h2>
+  <p style="color:rgba(150,180,255,0.5);max-width:520px;margin-top:12px">No forms to fill out. No legal jargon to decode. We handle the copy, the structure, and the placement.</p>
+  <div class="sms-steps-list">
+
+    <div class="sms-step">
+      <div class="sms-step-num">1</div>
+      <div class="sms-step-title" style="color:#e8f0ff">Free Audit</div>
+      <p class="sms-step-desc" style="color:rgba(150,180,255,0.55)">Send us your website URL. We run it through our 5-point compliance check and send you back a report within 24 hours. No charge, no obligation.</p>
+    </div>
+
+    <div class="sms-step">
+      <div class="sms-step-num">2</div>
+      <div class="sms-step-title" style="color:#e8f0ff">We Write Everything</div>
+      <p class="sms-step-desc" style="color:rgba(150,180,255,0.55)">Once you choose your package, we get to work. Privacy Policy update. SMS Terms page. Opt-in copy. Opt-out and frequency language. All of it.</p>
+    </div>
+
+    <div class="sms-step">
+      <div class="sms-step-num">3</div>
+      <div class="sms-step-title" style="color:#e8f0ff">48–72 Hour Delivery</div>
+      <p class="sms-step-desc" style="color:rgba(150,180,255,0.55)">We deliver the pages and copy, formatted and ready. You or your developer add them to your site. We give you a final checklist so you know it's done right.</p>
+    </div>
+
+    <div class="sms-step">
+      <div class="sms-step-num">4</div>
+      <div class="sms-step-title" style="color:#e8f0ff">Start Texting with Confidence</div>
+      <p class="sms-step-desc" style="color:rgba(150,180,255,0.55)">Your 10DLC registration goes through. Your campaigns send. Your customers respond. You're protected.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="sms-reviews sec-light" id="reviews">
+  <div class="eyebrow eyebrow-light">What Our Clients Say</div>
+  <h2 style="color:var(--text-dark)">Compliant.<br/>Confident.<br/>Texting.</h2>
+  <div class="sms-review-grid">
+
+    <div class="sms-review-card">
+      <div class="sms-review-mark">"</div>
+      <p class="sms-review-text">I didn't even know I needed this until Moor Graphix told me what was missing. Had my compliance pages live in two days and got my Text Request account approved the same week.</p>
+      <div class="sms-review-author">Dental Office Owner</div>
+      <div class="sms-review-role">Atlanta, GA</div>
+    </div>
+
+    <div class="sms-review-card">
+      <div class="sms-review-mark">"</div>
+      <p class="sms-review-text">The peace of mind alone was worth it. I was already texting clients before this. Glad I found out when I did.</p>
+      <div class="sms-review-author">Independent Insurance Agent</div>
+      <div class="sms-review-role">Client since 2024</div>
+    </div>
+
+  </div>
+</section>
+<hr class="div-line-light">
+
+<!-- ── FREE AUDIT FORM ── -->
+<section class="sms-audit sec-light2" id="audit">
+  <div class="sms-audit-inner">
+    <div class="sms-audit-eyebrow">Step 1 — No Pitch. No Pressure.</div>
+    <h2 class="sms-audit-headline">Get your free compliance audit.</h2>
+    <p class="sms-audit-sub">Send us your website URL. We'll check all 5 points and send you back a report within 24 hours. Just the truth about where your site stands.</p>
+    <form
+  id="audit-form"
+  action="https://hook.us2.make.com/s4xpdbpzawbxvudledpdwx6i5yn41sh4"
+  method="POST"
+>
+      <div class="sms-audit-row">
+        <input type="text"  name="name"    placeholder="Your name"            class="sms-audit-input" required>
+        <input type="email" name="email"   placeholder="Email address"        class="sms-audit-input" required>
+      </div>
+      <input type="url"     name="website" placeholder="https://yoursite.com" class="sms-audit-input" required>
+      <input type="tel"     name="phone"   placeholder="Phone number"         class="sms-audit-input">
+
+      <div class="audit-questions">
+        <p class="q-label">Answer these 5 quick questions:</p>
+
+        <div class="q-item">
+          <label>Does your site have a Privacy Policy that mentions SMS?</label>
+          <label><input type="radio" name="q1_privacy_policy" value="yes"> Yes</label>
+          <label><input type="radio" name="q1_privacy_policy" value="no">  No / Not sure</label>
+        </div>
+
+        <div class="q-item">
+          <label>Do you have a dedicated SMS Terms &amp; Conditions page?</label>
+          <label><input type="radio" name="q2_sms_terms" value="yes"> Yes</label>
+          <label><input type="radio" name="q2_sms_terms" value="no">  No / Not sure</label>
+        </div>
+
+        <div class="q-item">
+          <label>Do your contact/booking forms have opt-in language before submit?</label>
+          <label><input type="radio" name="q3_optin_forms" value="yes"> Yes</label>
+          <label><input type="radio" name="q3_optin_forms" value="no">  No / Not sure</label>
+        </div>
+
+        <div class="q-item">
+          <label>Do you show opt-out instructions (Reply STOP) in your opt-in areas?</label>
+          <label><input type="radio" name="q4_optout" value="yes"> Yes</label>
+          <label><input type="radio" name="q4_optout" value="no">  No / Not sure</label>
+        </div>
+
+        <div class="q-item">
+          <label>Do you disclose how often you'll text subscribers?</label>
+          <label><input type="radio" name="q5_frequency" value="yes"> Yes</label>
+          <label><input type="radio" name="q5_frequency" value="no">  No / Not sure</label>
+        </div>
+      </div>
+
+      <button type="submit" class="sms-audit-btn"><i class="ti ti-search"></i>Run My Free Compliance Check</button>
+      <p class="sms-audit-note">24-hour report. No spam. No obligation.</p>
+    </form>
+    <div class="sms-audit-thanks" id="auditThanks">
+      <div class="success-state">
+        <h3>Audit submitted.</h3>
+        <p>Check your inbox within 24 hours.<br>We'll send your full compliance report to the email you provided.</p>
+      </div>
+    </div>
+    <div class="sms-audit-divider" style="margin-top:28px"><span>Or skip the audit</span></div>
+    <div style="margin-top:20px">
+      <p style="font-size:14px;color:var(--text-mid);margin-bottom:16px">Already know what you need? Get the SMS Compliance Kit now.</p>
+      <a href="mailto:sidart@moorgraphix.com?subject=SMS%20Compliance%20Kit&body=I%27d%20like%20to%20get%20started%20with%20the%20SMS%20Compliance%20Kit.%20My%20website%20is%3A%20" style="display:inline-block">
+        <button class="btn-primary-light"><i class="ti ti-shield-check"></i>Get the SMS Compliance Kit — Starting at $297</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta sec-red" id="contact">
+  <div class="final-cta-eyebrow">Moor Graphix — SMS Compliance Kit</div>
+  <h2 style="color:#fff">Ready to text your customers<br/><em style="font-style:italic;color:#d4a843">without the risk?</em></h2>
+  <p class="final-cta-sub">One compliance package. 48–72 hours. And you're protected every time you hit send.</p>
+  <div class="final-cta-btns">
+    <a href="#audit"><button class="btn-primary" style="font-size:14px;padding:17px 34px"><i class="ti ti-clipboard-check"></i>Get My Free Audit</button></a>
+    <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer"><button class="btn-ghost" style="font-size:14px;padding:17px 30px">Book a Consult →</button></a>
+  </div>
+  <div class="cta-contact">
+    <div class="cta-info"><i class="ti ti-phone"></i><a href="tel:4704994407">(470) 499-4407</a></div>
+    <div class="cta-info"><i class="ti ti-mail"></i><a href="mailto:sidart@moorgraphix.com">sidart@moorgraphix.com</a></div>
+    <div class="cta-info"><i class="ti ti-map-pin"></i>Douglasville, GA — Serving Nationwide</div>
+  </div>
+  <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(80,60,60,0.3);font-size:12px;color:rgba(150,130,130,0.45);max-width:680px;margin-left:auto;margin-right:auto;line-height:1.75;text-align:center">
+    Moor Graphix is a brand strategy and design agency based in Atlanta, GA. We build the infrastructure that protects your business and positions your brand for growth. Strategy. Design. Systems. All of it.<br/><br/><em style="color:rgba(212,168,67,0.45);font-style:italic;letter-spacing:0.08em">Phore You.</em>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sec-dark">
+  <a href="index.html" class="foot-logo">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.tiktok.com/@moorgraphix" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-tiktok"></i></a>
+    <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2046 Moor Graphix</div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+</div><!-- /.page -->
+
+<!-- FLOATING AUDIT BAR -->
+<div class="sms-float-bar" id="floatBar">
+  <div class="sms-float-left">
+    <div class="sms-float-dot"></div>
+    <div class="sms-float-label"><strong>SMS Compliance Kit</strong> — Free audit. 48–72 hour delivery. Starting at $297.</div>
+  </div>
+  <div class="sms-float-right">
+    <button class="sms-float-btn" id="floatAuditBtn">Get Free Audit</button>
+    <button class="sms-float-dismiss" id="floatDismiss" aria-label="Dismiss"><i class="ti ti-x"></i></button>
+  </div>
+</div>
+
+<script>
+// ── FAQ / ACCORDION — none on this page ──
+
+// ── FLOATING AUDIT BAR ──
+const floatBar = document.getElementById('floatBar');
+const heroSec = document.getElementById('hero');
+const floatDismiss = document.getElementById('floatDismiss');
+const floatAuditBtn = document.getElementById('floatAuditBtn');
+
+const floatIO = new IntersectionObserver(entries => {
+  if (!floatBar.classList.contains('dismissed')) {
+    floatBar.classList.toggle('visible', !entries[0].isIntersecting);
+  }
+}, { threshold: 0.05 });
+floatIO.observe(heroSec);
+
+floatDismiss.addEventListener('click', () => {
+  floatBar.classList.remove('visible');
+  floatBar.classList.add('dismissed');
+});
+
+floatAuditBtn.addEventListener('click', () => {
+  document.getElementById('audit').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// ── AUDIT FORM — async submit ──
+const auditForm = document.getElementById('audit-form');
+const auditThanks = document.getElementById('auditThanks');
+if (auditForm) {
+  auditForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.sms-audit-btn');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<i class="ti ti-loader-2"></i>Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        auditForm.style.display = 'none';
+        auditThanks.style.display = 'block';
+        floatBar.classList.remove('visible');
+        floatBar.classList.add('dismissed');
+      } else {
+        btn.innerHTML = '<i class="ti ti-alert-circle"></i>Try Again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.innerHTML = '<i class="ti ti-alert-circle"></i>Try Again';
+      btn.disabled = false;
+    }
+  });
+}
+</script>
+<script src="assets/js/particles.js"></script>
+<!-- Moor Graphix AI Concierge -->
+<elevenlabs-convai agent-id="agent_3001knwwzjm9ecw9m8ng3svxhs65"></elevenlabs-convai>
+<script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+<script src="assets/js/mobile-menu.js" defer></script>
+</body>
+</html>
