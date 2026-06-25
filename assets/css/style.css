@@ -324,6 +324,7 @@ footer{padding:28px 44px;border-top:0.5px solid rgba(80,140,255,0.1);display:gri
 .foot-social a:hover{color:#6AABFF;border-color:rgba(80,140,255,0.5);transform:translateY(-2px)}
 .foot-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
 .foot-copy{font-size:10px;color:rgba(80,140,255,0.25);letter-spacing:0.2em;text-transform:uppercase}
+.foot-copy a{color:rgba(100,160,255,0.5);text-decoration:none}
 .foot-tagline{font-size:10px;color:rgba(80,140,255,0.2);font-style:italic}
 .div-line{border:none;border-top:1px solid rgba(80,140,255,0.1);margin:0}
 .div-line-light{border:none;border-top:1px solid rgba(48,96,208,0.1);margin:0}

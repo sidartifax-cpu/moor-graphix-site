@@ -120,6 +120,12 @@
 .ct-promise-title{font-family:'DM Serif Display',serif;font-size:22px;color:var(--text-dark);margin-bottom:10px}
 .ct-promise-desc{font-size:13.5px;color:var(--text-mid);line-height:1.7}
 
+/* SMS opt-in consent block */
+.ct-sms-optin{background:rgba(48,96,208,0.04);border:1.5px solid rgba(48,96,208,0.18);border-radius:4px;padding:16px 18px;margin-top:4px}
+.ct-sms-optin label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-size:13px;color:rgba(58,69,96,0.65);line-height:1.6}
+.ct-sms-optin input[type="checkbox"]{margin-top:3px;flex-shrink:0;accent-color:var(--blue);width:15px;height:15px;cursor:pointer}
+.ct-sms-optin a{color:var(--blue)}
+
 /* Responsive */
 @media(max-width:900px){
   .ct-form-grid{grid-template-columns:1fr}
@@ -260,7 +266,7 @@
           <input class="ct-input" type="email" id="cf-email" name="email" placeholder="you@example.com" required>
         </div>
         <div>
-          <label class="ct-label" for="cf-phone">Phone (Optional)</label>
+          <label class="ct-label" for="cf-phone">Phone Number <span style="font-weight:400;color:rgba(58,69,96,0.45)">(for project communication + optional SMS updates)</span></label>
           <input class="ct-input" type="tel" id="cf-phone" name="phone" placeholder="(___) ___-____">
         </div>
         <div>
@@ -280,6 +286,12 @@
         <div>
           <label class="ct-label" for="cf-message">Tell Me About Your Project</label>
           <textarea class="ct-textarea" id="cf-message" name="message" placeholder="What are you building? What's the vision? What's the timeline? Share as much as you'd like." required></textarea>
+        </div>
+        <div class="ct-sms-optin">
+          <label>
+            <input type="checkbox" name="sms_consent" value="yes">
+            By checking this box, I consent to receive recurring SMS text messages from Moor Graphix at the mobile number provided above. Messages may include project updates, appointment reminders, and promotional offers. Message frequency may vary — up to 4 messages/month. Msg &amp; data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help. Consent is not a condition of purchase. View our <a href="sms-terms.html">SMS Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>.
+          </label>
         </div>
         <button type="submit" class="ct-submit" id="ctSubmit"><i class="ti ti-send"></i>Send Message</button>
         <p class="ct-form-note">No spam. No pressure. Sid reads every message personally.</p>
@@ -466,7 +478,7 @@
     <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-youtube"></i></a>
   </div>
   <div class="foot-right">
-    <div class="foot-copy">© 2046 Moor Graphix</div>
+    <div class="foot-copy">© 2026 Moor Graphix &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="sms-terms.html">SMS Terms</a></div>
     <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
   </div>
 </footer>
