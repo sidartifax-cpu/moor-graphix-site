@@ -1,348 +1,409 @@
-# Moor Graphix — Homepage Project
+# Moor Graphix — SMS Compliance Pages
+## Claude Code Implementation Brief
 
-## Owner & Studio
-
-| Field | Value |
-|---|---|
-| **Owner** | Sid Washington |
-| **Studio** | Moor Graphix |
-| **Tagline** | Cultural Alchemy + AI Systems |
-| **Location** | Douglasville, GA (serves nationwide) |
-| **Phone** | (470) 499-4407 |
-| **Email** | sidart@moorgraphix.com |
-| **Website** | https://www.moorgraphix.com |
-| **YouTube** | https://www.youtube.com/@moorgraphix |
-| **Facebook** | https://www.facebook.com/moorthangraphics |
-| **Instagram** | https://www.instagram.com/moorgraphix |
-| **LinkedIn** | https://www.linkedin.com/company/moor-graphix |
-| **X / Twitter** | https://www.twitter.com/moorgraphix |
-| **Experience** | 30+ years |
-| **AI Agents Live** | 8+ |
-| **Brand ecosystems** | 3 |
-
-## What the Studio Does
-
-Moor Graphix is a brand design and AI systems studio rooted in **Cultural Alchemy** — the practice of extracting the hidden gold inside a client's heritage, name, and story and forging it into visual equity no competitor can copy. Services span brand identity systems, web design, AI agent infrastructure, apparel/print graphics, marketing materials, and digital illustrations.
-
-The name "Moor" traces from **Morrison** — Sid's grandfather's middle name. Research into that name surfaced the Morrison family crest in *Fairbairn's Crest*, which contains three faces of Moors. That crest became a personal symbol; that symbol became the company.
+You are building 2 new legal pages and updating 3 existing pages for **moorgraphix.com**.
 
 ---
 
-## File Structure
+## Site Design System
 
+### Colors
 ```
-moor-graphix-site/
-├── index.html                  ← single-page homepage
-├── services.html               ← services & pricing page
-├── CLAUDE.md                   ← this file
-├── wix-export/
-│   ├── wix-page.html           ← Wix embed snippet (scoped .mg- CSS)
-│   └── wix-instructions.txt    ← step-by-step Wix integration guide
-├── assets/
-│   ├── css/
-│   │   └── style.css           ← all shared styles
-│   ├── js/
-│   │   ├── images.js           ← ALL image data + section routing (edit this to control every section)
-│   │   └── main.js             ← homepage JS (gallery, showcase, portfolio grid, modal)
-│   └── images/
-│       ├── branding/           ← logo and brand marks
-│       │   └── moor-graphix-logo.png
-│       ├── social/             ← social media preview images (4 platforms)
-│       ├── hero-slideshow/     ← images shown in the homepage hero RIGHT panel (6 images)
-│       ├── showcase-strip/     ← thumbnails in the strip below the homepage hero (18 images)
-│       ├── services-hero/      ← slides for the services.html hero slideshow (15 NAMA blueprint pages)
-│       └── portfolio/          ← portfolio grid images, organized by category
-│           ├── logos/          ← logo design projects (3 images)
-│           ├── brand-identity/ ← brand identity projects (3 images)
-│           ├── web-design/     ← website design projects (10 images)
-│           ├── event-print/    ← event flyers and print work (1 image)
-│           └── campaign/       ← campaign design projects (1 image)
+--mg-black:     #0d0d0d   /* Primary background, nav, footer */
+--mg-gold:      #c8a96e   /* Accent — borders, highlights, links */
+--mg-white:     #ffffff   /* Page background */
+--mg-gray-dark: #1a1a1a   /* Body text */
+--mg-gray-mid:  #555555   /* Secondary text */
+--mg-gray-light:#999999   /* Tertiary / meta text */
+--mg-cream:     #f9f5ee   /* Callout box backgrounds */
+--mg-ticker-bg: #111111   /* Ticker bar background */
 ```
-
-All files were split from a single 6.4 MB monolithic HTML file. The split reduced `index.html` from 6.4 MB to 27 KB.
-
-### Image Section Control
-
-Each site section loads from its own dedicated folder. **All routing is controlled by `assets/js/images.js`.**
-
-| Section | Folder | Category key in images.js |
-|---|---|---|
-| Homepage hero slideshow | `hero-slideshow/` | `hero_slideshow` |
-| Showcase strip (below hero) | `showcase-strip/` | `showcase_strip` |
-| Portfolio grid | `portfolio/<subcategory>/` | `logos` / `brand_identity` / `web_design` / `event_print` / `campaign` |
-| Services page hero | `services-hero/` | `portfolio_slides` |
-
-**To change the homepage hero slideshow:**  
-Drop images into `assets/images/hero-slideshow/` and add/remove matching entries in `images.js` with `category: "hero_slideshow"`.
-
-**To change the showcase strip:**  
-Drop images into `assets/images/showcase-strip/` and add/remove matching entries in `images.js` with `category: "showcase_strip"`.
-
-**To add portfolio work:**  
-Drop the file into the correct `assets/images/portfolio/<subcategory>/` folder, then add an entry to `images.js` with the matching `category` slug (`logos`, `brand_identity`, `web_design`, `event_print`, or `campaign`).
-
-**To change the services page hero slides:**  
-Drop files into `assets/images/services-hero/` and add/remove entries in `images.js` with `category: "portfolio_slides"`.
-
----
-
-## Design System
-
-### Color Variables (`style.css` `:root`)
-
-| Variable | Hex | Usage |
-|---|---|---|
-| `--dark` | `#020408` | Page background (dark sections) |
-| `--dark2` | `#080D1A` | Secondary dark sections |
-| `--mid` | `#0D1628` | Mid-tone dark sections |
-| `--light1` | `#F0F4FF` | Light section background |
-| `--light2` | `#E8EEF8` | Light-2 section background |
-| `--light3` | `#DDE5F5` | Light-3 / card fills |
-| `--blue` | `#3060D0` | Primary brand blue |
-| `--blue-lt` | `#6AABFF` | Light blue (accents, hover glow) |
-| `--text-dark` | `#1A1F2E` | Body text on light sections |
-| `--text-mid` | `#3A4560` | Secondary text on light sections |
 
 ### Typography
-
-| Font | Weights | Role |
-|---|---|---|
-| **Syne** | 400, 600, 700, 800 | Body copy, UI, nav, labels |
-| **DM Serif Display** | 400 (italic 0 & 1) | All headings (h1, h2, h3), stat numbers, quotes |
-
-Fonts loaded from Google Fonts CDN. Icons from Tabler Icons (`@tabler/icons-webfont@2.47.0`).
-
-### Section Classes
-
-| Class | Background | Text |
-|---|---|---|
-| `.sec-dark` | `rgba(2,4,8,0.97)` | `#d0deff` |
-| `.sec-dark2` | `rgba(8,13,26,0.97)` | `#d0deff` |
-| `.sec-mid` | `rgba(13,22,40,0.98)` | `#d0deff` |
-| `.sec-light` | `var(--light1)` | `var(--text-dark)` |
-| `.sec-light2` | `var(--light2)` | `var(--text-dark)` |
-| `.sec-red` | `#06000A` | `#d0deff` (red border-top) |
-
----
-
-## Page Sections (HTML anchor IDs)
-
-| Section | ID | Class |
-|---|---|---|
-| Hero + gallery slideshow | `#work` | `.sec-dark` |
-| About / Origin Story | `#about` | `.sec-light` |
-| Services | `#services` | `.sec-dark2` |
-| Portfolio grid | `#portfolio` | `.sec-light` |
-| Videos | `#videos` | `.sec-dark2` |
-| AI Lab | `#ai` | `.sec-mid` |
-| Workshops | `#workshops` | `.sec-light` |
-| Social Media | `#social` | `.sec-light2` |
-| Testimonials | `#reviews` | `.sec-light` |
-| Final CTA / Contact | `#contact` | `.sec-red` |
-
----
-
-## Portfolio — All 18 Projects
-
-All portfolio images live in `assets/images/portfolio/<subcategory>/`. The array in `images.js` is Fisher-Yates shuffled on every page load, so display order is randomized at runtime.
-
-### Logo Design — `portfolio/logos/`
-
-| # | File | Display Name |
-|---|---|---|
-| 1 | `logos/scrolls-of-maat-logo.jpg` | Scrolls of MAAT |
-| 2 | `logos/own-the-song-logo.jpg` | Own the Song |
-| 3 | `logos/2-sports-moms-logo.png` | 2 Sports Moms |
-
-### Brand Identity — `portfolio/brand-identity/`
-
-| # | File | Display Name |
-|---|---|---|
-| 4 | `brand-identity/amerukhan-basics-coin.png` | Amerukhan Basics Coin |
-| 5 | `brand-identity/nama-new-amsterdam-musical.png` | NAMA — New Amsterdam Musical |
-| 6 | `brand-identity/wsl4-commemorative-coin.png` | WSL4 Commemorative Coin |
-
-### Web Design — `portfolio/web-design/`
-
-| # | File | Display Name |
-|---|---|---|
-| 7 | `web-design/widows-son-lodge-4-website.png` | Widow's Son Lodge #4 Website |
-| 8 | `web-design/roberts-law-group-website.png` | The Roberts Law Group |
-| 9 | `web-design/joyous-ocean-website.png` | Joyous Ocean — Dionne Monsanto |
-| 10 | `web-design/evans-guild-website.png` | The Evans Guild |
-| 11 | `web-design/hinson-security-website.png` | Hinson Security Services |
-| 12 | `web-design/black-mans-roundtable-website.png` | Black Man's Roundtable |
-| 13 | `web-design/montague-studios-website.png` | Montague Studios |
-| 14 | `web-design/isisara-bey-website.png` | Isisara Bey |
-| 15 | `web-design/2-sports-moms-full-site.png` | 2 Sports Moms — Full Site |
-| 16 | `web-design/nama-harlem-website.png` | NAMA Harlem Website |
-
-### Event + Print — `portfolio/event-print/`
-
-| # | File | Display Name |
-|---|---|---|
-| 17 | `event-print/african-dance-class-flyer.jpg` | African Dance Class — El Barrio |
-
-### Campaign — `portfolio/campaign/`
-
-| # | File | Display Name |
-|---|---|---|
-| 18 | `campaign/parent-playbook-series.png` | Parent Playbook Series |
-
-### Valid `category` filter values (portfolio grid)
-
 ```
-logos | brand_identity | web_design | event_print | campaign
+Headings:   Arial, Helvetica, sans-serif (bold)
+Body text:  Georgia, serif
+Code/mono:  Courier New, monospace
 ```
 
-These must match exactly — they map to the filter buttons in `#portfolio`.
+### Sizing Scale
+```
+hero-h1:    2.6rem (desktop), 1.8rem (mobile)
+h2:         1.6rem
+h3:         1.1rem bold
+body:       1rem / 1.8 line-height
+small/meta: 0.82–0.85rem
+```
+
+### Nav Structure (identical on all pages)
+```html
+<header class="mg-header">
+  <nav class="mg-nav">
+    <a class="mg-logo" href="/index.html">
+      <img src="/assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo" />
+      <span>Moor Graphix<span class="mg-logo-sub">Cultural Alchemy + AI Systems</span></span>
+    </a>
+    <button class="mg-hamburger" aria-label="Open menu">✕</button>
+    <ul class="mg-nav-links">
+      <li><a href="/index.html#portfolio">Work</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/ai-workshop.html">AI Workshop</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <a class="mg-btn-primary" href="https://calendly.com/moorwashington">Book Free Consult</a>
+  </nav>
+</header>
+```
+
+### Ticker Bar (used on most pages)
+```html
+<div class="mg-ticker-wrap" aria-hidden="true">
+  <div class="mg-ticker-inner">
+    <!-- repeat 2x for seamless loop -->
+    ✦ Privacy Policy ✦ SMS Terms &amp; Conditions ✦ TCPA Compliant ✦ 10DLC Ready ✦ Opt-In Documented ✦ Moor Graphix ✦
+  </div>
+</div>
+```
+Ticker CSS: `overflow:hidden; background:#111; color:#c8a96e; font:700 0.8rem Arial; white-space:nowrap`
+Animation: `@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} } .mg-ticker-inner { animation: ticker 28s linear infinite; display:inline-block; }`
+
+### Footer (identical on all pages)
+```html
+<footer class="mg-footer">
+  <div class="mg-footer-inner">
+    <a class="mg-logo" href="/index.html">Moor Graphix<span>Cultural Alchemy + AI Systems</span></a>
+    <div class="mg-footer-social">
+      <a href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@moorgraphix" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <div class="mg-footer-legal">
+      <span>© 2026 Moor Graphix</span>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/sms-terms.html">SMS Terms</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <p class="mg-footer-quote">"Graphic design is the masterful syncopation of text and images."</p>
+  </div>
+</footer>
+```
+
+### Shared CSS Components
+All pages share these reusable classes. Define in a shared `_legal.css` or inline per page:
+
+```css
+/* Page hero */
+.mg-legal-hero { background:#111; color:#fff; padding:70px 40px 55px; border-bottom:3px solid #c8a96e; }
+.mg-legal-hero .mg-eyebrow { font:700 0.78rem/1 Arial; color:#999; letter-spacing:.1em; text-transform:uppercase; }
+.mg-legal-hero h1 { font:700 2.4rem/1.1 Arial; color:#fff; margin:12px 0 10px; }
+.mg-legal-hero .mg-meta { font:400 0.82rem Arial; color:#888; }
+
+/* Content container */
+.mg-legal-body { max-width:820px; margin:0 auto; padding:64px 40px 96px; }
+
+/* Section heading with gold underline */
+.mg-legal-body h2 { font:700 1.2rem/1.3 Arial; color:#0d0d0d; margin:52px 0 14px; padding-bottom:10px; border-bottom:2px solid #c8a96e; }
+.mg-legal-body h3 { font:700 1rem/1.4 Arial; color:#333; margin:28px 0 10px; }
+.mg-legal-body p { margin-bottom:18px; }
+.mg-legal-body ul { margin:10px 0 20px 28px; }
+.mg-legal-body ul li { margin-bottom:8px; }
+.mg-legal-body a { color:#c8a96e; }
+
+/* Callout box */
+.mg-callout { background:#f9f5ee; border-left:4px solid #c8a96e; padding:22px 26px; margin:28px 0; border-radius:0 4px 4px 0; }
+.mg-callout strong { font-family:Arial,sans-serif; display:block; margin-bottom:6px; }
+
+/* Dark info box */
+.mg-dark-box { background:#0d0d0d; color:#fff; padding:34px 38px; border-radius:4px; margin:40px 0; }
+.mg-dark-box h3 { font:700 1rem Arial; color:#c8a96e; margin-bottom:14px; }
+.mg-dark-box a { color:#c8a96e; }
+
+/* Badge pill */
+.mg-badge { display:inline-block; background:#0d0d0d; color:#c8a96e; font:700 0.72rem Arial; letter-spacing:.08em; text-transform:uppercase; padding:4px 10px; border-radius:3px; margin-bottom:10px; }
+
+/* Quick-ref grid (SMS Terms page) */
+.mg-qr-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px 40px; }
+.mg-qr-grid label { display:block; font:700 0.72rem Arial; color:#888; letter-spacing:.07em; text-transform:uppercase; margin-bottom:4px; }
+.mg-qr-grid span { font:700 1rem Arial; color:#fff; }
+
+/* Form opt-in block */
+.mg-optin-block { background:#f9f5ee; border:1.5px solid #c8a96e; border-radius:4px; padding:22px 24px; margin:24px 0; }
+.mg-optin-block label { font:400 0.88rem/1.6 Georgia; color:#333; display:flex; gap:12px; align-items:flex-start; cursor:pointer; }
+.mg-optin-block input[type="checkbox"] { margin-top:3px; flex-shrink:0; accent-color:#c8a96e; width:16px; height:16px; }
+.mg-optin-block a { color:#c8a96e; }
+
+@media(max-width:640px) {
+  .mg-legal-hero { padding:44px 24px 38px; }
+  .mg-legal-body { padding:40px 24px 64px; }
+  .mg-qr-grid { grid-template-columns:1fr; }
+  .mg-dark-box { padding:24px 20px; }
+}
+```
 
 ---
 
-## YouTube Videos
+## Task 1 — CREATE: privacy-policy.html
 
-### Featured (full-width player, `#ytMain`)
+**File:** `privacy-policy.html`
+**URL:** `moorgraphix.com/privacy-policy.html`
 
-| ID | Label |
-|---|---|
-| `9PKxsJIykxk` | Moor Graphix — Featured Reel |
+### Page Structure
+```
+<head> — SEO meta, canonical, OG tags (match pattern from other pages)
+<header> — standard nav
+<div.mg-ticker-wrap> — ticker: "✦ Privacy Policy ✦ SMS Covered ✦ TCPA Compliant ✦ Moor Graphix ✦ Data Protected ✦"
+<div.mg-legal-hero>
+  <p.mg-eyebrow>Legal · Moor Graphix</p>
+  <h1>Privacy Policy</h1>
+  <p.mg-meta>Effective Date: June 25, 2026 | Last Updated: June 25, 2026</p>
+</div>
+<div.mg-legal-body>
+  [All sections below]
+</div>
+<footer> — standard footer WITH privacy-policy.html and sms-terms.html links
+```
 
-### Video Grid (`#videoGrid`, 3-column, 16:9)
+### Meta Tags
+```html
+<title>Privacy Policy | Moor Graphix</title>
+<meta name="description" content="Moor Graphix Privacy Policy — how we collect, use, and protect your personal information, including SMS messaging data and TCPA consent records." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://moorgraphix.com/privacy-policy.html" />
+<!-- OG tags matching site pattern -->
+<meta property="og:title" content="Privacy Policy | Moor Graphix" />
+<meta property="og:description" content="Moor Graphix Privacy Policy — SMS data coverage, TCPA compliance, and how we protect your information." />
+<meta property="og:url" content="https://moorgraphix.com/privacy-policy.html" />
+<meta property="og:site_name" content="Moor Graphix" />
+<meta property="og:type" content="website" />
+```
 
-| ID | Label |
-|---|---|
-| `HW4kxzqvTJY` | Brand Reel |
-| `hSABN8sDrB0` | Design Process |
-| `vj0MPw26avg` | Client Work Showcase |
-| `HH-CeLEeXZg` | Logo Animation |
-| `Y6vqct_uFi4` | Cultural Design |
-| `w2BNKA8od8s` | AI + Design |
+### Content — All 8 Sections
 
-### Shorts Grid (`#shortsGrid`, 3-column, 9:16 portrait)
+**Section 1 — Information We Collect**
+Subsections: "Information You Provide Directly" and "Information Collected Through SMS Opt-In"
+- Information You Provide: name/email, phone, business name/project details, other voluntarily shared info
+- SMS Opt-In collects: mobile phone number, method + timestamp of opt-in consent, message delivery + interaction data, opt-out requests + date received
 
-| ID | Label |
-|---|---|
-| `V_KPnvbQI_M` | Behind the Brand |
-| `6802KCAsa-s` | Design Tips |
-| `W07akSTDYyE` | Cultural Alchemy |
+**Section 2 — How We Use Your Information**
+General uses: respond to inquiries, deliver proposals, provide services, send project updates, schedule consultations, improve site, comply with legal obligations.
+SMS-specific subsection (use `.mg-badge` label "SMS Program"): mobile number and consent used exclusively to send consented messages (appointment reminders, updates, promos), maintain TCPA consent records, process opt-out requests.
+Callout box: "Moor Graphix does not sell, share, rent, or transfer your mobile phone number or SMS opt-in data to third parties for their marketing or promotional purposes."
 
-All players use `youtube-nocookie.com` embed with `autoplay=1&rel=0` on click. Thumbnails are loaded from `img.youtube.com/vi/{id}/hqdefault.jpg`.
+**Section 3 — SMS Messaging Program**
+Use `.mg-badge` with label "TCPA Compliance" above section heading.
+Subsections: Consent, Message Types, Message Frequency (up to 4/month), Costs (msg + data rates may apply), How to Opt Out (reply STOP — one confirmation then done; also email sidart@moorgraphix.com or call (470) 499-4407), How to Get Help (reply HELP), Carrier Disclaimer (carriers not liable for delayed/undelivered), Data Retention + Security (retain opt-in records minimum 4 years for TCPA).
 
-> **Local dev note:** YouTube embeds require an HTTP server. Run `python3 -m http.server 8080` from the site root and open `http://localhost:8080`.
+**Section 4 — Sharing of Information**
+We do not sell. Trusted third-party service providers (hosting, email, scheduling, SMS delivery) under protective agreements. Legal disclosure where required by law.
 
----
+**Section 5 — Cookies and Tracking**
+Standard cookie disclosure. May use cookies to improve experience, analyze traffic, understand visitor behavior. Can be disabled via browser settings.
 
-## Hero Gallery Slideshow
+**Section 6 — Your Rights**
+Right to access, correct, delete personal info (subject to legal retention). Opt out of marketing. Withdraw SMS consent via STOP reply. Contact sidart@moorgraphix.com.
 
-The right column of the homepage hero is a full-panel image slideshow built in `main.js`. Key facts:
+**Section 7 — Children's Privacy**
+Not directed at children under 13. No knowing collection from children. Contact us to delete if inadvertent.
 
-- Slides are built from `heroSlides` — items with `category: "hero_slideshow"` in `images.js`
-- Source folder: `assets/images/hero-slideshow/` — **6 curated images**
-- Auto-advances every **4 500 ms**
-- Left `‹` / right `›` arrow buttons reset the timer on click
-- Active slide: `opacity: 1`; inactive: `opacity: 0` (CSS transition `0.65s ease`)
-- Image rendering: `object-fit: contain` with dark `#02040A` background — no cropping
-- Counter label bottom-right: `"2 / 6"` format
+**Section 8 — Updates to This Policy**
+Revise "Last Updated" date on changes. Continued use = acceptance.
 
----
-
-## Adding a New Portfolio Image
-
-Each site section has its own folder and its own `category` value in `images.js`. You only need to touch one file.
-
-### Add to Portfolio Grid
-
-1. **Drop the file** into the matching subfolder:
-   - Logo design → `assets/images/portfolio/logos/`
-   - Brand identity → `assets/images/portfolio/brand-identity/`
-   - Web design → `assets/images/portfolio/web-design/`
-   - Event/print → `assets/images/portfolio/event-print/`
-   - Campaign → `assets/images/portfolio/campaign/`
-
-2. **Add one entry** to `assets/js/images.js` in the PORTFOLIO section:
-
-   ```js
-   {
-     src:      "assets/images/portfolio/web-design/your-filename.png",
-     name:     "Client / Project Name",
-     cat:      "Web Design",       // shown on gallery cards (free text)
-     category: "web_design",       // filter key — must match list above exactly
-     desc:     "One to three sentences: what was designed, cultural context, design intent."
-   },
-   ```
-
-3. **Save and refresh** — the image appears automatically in:
-   - Portfolio grid with filter support
-   - Modal detail view with prev/next navigation
-
-### Also Add to Showcase Strip
-
-Drop the same file (or a cropped thumbnail version) into `assets/images/showcase-strip/` and add a matching entry with `category: "showcase_strip"`. Clicking the showcase thumbnail will open the portfolio modal for that project.
-
-### Also Add to Hero Slideshow
-
-Drop the file into `assets/images/hero-slideshow/` and add an entry with `category: "hero_slideshow"`.
-
-### Recommended Image Sizes
-
-| Type | Ideal | Minimum |
-|---|---|---|
-| Website screenshot (4:3) | 800 × 600 px | 400 × 300 px |
-| Logo / coin (square) | 600 × 600 px | 300 × 300 px |
-| Event flyer (portrait) | 600 × 900 px | 400 × 600 px |
-| Social preview | 800 × 500 px | 400 × 250 px |
-
-All images render with `object-fit: contain` — transparent-background PNGs look best for logos.
+**Contact dark box at bottom:**
+```
+Moor Graphix
+Douglasville, GA — Serving Nationwide
+sidart@moorgraphix.com
+(470) 499-4407
+```
 
 ---
 
-## AI Agent Stack (live, as of site copy)
+## Task 2 — CREATE: sms-terms.html
 
-| Agent | Status | Role |
-|---|---|---|
-| MG Concierge Agent | Live | Client intake, brand discovery, project routing |
-| MAAT Master Orchestrator | Live | Routes all 8 agents across 3 brand ecosystems |
-| Sma Taui — Revenue Intel | Live | Weekly monetization briefings every Thursday |
-| Amerukhan Culture Shop | Live | AI concierge for cultural apparel brand |
-| MAAT Guide + Lab Onboarding | Live | Educational and incubator platform agents |
-| Sid Ambassador — Voice AI | Expanding | AI voice agent trained on Sid's cadence |
+**File:** `sms-terms.html`
+**URL:** `moorgraphix.com/sms-terms.html`
+
+### Page Structure
+Same pattern as privacy-policy.html with:
+- Ticker: "✦ SMS Terms & Conditions ✦ STOP to Opt Out ✦ HELP for Assistance ✦ Up to 4 Messages/Month ✦ 10DLC Registered ✦ Moor Graphix ✦"
+- Hero eyebrow: "Legal · Moor Graphix"
+- Hero h1: "SMS Terms & Conditions"
+- Hero meta: "Effective Date: June 25, 2026 | Last Updated: June 25, 2026"
+
+### Quick Reference Dark Box (place immediately after intro paragraph, before Section 1)
+```html
+<div class="mg-dark-box">
+  <h3>Quick Reference</h3>
+  <div class="mg-qr-grid">
+    <div><label>Business</label><span>Moor Graphix</span></div>
+    <div><label>Program</label><span>Client Communications &amp; Updates</span></div>
+    <div><label>Message Frequency</label><span>Up to 4 messages/month</span></div>
+    <div><label>Costs</label><span>Msg &amp; data rates may apply</span></div>
+    <div><label>To Opt Out</label><span>Reply STOP</span></div>
+    <div><label>For Help</label><span>Reply HELP</span></div>
+  </div>
+</div>
+```
+
+### Content — All 10 Sections
+
+**Section 1 — Program Description**
+Messages may include: project updates and milestone notifications, appointment reminders and scheduling confirmations, promotional offers and service announcements, responses to website inquiries, follow-up communications.
+
+**Section 2 — How to Opt In**
+Methods: (a) checking SMS opt-in checkbox on contact form at moorgraphix.com/contact.html or moorgraphix.com/sms-compliance.html, (b) providing written consent during consultation/intake, (c) texting a designated keyword.
+Confirmations required: authorized account holder, 18+, consent to recurring messages.
+Bold line: "Consent to receive SMS messages is not a condition of purchasing any Moor Graphix service."
+
+**Section 3 — Message Frequency**
+Up to 4 messages per month. Frequency varies by project status. Will not send unnecessarily.
+
+**Section 4 — Costs and Carrier Fees**
+No charge from Moor Graphix. Msg + data rates may apply from wireless provider. Contact carrier for plan details. Carriers not liable for delayed/undelivered messages.
+
+**Section 5 — How to Opt Out (STOP)**
+Use `.mg-callout` box:
+"To stop receiving messages from Moor Graphix at any time: Reply STOP to any text message you receive from us. After sending STOP, you will receive one final confirmation text acknowledging your opt-out. No further messages will be sent unless you opt back in."
+Also: email sidart@moorgraphix.com with mobile number + removal request, or call (470) 499-4407.
+Can re-enroll by contacting us or submitting new opt-in via website.
+
+**Section 6 — How to Get Help (HELP)**
+Reply HELP. Or contact: sidart@moorgraphix.com | (470) 499-4407 | moorgraphix.com/contact.html
+
+**Section 7 — Privacy and Data Use**
+Per Privacy Policy at moorgraphix.com/privacy-policy.html. No selling/renting/sharing of mobile number. Maintain opt-in consent records per TCPA.
+
+**Section 8 — Limitations and Disclaimers**
+Right to modify/suspend/terminate program. Not responsible for carrier failures or technical interruptions.
+
+**Section 9 — Changes to These Terms**
+Material changes communicated via SMS or this page. Continued participation = acceptance.
+
+**Section 10 — Governing Law**
+Georgia law + federal law including TCPA, 47 U.S.C. § 227, and FCC rules.
+
+**Contact dark box at bottom** — same as privacy-policy.html.
 
 ---
 
-## Services & Pricing (as shown on site)
+## Task 3 — UPDATE: contact.html
 
-| Service | Price |
-|---|---|
-| Brand Identity Systems | From $350 |
-| Web Design + Consulting | Custom Quote |
-| AI Integration + Agents | Enterprise Pricing |
-| Apparel + Print Graphics | From $150 |
-| Marketing Materials | From $75 |
-| Digital Illustrations + Art | Custom Quote |
+**What to change:** Add SMS opt-in consent block inside the contact form, immediately before the Submit button.
 
-Every engagement includes a **Brand Blueprint** — a complete roadmap for visual identity, brand voice, and digital presence.
+**Locate:** The `<form>` or form section containing the phone number field and submit button.
+
+**Add this block before the submit button:**
+```html
+<div class="mg-optin-block">
+  <label>
+    <input type="checkbox" name="sms_consent" value="yes" />
+    By checking this box, I consent to receive recurring SMS text messages from 
+    Moor Graphix at the mobile number provided above. Messages may include project 
+    updates, appointment reminders, and promotional offers. Message frequency may 
+    vary — up to 4 messages/month. Msg &amp; data rates may apply. Reply STOP to 
+    unsubscribe at any time. Reply HELP for help. Consent is not a condition of 
+    purchase. View our <a href="/sms-terms.html">SMS Terms</a> and 
+    <a href="/privacy-policy.html">Privacy Policy</a>.
+  </label>
+</div>
+```
+
+**Also update** the phone field label from "Phone (Optional)" to:
+```html
+<label>Phone Number <span style="font-weight:400;color:#888;">(for project communication + optional SMS updates)</span></label>
+```
 
 ---
 
-## Booking & Contact Links
+## Task 4 — UPDATE: sms-compliance.html
 
-| Purpose | URL |
-|---|---|
-| Book Free Consult | `https://www.moorgraphix.com/booking-calendar/custom-wall-art` |
-| Contact form | `https://www.moorgraphix.com/contact-us` |
-| Portfolio | `https://www.moorgraphix.com/portfolio` |
-| All Services | `https://www.moorgraphix.com/services` |
-| AI Workshops | `https://www.moorgraphix.com/ai-training` |
+**What to change:** Add footer links for Privacy Policy and SMS Terms if not already present. Add a brief line in any audit form or CTA section referencing the two new compliance pages.
+
+**Locate the footer** and add the two links:
+```html
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/sms-terms.html">SMS Terms</a>
+```
+
+**Locate any callout or CTA section** and add:
+```html
+<p>Our <a href="/privacy-policy.html">Privacy Policy</a> and 
+<a href="/sms-terms.html">SMS Terms &amp; Conditions</a> are live and 
+publicly accessible for 10DLC registration review.</p>
+```
 
 ---
 
-## Dev Notes
+## Task 5 — UPDATE: All Pages (index, services, about, ai-workshop, blog, contact, sms-compliance)
 
-- **No build step.** Pure HTML + CSS + JS. Open `index.html` directly or serve with `python3 -m http.server 8080`.
-- **No framework, no npm.** Edit `style.css`, `main.js`, and `index.html` directly.
-- **Particle background** (`#bg` canvas) is drawn with `requestAnimationFrame` — 180 stars + 26 node-graph points. Lives at the top of `main.js`.
-- **Modal keyboard nav:** `←`/`→` arrows navigate, `Escape` closes.
-- **Showcase strip** shows the first 12 projects (post-shuffle). Each cell opens the modal for that project on click.
-- **Portfolio filter buttons** (`#portfolio`) filter `rawProjects` by `category` field in-place — no page reload.
-- The footer copyright reads `© 2046` — this is intentional (future-facing).
-- **Waitlist form:** `ai-training.html` uses Formspree for the waitlist capture form. Replace `YOUR_FORM_ID` in the `action` attribute with the real form ID after creating a free account at [formspree.io/register](https://formspree.io/register). The form ID looks like `xabc1234` and the action URL becomes `https://formspree.io/f/xabc1234`.
+**Add to the footer of EVERY page:**
+```html
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/sms-terms.html">SMS Terms</a>
+```
+
+These must appear in the `.mg-footer-legal` div (or equivalent footer legal links section) on every page. If the footer already has a copyright line and a "Contact" link, add the two new links alongside them.
+
+**Order:** `© 2026 Moor Graphix  |  Privacy Policy  |  SMS Terms  |  Contact`
+
+---
+
+## File Output Checklist
+
+```
+NEW FILES:
+[ ] privacy-policy.html
+[ ] sms-terms.html
+
+UPDATED FILES:
+[ ] contact.html       — SMS opt-in block added to form
+[ ] sms-compliance.html — footer links + reference to new pages added
+[ ] index.html         — footer links added
+[ ] services.html      — footer links added
+[ ] about.html         — footer links added
+[ ] ai-workshop.html   — footer links added
+[ ] blog.html          — footer links added
+```
+
+---
+
+## Quality Checks Before Commit
+
+1. Both new pages render correctly on mobile (max-width: 640px breakpoint)
+2. All internal links (`/privacy-policy.html`, `/sms-terms.html`) resolve correctly
+3. Contact form opt-in checkbox is NOT pre-checked (default = unchecked)
+4. Footer on every page includes both Privacy Policy and SMS Terms links
+5. Ticker on both new pages loops smoothly (test at 28s animation)
+6. Headings use Arial bold, body text uses Georgia
+7. Gold color `#c8a96e` consistent on all accent elements
+8. No inline styles where class equivalents exist
+9. All `<a target="_blank">` links include `rel="noopener noreferrer"`
+10. Run the 5-point audit at moorgraphix.com/sms-compliance.html after deploy — all 5 should pass
+
+---
+
+## Contact Info (Used Throughout)
+
+```
+Business:  Moor Graphix
+Owner:     Sid Washington
+Email:     sidart@moorgraphix.com
+Phone:     (470) 499-4407
+Address:   Douglasville, GA — Serving Nationwide
+Website:   https://moorgraphix.com
+Calendar:  https://calendly.com/moorwashington
+```
+
+---
+
+## Reference: Existing Page Patterns
+
+The site is hosted on GitHub Pages (sidartifax-cpu.github.io) mapped to moorgraphix.com.
+All assets in `/assets/images/branding/`. Logo file: `moor-graphix-logo.png`.
+No build system — pure HTML/CSS/JS. No framework. No bundler.
+All pages use inline `<style>` blocks in `<head>`. No external CSS files currently exist.
+Match that pattern: inline `<style>` in `<head>` of each new page.
