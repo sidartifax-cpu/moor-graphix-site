@@ -170,6 +170,59 @@
 .sms-audit-divider span{font-size:11px;font-weight:600;color:rgba(58,69,96,0.35);letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap}
 .sms-audit-divider::before,.sms-audit-divider::after{content:'';flex:1;height:1px;background:rgba(48,96,208,0.1)}
 
+/* ── TEXT REQUEST PARTNER BANNER ── */
+.tr-banner{padding:80px 44px;position:relative;overflow:hidden}
+.tr-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 40%,rgba(130,80,255,0.1) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(48,96,208,0.07) 0%,transparent 55%);pointer-events:none}
+.tr-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1200px}
+.tr-eyebrow{font-size:9px;font-weight:700;letter-spacing:0.4em;text-transform:uppercase;color:rgba(212,168,67,0.65);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.tr-headline{font-family:'Syne',sans-serif;font-size:clamp(28px,3.8vw,52px);font-weight:800;color:#fff;line-height:1.0;letter-spacing:-0.025em;margin-bottom:18px;text-transform:uppercase}
+.tr-headline em{display:block;font-style:normal;color:#d4a843}
+.tr-sub{font-size:16px;color:rgba(150,180,255,0.6);line-height:1.75;margin-bottom:32px;max-width:420px}
+.tr-sub strong{color:rgba(200,220,255,0.85)}
+.tr-cta-btn{display:inline-flex;align-items:center;gap:10px;background:#d4a843;color:#0d0d0d;font-family:'Syne',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:16px 32px;border-radius:4px;text-decoration:none;transition:all 0.25s}
+.tr-cta-btn:hover{background:#c49a35;box-shadow:0 8px 28px rgba(212,168,67,0.35);transform:translateY(-2px)}
+.tr-cta-btn i{font-size:16px}
+.tr-note{font-size:11px;color:rgba(150,180,255,0.3);margin-top:10px;letter-spacing:0.04em}
+.tr-tagline{margin-top:28px;padding-top:22px;border-top:0.5px solid rgba(80,140,255,0.12);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(150,180,255,0.25)}
+.tr-tagline span{color:rgba(212,168,67,0.5)}
+
+/* industry cards grid */
+.tr-industries{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tr-card{border-radius:6px;padding:22px 20px;border:0.5px solid;transition:all 0.3s;position:relative;overflow:hidden}
+.tr-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;transition:width 0.35s}
+.tr-card:hover{transform:translateY(-3px)}
+.tr-card:hover::after{width:100%}
+
+.tr-health{border-color:rgba(160,90,255,0.2);background:rgba(160,90,255,0.05)}
+.tr-health:hover{border-color:rgba(160,90,255,0.4);background:rgba(160,90,255,0.08)}
+.tr-health::after{background:#a05aff}
+.tr-health .tr-cat{color:rgba(160,90,255,0.75)}
+
+.tr-trade{border-color:rgba(60,200,80,0.2);background:rgba(60,200,80,0.05)}
+.tr-trade:hover{border-color:rgba(60,200,80,0.4);background:rgba(60,200,80,0.08)}
+.tr-trade::after{background:#3cc850}
+.tr-trade .tr-cat{color:rgba(60,200,80,0.75)}
+
+.tr-pro{border-color:rgba(48,130,255,0.2);background:rgba(48,130,255,0.05)}
+.tr-pro:hover{border-color:rgba(48,130,255,0.4);background:rgba(48,130,255,0.08)}
+.tr-pro::after{background:#3082ff}
+.tr-pro .tr-cat{color:rgba(80,160,255,0.75)}
+
+.tr-ent{border-color:rgba(212,168,67,0.2);background:rgba(212,168,67,0.05)}
+.tr-ent:hover{border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.08)}
+.tr-ent::after{background:#d4a843}
+.tr-ent .tr-cat{color:rgba(212,168,67,0.75)}
+
+.tr-cat{font-size:8px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;margin-bottom:8px}
+.tr-card-title{font-size:13px;font-weight:700;color:#e8f0ff;margin-bottom:8px;font-family:'Syne',sans-serif}
+.tr-card-list{font-size:11.5px;color:rgba(150,180,255,0.45);line-height:1.75}
+
+@media(max-width:960px){.tr-inner{grid-template-columns:1fr;gap:40px}}
+@media(max-width:540px){
+  .tr-banner{padding:52px 20px}
+  .tr-industries{grid-template-columns:1fr}
+}
+
 /* legal pages note */
 .sms-legal-note{font-size:12px;color:rgba(58,69,96,0.42);margin-top:16px;line-height:1.7}
 .sms-legal-note a{color:var(--blue)}
@@ -599,6 +652,56 @@
       <p class="sms-step-desc" style="color:rgba(150,180,255,0.55)">Your 10DLC registration goes through. Your campaigns send. Your customers respond. You're protected.</p>
     </div>
 
+  </div>
+</section>
+
+<!-- ── TEXT REQUEST PARTNER BANNER ── -->
+<section class="tr-banner sec-dark" id="textrequest">
+  <div class="tr-inner">
+
+    <!-- LEFT — copy + CTA -->
+    <div>
+      <div class="tr-eyebrow"><i class="ti ti-stars"></i> Recommended SMS Platform — TextRequest</div>
+      <h2 class="tr-headline">
+        Get past<br/>the algorithm.<br/>
+        <em>Go straight<br/>to the source.</em>
+      </h2>
+      <p class="tr-sub">Text a Request <strong>straight to your customer's phone.</strong> Once your site is compliant, TextRequest is the platform we recommend to send every campaign — appointments, promos, follow-ups, and more.</p>
+      <a href="https://referrals.textrequest.com/uNLY0vne" target="_blank" rel="noopener noreferrer" class="tr-cta-btn">
+        <i class="ti ti-device-mobile"></i>Start Texting with TextRequest
+      </a>
+      <p class="tr-note">Moor Graphix affiliate link — we only recommend what we use.</p>
+      <div class="tr-tagline">Real Connections &nbsp;<span>·</span>&nbsp; Real Clients &nbsp;<span>·</span>&nbsp; Real Results</div>
+    </div>
+
+    <!-- RIGHT — industry cards -->
+    <div class="tr-industries">
+
+      <div class="tr-card tr-health">
+        <div class="tr-cat">Health &amp; Wellness</div>
+        <div class="tr-card-title">Medical &amp; Wellness Businesses</div>
+        <div class="tr-card-list">Barbershops · Beauty &amp; Nail Salons · Spas · Med Spas · Chiropractors · Physical Therapy · Personal Trainers · Mental Health · Optometrists · Vet Clinics</div>
+      </div>
+
+      <div class="tr-card tr-trade">
+        <div class="tr-cat">Home &amp; Trade Services</div>
+        <div class="tr-card-title">Home Service Businesses</div>
+        <div class="tr-card-list">Plumbers · HVAC · Electricians · Landscapers · Cleaning · Pest Control · Roofers · Pool Services · Interior Designers · General Contractors</div>
+      </div>
+
+      <div class="tr-card tr-pro">
+        <div class="tr-cat">Professional Services</div>
+        <div class="tr-card-title">Professional &amp; Financial</div>
+        <div class="tr-card-list">CPAs / Tax Preparers · Financial Advisors · Insurance Agents · Staffing Agencies · Notary Services · Travel Agents · Property Managers</div>
+      </div>
+
+      <div class="tr-card tr-ent">
+        <div class="tr-cat">Entertainment &amp; Hospitality</div>
+        <div class="tr-card-title">Restaurants &amp; Entertainment</div>
+        <div class="tr-card-list">Restaurants &amp; Bars · Clubs · Event Venues · Food Trucks · Golf Courses · Escape Rooms · Movie Theaters · Comedy Clubs · Karaoke Bars</div>
+      </div>
+
+    </div>
   </div>
 </section>
 

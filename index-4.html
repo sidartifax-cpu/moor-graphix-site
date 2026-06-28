@@ -206,34 +206,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 }
 @keyframes ticker-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
-/* ══════════════════════════════
-   GIVEBACK BANNER
-══════════════════════════════ */
-.giveback-wrap{padding:28px 44px;background:#08101c;border-top:0.5px solid rgba(80,140,255,.1);}
-.giveback-card{
-  position:relative;overflow:hidden;
-  background:linear-gradient(135deg,rgba(59,111,240,.12) 0%,rgba(8,12,20,.9) 60%);
-  border:1px solid rgba(59,111,240,.28);border-radius:20px;
-  padding:32px 40px;display:flex;align-items:center;justify-content:space-between;
-  gap:24px;flex-wrap:wrap;text-decoration:none;color:inherit;
-  transition:border-color .3s,box-shadow .3s,transform .2s;
-  max-width:1100px;margin:0 auto;
-}
-.giveback-card::before{content:'';position:absolute;top:-60px;left:-60px;width:220px;height:220px;background:radial-gradient(circle,rgba(59,111,240,.2) 0%,transparent 70%);pointer-events:none;}
-.giveback-card:hover{border-color:rgba(59,111,240,.55);box-shadow:0 0 60px rgba(59,111,240,.12);transform:translateY(-2px);}
-.gc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(212,168,67,.15);border:1px solid rgba(212,168,67,.35);border-radius:999px;padding:4px 12px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d4a843;margin-bottom:10px;}
-.gc-badge .dot{width:5px;height:5px;background:#d4a843;border-radius:50%;animation:gc-pulse 2s infinite;}
-@keyframes gc-pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
-.gc-headline{font-family:'Syne',sans-serif;font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;color:#f0f4ff;margin-bottom:6px;}
-.gc-headline .blue{color:#3b6ff0;}
-.gc-sub{font-size:13px;color:#8896b0;max-width:380px;line-height:1.55;}
-.gc-right{display:flex;flex-direction:column;align-items:flex-end;gap:14px;flex-shrink:0;}
-.gc-price{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;letter-spacing:-.03em;background:linear-gradient(135deg,#3b6ff0,#7aa0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
-.gc-price small{font-size:14px;font-weight:600;display:block;-webkit-text-fill-color:#8896b0;color:#8896b0;letter-spacing:.04em;margin-bottom:4px;background:none;}
-.gc-btn{display:inline-flex;align-items:center;gap:8px;background:#3b6ff0;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;padding:12px 22px;border-radius:999px;transition:background .2s,transform .15s;white-space:nowrap;}
-.gc-btn .ic{width:22px;height:22px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;}
-.gc-btn:hover{background:#2d5de0;}
-.gc-deadline{font-size:11px;color:#d4a843;font-weight:600;letter-spacing:.04em;text-align:right;}
 
 /* ══════════════════════════════
    HERO
@@ -586,9 +558,6 @@ footer.sec-dark{
   .video-section{padding:60px 20px;}
   .video-grid{grid-template-columns:repeat(2,1fr);}
   .video-shorts-grid{grid-template-columns:repeat(3,1fr);}
-  .giveback-wrap{padding:20px;}
-  .giveback-card{padding:24px 20px;flex-direction:column;align-items:flex-start;}
-  .gc-right{align-items:flex-start;flex-direction:row;flex-wrap:wrap;}
 }
 @media(max-width:640px){
   .cs-grid{grid-template-columns:1fr;}
@@ -674,21 +643,6 @@ footer.sec-dark{
   </div>
 </div>
 
-<!-- GIVEBACK BANNER -->
-<div class="giveback-wrap">
-  <a href="/100logos.html" class="giveback-card">
-    <div class="gc-left">
-      <div class="gc-badge"><span class="dot"></span> Community Giveback — Limited Spots</div>
-      <div class="gc-headline"><span class="blue">100 Logo Designs.</span><br>100 Businesses Transformed.</div>
-      <p class="gc-sub">Professional logo design or redesign — rooted in Cultural Alchemy. New businesses, nonprofits, and community orgs welcome.</p>
-    </div>
-    <div class="gc-right">
-      <div class="gc-price"><small>Only</small>$100</div>
-      <span class="gc-btn">Apply Now <span class="ic">→</span></span>
-      <div class="gc-deadline">⏳ Closes June 16, 2026</div>
-    </div>
-  </a>
-</div>
 
 <!-- HERO — dark, split-column with credential cards -->
 <section id="hero" class="sec-dark">
