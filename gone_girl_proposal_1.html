@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gone Girl — Brand Story Film Proposal | Moor Graphix</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  :root {
+    --ink: #0e0c0a;
+    --paper: #f7f4ef;
+    --gold: #c9a84c;
+    --gold-light: #e8d5a3;
+    --dust: #8c7b6e;
+    --blush: #d4a99a;
+    --night: #1a1612;
+    --rule: rgba(14,12,10,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* COVER */
+  .cover {
+    min-height: 100vh;
+    background: var(--night);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 10vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(201,168,76,0.08) 0%, transparent 65%);
+  }
+
+  .cover-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .cover-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 300;
+    line-height: 1.0;
+    color: var(--paper);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .cover-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dust);
+    margin-top: 16px;
+    margin-bottom: 56px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    padding-top: 32px;
+    margin-top: 8px;
+  }
+
+  .cover-meta-item label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dust);
+    margin-bottom: 6px;
+  }
+
+  .cover-meta-item span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--paper);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 10vw;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* LAYOUT */
+  .section {
+    padding: 96px 10vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-alt {
+    background: var(--night);
+    color: var(--paper);
+    max-width: 100%;
+    padding: 96px 10vw;
+  }
+
+  .section-alt .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* EYEBROWS + HEADINGS */
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: var(--dust);
+  }
+
+  .section-alt p { color: rgba(247,244,239,0.6); }
+  .section-alt h2 { color: var(--paper); }
+  .section-alt h3 { color: var(--gold-light); }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 56px 0;
+  }
+
+  /* STORY ACTS */
+  .acts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .act-card {
+    background: var(--night);
+    padding: 40px 36px;
+    position: relative;
+  }
+
+  .act-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.1);
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    line-height: 1;
+  }
+
+  .act-label {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .act-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--paper);
+    margin-bottom: 12px;
+  }
+
+  .act-desc {
+    font-size: 13px;
+    color: rgba(247,244,239,0.5);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* DELIVERABLES */
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .deliverable-card {
+    border-top: 2px solid var(--gold);
+    padding-top: 24px;
+  }
+
+  .deliverable-card h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .deliverable-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .deliverable-list li {
+    font-size: 13px;
+    color: var(--dust);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .deliverable-list li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    margin-top: 48px;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  .timeline-item {
+    padding: 0 0 48px 40px;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: absolute;
+    left: -4px;
+    top: 6px;
+  }
+
+  .timeline-phase {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .timeline-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--paper);
+    margin-bottom: 8px;
+  }
+
+  .timeline-desc {
+    font-size: 13px;
+    color: rgba(247,244,239,0.5);
+    margin: 0;
+  }
+
+  .timeline-days {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--gold-light);
+    background: rgba(201,168,76,0.08);
+    padding: 4px 12px;
+    border-radius: 2px;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .price-card {
+    background: rgba(247,244,239,0.04);
+    padding: 48px 36px;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    position: relative;
+  }
+
+  .price-card.featured {
+    background: rgba(201,168,76,0.06);
+    border-top: 2px solid var(--gold);
+  }
+
+  .price-card.featured::before {
+    content: 'MOST COMPLETE';
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .price-tier {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dust);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--paper);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .price-amount sup {
+    font-size: 24px;
+    vertical-align: top;
+    margin-top: 12px;
+    display: inline-block;
+  }
+
+  .price-includes {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .price-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .price-list li {
+    font-size: 13px;
+    color: rgba(247,244,239,0.55);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(247,244,239,0.06);
+    display: flex;
+    gap: 10px;
+  }
+
+  .price-list li::before {
+    content: '✓';
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* INVESTMENT NOTE */
+  .investment-note {
+    margin-top: 56px;
+    padding: 40px;
+    border: 1px solid rgba(201,168,76,0.15);
+    background: rgba(201,168,76,0.03);
+  }
+
+  .investment-note p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--gold);
+    padding: 80px 10vw;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    color: var(--night);
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    color: rgba(14,12,10,0.65);
+    max-width: 520px;
+    margin: 0 auto 40px;
+    font-size: 15px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--night);
+    color: var(--gold);
+    padding: 16px 40px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.8; }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--night);
+    padding: 16px 40px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid var(--night);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .btn-secondary:hover { opacity: 0.7; }
+
+  /* FOOTER */
+  footer {
+    background: var(--night);
+    padding: 48px 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--paper);
+  }
+
+  .footer-brand span { color: var(--gold); }
+
+  footer p {
+    font-size: 12px;
+    color: rgba(247,244,239,0.3);
+    margin: 0;
+  }
+
+  /* DIVIDER TEXT */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 56px 0;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .section-divider span {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dust);
+    white-space: nowrap;
+  }
+
+  /* WHAT'S YOURS STRIP */
+  .yours-strip {
+    background: var(--blush);
+    padding: 56px 10vw;
+  }
+
+  .yours-strip .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .yours-strip h2 {
+    color: var(--night);
+    margin-bottom: 24px;
+  }
+
+  .yours-strip p {
+    color: rgba(14,12,10,0.65);
+    max-width: 640px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 640px) {
+    .cover { padding: 60px 6vw; }
+    .section, .section-alt { padding: 64px 6vw; }
+    .cover-meta { flex-direction: column; gap: 24px; }
+    .acts-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-eyebrow">Moor Graphix — Creative Proposal</span>
+  <h1 class="cover-title">Gone Girl<br><em>Brand Story Film</em></h1>
+  <p class="cover-subtitle">The Year I Left to Find Myself</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <label>Project Type</label>
+      <span>Cinematic Documentary</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Runtime</label>
+      <span>20–30 Minutes</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Prepared By</label>
+      <span>Moor Graphix</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Deliverables</label>
+      <span>Film + Trailer + Social Suite</span>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll to explore</div>
+</div>
+
+<!-- VISION -->
+<div class="section">
+  <span class="eyebrow">The Vision</span>
+  <h2>This is more than a film.<br>It's the origin of a brand.</h2>
+  <p style="font-size: 17px; color: var(--ink); line-height: 1.9; max-width: 680px;">
+    In November 2024, you chose yourself. You left the country, the roles, the noise — and you went to find out who you were without any of it. That decision deserves to be told in a way that moves people. A way that opens doors, fills rooms, and anchors everything you build from here.
+  </p>
+  <p style="max-width: 680px;">
+    The Gone Girl Brand Story Film is your visual origin story. The documentary that every future client, speaking booker, publisher, and retreat attendee watches before they decide you are exactly who they need.
+  </p>
+</div>
+
+<!-- THE 5 ACTS -->
+<div class="section" style="padding-top: 0;">
+  <span class="eyebrow">Story Architecture</span>
+  <h2>Five acts. One transformation.</h2>
+  <div class="acts-grid">
+    <div class="act-card">
+      <span class="act-number">I</span>
+      <span class="act-label">Act One</span>
+      <div class="act-title">The Decision</div>
+      <p class="act-desc">Why she left. The weight of what she was walking away from. The moment everything changed.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-number">II</span>
+      <span class="act-label">Act Two</span>
+      <div class="act-title">The Arrival</div>
+      <p class="act-desc">Starting over in Panama. The disorientation of freedom. Learning a new country and a new self.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-number">III</span>
+      <span class="act-label">Act Three</span>
+      <div class="act-title">The Adventure</div>
+      <p class="act-desc">Travel. Excursions. Friendships. The joy of discovery when you have no obligation but to live.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-number">IV</span>
+      <span class="act-label">Act Four</span>
+      <div class="act-title">The Reality</div>
+      <p class="act-desc">Loneliness. Healing. Growth. The parts that don't make it to social media — the real work.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-number">V</span>
+      <span class="act-label">Act Five</span>
+      <div class="act-title">The Transformation</div>
+      <p class="act-desc">What changed. Who she became. What comes next. The woman standing on the other side of that decision.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S YOURS -->
+<div class="yours-strip">
+  <div class="inner">
+    <span class="eyebrow" style="color: var(--night); opacity: 0.5;">Your Role</span>
+    <h2>You lived it. We tell it.</h2>
+    <p>
+      You bring your footage, your photos, your journals, and your voice. We bring the structure, the cinematography, the story arc, the motion graphics, the music, and the brand integration. Your year becomes a film your audience can feel.
+    </p>
+  </div>
+</div>
+
+<!-- DELIVERABLES -->
+<div class="section">
+  <span class="eyebrow">What You Receive</span>
+  <h2>Every piece of the content ecosystem.</h2>
+  <div class="deliverables-grid">
+    <div class="deliverable-card">
+      <h3>The Hero Film</h3>
+      <ul class="deliverable-list">
+        <li>20–30 minute cinematic documentary</li>
+        <li>Professional color grading</li>
+        <li>Licensed music score</li>
+        <li>Voiceover narration integrated</li>
+        <li>Gone Girl brand titles + chapter cards</li>
+        <li>Delivered in 1080p MP4</li>
+      </ul>
+    </div>
+    <div class="deliverable-card">
+      <h3>The Trailer</h3>
+      <ul class="deliverable-list">
+        <li>60–90 second cinematic trailer</li>
+        <li>Designed to stop the scroll</li>
+        <li>Gone Girl brand integrated throughout</li>
+        <li>Website / YouTube / social ready</li>
+      </ul>
+    </div>
+    <div class="deliverable-card">
+      <h3>Social Media Suite</h3>
+      <ul class="deliverable-list">
+        <li>10–20 short-form video clips</li>
+        <li>Pulled from documentary footage</li>
+        <li>Captions written for each clip</li>
+        <li>Platform-ready (IG, TikTok, Facebook)</li>
+        <li>30-day content runway at launch</li>
+      </ul>
+    </div>
+    <div class="deliverable-card">
+      <h3>Brand Integration</h3>
+      <ul class="deliverable-list">
+        <li>Gone Girl logo woven throughout</li>
+        <li>Brand colors in all motion graphics</li>
+        <li>Website + tagline end cards</li>
+        <li>Consistent visual identity across all deliverables</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section-alt">
+  <div class="inner">
+    <span class="eyebrow">Production Timeline</span>
+    <h2>30 days from assets to delivery.</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-phase">Phase 0</div>
+        <div class="timeline-title">Asset Intake & Story Map</div>
+        <p class="timeline-desc">Receive and organize your Google Drive. Map all footage and photos to the 5-act structure. Build the narration guide.</p>
+        <span class="timeline-days">Days 1–3</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-phase">Phase 1</div>
+        <div class="timeline-title">Story Structure & Narration</div>
+        <p class="timeline-desc">Transform journal entries into a narration script. Record your voiceover. Clean and polish the audio.</p>
+        <span class="timeline-days">Days 3–8</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-phase">Phase 2</div>
+        <div class="timeline-title">Rough Cut</div>
+        <p class="timeline-desc">Assembly cut of all footage across 5 acts. Narration layered in. Pacing established. Client review checkpoint.</p>
+        <span class="timeline-days">Days 8–15</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-phase">Phase 3</div>
+        <div class="timeline-title">Picture Lock + Brand Integration</div>
+        <p class="timeline-desc">Final edit locked. Motion graphics, chapter titles, and Gone Girl brand assets added throughout.</p>
+        <span class="timeline-days">Days 15–22</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-phase">Phase 4</div>
+        <div class="timeline-title">Color, Music & Trailer</div>
+        <p class="timeline-desc">Cinematic color grade applied. Licensed music score mixed in. 60–90 second trailer cut from hero film.</p>
+        <span class="timeline-days">Days 22–26</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-phase">Phase 5</div>
+        <div class="timeline-title">Social Suite & Final Delivery</div>
+        <p class="timeline-desc">10–20 social clips cut, captioned, and platform-formatted. Full delivery via Google Drive.</p>
+        <span class="timeline-days">Days 26–30</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section-alt" style="padding-top: 0;">
+  <div class="inner">
+    <span class="eyebrow">Investment</span>
+    <h2>Choose your scope.</h2>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <span class="price-tier">Tier One</span>
+        <div class="price-amount"><sup>$</sup>2,500</div>
+        <p class="price-includes">The Film</p>
+        <ul class="price-list">
+          <li>20–30 min hero documentary</li>
+          <li>Professional color grade</li>
+          <li>Licensed music</li>
+          <li>Voiceover integration</li>
+          <li>Brand title cards</li>
+          <li>1080p final delivery</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured">
+        <span class="price-tier">Tier Two</span>
+        <div class="price-amount"><sup>$</sup>4,500</div>
+        <p class="price-includes">The Brand Launch</p>
+        <ul class="price-list">
+          <li>Everything in Tier One</li>
+          <li>60–90 second cinematic trailer</li>
+          <li>10 social media video clips</li>
+          <li>Caption copy for each clip</li>
+          <li>Full Gone Girl brand integration</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <span class="price-tier">Tier Three</span>
+        <div class="price-amount"><sup>$</sup>6,500</div>
+        <p class="price-includes">The Full Ecosystem</p>
+        <ul class="price-list">
+          <li>Everything in Tier Two</li>
+          <li>20 social media video clips</li>
+          <li>30-day content caption calendar</li>
+          <li>Platform-optimized versions</li>
+          <li>Launch strategy consultation</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="investment-note">
+      <p>"This film doesn't just tell your story. It becomes the asset that sells your books, fills your retreats, lands your speaking engagements, and introduces the world to Gone Girl — before you say a single word."</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- TERMS -->
+<div class="section">
+  <span class="eyebrow">How It Works</span>
+  <h2>Simple. Professional. Protected.</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-top: 40px;">
+    <div>
+      <h3 style="font-size: 18px; margin-bottom: 10px;">50% Deposit</h3>
+      <p style="font-size: 13px;">Project begins after signed agreement and deposit received. Remaining 50% due at final delivery.</p>
+    </div>
+    <div>
+      <h3 style="font-size: 18px; margin-bottom: 10px;">2 Revision Rounds</h3>
+      <p style="font-size: 13px;">Includes two client review checkpoints. Additional revisions billed at $75/hour.</p>
+    </div>
+    <div>
+      <h3 style="font-size: 18px; margin-bottom: 10px;">Assets Required</h3>
+      <p style="font-size: 13px;">All footage, photos, and brand materials must be organized and submitted before production begins.</p>
+    </div>
+    <div>
+      <h3 style="font-size: 18px; margin-bottom: 10px;">Rush Rate</h3>
+      <p style="font-size: 13px;">Delivery under 3 weeks carries a 25% rush fee added to any tier.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <span class="eyebrow" style="color: var(--night); opacity: 0.5;">Ready to Begin</span>
+  <h2>Your story is already complete.<br>Let's make the world feel it.</h2>
+  <p>Reach out to begin your intake process. We'll confirm your asset readiness, align on tier, and get your project start date locked in.</p>
+  <div class="cta-buttons">
+    <a href="mailto:sidart@moorgraphix.com" class="btn-primary">Start the Conversation</a>
+    <a href="https://moorgraphix.com" class="btn-secondary">View Our Work</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Moor <span>Graphix</span></div>
+  <p>Strategic. Premium. Legacy-grade creative for brands building something real.</p>
+  <p>moorgraphix.com</p>
+</footer>
+
+</body>
+</html>
