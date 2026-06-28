@@ -175,6 +175,38 @@
 @media(max-width:640px){
   .cs-grid { grid-template-columns: 1fr; }
 }
+
+/* ── TEXT REQUEST PARTNER BANNER ── */
+.tr-hp-banner{padding:0 44px;background:#06080f;border-top:0.5px solid rgba(80,140,255,0.08);border-bottom:0.5px solid rgba(80,140,255,0.08);position:relative;overflow:hidden}
+.tr-hp-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(130,80,255,0.1) 0%,transparent 55%),radial-gradient(ellipse at 15% 50%,rgba(212,168,67,0.06) 0%,transparent 50%);pointer-events:none}
+.tr-hp-inner{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding:52px 0;max-width:1200px;position:relative;z-index:1}
+.tr-hp-left{display:flex;flex-direction:column;gap:16px}
+.tr-hp-tag{display:inline-flex;align-items:center;gap:8px;font-size:8px;font-weight:700;letter-spacing:0.4em;text-transform:uppercase;color:rgba(212,168,67,0.65);margin-bottom:4px}
+.tr-hp-tag-dot{width:6px;height:6px;border-radius:50%;background:#d4a843;animation:pulseHP 2s ease-in-out infinite}
+@keyframes pulseHP{0%,100%{opacity:1}50%{opacity:0.3}}
+.tr-hp-headline{font-family:'Syne',sans-serif;font-size:clamp(22px,2.8vw,38px);font-weight:800;color:#fff;line-height:1.05;letter-spacing:-0.02em;text-transform:uppercase}
+.tr-hp-headline span{color:#d4a843}
+.tr-hp-sub{font-size:14px;color:rgba(150,180,255,0.55);line-height:1.65;max-width:520px}
+.tr-hp-industries{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.tr-hp-pill{font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:5px 12px;border-radius:20px;border:0.5px solid}
+.tr-hp-pill.p-health{border-color:rgba(160,90,255,0.3);color:rgba(160,90,255,0.75);background:rgba(160,90,255,0.07)}
+.tr-hp-pill.p-trade{border-color:rgba(60,200,80,0.3);color:rgba(60,200,80,0.75);background:rgba(60,200,80,0.07)}
+.tr-hp-pill.p-pro{border-color:rgba(48,130,255,0.3);color:rgba(80,160,255,0.75);background:rgba(48,130,255,0.07)}
+.tr-hp-pill.p-ent{border-color:rgba(212,168,67,0.3);color:rgba(212,168,67,0.75);background:rgba(212,168,67,0.07)}
+.tr-hp-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0}
+.tr-hp-btn-primary{display:inline-flex;align-items:center;gap:9px;background:#d4a843;color:#0d0d0d;font-family:'Syne',sans-serif;font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:14px 26px;border-radius:4px;text-decoration:none;white-space:nowrap;transition:all 0.25s}
+.tr-hp-btn-primary:hover{background:#c49a35;box-shadow:0 6px 24px rgba(212,168,67,0.35);transform:translateY(-2px)}
+.tr-hp-btn-ghost{display:inline-flex;align-items:center;gap:9px;background:transparent;color:rgba(150,180,255,0.65);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px 26px;border-radius:4px;border:0.5px solid rgba(80,140,255,0.25);text-decoration:none;white-space:nowrap;transition:all 0.25s}
+.tr-hp-btn-ghost:hover{border-color:rgba(80,140,255,0.55);color:#6AABFF;transform:translateY(-2px)}
+.tr-hp-note{font-size:10px;color:rgba(150,180,255,0.22);letter-spacing:0.04em;text-align:right}
+@media(max-width:860px){
+  .tr-hp-inner{grid-template-columns:1fr;gap:28px}
+  .tr-hp-right{align-items:flex-start}
+  .tr-hp-note{text-align:left}
+}
+@media(max-width:540px){
+  .tr-hp-banner{padding:0 20px}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -602,6 +634,32 @@
     <div class="ws-stat"><div class="ws-stat-n">$0</div><div class="ws-stat-l">Enterprise Overhead Required</div></div>
   </div>
 </section>
+
+<!-- TEXT REQUEST PARTNER BANNER -->
+<div class="tr-hp-banner">
+  <div class="tr-hp-inner">
+    <div class="tr-hp-left">
+      <div class="tr-hp-tag"><span class="tr-hp-tag-dot"></span>SMS Marketing Partner — TextRequest</div>
+      <div class="tr-hp-headline">
+        Get past the algorithm.<br/>
+        <span>Go straight to the source.</span>
+      </div>
+      <p class="tr-hp-sub">Text a Request straight to your customer's phone. Get TCPA compliant with Moor Graphix first — then start texting with the platform we recommend.</p>
+      <div class="tr-hp-industries">
+        <span class="tr-hp-pill p-health">Health &amp; Wellness</span>
+        <span class="tr-hp-pill p-trade">Home &amp; Trade</span>
+        <span class="tr-hp-pill p-pro">Professional Services</span>
+        <span class="tr-hp-pill p-ent">Entertainment &amp; Hospitality</span>
+      </div>
+    </div>
+    <div class="tr-hp-right">
+      <a href="sms-compliance.html" class="tr-hp-btn-primary"><i class="ti ti-shield-check"></i>Get SMS Compliant First</a>
+      <a href="https://referrals.textrequest.com/uNLY0vne" target="_blank" rel="noopener noreferrer" class="tr-hp-btn-ghost"><i class="ti ti-device-mobile"></i>Start Texting with TextRequest</a>
+      <span class="tr-hp-note">Real Connections · Real Clients · Real Results</span>
+    </div>
+  </div>
+</div>
+
 <hr class="div-line-light">
 
 <!-- SOCIAL -->
