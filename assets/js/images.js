@@ -131,7 +131,8 @@ const PROJECTS = [
     name:     "NAMA — New Amsterdam Musical",
     cat:      "Brand Identity",
     category: "showcase_strip",
-    desc:     "Heraldic brand identity for the New Amsterdam Musical Association. A full crest featuring a lyre, classical architecture, treble clef, and laurel wreath in navy and gold. Est. 1904."
+    desc:     "Heraldic brand identity for the New Amsterdam Musical Association. A full crest featuring a lyre, classical architecture, treble clef, and laurel wreath in navy and gold. Est. 1904.",
+    link:     "https://sidartifax-cpu.github.io/NAMA/index.html"
   },
   {
     src:      "assets/images/showcase-strip/wsl4-commemorative-coin.jpg",
@@ -211,7 +212,8 @@ const PROJECTS = [
     name:     "NAMA Harlem Website",
     cat:      "Web Design",
     category: "showcase_strip",
-    desc:     "Heritage website for NAMA Harlem — the New Amsterdam Musical Association, Est. 1904. Oldest African-American musical org in the U.S."
+    desc:     "Heritage website for NAMA Harlem — the New Amsterdam Musical Association, Est. 1904. Oldest African-American musical org in the U.S.",
+    link:     "https://sidartifax-cpu.github.io/NAMA/index.html"
   },
   {
     src:      "assets/images/showcase-strip/african-dance-class-flyer.jpg",
@@ -502,7 +504,8 @@ const PROJECTS = [
     name:     "NAMA — New Amsterdam Musical",
     cat:      "Brand Identity",
     category: "brand_identity",
-    desc:     "Heraldic brand identity for the New Amsterdam Musical Association. A full crest featuring a lyre, classical architecture, treble clef, and laurel wreath in navy and gold. Est. 1904 banner anchors the prestige and history."
+    desc:     "Heraldic brand identity for the New Amsterdam Musical Association. A full crest featuring a lyre, classical architecture, treble clef, and laurel wreath in navy and gold. Est. 1904 banner anchors the prestige and history.",
+    link:     "https://sidartifax-cpu.github.io/NAMA/index.html"
   },
   {
     src:      "assets/images/portfolio/brand-identity/wsl4-commemorative-coin.jpg",
@@ -661,7 +664,8 @@ const PROJECTS = [
     name:     "NAMA Harlem Website",
     cat:      "Web Design",
     category: "web_design",
-    desc:     "Heritage website for NAMA Harlem — the New Amsterdam Musical Association, Est. 1904. Announcement bar, brownstone photography, gold serif typography, triple CTA. Oldest African-American musical org in the U.S."
+    desc:     "Heritage website for NAMA Harlem — the New Amsterdam Musical Association, Est. 1904. Announcement bar, brownstone photography, gold serif typography, triple CTA. Oldest African-American musical org in the U.S.",
+    link:     "https://sidartifax-cpu.github.io/NAMA/index.html"
   },
   {
     src:      "assets/images/portfolio/web-design/dahill.jpg",
