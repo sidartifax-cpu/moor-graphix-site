@@ -918,6 +918,13 @@ const PROJECTS = [
     desc:     "12-panel fundraising and brand strategy system for StationSoccer Atlanta — executive vision, revenue growth funnel, annual campaign calendar, sample fundraising campaign, corporate partnership program, donor journey, impact dashboard, brand storytelling, board toolkit, community partnership map, and grant snapshot, built to turn community support into recurring donor relationships."
   },
   {
+    src:      "assets/images/portfolio/campaign/Stay-Well-Collection-Brand-Concept.png",
+    name:     "The Stay Well Collection — Luxury Bath & Home Goods Concept",
+    cat:      "Brand Concept Design",
+    category: "campaign",
+    desc:     "Complete brand and product concept for a luxury bath & home goods seasonal collection — trend forecast board, seasonal color story, product assortment board, print and pattern development, product sketches and mockups, technical development snapshot, and seasonal storytelling page. Inspired by boutique hotels, southern ease, and elevated everyday rituals."
+  },
+  {
     src:      "assets/images/portfolio/campaign/Moving-Georgia-Forward-Campaign-System.png",
     name:     "Moving Georgia Forward — Public Engagement Campaign System",
     cat:      "Campaign Strategy",
