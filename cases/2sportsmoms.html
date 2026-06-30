@@ -226,6 +226,13 @@
       .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
       .social-inner { grid-template-columns: 1fr 1fr; }
     }
+    /* CASE STUDY GALLERY */
+    .gallery-hero { border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--blue-line); }
+    .gallery-hero img { width: 100%; display: block; }
+    .gallery-cap { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+    .gallery-grid-2 { display: grid; grid-template-columns: 1fr 2fr; gap: 1.25rem; align-items: start; }
+    .gallery-grid-2 img { width: 100%; border-radius: 1rem; border: 1px solid var(--blue-line); display: block; background: var(--bg-2); }
+    @media (max-width: 760px) { .gallery-grid-2 { grid-template-columns: 1fr; } }
   </style>
   <script type="application/ld+json">
   {
@@ -238,6 +245,10 @@
     "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
     "about": { "@type": "NGO", "name": "2 Sports Moms" },
     "keywords": "nonprofit branding, logo design, website design, 501c3 brand identity, youth sports nonprofit",
+    "image": [
+      "https://moorgraphix.com/assets/images/portfolio/logos/2-sports-moms-logo.jpg",
+      "https://moorgraphix.com/assets/images/portfolio/web-design/2-sports-moms-full-site.jpg"
+    ],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://moorgraphix.com/cases/2sportsmoms.html",
@@ -351,6 +362,20 @@
       </div>
     </div>
   </div>
+
+  <!-- VISUAL PROOF -->
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-label">Brand & Website</div>
+    </div>
+    <div class="gallery-grid-2 reveal d1">
+      <img src="../assets/images/portfolio/logos/2-sports-moms-logo.jpg" alt="2 Sports Moms logo design by Moor Graphix" loading="lazy">
+      <img src="../assets/images/portfolio/web-design/2-sports-moms-full-site.jpg" alt="2 Sports Moms website design by Moor Graphix" loading="lazy">
+    </div>
+    <p class="gallery-cap">Logo identity and full website build by Moor Graphix</p>
+  </div>
+
+  <hr class="div" />
 
   <!-- PROBLEM -->
   <div class="wrap">

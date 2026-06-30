@@ -237,6 +237,15 @@
       .bento { grid-template-columns: 1fr; }
       .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
     }
+
+    /* CASE STUDY GALLERY */
+    .gallery-hero { border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--blue-line); }
+    .gallery-hero img { width: 100%; display: block; }
+    .gallery-cap { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .gallery-grid img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 1rem; border: 1px solid var(--blue-line); display: block; background: var(--bg-2); }
+    .gallery-section-2 { margin-top: 3.5rem; }
+    @media (max-width: 760px) { .gallery-grid { grid-template-columns: 1fr; } }
   </style>
   <script type="application/ld+json">
   {
@@ -249,6 +258,12 @@
     "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
     "about": { "@type": "Organization", "name": "The Evans Guild", "founder": { "@type": "Person", "name": "Etu Evans" } },
     "keywords": "brand identity design, logo design, website design, fashion branding, celebrity designer brand, Etu Evans",
+    "image": [
+      "https://moorgraphix.com/assets/images/portfolio/web-design/evans-guild-website.jpg",
+      "https://moorgraphix.com/assets/images/portfolio/brand-identity/Sir-Evans-Cognac-web.jpg",
+      "https://moorgraphix.com/assets/images/portfolio/brand-identity/Sir-Evans-Vodka-web.jpg",
+      "https://moorgraphix.com/assets/images/portfolio/brand-identity/Sir-Evans-Tequila-web.jpg"
+    ],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://moorgraphix.com/cases/evansguild.html",
@@ -381,6 +396,28 @@
         <span class="press-pill">Tim Gunn</span>
         <span class="press-pill">TED Talk</span>
       </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- VISUAL PROOF -->
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-label">The Evans Guild — Live Site</div>
+    </div>
+    <div class="gallery-hero reveal d1">
+      <img src="../assets/images/portfolio/web-design/evans-guild-website.jpg" alt="The Evans Guild website homepage design by Moor Graphix" loading="lazy">
+    </div>
+    <p class="gallery-cap">theevansguild.com — full website design and build by Moor Graphix</p>
+    <div class="reveal gallery-section-2">
+      <div class="sec-label">Sir Evans — Spirits Line</div>
+      <p class="body-text">A recent brand extension into the spirits category — premium cognac, vodka, and tequila packaging design carrying the Sir Evans equestrian mark into a new product world.</p>
+    </div>
+    <div class="gallery-grid reveal d1">
+      <img src="../assets/images/portfolio/brand-identity/Sir-Evans-Cognac-web.jpg" alt="Sir Evans Cognac bottle and label design by Moor Graphix" loading="lazy">
+      <img src="../assets/images/portfolio/brand-identity/Sir-Evans-Vodka-web.jpg" alt="Sir Evans Vodka bottle and label design by Moor Graphix" loading="lazy">
+      <img src="../assets/images/portfolio/brand-identity/Sir-Evans-Tequila-web.jpg" alt="Sir Evans Tequila bottle and label design by Moor Graphix" loading="lazy">
     </div>
   </div>
 
