@@ -917,6 +917,13 @@ const PROJECTS = [
     category: "campaign",
     desc:     "12-panel fundraising and brand strategy system for StationSoccer Atlanta — executive vision, revenue growth funnel, annual campaign calendar, sample fundraising campaign, corporate partnership program, donor journey, impact dashboard, brand storytelling, board toolkit, community partnership map, and grant snapshot, built to turn community support into recurring donor relationships."
   },
+  {
+    src:      "assets/images/portfolio/campaign/Early-Learning-Matters-Coaching-Plan.png",
+    name:     "Early Learning Matters Teacher Coaching Plan",
+    cat:      "Document & Systems Design",
+    category: "campaign",
+    desc:     "A complete instructional coaching system built for early childhood programs — 6-week coaching cycle, 4-domain observation checklist, implementation tracker, growth dashboard, feedback email template, workshop agenda, and coaching report. One ready-to-deploy system designed and built by Moor Graphix."
+  },
 
 
   // ══════════════════════════════════════════════════════════════════════════
