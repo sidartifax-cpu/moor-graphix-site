@@ -7,7 +7,7 @@ img{display:block;max-width:100%}
 :root{
   --dark:#020408;--dark2:#080D1A;--mid:#0D1628;
   --light1:#F0F4FF;--light2:#E8EEF8;--light3:#DDE5F5;
-  --blue:#3060D0;--blue-lt:#6AABFF;
+  --blue:#3060D0;--blue-lt:#6AABFF;--cream:#F0E6D2;
   --text-dark:#1A1F2E;--text-mid:#3A4560;
 }
 #bg{position:fixed;inset:0;z-index:0;pointer-events:none}
@@ -45,7 +45,7 @@ p{font-size:clamp(15px,1.3vw,17px);line-height:1.85;margin-bottom:14px}
 
 /* TICKER */
 .ticker-bar{overflow:hidden;background:#04060F;border-bottom:1px solid rgba(80,140,255,0.12);padding:11px 0;display:flex;align-items:center}
-.ticker-label{font-size:9px;font-weight:700;letter-spacing:0.38em;color:var(--blue);text-transform:uppercase;padding:0 20px;white-space:nowrap;border-right:0.5px solid rgba(80,140,255,0.15);flex-shrink:0}
+.ticker-label{font-size:9px;font-weight:700;letter-spacing:0.38em;color:var(--cream);text-transform:uppercase;padding:0 20px;white-space:nowrap;border-right:0.5px solid rgba(80,140,255,0.15);flex-shrink:0}
 .ticker-inner{overflow:hidden;flex:1}
 .ticker-track{display:flex;animation:tick 60s linear infinite;width:max-content}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
@@ -144,10 +144,10 @@ p{font-size:clamp(15px,1.3vw,17px);line-height:1.85;margin-bottom:14px}
 .svc:hover{border-color:rgba(80,140,255,0.28);background:#06090F}
 .svc:hover::after{width:100%}
 .svc-num{font-size:10px;color:rgba(80,140,255,0.28);letter-spacing:0.3em;margin-bottom:12px}
-.svc-icon{font-size:24px;color:var(--blue);margin-bottom:10px;display:block}
+.svc-icon{font-size:24px;color:var(--cream);margin-bottom:10px;display:block}
 .svc-name{font-size:16px;font-weight:700;color:#d0deff;margin-bottom:8px}
 .svc-desc{font-size:13px;color:rgba(100,160,255,0.38);line-height:1.7}
-.svc-price{display:inline-block;margin-top:14px;font-size:10px;color:var(--blue);border:0.5px solid rgba(48,96,208,0.3);padding:4px 10px;border-radius:2px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700}
+.svc-price{display:inline-block;margin-top:14px;font-size:10px;color:var(--cream);border:0.5px solid rgba(240,230,210,0.25);padding:4px 10px;border-radius:2px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700}
 
 /* BLUEPRINT */
 .blueprint{padding:48px 44px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center}
@@ -311,7 +311,7 @@ p{font-size:clamp(15px,1.3vw,17px);line-height:1.85;margin-bottom:14px}
 .final-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
 .cta-contact{display:flex;gap:32px;justify-content:center;flex-wrap:wrap}
 .cta-info{font-size:14px;color:rgba(100,160,255,0.45);display:flex;align-items:center;gap:8px}
-.cta-info i{font-size:17px;color:var(--blue)}
+.cta-info i{font-size:17px;color:var(--cream)}
 .cta-info a{color:inherit;transition:color 0.2s}
 .cta-info a:hover{color:#6AABFF}
 

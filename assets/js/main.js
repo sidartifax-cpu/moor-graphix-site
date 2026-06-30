@@ -66,26 +66,28 @@ nextBtn.addEventListener('click',e=>{e.stopPropagation();goToSlide(slideIdx+1);s
 // ── SHOWCASE STRIP ──
 // Images loaded from assets/images/showcase-strip/ via showcaseItems array above
 const sw=document.getElementById('sw');
-showcaseItems.forEach(item=>{
-  const d=document.createElement('div');d.className='sw-item';
-  const img=document.createElement('img');img.src=item.src;img.alt=item.name;
-  const ov=document.createElement('div');ov.className='sw-ov';
-  const lb=document.createElement('div');lb.className='sw-lbl';lb.textContent=item.name;
-  const hint=document.createElement('div');hint.className='sw-click-hint';
-  // If showcase item has a case study link, update hint text
-  hint.textContent=item.link?'View Case Study':'View Details';
-  d.appendChild(img);d.appendChild(ov);d.appendChild(lb);d.appendChild(hint);
-  d.addEventListener('click',()=>{
-    // If item has a case study link, navigate there
-    if(item.link){
-      window.location.href=item.link;
-      return;
-    }
-    const pi=projects.findIndex(p=>p.name===item.name);
-    if(pi>=0) openModal(pi);
+if(sw){
+  showcaseItems.forEach(item=>{
+    const d=document.createElement('div');d.className='sw-item';
+    const img=document.createElement('img');img.src=item.src;img.alt=item.name;
+    const ov=document.createElement('div');ov.className='sw-ov';
+    const lb=document.createElement('div');lb.className='sw-lbl';lb.textContent=item.name;
+    const hint=document.createElement('div');hint.className='sw-click-hint';
+    // If showcase item has a case study link, update hint text
+    hint.textContent=item.link?'View Case Study':'View Details';
+    d.appendChild(img);d.appendChild(ov);d.appendChild(lb);d.appendChild(hint);
+    d.addEventListener('click',()=>{
+      // If item has a case study link, navigate there
+      if(item.link){
+        window.location.href=item.link;
+        return;
+      }
+      const pi=projects.findIndex(p=>p.name===item.name);
+      if(pi>=0) openModal(pi);
+    });
+    sw.appendChild(d);
   });
-  sw.appendChild(d);
-});
+}
 
 // ── PORTFOLIO GRID ──
 const wgf=document.getElementById('wgf');

@@ -889,6 +889,13 @@ const PROJECTS = [
     desc:     "10,000-copy shopping guide for UMEZ, BRISC, and the Harlem Business Alliance — featuring 68 Black-owned businesses across Harlem. Complete publication design, art direction, and 90% original photography by Moor Graphix. Distributed throughout Harlem and Manhattan's hotel and theater districts in 2001, before Google, Yelp, or social media existed.",
     link:     "cases/harlem-directory.html"
   },
+  {
+    src:      "assets/images/portfolio/campaign/Every Drop Counts Strategy.png",
+    name:     "Every Drop Counts Strategy",
+    cat:      "Campaign Strategy",
+    category: "campaign",
+    desc:     "Full community outreach strategy for DeKalb Water Assistance — a 6-month campaign plan covering logo, timeline, Facebook ads, flyers, SMS templates, email design, KPI dashboard, and a community partnership map. Built to drive awareness and applications for water bill assistance across DeKalb County."
+  },
 
 
   // ══════════════════════════════════════════════════════════════════════════
