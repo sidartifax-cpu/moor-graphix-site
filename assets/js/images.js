@@ -91,6 +91,13 @@ const PROJECTS = [
     category: "hero_slideshow",
     desc:     "Professional legal website for The Roberts Law Group, Atlanta. Navy and gold palette communicating trust and authority. Split-hero layout with Atlanta skyline photography and strong practice area navigation."
   },
+  {
+    src:      "assets/images/hero-slideshow/ETHOH Monthly Blessing Campaign.png",
+    name:     "ETHOH Monthly Blessing Campaign",
+    cat:      "Campaign Strategy",
+    category: "hero_slideshow",
+    desc:     "Full creative launch sheet for ETHOH's Monthly Blessing recurring-donation campaign — wearable witness t-shirt design, four-part social story series, campaign pathway, and unified purple-gold-lotus visual language built to move supporters from seeing to wearing the light."
+  },
 
 
   // ══════════════════════════════════════════════════════════════════════════
@@ -895,6 +902,20 @@ const PROJECTS = [
     cat:      "Campaign Strategy",
     category: "campaign",
     desc:     "Full community outreach strategy for DeKalb Water Assistance — a 6-month campaign plan covering logo, timeline, Facebook ads, flyers, SMS templates, email design, KPI dashboard, and a community partnership map. Built to drive awareness and applications for water bill assistance across DeKalb County."
+  },
+  {
+    src:      "assets/images/portfolio/campaign/ETHOH Monthly Blessing Campaign.png",
+    name:     "ETHOH Monthly Blessing Campaign",
+    cat:      "Campaign Strategy",
+    category: "campaign",
+    desc:     "Full creative launch sheet for ETHOH's Monthly Blessing recurring-donation campaign — wearable witness t-shirt design, four-part social story series, campaign pathway, and unified purple-gold-lotus visual language built to move supporters from seeing to wearing the light."
+  },
+  {
+    src:      "assets/images/portfolio/campaign/StationSoccer Atlanta Campaign.png",
+    name:     "StationSoccer Atlanta Campaign",
+    cat:      "Campaign Strategy",
+    category: "campaign",
+    desc:     "12-panel fundraising and brand strategy system for StationSoccer Atlanta — executive vision, revenue growth funnel, annual campaign calendar, sample fundraising campaign, corporate partnership program, donor journey, impact dashboard, brand storytelling, board toolkit, community partnership map, and grant snapshot, built to turn community support into recurring donor relationships."
   },
 
 
