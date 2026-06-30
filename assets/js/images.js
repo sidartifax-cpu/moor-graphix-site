@@ -918,6 +918,13 @@ const PROJECTS = [
     desc:     "12-panel fundraising and brand strategy system for StationSoccer Atlanta — executive vision, revenue growth funnel, annual campaign calendar, sample fundraising campaign, corporate partnership program, donor journey, impact dashboard, brand storytelling, board toolkit, community partnership map, and grant snapshot, built to turn community support into recurring donor relationships."
   },
   {
+    src:      "assets/images/portfolio/campaign/Moving-Georgia-Forward-Campaign-System.png",
+    name:     "Moving Georgia Forward — Public Engagement Campaign System",
+    cat:      "Campaign Strategy",
+    category: "campaign",
+    desc:     "A full public engagement campaign system for Georgia DOT — public meeting flyer, multi-platform social media campaign, email announcement, PowerPoint title slide, website update mockup, stakeholder message map, brand consistency checklist, event timeline, and KPI dashboard. One system. Clear communication across every channel."
+  },
+  {
     src:      "assets/images/portfolio/campaign/Early-Learning-Matters-Coaching-Plan.png",
     name:     "Early Learning Matters Teacher Coaching Plan",
     cat:      "Document & Systems Design",
