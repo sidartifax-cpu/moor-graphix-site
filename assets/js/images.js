@@ -1049,6 +1049,91 @@ const PROJECTS = [
     cat:      "Brand Blueprint",
     category: "portfolio_slides",
     desc:     "Final page of the NAMA Strategic Brand Blueprint. Summary, deliverables checklist, and contact information for ongoing brand stewardship."
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // VIDEO — YouTube links open in new tab on card click
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    src:      "https://img.youtube.com/vi/9PKxsJIykxk/maxresdefault.jpg",
+    name:     "Moor Graphix — Featured Reel",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=9PKxsJIykxk",
+    desc:     "The full Moor Graphix brand reel — logo design, web builds, campaign systems, AI production, and cultural alchemy in motion. 30 years of craft in 60 seconds."
+  },
+  {
+    src:      "https://img.youtube.com/vi/HW4kxzqvTJY/maxresdefault.jpg",
+    name:     "Brand Reel",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=HW4kxzqvTJY",
+    desc:     "Moor Graphix brand reel — a showcase of identity design, motion, and visual storytelling across clients and industries."
+  },
+  {
+    src:      "https://img.youtube.com/vi/hSABN8sDrB0/maxresdefault.jpg",
+    name:     "Design Process",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=hSABN8sDrB0",
+    desc:     "A look inside the Moor Graphix design process — how Cultural Alchemy translates a client's story into a visual system that performs."
+  },
+  {
+    src:      "https://img.youtube.com/vi/vj0MPw26avg/maxresdefault.jpg",
+    name:     "Client Work Showcase",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=vj0MPw26avg",
+    desc:     "A curated showcase of client work — brand identities, websites, and campaign systems built for real organizations with real results."
+  },
+  {
+    src:      "https://img.youtube.com/vi/HH-CeLEeXZg/maxresdefault.jpg",
+    name:     "Logo Animation",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=HH-CeLEeXZg",
+    desc:     "Logo reveal and animation — bringing a static mark to life with motion that reinforces brand character and makes a lasting first impression."
+  },
+  {
+    src:      "https://img.youtube.com/vi/Y6vqct_uFi4/maxresdefault.jpg",
+    name:     "Cultural Design",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=Y6vqct_uFi4",
+    desc:     "Cultural Alchemy in practice — how Morrison Washington extracts cultural truth from a client's story and encodes it into design that resonates across communities."
+  },
+  {
+    src:      "https://img.youtube.com/vi/w2BNKA8od8s/maxresdefault.jpg",
+    name:     "AI + Design",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=w2BNKA8od8s",
+    desc:     "Where AI meets design — how Moor Graphix uses enterprise AI infrastructure to produce brand content at scale without losing the human voice or cultural intent."
+  },
+  {
+    src:      "https://img.youtube.com/vi/V_KPnvbQI_M/maxresdefault.jpg",
+    name:     "Behind the Brand",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=V_KPnvbQI_M",
+    desc:     "Behind the scenes at Moor Graphix — the process, the tools, the decisions, and the cultural philosophy that drives every project."
+  },
+  {
+    src:      "https://img.youtube.com/vi/6802KCAsa-s/maxresdefault.jpg",
+    name:     "Design Tips",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=6802KCAsa-s",
+    desc:     "Quick design tips from 30+ years of professional experience — practical principles any brand owner can apply immediately."
+  },
+  {
+    src:      "https://img.youtube.com/vi/W07akSTDYyE/maxresdefault.jpg",
+    name:     "Cultural Alchemy",
+    cat:      "Video",
+    category: "video",
+    link:     "https://www.youtube.com/watch?v=W07akSTDYyE",
+    desc:     "The philosophy behind the work — Cultural Alchemy explained. What it means to extract authentic identity and encode it into a visual language that outlasts trends."
   }
 
 ];

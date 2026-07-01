@@ -101,6 +101,7 @@ const CAT_CFG={
   web_design:     {icon:'ti-device-desktop',  label:'Web Design'},
   event_print:    {icon:'ti-calendar-event',  label:'Event + Print'},
   campaign:       {icon:'ti-speakerphone',    label:'Campaign'},
+  video:          {icon:'ti-brand-youtube',   label:'Video'},
 };
 
 // 2-char initials — skip stop words, take first letter of first two significant words
@@ -163,7 +164,11 @@ function buildGrid(cat){
     // Click: case study link navigates to page; otherwise opens modal
     card.addEventListener('click',()=>{
       if(hasCaseStudy){
-        window.location.href=item.link;
+        if(item.link.startsWith('http')){
+          window.open(item.link,'_blank','noopener,noreferrer');
+        } else {
+          window.location.href=item.link;
+        }
       } else {
         openModal(origIdx,cat);
       }
