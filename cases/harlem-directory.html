@@ -246,6 +246,58 @@
     .gallery-hero { border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--blue-line); max-width: 420px; margin: 0 auto; }
     .gallery-hero img { width: 100%; display: block; }
     .gallery-cap { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+
+    /* ORIGIN — Artifax Graphics */
+    .origin-brand { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--blue); line-height: 1; }
+    .origin-arrow { color: var(--muted); font-size: 1.2rem; margin: 0.6rem 0; }
+    .origin-brand-new { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--white); line-height: 1; }
+    .milestone-row { display: flex; flex-direction: column; gap: 0; margin-top: 1.5rem; }
+    .milestone { display: grid; grid-template-columns: 5rem 1fr; gap: 1.5rem; padding: 1.4rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); align-items: flex-start; }
+    .milestone:last-child { border-bottom: none; }
+    .m-year { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: rgba(59,111,240,0.45); line-height: 1.2; }
+    .m-text { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+    .m-text strong { color: var(--white); font-weight: 500; }
+    .origin-intro { margin-top: 1.75rem; }
+
+    /* BUSINESS ARCHIVE */
+    .arch-controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 2rem; }
+    .arch-search { background: var(--bg-2); border: 1px solid var(--blue-line); border-radius: 0.5rem; padding: 0.6rem 1rem; font-size: 0.82rem; color: var(--white); outline: none; min-width: 220px; font-family: 'Plus Jakarta Sans', sans-serif; transition: border-color 0.3s; }
+    .arch-search::placeholder { color: var(--muted); }
+    .arch-search:focus { border-color: var(--blue); }
+    .arch-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .arch-filter { background: var(--bg-2); border: 1px solid var(--blue-line); color: var(--muted); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.45rem 0.9rem; border-radius: 9999px; cursor: pointer; transition: all 0.25s; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .arch-filter:hover, .arch-filter.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .arch-count { font-size: 0.72rem; color: var(--muted); margin-left: auto; }
+    .arch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+    .arch-card { background: var(--bg-2); border: 1px solid var(--blue-line); border-radius: 0.75rem; padding: 1.1rem 1.25rem; transition: border-color 0.3s, transform 0.3s; }
+    .arch-card:hover { border-color: rgba(59,111,240,0.4); transform: translateY(-2px); }
+    .arch-card.hidden { display: none; }
+    .arch-id { font-size: 0.52rem; letter-spacing: 0.18em; color: rgba(59,111,240,0.4); text-transform: uppercase; margin-bottom: 0.25rem; }
+    .arch-name { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; line-height: 1.3; }
+    .arch-cat { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .arch-addr { font-size: 0.68rem; color: rgba(59,111,240,0.55); margin-top: 0.4rem; }
+    .arch-badge { display: inline-block; font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.18rem 0.5rem; border-radius: 9999px; }
+    .badge-retail   { background: rgba(59,111,240,0.12); color: #6AABFF; border: 1px solid rgba(59,111,240,0.25); }
+    .badge-services { background: rgba(80,200,120,0.08); color: rgba(100,210,140,0.9); border: 1px solid rgba(80,200,120,0.2); }
+    .badge-food     { background: rgba(240,160,59,0.08); color: rgba(240,180,80,0.9); border: 1px solid rgba(240,160,59,0.2); }
+    .badge-cultural { background: rgba(180,100,240,0.08); color: rgba(190,130,240,0.9); border: 1px solid rgba(180,100,240,0.2); }
+    .badge-anchor   { background: rgba(240,59,100,0.08); color: rgba(240,100,130,0.9); border: 1px solid rgba(240,59,100,0.2); }
+    .badge-partner  { background: rgba(59,111,240,0.06); color: rgba(59,111,240,0.5); border: 1px solid rgba(59,111,240,0.15); }
+
+    /* SECTOR STATS */
+    .sector-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; margin-top: 2.5rem; }
+    .sector-card { background: var(--bg-2); border: 1px solid var(--blue-line); border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+    .sector-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--blue); line-height: 1; }
+    .sector-l { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.35rem; line-height: 1.4; }
+
+    @media (max-width: 960px) {
+      .arch-grid { grid-template-columns: 1fr 1fr; }
+      .sector-row { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) {
+      .arch-grid { grid-template-columns: 1fr; }
+      .sector-row { grid-template-columns: 1fr 1fr; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -398,6 +450,43 @@
 
   <hr class="div" />
 
+  <!-- ORIGIN — Artifax Graphics → Moor Graphix -->
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="sec-label">The Studio</div>
+        <div class="origin-brand">Artifax Graphics</div>
+        <div class="origin-arrow">↓</div>
+        <div class="origin-brand-new">Moor Graphix</div>
+        <p class="body-text origin-intro">This directory wasn't designed by Moor Graphix. It was designed by <strong>Artifax Graphics</strong> — the studio Morrison Washington founded and operated before the name changed. Understanding that distinction matters, because it means this project is part of a 30-year arc of community-centered design, not an isolated moment.</p>
+        <p class="body-text">Artifax Graphics did the same thing Moor Graphix does today: it used design as economic infrastructure. It made communities visible. It built platforms for people the mainstream market wasn't building them for. The name changed. The work didn't.</p>
+        <p class="body-text"><strong>What you see in this directory is the origin of Cultural Alchemy — before it had a name.</strong></p>
+      </div>
+      <div class="reveal d1">
+        <div class="milestone-row">
+          <div class="milestone">
+            <div class="m-year">Pre-<br>2001</div>
+            <div class="m-text"><strong>Artifax Graphics is founded</strong> by Morrison Washington in New York. The studio takes on publication design, photography, brand identity, and community outreach work for Harlem-based organizations and businesses.</div>
+          </div>
+          <div class="milestone">
+            <div class="m-year">2001</div>
+            <div class="m-text"><strong>UMEZ, BRISC, and the Harlem Business Alliance commission Artifax Graphics</strong> to design, photograph, and produce the Harlem Business Directory & Shopping Guide — 10,000 copies, 66 businesses documented, 90% original photography.</div>
+          </div>
+          <div class="milestone">
+            <div class="m-year">2006</div>
+            <div class="m-text"><strong>Five years after publication,</strong> Harlem's commercial landscape has shifted significantly. Many businesses from the directory have closed or relocated as rapid gentrification reshapes the neighborhood's economic ecosystem.</div>
+          </div>
+          <div class="milestone">
+            <div class="m-year">Now</div>
+            <div class="m-text"><strong>Artifax Graphics evolves into Moor Graphix.</strong> The studio expands from print and photography into web design, brand systems, and AI infrastructure — carrying the same community-first mission into a new medium.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
   <!-- PROBLEM -->
   <div class="wrap">
     <div class="two-col">
@@ -472,12 +561,43 @@
 
   <hr class="div" />
 
+  <!-- BUSINESS ARCHIVE -->
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-label">04 — The Archive</div>
+      <h2>Every business.<br><em>On the record.</em></h2>
+      <p class="body-text">All 66 confirmed businesses from the 2001 Harlem Business Directory & Shopping Guide — documented by name, category, and address. Search or filter by section. This is the commercial census of Harlem at the turn of the century, preserved 25 years later.</p>
+    </div>
+    <div class="arch-controls">
+      <input class="arch-search" type="text" id="archSearch" placeholder="Search businesses…" aria-label="Search businesses">
+      <div class="arch-filters">
+        <button type="button" class="arch-filter active" data-filter="all">All</button>
+        <button type="button" class="arch-filter" data-filter="Retail">Retail</button>
+        <button type="button" class="arch-filter" data-filter="Services">Services</button>
+        <button type="button" class="arch-filter" data-filter="Food & Dining">Food & Dining</button>
+        <button type="button" class="arch-filter" data-filter="Cultural">Cultural</button>
+        <button type="button" class="arch-filter" data-filter="Anchor">Anchor</button>
+      </div>
+      <span class="arch-count" id="archCount">66 businesses</span>
+    </div>
+    <div class="arch-grid" id="archGrid"></div>
+  </div>
+
+  <hr class="div" />
+
   <!-- PROOF BENTO -->
   <div class="wrap" id="proof">
     <div class="reveal">
       <div class="sec-label">03 — The Proof</div>
       <h2>The guide that<br>became a <em>document.</em></h2>
       <p class="body-text">When the publication launched, its primary job was practical: connect people with businesses. More than two decades later, it has become something else entirely — <strong>a primary visual record of Harlem's entrepreneurial ecosystem during one of the neighborhood's most significant periods of growth.</strong> Many of the businesses featured represent an important chapter of Harlem's economic and cultural history that might otherwise have gone undocumented.</p>
+      <div class="sector-row">
+        <div class="sector-card"><div class="sector-n">16</div><div class="sector-l">Retail Shops</div></div>
+        <div class="sector-card"><div class="sector-n">24</div><div class="sector-l">Restaurants &amp; Dining</div></div>
+        <div class="sector-card"><div class="sector-n">17</div><div class="sector-l">Cultural &amp; Institutional</div></div>
+        <div class="sector-card"><div class="sector-n">5</div><div class="sector-l">Service Businesses</div></div>
+        <div class="sector-card"><div class="sector-n">4</div><div class="sector-l">Anchor &amp; Partners</div></div>
+      </div>
     </div>
     <div class="bento">
       <!-- Featured full-width card -->
@@ -589,6 +709,132 @@
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
 <script src="../assets/js/particles.js"></script>
+<script>
+(function(){
+  var businesses=[
+    // RETAIL — 16 featured photo ads
+    {id:'R-001',name:'The Scarf Lady',cat:'Fashion & Accessories',sec:'Retail',featured:true},
+    {id:'R-002',name:'Acres of Diamonds',cat:"Children's Clothing",sec:'Retail',featured:true},
+    {id:'R-003',name:'D Ferg',cat:'Urban Fashion',sec:'Retail',featured:true},
+    {id:'R-004',name:'Harlem Boutique',cat:"Women's Fashion",sec:'Retail',featured:true},
+    {id:'R-005',name:'Universal Woodworks',cat:'Furniture / Woodworking',sec:'Retail',featured:true},
+    {id:'R-006',name:'Harlem Underground',cat:'Urban Clothing',sec:'Retail',featured:true},
+    {id:'R-007',name:"Imani's Nubianage Creations",cat:'African Art & Gifts',sec:'Retail',featured:true},
+    {id:'R-008',name:'Diema Imports',cat:'African Imports',sec:'Retail',featured:true},
+    {id:'R-009',name:'Progressive Unlimited',cat:'African Art & Gifts',sec:'Retail',featured:true},
+    {id:'R-010',name:'Yaiqab Treasures of Egypt',cat:'Books & Gifts',sec:'Retail',featured:true},
+    {id:'R-011',name:'Rainbow Babies',cat:"Children's Clothing",sec:'Retail',featured:true},
+    {id:'R-012',name:'Harlem Motor Sports',cat:'Apparel / Motorsports',sec:'Retail',featured:true},
+    {id:'R-013',name:'125th Street Record Shop',cat:'Music Retail',sec:'Retail',featured:true},
+    {id:'R-014',name:"Dee's Cards & Wedding Service",cat:'Cards / Invitations',sec:'Retail',featured:true},
+    {id:'R-015',name:'Long Life Vitamins',cat:'Health & Nutrition',sec:'Retail',featured:true},
+    {id:'R-016',name:'Inner City Art Gallery',cat:'Fine Art Gallery',sec:'Retail',featured:true},
+    // SERVICES — 5 featured photo ads
+    {id:'S-001',name:'Gordon Cleaners',cat:'Dry Cleaning',sec:'Services',featured:true},
+    {id:'S-002',name:'Sankofa Digital Portrait Studio',cat:'Photography',sec:'Services',featured:true},
+    {id:'S-003',name:"Kev's Copy Center",cat:'Printing & Copies',sec:'Services',featured:true},
+    {id:'S-004',name:'Lenox Avenue Floral Shop',cat:'Florist',sec:'Services',featured:true},
+    {id:'S-005',name:'Cynergy Spa',cat:'Spa & Wellness',sec:'Services',featured:true},
+    // FOOD & DINING — 24 directory listings
+    {id:'F-001',name:'A Taste of Seafood',cat:'Restaurant',sec:'Food & Dining',addr:'50 East 125th St'},
+    {id:'F-002',name:"Amy Ruth's",cat:'Restaurant',sec:'Food & Dining',addr:'113 West 116th St'},
+    {id:'F-003',name:"Copeland's",cat:'Restaurant',sec:'Food & Dining',addr:'547 West 145th St'},
+    {id:'F-004',name:'Cotton Club',cat:'Restaurant / Entertainment',sec:'Food & Dining',addr:'656 West 125th St'},
+    {id:'F-005',name:'Crab Inn',cat:'Restaurant',sec:'Food & Dining',addr:'15 West 125th St'},
+    {id:'F-006',name:"Duffy's Place",cat:'Restaurant',sec:'Food & Dining',addr:'2561 Adam Clayton Powell Jr. Blvd'},
+    {id:'F-007',name:"Emily's",cat:'Restaurant',sec:'Food & Dining',addr:'1325 5th Avenue'},
+    {id:'F-008',name:"Isaac's Perfect Harlem Cafe",cat:'Restaurant',sec:'Food & Dining',addr:'270 West 135th St'},
+    {id:'F-009',name:'Jamaican Hot Pot',cat:'Restaurant',sec:'Food & Dining',addr:'2260 Adam Clayton Powell Jr. Blvd'},
+    {id:'F-010',name:'Lenox Lounge',cat:'Restaurant / Jazz',sec:'Food & Dining',addr:'288 Lenox Avenue'},
+    {id:'F-011',name:"Londel's",cat:'Restaurant',sec:'Food & Dining',addr:'2620 Frederick Douglass Blvd'},
+    {id:'F-012',name:"Mr. B's Cocktail Lounge",cat:'Lounge',sec:'Food & Dining',addr:'2297 7th Avenue'},
+    {id:'F-013',name:'Pan Pan',cat:'Restaurant',sec:'Food & Dining',addr:'500 Lenox Avenue'},
+    {id:'F-014',name:"Perk's Fine Cuisine",cat:'Restaurant',sec:'Food & Dining',addr:'533 Manhattan Avenue'},
+    {id:'F-015',name:"Showman's",cat:'Jazz Club',sec:'Food & Dining',addr:'375 West 125th St'},
+    {id:'F-016',name:'Sisters Cuisine',cat:'Restaurant',sec:'Food & Dining',addr:'1931 Madison Avenue'},
+    {id:'F-017',name:'Spoon Bread Too',cat:'Restaurant',sec:'Food & Dining',addr:'364 Cathedral Parkway'},
+    {id:'F-018',name:"St. Nick's Pub",cat:'Pub / Jazz',sec:'Food & Dining',addr:'773 St. Nicholas Avenue'},
+    {id:'F-019',name:"Sylvia's",cat:'Restaurant',sec:'Food & Dining',addr:'328 Lenox Avenue'},
+    {id:'F-020',name:'The Sugar Shack',cat:'Restaurant',sec:'Food & Dining',addr:'2611 Frederick Douglass Blvd'},
+    {id:'F-021',name:'Uptown Juice Bar',cat:'Juice Bar',sec:'Food & Dining',addr:'54 West 129th St'},
+    {id:'F-022',name:'22 West Restaurant',cat:'Restaurant',sec:'Food & Dining',addr:'22 West 135th St'},
+    {id:'F-023',name:'5th Avenue Seafood',cat:'Restaurant',sec:'Food & Dining',addr:'2014 5th Avenue'},
+    {id:'F-024',name:'Strictly Roots',cat:'Restaurant',sec:'Food & Dining',addr:'2058 Adam Clayton Powell Jr. Blvd'},
+    // CULTURAL & INSTITUTIONAL — 17 listings
+    {id:'C-001',name:'Aaron Davis Hall',cat:'Performing Arts',sec:'Cultural',addr:'135th St & Convent Ave'},
+    {id:'C-002',name:'African American Wax & History Museum',cat:'Museum',sec:'Cultural',addr:'316 West 115th St'},
+    {id:'C-003',name:'Apollo Theatre',cat:'Performing Arts',sec:'Cultural',addr:'253 West 125th St'},
+    {id:'C-004',name:'Boys Choir of Harlem',cat:'Music Education',sec:'Cultural',addr:'2005 Madison Ave'},
+    {id:'C-005',name:'Dance Theatre of Harlem',cat:'Dance',sec:'Cultural',addr:'466 West 152nd St'},
+    {id:'C-006',name:'El Museo del Barrio',cat:'Museum',sec:'Cultural',addr:'1230 5th Avenue'},
+    {id:'C-007',name:"Green Acre Children's Center",cat:'Education',sec:'Cultural',addr:'419 Convent Ave'},
+    {id:'C-008',name:'Harlem School of the Arts',cat:'Arts Education',sec:'Cultural',addr:'645 St. Nicholas Avenue'},
+    {id:'C-009',name:'Jazzmobile',cat:'Music Organization',sec:'Cultural',addr:'154 West 127th St'},
+    {id:'C-010',name:'NAMA Foundation',cat:'Nonprofit',sec:'Cultural',addr:'149 West 126th St'},
+    {id:'C-011',name:'Museum of the City of New York',cat:'Museum',sec:'Cultural',addr:'1220 5th Avenue'},
+    {id:'C-012',name:'National Black Theatre',cat:'Theatre',sec:'Cultural',addr:'2031-33 5th Avenue'},
+    {id:'C-013',name:'The Photographic Center',cat:'Arts',sec:'Cultural',addr:'439 West 125th St'},
+    {id:'C-014',name:'The Studio Museum in Harlem',cat:'Museum',sec:'Cultural',addr:'144 West 125th St'},
+    {id:'C-015',name:'The Roger Furman Theater',cat:'Theatre',sec:'Cultural',addr:'253 West 153rd St'},
+    {id:'C-016',name:'Schomburg Center for Research in Black Culture',cat:'Library & Research',sec:'Cultural',addr:'515 Lenox Ave'},
+    {id:'C-017',name:'Millennium Dance Company',cat:'Dance',sec:'Cultural',addr:'2542 8th Avenue'},
+    // ANCHOR ADVERTISERS — 3 full display ads
+    {id:'A-001',name:'The Brownstone',cat:'Restaurant / Event Venue',sec:'Anchor',featured:true},
+    {id:'A-002',name:'Clothes Art, Inc.',cat:'Fashion / African Clothing',sec:'Anchor',featured:true,addr:'228 West 135th St'},
+    {id:'A-003',name:'The Harlem Collective',cat:'Retail Cooperative',sec:'Anchor',featured:true,addr:'533 Frederick Douglass Ave'},
+    // PARTNER
+    {id:'P-001',name:'NuJapple Marketing',cat:'Marketing / Directory Services',sec:'Partner',addr:'Harlem, NY'},
+  ];
+
+  var badgeMap={
+    'Retail':'badge-retail','Services':'badge-services',
+    'Food & Dining':'badge-food','Cultural':'badge-cultural',
+    'Anchor':'badge-anchor','Partner':'badge-partner'
+  };
+
+  var activeFilter='all';
+
+  function build(filter,query){
+    var grid=document.getElementById('archGrid');
+    var countEl=document.getElementById('archCount');
+    if(!grid) return;
+    var q=(query||'').toLowerCase().trim();
+    var visible=0;
+    grid.innerHTML='';
+    businesses.forEach(function(b){
+      var matchF=filter==='all'||b.sec===filter;
+      var matchQ=!q||b.name.toLowerCase().includes(q)||b.cat.toLowerCase().includes(q)||(b.addr&&b.addr.toLowerCase().includes(q));
+      var show=matchF&&matchQ;
+      if(show) visible++;
+      var addr=b.addr?'<div class="arch-addr">'+b.addr+'</div>':'';
+      var badge='<span class="arch-badge '+(badgeMap[b.sec]||'badge-partner')+'">'+b.sec+'</span>';
+      var card=document.createElement('div');
+      card.className='arch-card'+(show?'':' hidden');
+      card.innerHTML='<div class="arch-id">'+b.id+'</div><div class="arch-name">'+b.name+'</div><div class="arch-cat">'+b.cat+'</div>'+badge+addr;
+      grid.appendChild(card);
+    });
+    if(countEl) countEl.textContent=visible+' business'+(visible===1?'':'es');
+  }
+
+  build('all','');
+
+  document.querySelectorAll('.arch-filter').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.arch-filter').forEach(function(b){b.classList.remove('active');});
+      this.classList.add('active');
+      activeFilter=this.dataset.filter;
+      build(activeFilter,document.getElementById('archSearch').value);
+    });
+  });
+
+  var searchEl=document.getElementById('archSearch');
+  if(searchEl){
+    searchEl.addEventListener('input',function(){
+      build(activeFilter,this.value);
+    });
+  }
+})();
+</script>
 <script src="../assets/js/mobile-menu.js" defer></script>
 </body>
 </html>
