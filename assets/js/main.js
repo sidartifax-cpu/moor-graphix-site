@@ -8,7 +8,7 @@ function shuffle(arr){
 
 // Split PROJECTS into per-section arrays — each section loads from its own folder.
 // To change what appears in each section, edit assets/js/images.js.
-const PORTFOLIO_CATS = ['logos','brand_identity','web_design','event_print','campaign'];
+const PORTFOLIO_CATS = ['logos','brand_identity','web_design','event_print','campaign','video'];
 const heroSlides     = PROJECTS.filter(p => p.category === 'hero_slideshow');
 const showcaseItems  = PROJECTS.filter(p => p.category === 'showcase_strip');
 const projects       = shuffle(PROJECTS.filter(p => PORTFOLIO_CATS.includes(p.category)));

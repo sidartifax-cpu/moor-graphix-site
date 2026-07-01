@@ -910,42 +910,6 @@
   </div>
 </section>
 
-<script>
-(function(){
-  function setupYT(el){
-    var vid=el.dataset.id;
-    el.addEventListener('click',function(){
-      this.classList.add('playing');
-      var iframeWrap=this.querySelector('.yt-iframe-wrap');
-      var iframe=iframeWrap.querySelector('iframe');
-      iframe.src='https://www.youtube-nocookie.com/embed/'+vid+'?autoplay=1&rel=0';
-    });
-  }
-  setupYT(document.getElementById('ytMainWorkshop'));
-  var videoData=[
-    {id:"HW4kxzqvTJY",label:"Brand Reel"},
-    {id:"hSABN8sDrB0",label:"Design Process"},
-    {id:"vj0MPw26avg",label:"Client Work Showcase"},
-    {id:"HH-CeLEeXZg",label:"Logo Animation"},
-    {id:"Y6vqct_uFi4",label:"Cultural Design"},
-    {id:"w2BNKA8od8s",label:"AI + Design"}
-  ];
-  var vg=document.getElementById('videoGridWorkshop');
-  videoData.forEach(function(v){
-    var el=document.createElement('div');
-    el.className='yt-player';
-    el.dataset.id=v.id;
-    el.innerHTML='<img class="yt-thumb" src="https://img.youtube.com/vi/'+v.id+'/hqdefault.jpg" alt="'+v.label+'">'
-      +'<div class="yt-overlay"></div>'
-      +'<div class="yt-play-btn"><div class="yt-play-triangle"></div></div>'
-      +'<div class="yt-label">'+v.label+'</div>'
-      +'<div class="yt-iframe-wrap"><iframe src="" title="'+v.label+'" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe></div>';
-    vg.appendChild(el);
-    setupYT(el);
-  });
-})();
-</script>
-
 <!-- ── TESTIMONIALS ── -->
 <section class="ait-testimonials sec-light" id="testimonials">
   <div class="eyebrow eyebrow-light">Student Transformations</div>
@@ -1254,6 +1218,45 @@ if(wlForm){
 }
 </script>
 <script src="assets/js/particles.js"></script>
+<script>
+(function(){
+  function setupYT(el){
+    var vid=el.dataset.id;
+    el.addEventListener('click',function(){
+      this.classList.add('playing');
+      var iframeWrap=this.querySelector('.yt-iframe-wrap');
+      var iframe=iframeWrap.querySelector('iframe');
+      iframe.src='https://www.youtube-nocookie.com/embed/'+vid+'?autoplay=1&rel=0';
+    });
+  }
+  var main=document.getElementById('ytMainWorkshop');
+  if(main) setupYT(main);
+  var videoData=[
+    {id:"HW4kxzqvTJY",label:"Brand Reel"},
+    {id:"hSABN8sDrB0",label:"Design Process"},
+    {id:"vj0MPw26avg",label:"Client Work Showcase"},
+    {id:"HH-CeLEeXZg",label:"Logo Animation"},
+    {id:"Y6vqct_uFi4",label:"Cultural Design"},
+    {id:"w2BNKA8od8s",label:"AI + Design"}
+  ];
+  var vg=document.getElementById('videoGridWorkshop');
+  if(vg){
+    videoData.forEach(function(v){
+      var el=document.createElement('div');
+      el.className='yt-player';
+      el.dataset.id=v.id;
+      el.innerHTML=
+        '<img class="yt-thumb" src="https://img.youtube.com/vi/'+v.id+'/hqdefault.jpg" alt="'+v.label+'" onerror="this.src=\'https://img.youtube.com/vi/'+v.id+'/mqdefault.jpg\'">'
+        +'<div class="yt-overlay"></div>'
+        +'<div class="yt-play-btn"><div class="yt-play-triangle"></div></div>'
+        +'<div class="yt-label">'+v.label+'</div>'
+        +'<div class="yt-iframe-wrap"><iframe src="" title="'+v.label+'" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe></div>';
+      vg.appendChild(el);
+      setupYT(el);
+    });
+  }
+})();
+</script>
 <!-- Moor Graphix AI Concierge -->
 <elevenlabs-convai agent-id="agent_3001knwwzjm9ecw9m8ng3svxhs65" avatar-image-url="https://moorgraphix.com/assets/images/branding/moor-graphix-logo.png"></elevenlabs-convai>
 <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
