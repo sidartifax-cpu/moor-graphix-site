@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Podcast Starter Kit | Sid Washington x Moor Graphix</title>
+  <meta name="description" content="A budget-friendly podcast equipment guide for beginners who only have a computer and want to record quality audio and video from home." />
+  <style>
+    :root {
+      --ink: #17120d;
+      --coffee: #2b1b14;
+      --gold: #c59a43;
+      --cream: #f7efe1;
+      --sand: #e3d1b1;
+      --copper: #a65d35;
+      --sage: #53695b;
+      --white: #fffaf1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top left, #fff4da 0, #f7efe1 34%, #dec7a2 100%);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(43,27,20,.96), rgba(83,105,91,.94)), url('');
+      color: var(--white);
+      border-radius: 28px;
+      padding: 54px 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(43,27,20,.2);
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -110px auto;
+      width: 280px;
+      height: 280px;
+      border: 1px solid rgba(197,154,67,.42);
+      border-radius: 50%;
+      box-shadow: 0 0 0 28px rgba(197,154,67,.06), 0 0 0 58px rgba(197,154,67,.04);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: .82rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: .96;
+      margin: 0 0 22px;
+      max-width: 900px;
+    }
+
+    .lead {
+      font-size: 1.18rem;
+      max-width: 770px;
+      color: #fff1d6;
+      margin: 0 0 28px;
+    }
+
+    .brandline {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .pill {
+      border: 1px solid rgba(247,239,225,.35);
+      border-radius: 999px;
+      padding: 9px 14px;
+      background: rgba(255,250,241,.09);
+      backdrop-filter: blur(7px);
+    }
+
+    .section {
+      margin: 34px 0;
+      background: rgba(255,250,241,.72);
+      border: 1px solid rgba(43,27,20,.08);
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: 0 16px 50px rgba(43,27,20,.08);
+    }
+
+    h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      margin: 0 0 12px;
+      color: var(--coffee);
+    }
+
+    h3 { margin-bottom: 8px; color: var(--coffee); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(43,27,20,.09);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(43,27,20,.07);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 270px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(197,154,67,.14);
+      color: #6b421e;
+      border: 1px solid rgba(197,154,67,.25);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: .78rem;
+      font-weight: 700;
+      width: fit-content;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 700;
+      color: var(--copper);
+      margin: 10px 0;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      background: var(--coffee);
+      color: var(--white);
+      font-weight: 800;
+      border-radius: 14px;
+      padding: 13px 16px;
+      margin-top: 14px;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); background: #3b261c; }
+
+    .button.gold { background: var(--gold); color: var(--ink); }
+    .button.gold:hover { background: #d8ad56; }
+
+    .note {
+      background: #fff2ce;
+      border-left: 6px solid var(--gold);
+      padding: 16px 18px;
+      border-radius: 14px;
+      margin-top: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    th, td {
+      text-align: left;
+      padding: 15px;
+      border-bottom: 1px solid rgba(43,27,20,.09);
+      vertical-align: top;
+    }
+
+    th { background: var(--coffee); color: var(--white); }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .checklist li { margin-bottom: 10px; }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(135deg, var(--coffee), #493024);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 42px 26px;
+    }
+
+    .cta h2 { color: var(--white); }
+    .cta p { max-width: 760px; margin: 0 auto 22px; color: #ffefce; }
+
+    footer {
+      text-align: center;
+      color: rgba(23,18,13,.7);
+      padding: 20px 0 40px;
+      font-size: .92rem;
+    }
+
+    .small { font-size: .9rem; color: rgba(23,18,13,.74); }
+
+    @media (max-width: 900px) {
+      .grid, .two { grid-template-columns: 1fr; }
+      header { padding: 42px 24px; }
+      .wrap { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="eyebrow">Podcast Starter Guide • Budget First</div>
+      <h1>Start Recording From Your Bedroom With Only a Computer</h1>
+      <p class="lead">A simple, low-cost equipment guide for new podcasters who want clear audio, clean video, and a setup that can grow from bedroom recordings to online distribution.</p>
+      <div class="brandline">
+        <span class="pill">Prepared by Sid Washington</span>
+        <span class="pill">Moor Graphix</span>
+        <span class="pill">Audio • Video • Upload Ready</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>The Fastest Path: Start With Audio</h2>
+      <p>If the budget is tight, do not chase a fancy camera first. A strong voice is the drum. Clean sound makes people stay. Start with a USB microphone, headphones, and free recording software.</p>
+      <div class="note"><strong>Buying note:</strong> Prices and availability can change. These links point visitors to common retailers and search results where they can compare options before purchasing.</div>
+    </section>
+
+    <section class="section">
+      <h2>Budget Audio-Only Setup</h2>
+      <div class="grid">
+        <article class="card">
+          <div>
+            <span class="tag">Cheapest Full Kit</span>
+            <h3>USB Podcast Microphone Kit</h3>
+            <p>Includes microphone, scissor arm, shock mount, and pop filter. Best low-cost first purchase for a computer-only setup.</p>
+            <div class="price">About $33</div>
+          </div>
+          <a class="button" href="https://www.walmart.com/ip/USB-Podcast-Microphone-Kit-Professional-192kHz-24Bit-Condenser-Mic-with-Scissor-Arm-Shock-Mount-Pop-Filter-for-PC-Recording-YouTube-Streaming/19355967174" target="_blank" rel="noopener">Where to Buy</a>
+        </article>
+
+        <article class="card">
+          <div>
+            <span class="tag">Cleaner Starter Bundle</span>
+            <h3>Movo PodPak Podcast Bundle</h3>
+            <p>A simple podcast bundle with mic, boom arm, and pop filter. Good for beginners who want a clean package from a known brand.</p>
+            <div class="price">About $60</div>
+          </div>
+          <a class="button" href="https://www.bestbuy.com/product/movo-podpak-podcast-equipment-bundle-with-microphone-boom-arm-and-pop-filter/J3LVLQ3PH4/sku/10181674" target="_blank" rel="noopener">Where to Buy</a>
+        </article>
+
+        <article class="card">
+          <div>
+            <span class="tag">Best Budget Upgrade</span>
+            <h3>FIFINE A6T USB Mic Kit</h3>
+            <p>A highly rated USB microphone kit for streaming, podcasting, voiceover, and beginner content creation.</p>
+            <div class="price">About $50</div>
+          </div>
+          <a class="button" href="https://www.microcenter.com/product/695256/A6T_USB_Condenser_Microphone_Kit;_Tap-to-mute_button;_Two-tone_RGB" target="_blank" rel="noopener">Where to Buy</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Add Video When You Are Ready</h2>
+      <div class="grid">
+        <article class="card">
+          <div>
+            <span class="tag">Cheapest Webcam</span>
+            <h3>1080p Webcam With Ring Light</h3>
+            <p>Low-cost webcam option with built-in light. Useful for video podcasts, Zoom interviews, and simple YouTube recordings.</p>
+            <div class="price">About $17</div>
+          </div>
+          <a class="button" href="https://www.walmart.com/ip/60Fps-1080P-Webcam-With-Ring-Light-Pc-Camera-5X-Digital-Zoom-And-Remote-Control-Built-In-Dual-Noise-Canceling-Microphones-Privacy-Cover-For-Pc-Comput/15748909069" target="_blank" rel="noopener">Where to Buy</a>
+        </article>
+
+        <article class="card">
+          <div>
+            <span class="tag">Webcam + Stand</span>
+            <h3>SLIDE 1080p HD Webcam Kit</h3>
+            <p>A compact webcam and ring light kit for beginners who want a quick desk-friendly video setup.</p>
+            <div class="price">About $29</div>
+          </div>
+          <a class="button" href="https://www.target.com/p/slide-1080p-hd-webcam-ring-light-stand-vlogging-kit-black-1/-/A-1000489817" target="_blank" rel="noopener">Where to Buy</a>
+        </article>
+
+        <article class="card">
+          <div>
+            <span class="tag">Budget Lighting</span>
+            <h3>NEEWER 10-inch Ring Light</h3>
+            <p>A simple ring light with tripod support. Better lighting can make even a low-cost webcam look more professional.</p>
+            <div class="price">About $22</div>
+          </div>
+          <a class="button" href="https://www.bestbuy.com/site/searchpage.jsp?st=NEEWER+R11+10%22+Ring+Light+with+Tripod+and+3+Phone+Holders" target="_blank" rel="noopener">Where to Buy</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section two">
+      <div>
+        <h2>What To Buy First</h2>
+        <table>
+          <thead>
+            <tr><th>Priority</th><th>Item</th><th>Budget</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>USB microphone kit with boom arm and pop filter</td><td>$25–$70</td></tr>
+            <tr><td>2</td><td>Wired headphones or earbuds</td><td>$10–$25</td></tr>
+            <tr><td>3</td><td>Free recording software: OBS, Audacity, GarageBand, or CapCut</td><td>Free</td></tr>
+            <tr><td>4</td><td>1080p webcam</td><td>$17–$50</td></tr>
+            <tr><td>5</td><td>Ring light or desk light</td><td>$15–$30</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h2>Bedroom Sound Wisdom</h2>
+        <ul class="checklist">
+          <li>Record near soft things: curtains, bed, clothing, rugs, pillows, and blankets.</li>
+          <li>Keep the microphone 4–8 inches from your mouth.</li>
+          <li>Turn off fans, TVs, air conditioners, and loud devices.</li>
+          <li>Do a 30-second test before every episode.</li>
+          <li>Use OBS Studio for video recording and Audacity or GarageBand for audio-only episodes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Three Starter Packages</h2>
+      <div class="grid">
+        <article class="card">
+          <div>
+            <span class="tag">Audio Only</span>
+            <h3>The $50 Voice Setup</h3>
+            <p>USB mic kit + wired headphones + free software. This is the best first step for a new podcaster with only a computer.</p>
+          </div>
+          <a class="button gold" href="https://www.walmart.com/search?q=usb+podcast+microphone+kit" target="_blank" rel="noopener">Compare Audio Options</a>
+        </article>
+        <article class="card">
+          <div>
+            <span class="tag">Audio + Video</span>
+            <h3>The $100 Bedroom Studio</h3>
+            <p>USB mic kit + webcam + ring light. Enough to record podcast clips, YouTube episodes, and interviews.</p>
+          </div>
+          <a class="button gold" href="https://www.walmart.com/search?q=podcast+microphone+webcam+ring+light" target="_blank" rel="noopener">Compare Video Options</a>
+        </article>
+        <article class="card">
+          <div>
+            <span class="tag">Better Sound</span>
+            <h3>The $150 Growth Setup</h3>
+            <p>Higher-rated USB mic kit + webcam + ring light + simple sound treatment. This setup feels more serious without breaking the bank.</p>
+          </div>
+          <a class="button gold" href="https://www.bestbuy.com/site/searchpage.jsp?st=podcast+microphone+webcam+ring+light" target="_blank" rel="noopener">Compare Growth Options</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Record the Message. Build the Movement.</h2>
+      <p>Your first studio does not need to be expensive. It needs to be consistent. Start with clear sound, honest light, and a room prepared with intention. The signal travels when the voice is clean.</p>
+      <a class="button gold" href="https://moorgraphix.com" target="_blank" rel="noopener">Built by Moor Graphix</a>
+    </section>
+
+    <footer>
+      <p><strong>Sid Washington x Moor Graphix</strong> • Budget podcast equipment guide</p>
+      <p class="small">Prices and availability may change. This guide is for comparison and planning purposes; buyers should review current details with each retailer before purchasing.</p>
+    </footer>
+  </main>
+</body>
+</html>
