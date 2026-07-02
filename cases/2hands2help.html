@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2hands2help — Empower Curriculum | Moor Graphix Case Study</title>
+  <meta name="description" content="How Moor Graphix designed the complete Empower social-emotional learning curriculum for 2hands2help — logo, 30+ custom character illustrations, and full lesson plan layout across 4 units." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="2hands2help / Empower — Case Study | Moor Graphix" />
+  <meta property="og:description" content="Logo design. 30+ custom characters. 4-unit curriculum layout. Moor Graphix built the complete visual identity of the Empower social-emotional learning program." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/2hands2help.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 200; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; padding: 12px 36px; background: rgba(2,4,8,0.93); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 0.5px solid rgba(100,160,255,0.12); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
+    .nav-logo img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; }
+    .nav-logo-text .logo-word { font-size: 16px; font-weight: 800; letter-spacing: 0.12em; color: #fff; text-transform: uppercase; line-height: 1; }
+    .nav-logo-text .logo-sub { font-size: 8.5px; letter-spacing: 0.36em; color: rgba(100,160,255,0.45); text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 14px; list-style: none; font-size: 9.5px; letter-spacing: 0.13em; color: rgba(100,160,255,0.5); text-transform: uppercase; flex-shrink: 0; }
+    .nav-links li { cursor: pointer; transition: color 0.2s; padding: 4px 0; position: relative; }
+    .nav-links li::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #6AABFF; transition: width 0.3s; }
+    .nav-links li:hover { color: #6AABFF; }
+    .nav-links li:hover::after { width: 100%; }
+    .nav-links a { color: inherit; text-decoration: none; }
+    .nav-pill { background: rgba(80,140,255,0.15); border: 0.5px solid rgba(80,140,255,0.4); color: #6AABFF; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; padding: 10px 20px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 7px; transition: background 0.25s; white-space: nowrap; text-decoration: none; }
+    .nav-pill:hover { background: rgba(80,140,255,0.28); }
+    .bp { width: 7px; height: 7px; border-radius: 50%; background: #6AABFF; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.6); } }
+    .hamburger { display: none; }
+    .mobile-menu { display: none; }
+    @media (max-width: 768px) {
+      .nav { padding: 12px 18px; gap: 0; }
+      .nav-links { display: none !important; }
+      .nav-pill  { display: none !important; }
+      .hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px 4px; z-index: 310; flex-shrink: 0; }
+      .hamburger span { display: block; width: 22px; height: 2px; background: #6AABFF; border-radius: 2px; transition: all 0.3s; pointer-events: none; }
+      .mobile-menu { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; position: fixed; inset: 0; background: rgba(2,4,8,0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 300; opacity: 0; pointer-events: none; transition: opacity 0.28s ease; }
+      .mobile-menu.open { opacity: 1; pointer-events: all; }
+      .mobile-menu-close { position: absolute; top: 20px; right: 22px; background: none; border: none; color: rgba(100,160,255,0.55); font-size: 26px; cursor: pointer; line-height: 1; padding: 4px; transition: color 0.2s; }
+      .mobile-menu-close:hover { color: #6AABFF; }
+      .mobile-menu a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: 0.08em; color: rgba(190,215,255,0.85); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+      .mobile-menu a:hover { color: #6AABFF; }
+      .mobile-menu .mob-consult { margin-top: 10px; background: rgba(80,140,255,0.15); border: 0.5px solid rgba(80,140,255,0.4); color: #6AABFF !important; font-size: 13px !important; letter-spacing: 0.14em; padding: 13px 28px; border-radius: 4px; }
+      .nav-logo-text .logo-sub { display: none; }
+    }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 38s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO */
+    .hero { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem 5rem; display: grid; grid-template-columns: 56% 1fr; gap: 4rem; align-items: center; position: relative; }
+    .hero::before { content: ''; position: absolute; top: 15%; right: -8%; width: 55vw; height: 55vw; background: radial-gradient(circle, rgba(59,111,240,0.06) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+    .hero-left { position: relative; z-index: 1; }
+    .hero-right { position: relative; z-index: 1; }
+
+    .pill-label { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--blue-line); border-radius: 9999px; padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 2rem; background: var(--blue-dim); }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 5.5vw, 5.2rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
+    h1 em { font-style: italic; color: var(--blue); }
+    .hero-deck { font-size: 1.05rem; color: var(--muted); max-width: 48ch; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.45s var(--ease); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; }
+    .btn-ghost:hover { color: var(--white); }
+    .meta-strip { border-top: 1px solid var(--blue-line); margin-top: 2.5rem; padding-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+
+    /* HERO RIGHT */
+    .hero-img-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; }
+    .hero-img-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); overflow: hidden; }
+    .hero-img-inner img { width: 100%; display: block; object-fit: contain; }
+    .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.875rem; }
+    .stat-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1rem; padding: 2px; }
+    .stat-inner { background: var(--bg-2); border-radius: calc(1rem - 2px); padding: 1.25rem 1.5rem; }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--blue); line-height: 1; margin-bottom: 0.25rem; }
+    .stat-lbl { font-size: 0.7rem; color: var(--muted); line-height: 1.45; }
+
+    /* SECTIONS */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    /* SERVICES STRIP */
+    .strip { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .strip-inner { max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .strip-label { font-size: 0.55rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; }
+    .strip-pills { display: flex; gap: 0.625rem; flex-wrap: wrap; }
+    .s-pill { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 9999px; padding: 0.3rem 0.875rem; font-size: 0.68rem; color: var(--muted); white-space: nowrap; transition: border-color 0.3s, color 0.3s; }
+    .s-pill:hover { border-color: rgba(59,111,240,0.5); color: var(--white); }
+    .s-pill::before { content: '✦'; font-size: 0.4rem; color: var(--blue); }
+
+    /* STEPS */
+    .steps-col { margin-top: 2rem; }
+    .step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .step:first-child { padding-top: 0; }
+    .step:last-child { border-bottom: none; }
+    .step:hover { transform: translateX(6px); }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .step h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .step p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* GALLERY */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .gallery-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .gallery-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item { position: relative; cursor: pointer; border-radius: 1rem; overflow: hidden; border: 1px solid var(--blue-line); background: var(--bg-2); transition: transform 0.45s var(--ease), border-color 0.3s, box-shadow 0.45s var(--ease); }
+    .gallery-item:hover { transform: translateY(-4px); border-color: rgba(59,111,240,0.45); box-shadow: 0 16px 40px rgba(59,111,240,0.12); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
+    .gallery-item.square img { aspect-ratio: 1/1; }
+    .gallery-item.landscape img { aspect-ratio: 16/9; }
+    .gallery-item.auto img { aspect-ratio: auto; height: auto; }
+    .gallery-zoom-icon { position: absolute; top: 10px; right: 10px; background: rgba(8,12,20,0.7); border: 1px solid var(--blue-line); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--blue); opacity: 0; transition: opacity 0.3s; }
+    .gallery-item:hover .gallery-zoom-icon { opacity: 1; }
+    .gallery-caption { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.75rem; background: var(--bg-2); }
+
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(4,8,16,0.96); backdrop-filter: blur(16px); align-items: center; justify-content: center; }
+    .lightbox.active { display: flex; }
+    .lightbox-img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 0.75rem; box-shadow: 0 32px 80px rgba(0,0,0,0.6); }
+    .lightbox-close { position: fixed; top: 1.5rem; right: 1.5rem; background: rgba(59,111,240,0.15); border: 1px solid var(--blue-line); color: var(--white); font-size: 1.4rem; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.25s; }
+    .lightbox-close:hover { background: rgba(59,111,240,0.35); }
+    .lightbox-prev, .lightbox-next { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(59,111,240,0.15); border: 1px solid var(--blue-line); color: var(--white); font-size: 1.2rem; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.25s; }
+    .lightbox-prev { left: 1.5rem; }
+    .lightbox-next { right: 1.5rem; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(59,111,240,0.35); }
+    .lightbox-counter { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); font-size: 0.65rem; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; }
+
+    /* CHARACTER SHOWCASE */
+    .char-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .char-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.25rem; padding: 2px; cursor: pointer; transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease); }
+    .char-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.12); }
+    .char-inner { background: var(--bg-2); border-radius: calc(1.25rem - 2px); overflow: hidden; }
+    .char-inner img { width: 100%; display: block; object-fit: contain; aspect-ratio: 3/4; background: var(--bg-3); }
+    .char-name { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.875rem; }
+
+    /* BENTO */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; min-height: 160px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .big-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* QUOTE */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 1.5rem 4rem; }
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .char-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 2; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wrap { padding: 5rem 1.5rem; }
+    }
+    @media (max-width: 560px) {
+      .char-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "2hands2help / Empower — Case Study",
+    "headline": "A complete visual identity for a social-emotional learning curriculum.",
+    "description": "How Moor Graphix designed the complete Empower SEL curriculum for 2hands2help — logo, brand guidelines, 30+ custom character illustrations, and full lesson plan layout across 4 units.",
+    "url": "https://moorgraphix.com/cases/2hands2help.html",
+    "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
+    "about": { "@type": "Organization", "name": "2hands2help / Empower" },
+    "keywords": "curriculum design, logo design, character illustration, education design, social-emotional learning, lesson plan design, nonprofit design"
+  }
+  </script>
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="https://moorgraphix.com/index.html" class="nav-logo">
+    <img src="../assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+    <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+    <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+    <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+    <li><a href="https://moorgraphix.com/about.html">About</a></li>
+    <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+  </ul>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="nav-pill">
+    <div class="bp"></div>Book Free Consult
+  </a>
+  <button type="button" class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button type="button" class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="https://moorgraphix.com/index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
+  <a href="https://moorgraphix.com/services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="https://moorgraphix.com/ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
+  <a href="https://moorgraphix.com/blog.html" onclick="toggleMobileMenu()">Blog</a>
+  <a href="https://moorgraphix.com/about.html" onclick="toggleMobileMenu()">About</a>
+  <a href="https://moorgraphix.com/contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="mob-consult" onclick="toggleMobileMenu()">Book Free Consult</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>✦ 2hands2help</span><span>✦ Empower Program</span><span>✦ SEL Curriculum</span><span>✦ Logo Design</span><span>✦ Character Illustration</span><span>✦ Lesson Plan Design</span><span>✦ Youth Education</span><span>✦ Social-Emotional Learning</span><span>✦ Scenario Cards</span>
+    <span>✦ 2hands2help</span><span>✦ Empower Program</span><span>✦ SEL Curriculum</span><span>✦ Logo Design</span><span>✦ Character Illustration</span><span>✦ Lesson Plan Design</span><span>✦ Youth Education</span><span>✦ Social-Emotional Learning</span><span>✦ Scenario Cards</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left reveal">
+    <div class="pill-label">Case Study — Curriculum Design & Character Illustration</div>
+    <h1>A curriculum.<br>A cast of <em>characters.</em><br>A complete visual world.</h1>
+    <p class="hero-deck">Joelle James and 2hands2help created the Empower program to teach social-emotional skills to youth. <strong>Moor Graphix built everything they needed to bring it to life visually</strong> — logo, brand guidelines, 30+ original character illustrations, and full lesson plan layout across 4 units.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-primary" href="#characters">See the Characters <span class="btn-icon">↓</span></a>
+      <a class="btn btn-ghost" href="#scope">Full Scope ↓</a>
+    </div>
+    <div class="meta-strip">
+      <div class="meta-item"><span class="meta-lbl">Client</span><span class="meta-val">Joelle James / 2hands2help</span></div>
+      <div class="meta-item"><span class="meta-lbl">Program</span><span class="meta-val">Empower — SEL Curriculum</span></div>
+      <div class="meta-item"><span class="meta-lbl">Deliverables</span><span class="meta-val">Logo · Characters · Curriculum Layout</span></div>
+      <div class="meta-item"><span class="meta-lbl">Partnership</span><span class="meta-val">2023 – 2025</span></div>
+    </div>
+  </div>
+  <div class="hero-right reveal d2">
+    <div class="hero-img-card">
+      <div class="hero-img-inner">
+        <img src="../assets/images/empower/characters-superkids.png" alt="Empower Superkids character illustration group by Moor Graphix" loading="eager">
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-card"><div class="stat-inner"><div class="stat-num">30+</div><div class="stat-lbl">Original character illustrations</div></div></div>
+      <div class="stat-card"><div class="stat-inner"><div class="stat-num">4</div><div class="stat-lbl">Curriculum units fully designed</div></div></div>
+      <div class="stat-card"><div class="stat-inner"><div class="stat-num">2+</div><div class="stat-lbl">Years of ongoing partnership</div></div></div>
+      <div class="stat-card"><div class="stat-inner"><div class="stat-num">SEL</div><div class="stat-lbl">Social-emotional learning for youth</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-label reveal">Services delivered across this engagement</div>
+    <div class="strip-pills reveal d1">
+      <span class="s-pill">Logo Design</span>
+      <span class="s-pill">Brand Guidelines</span>
+      <span class="s-pill">Character Illustration</span>
+      <span class="s-pill">Curriculum Layout Design</span>
+      <span class="s-pill">Lesson Plan Design</span>
+      <span class="s-pill">Activity Sheet Design</span>
+      <span class="s-pill">Scenario Card Design</span>
+      <span class="s-pill">Print Production</span>
+      <span class="s-pill">Supplemental Materials</span>
+      <span class="s-pill">UUSW Logo Design</span>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- CHALLENGE -->
+<div class="wrap">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">01 — The Challenge</div>
+      <h2>A powerful<br>curriculum with<br><em>no visual world.</em></h2>
+      <p class="body-text">Joelle James had built something real with 2hands2help: a structured, research-informed social-emotional learning program designed to help youth navigate feelings, build relationships, and develop the inner tools they'd need for life.</p>
+      <p class="body-text">But the Empower curriculum existed as a concept — text, frameworks, lesson structures — without the visual identity, characters, or designed materials that would make it <strong>credible in a classroom, fundable to donors, and engaging to the kids it was built for.</strong></p>
+      <p class="body-text">Moor Graphix was brought in to build the entire visual world from zero: the logo, the cast of characters kids would see themselves in, and the fully designed lesson plan system across 4 units.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="steps-col">
+        <div class="step">
+          <div class="step-n">—</div>
+          <div>
+            <h3>No logo or visual identity</h3>
+            <p>The Empower program needed a mark that communicated youth empowerment, warmth, and credibility — something educators and funders would immediately trust.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">—</div>
+          <div>
+            <h3>No characters for kids to connect with</h3>
+            <p>A curriculum that teaches emotional intelligence needs characters who model it. Kids needed to see themselves — different backgrounds, ages, family structures, and emotional experiences — reflected in the program.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">—</div>
+          <div>
+            <h3>No designed lesson materials</h3>
+            <p>Raw curriculum content needed to become designed, print-ready lesson plans, activity sheets, and scenario cards that educators could actually use in a classroom setting.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">—</div>
+          <div>
+            <h3>Ongoing refinement across 4 units</h3>
+            <p>As the curriculum evolved through implementation and feedback, the design had to evolve with it — multiple revision cycles across units, characters, and supplemental materials.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- LOGO SECTION -->
+<div class="wrap">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">02 — Logo & Brand Identity</div>
+      <h2>A mark that<br>earns trust in<br><em>every room.</em></h2>
+      <p class="body-text">The Empower logo needed to work for two very different audiences simultaneously: the youth it serves, and the educators, administrators, and funders who would evaluate it. It needed energy without chaos, warmth without naivety, and professional authority without coldness.</p>
+      <p class="body-text">Moor Graphix delivered the logo across all formats — full color, grayscale, vector, print-ready — with a complete brand guidelines document covering usage, color system, and typography. Multiple revision rounds refined the mark until it was ready for both the classroom and the boardroom.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="gallery-grid cols-2" id="gallery-logo">
+        <div class="gallery-item square" onclick="openLightbox('gallery-logo', 0)">
+          <img src="../assets/images/empower/logo-color.jpg" alt="Empower Program logo — color version by Moor Graphix" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Logo — Color</div>
+        </div>
+        <div class="gallery-item square" onclick="openLightbox('gallery-logo', 1)">
+          <img src="../assets/images/empower/brand-mockup-1.jpg" alt="Empower brand identity mockup 1 by Moor Graphix" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Brand Mockup</div>
+        </div>
+        <div class="gallery-item square" onclick="openLightbox('gallery-logo', 2)">
+          <img src="../assets/images/empower/brand-mockup-2.jpg" alt="Empower brand identity mockup 2 by Moor Graphix" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Brand Mockup</div>
+        </div>
+        <div class="gallery-item square" onclick="openLightbox('gallery-logo', 3)">
+          <img src="../assets/images/empower/brand-mockup-3.jpg" alt="Empower brand identity mockup 3 by Moor Graphix" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Brand Mockup</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- CHARACTERS -->
+<div class="wrap" id="characters">
+  <div class="reveal">
+    <div class="sec-label">03 — Character Illustration</div>
+    <h2>30+ original<br>characters. Every<br><em>kid sees themselves.</em></h2>
+    <p class="body-text">The most distinctive and labor-intensive deliverable in this engagement was the cast of original characters Moor Graphix illustrated for the Empower curriculum. These weren't stock images or clip art — they were <strong>custom-designed people</strong> that populated the Empower world: kids, parents, teachers, coaches, community figures, and even abstract emotional characters.</p>
+    <p class="body-text">The cast was built to reflect the real diversity of the students Empower serves — different races, family structures, ages, and roles. Alongside the realistic cast, Moor Graphix also designed fantastical "Super Kid" versions and emotional concept characters that bring abstract SEL ideas to life visually.</p>
+  </div>
+
+  <!-- Character showcase -->
+  <div class="char-grid reveal d1" id="gallery-characters">
+    <div class="char-card" onclick="openLightbox('gallery-characters', 0)">
+      <div class="char-inner">
+        <img src="../assets/images/empower/character-captain-cool.png" alt="Captain Cool — Empower character by Moor Graphix" loading="lazy">
+      </div>
+      <div class="char-name">Captain Cool</div>
+    </div>
+    <div class="char-card" onclick="openLightbox('gallery-characters', 1)">
+      <div class="char-inner">
+        <img src="../assets/images/empower/characters-superkids.png" alt="Empower Superkids group — character illustration by Moor Graphix" loading="lazy">
+      </div>
+      <div class="char-name">The Superkids</div>
+    </div>
+    <div class="char-card" onclick="openLightbox('gallery-characters', 2)">
+      <div class="char-inner">
+        <img src="../assets/images/empower/character-jazzy.png" alt="Jazzy — Empower character by Moor Graphix" loading="lazy">
+      </div>
+      <div class="char-name">Jazzy</div>
+    </div>
+    <div class="char-card" onclick="openLightbox('gallery-characters', 3)">
+      <div class="char-inner">
+        <img src="../assets/images/empower/character-lucky.png" alt="Lucky — Empower character by Moor Graphix" loading="lazy">
+      </div>
+      <div class="char-name">Lucky</div>
+    </div>
+  </div>
+
+  <div class="reveal d1" style="margin-top:2rem;">
+    <div class="sec-label">Full Character Roster — Designed by Moor Graphix</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.4rem 3rem;margin-top:1.25rem;">
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Brandon · Kyle · Jayden · Robert</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Juan · Kai · Maria · Jazzy · Lucky</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Sidney · Davis · Baby Hero</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Mom · Dad · Grandma Ella · Grandpa</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Coach · Mr. Williams · Ms. Santos</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Ms. Sanders · Ms. Thompson · Principal</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Officer Blake · SRO Patel · Neighbor</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Captain Cool · Super Kids (5 versions)</div>
+      <div style="font-size:0.78rem;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(59,111,240,0.08);">Doubt · Focus · Crybaby · Squirm Monsters</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- CURRICULUM DESIGN -->
+<div class="wrap">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">04 — Curriculum Layout Design</div>
+      <h2>4 units.<br>Designed to<br><em>teach and inspire.</em></h2>
+      <p class="body-text">The Empower lesson plans aren't just functional documents — they're designed experiences. Moor Graphix laid out all four curriculum units with the characters, color system, and visual hierarchy that makes the content inviting for youth and clear for educators.</p>
+      <p class="body-text">Each unit went through multiple design revision cycles as the curriculum was piloted and refined. Moor Graphix delivered each iteration — including the November 2025 revision cycle — keeping the visual system current with every content update.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="steps-col">
+        <div class="step">
+          <div class="step-n">01</div>
+          <div>
+            <h3>Unit 1 — Self-Awareness</h3>
+            <p>Helping students recognize and name their emotions, understand their strengths, and build a foundation of self-knowledge.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <div>
+            <h3>Unit 2 — Self-Management</h3>
+            <p>Strategies for managing impulses, setting goals, and developing the discipline to stay on track when emotions run high.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <div>
+            <h3>Unit 3 — Social Awareness</h3>
+            <p>Building empathy, understanding diverse perspectives, and developing the social intelligence to navigate relationships.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">04</div>
+          <div>
+            <h3>Unit 4 — Relationship Skills & Responsible Decision-Making</h3>
+            <p>Communication, conflict resolution, and the frameworks for making thoughtful decisions under pressure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- ACTIVITY SHEETS & SCENARIO CARDS -->
+<div class="wrap">
+  <div class="reveal">
+    <div class="sec-label">05 — Activity Sheets & Scenario Cards</div>
+    <h2>The tools that<br>make the lesson<br><em>land.</em></h2>
+    <p class="body-text">Beyond the lesson plans themselves, Moor Graphix designed the full suite of student-facing activity sheets and scenario cards that bring each lesson to life in the classroom. Each sheet is character-driven, age-appropriate, and designed to be completed — not just looked at.</p>
+  </div>
+  <div class="gallery-grid cols-4 reveal d1" id="gallery-activities">
+    <div class="gallery-item" onclick="openLightbox('gallery-activities', 0)">
+      <img src="../assets/images/empower/activity-1-1.png" alt="Empower Lesson Plan Activity Sheet 1.1" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Unit 1 — Sheet 1.1</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-activities', 1)">
+      <img src="../assets/images/empower/activity-1-2.png" alt="Empower Lesson Plan Activity Sheet 1.2" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Unit 1 — Sheet 1.2</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-activities', 2)">
+      <img src="../assets/images/empower/scenario-cards.png" alt="Empower Scenario Cards designed by Moor Graphix" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Scenario Cards</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-activities', 3)">
+      <img src="../assets/images/empower/activity-2-1.png" alt="Empower Lesson Plan Activity Sheet 2.1" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Unit 2 — Sheet 2.1</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SCOPE BENTO -->
+<div class="wrap" id="scope">
+  <div class="reveal">
+    <div class="sec-label">06 — Full Scope</div>
+    <h2>Everything it takes<br>to build a<br><em>curriculum from zero.</em></h2>
+    <p class="body-text">From the logo to the last scenario card — Moor Graphix delivered the complete visual system.</p>
+  </div>
+  <div class="bento">
+    <div class="bento-card c2 reveal d1">
+      <div class="bento-inner">
+        <div class="big-num">30+</div>
+        <div class="big-lbl">Original character illustrations</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d2">
+      <div class="bento-inner">
+        <div class="big-num">4</div>
+        <div class="big-lbl">Curriculum units fully designed</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d3">
+      <div class="bento-inner">
+        <div class="big-num">2+</div>
+        <div class="big-lbl">Years of partnership and iteration</div>
+      </div>
+    </div>
+    <div class="bento-card c3 reveal d1">
+      <div class="bento-inner">
+        <h4>A cast built for every classroom</h4>
+        <p>Kids, parents, teachers, coaches, community figures, and conceptual SEL characters — the Empower cast was designed to reflect the real diversity of the students this program serves. Every character was custom-illustrated from scratch.</p>
+      </div>
+    </div>
+    <div class="bento-card c3 reveal d2">
+      <div class="bento-inner">
+        <h4>Curriculum that evolves — design that keeps up</h4>
+        <p>As Empower was piloted, refined, and expanded, Moor Graphix delivered each design revision cycle on time. The November 2025 update cycle produced new units and updated materials that kept the program current with its educational goals.</p>
+      </div>
+    </div>
+    <div class="bento-card c4 reveal d1">
+      <div class="bento-inner">
+        <h4>From concept to classroom-ready</h4>
+        <p>Every deliverable Moor Graphix produced was built for real use — print-ready PDFs, high-resolution illustrations, and InDesign-based layouts that could be updated, exported, and distributed to educators without rebuilding from scratch each time.</p>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d2">
+      <div class="bento-inner">
+        <div class="big-num">UUSW</div>
+        <div class="big-lbl">Second logo project delivered for Joelle James</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE -->
+<div class="quote-break">
+  <div class="quote-inner">
+    <div class="reveal">
+      <blockquote>"The Empower program needed more than a designer — it needed a creative partner who could translate the vision of social-emotional learning into a visual world kids would actually want to be inside."</blockquote>
+      <p class="quote-attr">— Sid Washington, Moor Graphix</p>
+    </div>
+    <div class="reveal d1">
+      <div class="sec-label">The Approach</div>
+      <h2>Curriculum design<br>is <em>character</em> design.</h2>
+      <p class="body-text">Social-emotional learning works when students see themselves reflected in the material. Abstract concepts like empathy, impulse control, and decision-making become real when they're embodied in characters who look like you, live in neighborhoods like yours, and face situations you've actually been in.</p>
+      <p class="body-text">Moor Graphix applied Cultural Alchemy to the Empower curriculum — building a visual world diverse enough for every child to find themselves in it, and designed well enough that educators would choose to use it every day.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-inner reveal">
+    <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Program</div>
+    <h2>Have a curriculum,<br>program, or mission that<br>needs a <em>visual world?</em></h2>
+    <p class="body-text">Whether you're building an educational program from zero or need to elevate existing materials — Moor Graphix brings the same depth and craft that turned the Empower concept into a print-ready, classroom-ready curriculum product.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
+        Book Free Consultation
+        <span class="btn-icon">↗</span>
+      </a>
+      <a class="btn-outline" href="https://moorgraphix.com/index.html#portfolio">← View All Work</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+    <a class="footer-back" href="https://moorgraphix.com/index.html#portfolio">← Back to Portfolio</a>
+    <span class="footer-copy">© 2026 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
+  <button type="button" class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button type="button" class="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button type="button" class="lightbox-next" onclick="lightboxNav(1)">›</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script>
+  const obs = new IntersectionObserver(
+    es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+    { threshold: 0.06 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  let currentGallery = [], currentIndex = 0;
+
+  function buildGallery(galleryId) {
+    const container = document.getElementById(galleryId);
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('img')).map(img => ({ src: img.src, alt: img.alt }));
+  }
+
+  function openLightbox(galleryId, index) {
+    currentGallery = buildGallery(galleryId);
+    currentIndex = index;
+    showLightboxImage();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLightboxImage() {
+    const img = document.getElementById('lightbox-img');
+    const counter = document.getElementById('lightbox-counter');
+    img.src = currentGallery[currentIndex].src;
+    img.alt = currentGallery[currentIndex].alt;
+    counter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
+  }
+
+  function lightboxNav(dir) {
+    currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
+    showLightboxImage();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeLightboxOnBackdrop(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+</script>
+<script src="../assets/js/particles.js"></script>
+</body>
+</html>
