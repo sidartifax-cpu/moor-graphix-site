@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETHOH — Case Study | Moor Graphix</title>
+  <meta name="description" content="How Moor Graphix served as the full creative partner for ETHOH — 20th Anniversary campaign, video production, social media, merchandise, and fundraising creative across 4+ years." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="ETHOH Case Study — Moor Graphix" />
+  <meta property="og:description" content="20th Anniversary. 15+ videos. Souvenir journal. Merchandise line. 4 years of creative partnership with Enter The Holy of Holies." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/ethoh.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 200; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; padding: 12px 36px; background: rgba(2,4,8,0.93); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 0.5px solid rgba(100,160,255,0.12); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
+    .nav-logo img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; }
+    .nav-logo-text .logo-word { font-size: 16px; font-weight: 800; letter-spacing: 0.12em; color: #fff; text-transform: uppercase; line-height: 1; }
+    .nav-logo-text .logo-sub { font-size: 8.5px; letter-spacing: 0.36em; color: rgba(100,160,255,0.45); text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 14px; list-style: none; font-size: 9.5px; letter-spacing: 0.13em; color: rgba(100,160,255,0.5); text-transform: uppercase; flex-shrink: 0; }
+    .nav-links li { cursor: pointer; transition: color 0.2s; padding: 4px 0; position: relative; }
+    .nav-links li::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #6AABFF; transition: width 0.3s; }
+    .nav-links li:hover { color: #6AABFF; }
+    .nav-links li:hover::after { width: 100%; }
+    .nav-links a { color: inherit; text-decoration: none; }
+    .nav-pill { background: rgba(80,140,255,0.15); border: 0.5px solid rgba(80,140,255,0.4); color: #6AABFF; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; padding: 10px 20px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 7px; transition: background 0.25s; white-space: nowrap; text-decoration: none; }
+    .nav-pill:hover { background: rgba(80,140,255,0.28); }
+    .bp { width: 7px; height: 7px; border-radius: 50%; background: #6AABFF; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.6); } }
+    .hamburger { display: none; }
+    .mobile-menu { display: none; }
+    @media (max-width: 768px) {
+      .nav { padding: 12px 18px; gap: 0; }
+      .nav-links { display: none !important; }
+      .nav-pill  { display: none !important; }
+      .hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px 4px; z-index: 310; flex-shrink: 0; }
+      .hamburger span { display: block; width: 22px; height: 2px; background: #6AABFF; border-radius: 2px; transition: all 0.3s; pointer-events: none; }
+      .mobile-menu { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; position: fixed; inset: 0; background: rgba(2,4,8,0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 300; opacity: 0; pointer-events: none; transition: opacity 0.28s ease; }
+      .mobile-menu.open { opacity: 1; pointer-events: all; }
+      .mobile-menu-close { position: absolute; top: 20px; right: 22px; background: none; border: none; color: rgba(100,160,255,0.55); font-size: 26px; cursor: pointer; line-height: 1; padding: 4px; transition: color 0.2s; }
+      .mobile-menu-close:hover { color: #6AABFF; }
+      .mobile-menu a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: 0.08em; color: rgba(190,215,255,0.85); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+      .mobile-menu a:hover { color: #6AABFF; }
+      .mobile-menu .mob-consult { margin-top: 10px; background: rgba(80,140,255,0.15); border: 0.5px solid rgba(80,140,255,0.4); color: #6AABFF !important; font-size: 13px !important; letter-spacing: 0.14em; padding: 13px 28px; border-radius: 4px; }
+      .nav-logo-text .logo-sub { display: none; }
+    }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 40s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100dvh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.45;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,12,20,1) 0%, rgba(8,12,20,0.6) 50%, rgba(8,12,20,0.3) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      width: 100%;
+    }
+    .pill-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--blue-line); border-radius: 9999px;
+      padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 2rem;
+      background: var(--blue-dim);
+    }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 6vw, 5.5rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.5rem; max-width: 18ch; }
+    h1 em { font-style: italic; color: var(--blue); }
+    .hero-deck { font-size: 1rem; color: var(--muted); max-width: 52ch; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 3rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.45s var(--ease); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; }
+    .btn-ghost:hover { color: var(--white); }
+    .meta-strip { border-top: 1px solid var(--blue-line); padding-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+
+    /* SECTIONS */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    /* SERVICES STRIP */
+    .services-strip { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .services-inner { max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .services-label { font-size: 0.55rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; }
+    .services-scroll { display: flex; gap: 0.625rem; flex-wrap: wrap; }
+    .svc-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--blue-dim); border: 1px solid var(--blue-line);
+      border-radius: 9999px; padding: 0.3rem 0.875rem;
+      font-size: 0.68rem; color: var(--muted); white-space: nowrap;
+      transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+    }
+    .svc-pill:hover { border-color: rgba(59,111,240,0.5); color: var(--white); }
+    .svc-pill::before { content: '✦'; font-size: 0.4rem; color: var(--blue); }
+
+    /* STEPS */
+    .steps-col { margin-top: 2rem; }
+    .step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .step:first-child { padding-top: 0; }
+    .step:last-child { border-bottom: none; }
+    .step:hover { transform: translateX(6px); }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .step h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .step p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* LIGHTBOX GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .gallery-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .gallery-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item {
+      position: relative;
+      cursor: pointer;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--blue-line);
+      background: var(--bg-2);
+      transition: transform 0.45s var(--ease), border-color 0.3s, box-shadow 0.45s var(--ease);
+    }
+    .gallery-item:hover { transform: translateY(-4px); border-color: rgba(59,111,240,0.45); box-shadow: 0 16px 40px rgba(59,111,240,0.12); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
+    .gallery-item.landscape img { aspect-ratio: 16/9; }
+    .gallery-item.square img { aspect-ratio: 1/1; }
+    .gallery-zoom-icon {
+      position: absolute; top: 10px; right: 10px;
+      background: rgba(8,12,20,0.7); border: 1px solid var(--blue-line);
+      border-radius: 50%; width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; color: var(--blue);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-zoom-icon { opacity: 1; }
+    .gallery-caption { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.75rem; background: var(--bg-2); }
+
+    /* LIGHTBOX OVERLAY */
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(4,8,16,0.96);
+      backdrop-filter: blur(16px);
+      align-items: center; justify-content: center;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox-img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 0.75rem; box-shadow: 0 32px 80px rgba(0,0,0,0.6); }
+    .lightbox-close { position: fixed; top: 1.5rem; right: 1.5rem; background: rgba(59,111,240,0.15); border: 1px solid var(--blue-line); color: var(--white); font-size: 1.4rem; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.25s; }
+    .lightbox-close:hover { background: rgba(59,111,240,0.35); }
+    .lightbox-prev, .lightbox-next { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(59,111,240,0.15); border: 1px solid var(--blue-line); color: var(--white); font-size: 1.2rem; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.25s; }
+    .lightbox-prev { left: 1.5rem; }
+    .lightbox-next { right: 1.5rem; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(59,111,240,0.35); }
+    .lightbox-counter { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); font-size: 0.65rem; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; }
+
+    /* VIDEO GRID */
+    .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+    .video-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.25rem; padding: 2px; transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease); }
+    .video-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .video-inner { background: var(--bg-2); border-radius: calc(1.25rem - 2px); overflow: hidden; }
+    .video-inner video { width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; }
+    .video-meta { padding: 1rem 1.25rem 1.25rem; }
+    .video-meta h4 { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .video-meta p { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+
+    /* BENTO */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; min-height: 160px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .big-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* QUOTE */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* PORTRAIT */
+    .portrait-card { border-radius: 1.5rem; overflow: hidden; border: 1px solid var(--blue-line); background: var(--bg-2); }
+    .portrait-card img { width: 100%; display: block; object-fit: cover; max-height: 520px; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .video-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 2; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wrap { padding: 5rem 1.5rem; }
+      .hero-content { padding: 0 1.5rem 4rem; }
+    }
+    @media (max-width: 560px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
+      h1 { font-size: 3rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "ETHOH — Case Study",
+    "headline": "20 years of mission. 4 years of creative partnership.",
+    "description": "How Moor Graphix served as the full creative partner for ETHOH — 20th Anniversary campaign, video production, social media design, souvenir journal, merchandise, and fundraising creative.",
+    "url": "https://moorgraphix.com/cases/ethoh.html",
+    "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
+    "about": { "@type": "Organization", "name": "ETHOH — Enter The Holy of Holies" },
+    "keywords": "video production, print design, social media design, nonprofit creative, spiritual wellness, flyer design, merchandise design, fundraising creative"
+  }
+  </script>
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="https://moorgraphix.com/index.html" class="nav-logo">
+    <img src="../assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+    <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+    <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+    <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+    <li><a href="https://moorgraphix.com/about.html">About</a></li>
+    <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+  </ul>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="nav-pill">
+    <div class="bp"></div>Book Free Consult
+  </a>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="https://moorgraphix.com/index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
+  <a href="https://moorgraphix.com/services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="https://moorgraphix.com/ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
+  <a href="https://moorgraphix.com/blog.html" onclick="toggleMobileMenu()">Blog</a>
+  <a href="https://moorgraphix.com/about.html" onclick="toggleMobileMenu()">About</a>
+  <a href="https://moorgraphix.com/contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="mob-consult" onclick="toggleMobileMenu()">Book Free Consult</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>✦ ETHOH</span><span>✦ 20th Anniversary</span><span>✦ Video Production</span><span>✦ Print Design</span><span>✦ Social Media</span><span>✦ Souvenir Journal</span><span>✦ Merchandise</span><span>✦ Fundraising Creative</span><span>✦ Schomburg Center</span><span>✦ New York NY</span>
+    <span>✦ ETHOH</span><span>✦ 20th Anniversary</span><span>✦ Video Production</span><span>✦ Print Design</span><span>✦ Social Media</span><span>✦ Souvenir Journal</span><span>✦ Merchandise</span><span>✦ Fundraising Creative</span><span>✦ Schomburg Center</span><span>✦ New York NY</span>
+  </div>
+</div>
+
+<!-- HERO — video background -->
+<div class="hero">
+  <video class="hero-video-bg" autoplay muted loop playsinline preload="none"
+    src="../assets/video/ethoh/promo-ad.mp4"></video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="pill-label">Case Study — Full Creative Partnership</div>
+    <h1>20 years of mission.<br><em>4 years</em> of creative partnership.</h1>
+    <p class="hero-deck">ETHOH — Enter The Holy of Holies — is a New York-based spiritual wellness organization led by Reverend Nafisa Sharriff. <strong>Moor Graphix served as their complete creative engine</strong> for 4+ years: videos, campaigns, print, merchandise, event media, and a landmark 20th Anniversary production.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-primary" href="#work">See the Work <span class="btn-icon">↓</span></a>
+      <a class="btn btn-ghost" href="#scope">View Full Scope ↓</a>
+    </div>
+    <div class="meta-strip">
+      <div class="meta-item"><span class="meta-lbl">Client</span><span class="meta-val">ETHOH / Rev. Nafisa Sharriff</span></div>
+      <div class="meta-item"><span class="meta-lbl">Industry</span><span class="meta-val">Spiritual Wellness · Community</span></div>
+      <div class="meta-item"><span class="meta-lbl">Location</span><span class="meta-val">New York, NY</span></div>
+      <div class="meta-item"><span class="meta-lbl">Partnership</span><span class="meta-val">2022 – 2026</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES STRIP -->
+<div class="services-strip">
+  <div class="services-inner">
+    <div class="services-label reveal">Services delivered across this partnership</div>
+    <div class="services-scroll reveal d1">
+      <span class="svc-pill">Video Production</span>
+      <span class="svc-pill">20th Anniversary Campaign</span>
+      <span class="svc-pill">Print Design</span>
+      <span class="svc-pill">Social Media Graphics</span>
+      <span class="svc-pill">Souvenir Journal Design</span>
+      <span class="svc-pill">Merchandise Design</span>
+      <span class="svc-pill">Fundraising Creative</span>
+      <span class="svc-pill">Event Marketing</span>
+      <span class="svc-pill">Documentary Videography</span>
+      <span class="svc-pill">Intro / Outro Packages</span>
+      <span class="svc-pill">Apparel Design</span>
+      <span class="svc-pill">Flyer Design</span>
+      <span class="svc-pill">Banner Design</span>
+      <span class="svc-pill">QR Code Design</span>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- 20TH ANNIVERSARY SECTION -->
+<div class="wrap" id="work">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">01 — The Milestone</div>
+      <h2>A 20th Anniversary<br>worthy of the<br><em>20 years behind it.</em></h2>
+      <p class="body-text">When ETHOH approached their 20th year of serving the New York spiritual wellness community, the occasion demanded more than a flyer. It demanded a full production — designed to honor two decades of healing, ceremony, African dance, and interfaith community.</p>
+      <p class="body-text">Moor Graphix produced the entire creative suite: <strong>flyers, banners, paperless program, souvenir journal, donation ask letter, anniversary recap video, and event intro/outro package.</strong> Every touchpoint of the anniversary carried the same intentional visual presence.</p>
+      <p class="body-text">The result was a celebration that felt as significant as the milestone it honored.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="steps-col">
+        <div class="step">
+          <div class="step-n">01</div>
+          <div>
+            <h3>Souvenir Journal — full production</h3>
+            <p>Layout, editorial design, and press-ready PDF production of the 20th Anniversary Souvenir Journal — a keepsake for attendees and donors that documented two decades of ETHOH's community impact.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <div>
+            <h3>Print & digital flyer suite</h3>
+            <p>Anniversary flyer in multiple formats — front and back, social-optimized cuts, and a back-of-flyer version — ensuring consistent presence across every platform and print run.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <div>
+            <h3>Event banners & paperless program</h3>
+            <p>Designed anniversary banners for the event space and digital use, plus a fully designed paperless ceremony program for the celebration weekend.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">04</div>
+          <div>
+            <h3>Recap video & intro/outro package</h3>
+            <p>Produced the 20th Anniversary Recap Video and a full branded intro/outro video package used at the event and across social media throughout the anniversary season.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 20TH ANNIVERSARY GALLERY -->
+<div class="wrap" style="padding-top:0;">
+  <div class="sec-label reveal">20th Anniversary — Visual Work</div>
+  <div class="gallery-grid reveal d1" id="gallery-anniversary">
+    <div class="gallery-item" onclick="openLightbox('gallery-anniversary', 0)">
+      <img src="../assets/images/ethoh/flyer-front.jpg" alt="ETHOH 20th Anniversary Event Flyer Front" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Anniversary Flyer — Front</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-anniversary', 1)">
+      <img src="../assets/images/ethoh/flyer-back.jpg" alt="ETHOH 20th Anniversary Event Flyer Back" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Anniversary Flyer — Back</div>
+    </div>
+    <div class="gallery-item landscape" onclick="openLightbox('gallery-anniversary', 2)">
+      <img src="../assets/images/ethoh/banner-20th.jpg" alt="ETHOH 20th Anniversary Banner" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">20th Anniversary Banner</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-anniversary', 3)">
+      <img src="../assets/images/ethoh/20th-collage.png" alt="ETHOH 20th Anniversary Retrospective Photo Collage" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Retrospective Photo Collage</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-anniversary', 4)">
+      <img src="../assets/images/ethoh/journal-page-01.jpg" alt="ETHOH Souvenir Journal Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Souvenir Journal — Cover</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-anniversary', 5)">
+      <img src="../assets/images/ethoh/journal-page-02.jpg" alt="ETHOH Souvenir Journal Interior Page" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Souvenir Journal — Interior</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- VIDEO SECTION -->
+<div class="wrap">
+  <div class="reveal">
+    <div class="sec-label">02 — Video Production</div>
+    <h2>15+ video projects.<br><em>Every campaign.</em><br>Every season.</h2>
+    <p class="body-text">From promotional ads and birthday videos to fundraising series and a full documentary — video became the highest-volume deliverable in this partnership. Moor Graphix produced branded video content for ETHOH across every season, event, and campaign for 4+ years.</p>
+  </div>
+  <div class="video-grid reveal d1">
+    <div class="video-card">
+      <div class="video-inner">
+        <video controls preload="none" src="../assets/video/ethoh/promo-ad.mp4"></video>
+      </div>
+      <div class="video-meta">
+        <h4>ETHOH Promo Ad</h4>
+        <p>Promotional video ad produced for ETHOH — used across social media and event marketing.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-inner">
+        <video controls preload="none" src="../assets/video/ethoh/journal-tshirt-ad.mp4"></video>
+      </div>
+      <div class="video-meta">
+        <h4>Journal + T-Shirt Bundle Ad</h4>
+        <p>Video ad promoting the ETHOH souvenir journal and branded t-shirt bundle — merchandise revenue campaign.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-inner">
+        <video controls preload="none" src="../assets/video/ethoh/year-end-donation.mp4"></video>
+      </div>
+      <div class="video-meta">
+        <h4>Year-End Donation Campaign</h4>
+        <p>One of six video cuts produced for the 2025 Year-End Donation drive — multi-video fundraising series.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video project list -->
+  <div style="margin-top:3rem;" class="reveal">
+    <div class="sec-label">Full Video Library — Projects Produced</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem 3rem;margin-top:1.5rem;">
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">ETHOH Intro / Outro Package</h3><p>Annual branded video open/close, multiple versions across 2022–2025</p></div>
+      </div>
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">Happy Birthday ETHOH</h3><p>Annual birthday celebration videos, 2022–2025</p></div>
+      </div>
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">20th Anniversary Recap Video</h3><p>Full event recap video from the 20th Anniversary weekend</p></div>
+      </div>
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">Full Wolf Moon Detox Series</h3><p>Promotional video series for the annual Wolf Moon Detox event</p></div>
+      </div>
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">Schomburg Documentary</h3><p>Video documentary of Rev. Nafisa's blessing at the Schomburg Center Centennial</p></div>
+      </div>
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">ETHOH Testimonials Video</h3><p>Community testimonials compilation for donor and social outreach</p></div>
+      </div>
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">Creating Sacred Space</h3><p>Promotional video for the Creating Sacred Space wellness retreat</p></div>
+      </div>
+      <div class="step" style="grid-template-columns:auto 1fr;gap:1rem;">
+        <div class="step-n" style="font-size:1rem;color:var(--blue);">→</div>
+        <div><h3 style="font-size:0.84rem;">Year-End Donation Series</h3><p>6-video fundraising series for the 2025 year-end giving campaign</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SOCIAL & PRINT GALLERY -->
+<div class="wrap">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">03 — Print & Social Media</div>
+      <h2>Every campaign.<br><em>Ready to deploy.</em></h2>
+      <p class="body-text">Social media graphics, event flyers, invite designs, weekly sponsor templates, fundraising flyers, and African Dance Class Series print materials — Moor Graphix kept ETHOH's visual presence consistent and campaign-ready across every platform and print run.</p>
+      <p class="body-text">30+ social media templates and 20+ unique print and digital designs delivered across the partnership.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="gallery-grid cols-2" id="gallery-social">
+        <div class="gallery-item square" onclick="openLightbox('gallery-social', 0)">
+          <img src="../assets/images/ethoh/social-flyer-1.jpg" alt="ETHOH Social Media Flyer 2024" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Social Flyer</div>
+        </div>
+        <div class="gallery-item square" onclick="openLightbox('gallery-social', 1)">
+          <img src="../assets/images/ethoh/social-flyer-2.jpg" alt="ETHOH Social Media Flyer 2" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Social Flyer</div>
+        </div>
+        <div class="gallery-item square" onclick="openLightbox('gallery-social', 2)">
+          <img src="../assets/images/ethoh/social-template-1.jpg" alt="ETHOH Social Media Template 1" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Social Template</div>
+        </div>
+        <div class="gallery-item square" onclick="openLightbox('gallery-social', 3)">
+          <img src="../assets/images/ethoh/social-template-2.jpg" alt="ETHOH Social Media Template 2" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Social Template</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Full social gallery -->
+  <div class="gallery-grid cols-4 reveal d1" style="margin-top:2rem;" id="gallery-social-full">
+    <div class="gallery-item square" onclick="openLightbox('gallery-social-full', 0)">
+      <img src="../assets/images/ethoh/social-24-front.jpg" alt="ETHOH Social Media 2024 Front" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Social 2024 — Front</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-social-full', 1)">
+      <img src="../assets/images/ethoh/social-24-back.jpg" alt="ETHOH Social Media 2024 Back" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Social 2024 — Back</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-social-full', 2)">
+      <img src="../assets/images/ethoh/dance-class-front.jpg" alt="ETHOH African Dance Class Series Flyer Front" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Dance Class Series — Front</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-social-full', 3)">
+      <img src="../assets/images/ethoh/dance-class-back.jpg" alt="ETHOH African Dance Class Series Flyer Back" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Dance Class Series — Back</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- MERCHANDISE SECTION -->
+<div class="wrap">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">04 — Merchandise Design</div>
+      <h2>A product line<br>that extends<br><em>the mission.</em></h2>
+      <p class="body-text">Moor Graphix designed a full merchandise line for ETHOH — giving the organization a new revenue stream beyond donations and creating physical touchpoints that let supporters carry the mission with them.</p>
+      <p class="body-text">Deliverables included the master ETHOH branded t-shirt, the Nafisa Saying graphic series, the Giving Tuesday 2025 tee in 7 colorway variations, the IATL t-shirt (2026), and the souvenir journal + t-shirt bundle — all production-ready.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="gallery-grid cols-2" id="gallery-merch">
+        <div class="gallery-item" onclick="openLightbox('gallery-merch', 0)">
+          <img src="../assets/images/ethoh/tshirt-mockup.jpg" alt="ETHOH Branded T-Shirt Mockup" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">ETHOH T-Shirt</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('gallery-merch', 1)">
+          <img src="../assets/images/ethoh/bundle-mockup.jpg" alt="ETHOH Journal and T-Shirt Bundle Mockup" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Journal + Tee Bundle</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('gallery-merch', 2)">
+          <img src="../assets/images/ethoh/giving-tuesday-tee.png" alt="ETHOH Giving Tuesday 2025 T-Shirt Design" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Giving Tuesday Tee</div>
+        </div>
+        <div class="gallery-item landscape" onclick="openLightbox('gallery-merch', 3)">
+          <img src="../assets/images/ethoh/magazine-mockup.jpg" alt="ETHOH Magazine Mockup" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Magazine Mockup</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SCHOMBURG DOCUMENTARY SECTION -->
+<div class="wrap">
+  <div class="two-col">
+    <div class="reveal d1">
+      <div class="portrait-card">
+        <img src="../assets/images/ethoh/reverend-nafisa.png" alt="Reverend Nafisa Sharriff of ETHOH" loading="lazy">
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="sec-label">05 — Historic Documentation</div>
+      <h2>The Schomburg.<br>A blessing for the<br><em>ages.</em></h2>
+      <p class="body-text">When the Schomburg Center for Research in Black Culture opened its Centennial celebration in New York, Reverend Nafisa Sharriff was called to deliver the opening blessing — a historically significant moment for both the organization and the broader community it serves.</p>
+      <p class="body-text"><strong>Moor Graphix was there to document it.</strong> The resulting documentary video preserved a milestone moment in ETHOH's legacy — visual proof of an organization whose spiritual leadership had earned a place at one of the most culturally significant institutions in Black American history.</p>
+      <p class="body-text">This is the kind of work that doesn't just promote an organization. It records its place in history.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SCOPE / DELIVERABLES BENTO -->
+<div class="wrap" id="scope">
+  <div class="reveal">
+    <div class="sec-label">06 — Full Scope</div>
+    <h2>The complete<br><em>body of work.</em></h2>
+    <p class="body-text">Four years. Every format. Every campaign season. Every milestone.</p>
+  </div>
+  <div class="bento">
+    <div class="bento-card c2 reveal d1">
+      <div class="bento-inner">
+        <div class="big-num">15+</div>
+        <div class="big-lbl">Unique video projects produced</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d2">
+      <div class="bento-inner">
+        <div class="big-num">40+</div>
+        <div class="big-lbl">Total video cuts &amp; versions delivered</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d3">
+      <div class="bento-inner">
+        <div class="big-num">20+</div>
+        <div class="big-lbl">Unique print &amp; digital designs</div>
+      </div>
+    </div>
+    <div class="bento-card c3 reveal d1">
+      <div class="bento-inner">
+        <h4>20th Anniversary — full production</h4>
+        <p>Flyers, banners, paperless program, souvenir journal, donation ask letter, recap video, and event intro/outro package — the entire anniversary creative suite, produced by Moor Graphix.</p>
+      </div>
+    </div>
+    <div class="bento-card c3 reveal d2">
+      <div class="bento-inner">
+        <h4>Fundraising campaigns with ready-to-deploy creative</h4>
+        <p>Year-End Donation series (6 videos), Giving Tuesday (2024 &amp; 2025), Monthly Blessings Campaign, and Subscription Donation Campaign — each with complete creative packages that reduced time-to-launch for every drive.</p>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d1">
+      <div class="bento-inner">
+        <div class="big-num">4</div>
+        <div class="big-lbl">Fundraising campaigns with full creative</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d2">
+      <div class="bento-inner">
+        <div class="big-num">30+</div>
+        <div class="big-lbl">Social media templates &amp; graphics</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d3">
+      <div class="bento-inner">
+        <div class="big-num">4</div>
+        <div class="big-lbl">Merch designs, 15+ colorway variations</div>
+      </div>
+    </div>
+    <div class="bento-card c6 reveal d1">
+      <div class="bento-inner" style="min-height:auto;">
+        <h4>The Schomburg Centennial Documentary — a milestone in ETHOH's legacy</h4>
+        <p>Moor Graphix documented Rev. Nafisa Sharriff's historic opening blessing at the Schomburg Center for Research in Black Culture — one of Harlem's most iconic cultural institutions. This wasn't a promotional video. It was a record of an organization earning its place in history.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE BREAK -->
+<div class="quote-break">
+  <div class="quote-inner">
+    <div class="reveal">
+      <blockquote>"ETHOH's mission has served this community for over 20 years — and every piece of creative we produced was built to carry that weight. Not just to look good, but to move people to show up, give, and stay connected."</blockquote>
+      <p class="quote-attr">— Sid Washington, Moor Graphix</p>
+    </div>
+    <div class="reveal d1">
+      <div class="sec-label">The Approach</div>
+      <h2>Creative that<br><em>serves</em> the mission.</h2>
+      <p class="body-text">ETHOH didn't need a design agency. They needed a creative partner who understood that every flyer, every video, every social post was in service of a 20-year community mission — not a brand aesthetic.</p>
+      <p class="body-text">Moor Graphix brought Cultural Alchemy to every deliverable: extracting what made ETHOH's work meaningful and encoding it into creative that moved their community to attend, donate, and stay connected across every season and campaign.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-inner reveal">
+    <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Organization</div>
+    <h2>Ready for a creative partner<br>who <em>understands</em> your mission?</h2>
+    <p class="body-text">Whether you're planning a milestone campaign, building a video presence, or need a full creative partner for your nonprofit or wellness organization — Moor Graphix brings the same depth and consistency that carried ETHOH through 4 years of growth.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank">
+        Book Free Consultation
+        <span class="btn-icon">↗</span>
+      </a>
+      <a class="btn-outline" href="https://moorgraphix.com/index.html#portfolio">← View All Work</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+    <a class="footer-back" href="https://moorgraphix.com/index.html#portfolio">← Back to Portfolio</a>
+    <span class="footer-copy">© 2026 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-next" onclick="lightboxNav(1)">›</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script>
+  // SCROLL REVEAL
+  const obs = new IntersectionObserver(
+    es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+    { threshold: 0.06 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // MOBILE MENU
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // LIGHTBOX
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  function buildGallery(galleryId) {
+    const container = document.getElementById(galleryId);
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('img')).map(img => ({ src: img.src, alt: img.alt }));
+  }
+
+  function openLightbox(galleryId, index) {
+    currentGallery = buildGallery(galleryId);
+    currentIndex = index;
+    showLightboxImage();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLightboxImage() {
+    const img = document.getElementById('lightbox-img');
+    const counter = document.getElementById('lightbox-counter');
+    const item = currentGallery[currentIndex];
+    img.src = item.src;
+    img.alt = item.alt;
+    counter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
+  }
+
+  function lightboxNav(dir) {
+    currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
+    showLightboxImage();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeLightboxOnBackdrop(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+</script>
+<script src="../assets/js/particles.js"></script>
+</body>
+</html>
