@@ -76,13 +76,14 @@
       align-items: flex-end;
       overflow: hidden;
     }
-    .hero-video-bg {
+    .hero-img-bg {
       position: absolute;
       inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
+      object-position: center top;
       z-index: 0;
-      opacity: 0.45;
+      opacity: 0.35;
     }
     .hero-overlay {
       position: absolute;
@@ -216,7 +217,8 @@
     .video-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.25rem; padding: 2px; transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease); }
     .video-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
     .video-inner { background: var(--bg-2); border-radius: calc(1.25rem - 2px); overflow: hidden; }
-    .video-inner video { width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; }
+    .video-inner iframe { width: 100%; display: block; aspect-ratio: 9/16; border: none; }
+    .video-placeholder { width: 100%; aspect-ratio: 9/16; background: var(--bg-3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
     .video-meta { padding: 1rem 1.25rem 1.25rem; }
     .video-meta h4 { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
     .video-meta p { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
@@ -349,8 +351,7 @@
 
 <!-- HERO — video background -->
 <div class="hero">
-  <video class="hero-video-bg" autoplay muted loop playsinline preload="none"
-    src="../assets/video/ethoh/promo-ad.mp4"></video>
+  <img class="hero-img-bg" src="../assets/images/ethoh/20th-collage.png" alt="ETHOH 20th Anniversary" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="pill-label">Case Study — Full Creative Partnership</div>
@@ -488,16 +489,20 @@
   <div class="video-grid reveal d1">
     <div class="video-card">
       <div class="video-inner">
-        <video controls preload="none" src="../assets/video/ethoh/promo-ad.mp4"></video>
+        <!-- REPLACE YouTube video ID: swap VIDEO_ID_1 with the YouTube video ID from the URL after ?v= -->
+        <iframe src="https://www.youtube.com/embed/yuzjRDXGM3Q?rel=0&modestbranding=1"
+          title="ETHOH Year-End Donation Campaign" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="video-meta">
-        <h4>ETHOH Promo Ad</h4>
-        <p>Promotional video ad produced for ETHOH — used across social media and event marketing.</p>
+        <h4>Year-End Donation Campaign</h4>
+        <p>One of six video cuts produced for the 2025 Year-End Donation drive — multi-video fundraising series.</p>
       </div>
     </div>
     <div class="video-card">
       <div class="video-inner">
-        <video controls preload="none" src="../assets/video/ethoh/journal-tshirt-ad.mp4"></video>
+        <!-- REPLACE YouTube video ID: swap VIDEO_ID_2 -->
+        <iframe src="https://www.youtube.com/embed/291SYoZIH14?rel=0&modestbranding=1"
+          title="ETHOH Journal T-Shirt Bundle Ad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="video-meta">
         <h4>Journal + T-Shirt Bundle Ad</h4>
@@ -506,11 +511,12 @@
     </div>
     <div class="video-card">
       <div class="video-inner">
-        <video controls preload="none" src="../assets/video/ethoh/year-end-donation.mp4"></video>
+        <iframe src="https://www.youtube.com/embed/yHRlIj9fv30?rel=0&modestbranding=1"
+          title="ETHOH Movement and Meditation Retreat" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="video-meta">
-        <h4>Year-End Donation Campaign</h4>
-        <p>One of six video cuts produced for the 2025 Year-End Donation drive — multi-video fundraising series.</p>
+        <h4>Movement and Meditation Retreat</h4>
+        <p>Produced for ETHOH's Movement and Meditation Retreat — part of the organization's ongoing wellness programming.</p>
       </div>
     </div>
   </div>
@@ -764,7 +770,7 @@
     <h2>Ready for a creative partner<br>who <em>understands</em> your mission?</h2>
     <p class="body-text">Whether you're planning a milestone campaign, building a video presence, or need a full creative partner for your nonprofit or wellness organization — Moor Graphix brings the same depth and consistency that carried ETHOH through 4 years of growth.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank">
+      <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
         Book Free Consultation
         <span class="btn-icon">↗</span>
       </a>
@@ -784,10 +790,10 @@
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <button class="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+  <button type="button" class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button type="button" class="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
   <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <button class="lightbox-next" onclick="lightboxNav(1)">›</button>
+  <button type="button" class="lightbox-next" onclick="lightboxNav(1)">›</button>
   <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
