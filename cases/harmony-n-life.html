@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony N Life Records — Case Study | Moor Graphix</title>
+  <meta name="description" content="How Moor Graphix served as the creative studio for Harmony N Life Records — album artwork for vocalist Rhonda Thomas and event flyer design across 8+ years of independent music." />
+  <meta name="author" content="Sid Washington" />
+  <meta property="og:title" content="Harmony N Life Records — Case Study | Moor Graphix" />
+  <meta property="og:description" content="7 album covers. 20+ event flyers. 8 years of independent music creative." />
+  <meta property="og:url" content="https://moorgraphix.com/cases/harmony-n-life.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c14;
+      --bg-2:      #0d1220;
+      --bg-3:      #111827;
+      --blue:      #3b6ff0;
+      --blue-dim:  rgba(59,111,240,0.10);
+      --blue-line: rgba(59,111,240,0.20);
+      --white:     #e8edf8;
+      --muted:     rgba(232,237,248,0.50);
+      --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 200; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; padding: 12px 36px; background: rgba(2,4,8,0.93); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 0.5px solid rgba(100,160,255,0.12); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
+    .nav-logo img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; }
+    .nav-logo-text .logo-word { font-size: 16px; font-weight: 800; letter-spacing: 0.12em; color: #fff; text-transform: uppercase; line-height: 1; }
+    .nav-logo-text .logo-sub { font-size: 8.5px; letter-spacing: 0.36em; color: rgba(100,160,255,0.45); text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 14px; list-style: none; font-size: 9.5px; letter-spacing: 0.13em; color: rgba(100,160,255,0.5); text-transform: uppercase; flex-shrink: 0; }
+    .nav-links li { cursor: pointer; transition: color 0.2s; padding: 4px 0; position: relative; }
+    .nav-links li::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #6AABFF; transition: width 0.3s; }
+    .nav-links li:hover { color: #6AABFF; }
+    .nav-links li:hover::after { width: 100%; }
+    .nav-links a { color: inherit; text-decoration: none; }
+    .nav-pill { background: rgba(80,140,255,0.15); border: 0.5px solid rgba(80,140,255,0.4); color: #6AABFF; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; padding: 10px 20px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 7px; transition: background 0.25s; white-space: nowrap; text-decoration: none; }
+    .nav-pill:hover { background: rgba(80,140,255,0.28); }
+    .bp { width: 7px; height: 7px; border-radius: 50%; background: #6AABFF; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.6); } }
+    .hamburger { display: none; }
+    .mobile-menu { display: none; }
+    @media (max-width: 768px) {
+      .nav { padding: 12px 18px; gap: 0; }
+      .nav-links { display: none !important; }
+      .nav-pill  { display: none !important; }
+      .hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px 4px; z-index: 310; flex-shrink: 0; }
+      .hamburger span { display: block; width: 22px; height: 2px; background: #6AABFF; border-radius: 2px; transition: all 0.3s; pointer-events: none; }
+      .mobile-menu { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; position: fixed; inset: 0; background: rgba(2,4,8,0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 300; opacity: 0; pointer-events: none; transition: opacity 0.28s ease; }
+      .mobile-menu.open { opacity: 1; pointer-events: all; }
+      .mobile-menu-close { position: absolute; top: 20px; right: 22px; background: none; border: none; color: rgba(100,160,255,0.55); font-size: 26px; cursor: pointer; line-height: 1; padding: 4px; transition: color 0.2s; }
+      .mobile-menu-close:hover { color: #6AABFF; }
+      .mobile-menu a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: 0.08em; color: rgba(190,215,255,0.85); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+      .mobile-menu a:hover { color: #6AABFF; }
+      .mobile-menu .mob-consult { margin-top: 10px; background: rgba(80,140,255,0.15); border: 0.5px solid rgba(80,140,255,0.4); color: #6AABFF !important; font-size: 13px !important; letter-spacing: 0.14em; padding: 13px 28px; border-radius: 4px; }
+      .nav-logo-text .logo-sub { display: none; }
+    }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--bg-2); border-bottom: 1px solid var(--blue-line); overflow: hidden; padding: 0.5rem 0; }
+    .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 40s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO */
+    .hero { position: relative; min-height: 100dvh; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-img-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; z-index: 0; opacity: 0.35; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,12,20,1) 0%, rgba(8,12,20,0.6) 50%, rgba(8,12,20,0.3) 100%); z-index: 1; }
+    .hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 0 2rem 5rem; width: 100%; }
+    .pill-label { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--blue-line); border-radius: 9999px; padding: 0.3rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 2rem; background: var(--blue-dim); }
+    .pill-label::before { content: '✦'; font-size: 0.45rem; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 6vw, 5.5rem); font-weight: 300; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.5rem; max-width: 18ch; }
+    h1 em { font-style: italic; color: var(--blue); }
+    .hero-deck { font-size: 1rem; color: var(--muted); max-width: 52ch; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-deck strong { color: var(--white); font-weight: 500; }
+    .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 3rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.45s var(--ease); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,111,240,0.3); }
+    .btn-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: transform 0.4s var(--ease-back); }
+    .btn-primary:hover .btn-icon { transform: translate(2px,-2px) scale(1.1); }
+    .btn-ghost { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; }
+    .btn-ghost:hover { color: var(--white); }
+    .meta-strip { border-top: 1px solid var(--blue-line); padding-top: 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-lbl { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
+    .meta-val { font-size: 0.82rem; color: var(--white); font-weight: 400; }
+
+    /* SECTIONS */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; }
+    hr.div { border: none; border-top: 1px solid var(--blue-line); max-width: 1280px; margin: 0 auto; }
+    .sec-label { font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sec-label::after { content: ''; width: 2rem; height: 1px; background: var(--blue); opacity: 0.4; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    h2 em { font-style: italic; color: var(--blue); }
+    .body-text { font-size: 0.94rem; color: var(--muted); max-width: 58ch; line-height: 1.85; margin-bottom: 1.2rem; }
+    .body-text:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--white); font-weight: 500; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    /* SERVICES STRIP */
+    .services-strip { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .services-inner { max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .services-label { font-size: 0.55rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.25rem; }
+    .services-scroll { display: flex; gap: 0.625rem; flex-wrap: wrap; }
+    .svc-pill { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 9999px; padding: 0.3rem 0.875rem; font-size: 0.68rem; color: var(--muted); white-space: nowrap; transition: border-color 0.3s var(--ease), color 0.3s var(--ease); }
+    .svc-pill:hover { border-color: rgba(59,111,240,0.5); color: var(--white); }
+    .svc-pill::before { content: '✦'; font-size: 0.4rem; color: var(--blue); }
+
+    /* STEPS */
+    .steps-col { margin-top: 2rem; }
+    .step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(59,111,240,0.1); transition: transform 0.45s var(--ease); }
+    .step:first-child { padding-top: 0; }
+    .step:last-child { border-bottom: none; }
+    .step:hover { transform: translateX(6px); }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(59,111,240,0.28); line-height: 1; }
+    .step h3 { font-size: 0.94rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
+    .step p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    /* GALLERY */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .gallery-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .gallery-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item { position: relative; cursor: pointer; border-radius: 1rem; overflow: hidden; border: 1px solid var(--blue-line); background: var(--bg-2); transition: transform 0.45s var(--ease), border-color 0.3s, box-shadow 0.45s var(--ease); }
+    .gallery-item:hover { transform: translateY(-4px); border-color: rgba(59,111,240,0.45); box-shadow: 0 16px 40px rgba(59,111,240,0.12); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
+    .gallery-item.landscape img { aspect-ratio: 16/9; }
+    .gallery-item.square img { aspect-ratio: 1/1; }
+    .gallery-zoom-icon { position: absolute; top: 10px; right: 10px; background: rgba(8,12,20,0.7); border: 1px solid var(--blue-line); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--blue); opacity: 0; transition: opacity 0.3s; }
+    .gallery-item:hover .gallery-zoom-icon { opacity: 1; }
+    .gallery-caption { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.75rem; background: var(--bg-2); }
+
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(4,8,16,0.96); backdrop-filter: blur(16px); align-items: center; justify-content: center; }
+    .lightbox.active { display: flex; }
+    .lightbox-img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 0.75rem; box-shadow: 0 32px 80px rgba(0,0,0,0.6); }
+    .lightbox-close { position: fixed; top: 1.5rem; right: 1.5rem; background: rgba(59,111,240,0.15); border: 1px solid var(--blue-line); color: var(--white); font-size: 1.4rem; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.25s; }
+    .lightbox-close:hover { background: rgba(59,111,240,0.35); }
+    .lightbox-prev, .lightbox-next { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(59,111,240,0.15); border: 1px solid var(--blue-line); color: var(--white); font-size: 1.2rem; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.25s; }
+    .lightbox-prev { left: 1.5rem; }
+    .lightbox-next { right: 1.5rem; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(59,111,240,0.35); }
+    .lightbox-counter { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); font-size: 0.65rem; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; }
+
+    /* BENTO */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.875rem; margin-top: 3rem; }
+    .bento-card { background: var(--blue-dim); border: 1px solid var(--blue-line); border-radius: 1.5rem; padding: 2px; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,111,240,0.1); }
+    .bento-inner { background: var(--bg-2); border-radius: calc(1.5rem - 2px); padding: 1.75rem 2rem; height: 100%; min-height: 160px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .bento-card.c2 { grid-column: span 2; }
+    .bento-card.c3 { grid-column: span 3; }
+    .bento-card.c4 { grid-column: span 4; }
+    .bento-card.c6 { grid-column: span 6; }
+    .big-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; color: var(--blue); }
+    .big-lbl { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .bento-inner h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .bento-inner p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* QUOTE */
+    .quote-break { background: var(--bg-2); border-top: 1px solid var(--blue-line); border-bottom: 1px solid var(--blue-line); }
+    .quote-inner { max-width: 1280px; margin: 0 auto; padding: 5.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--white); border-left: 2px solid var(--blue); padding-left: 2rem; }
+    .quote-attr { margin-top: 1.25rem; font-size: 0.72rem; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
+
+    /* CTA */
+    .cta-wrap { background: linear-gradient(135deg, #060c1a 0%, #091028 100%); border-top: 1px solid var(--blue-line); }
+    .cta-inner { max-width: 1280px; margin: 0 auto; padding: 7rem 2rem; text-align: center; }
+    .cta-inner h2 { max-width: 22ch; margin: 0 auto 1.25rem; }
+    .cta-inner .body-text { margin: 0 auto 3rem; text-align: center; max-width: 52ch; }
+    .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--blue-line); color: var(--white); padding: 0.875rem 1.75rem; border-radius: 9999px; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all 0.4s var(--ease); }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-2); border-top: 1px solid var(--blue-line); padding: 2.25rem 2rem; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+    .footer-back { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: opacity 0.3s; }
+    .footer-back:hover { opacity: 0.7; }
+    .footer-copy { font-size: 0.66rem; color: var(--muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .two-col { grid-template-columns: 1fr; gap: 3rem; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 2; }
+      .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wrap { padding: 5rem 1.5rem; }
+      .hero-content { padding: 0 1.5rem 4rem; }
+    }
+    @media (max-width: 560px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
+      h1 { font-size: 3rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Harmony N Life Records — Case Study",
+    "headline": "8 years of sound, art, and independent spirit.",
+    "description": "How Moor Graphix served as the creative studio for Harmony N Life Records — album artwork for vocalist Rhonda Thomas and event flyer design across 8+ years.",
+    "url": "https://moorgraphix.com/cases/harmony-n-life.html",
+    "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
+    "about": { "@type": "Organization", "name": "Harmony N Life Records" },
+    "keywords": "album cover design, CD artwork, event flyer design, music promotion, independent label, Rhonda Thomas, jazz, R&B, print design, concert marketing"
+  }
+  </script>
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="https://moorgraphix.com/index.html" class="nav-logo">
+    <img src="../assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://moorgraphix.com/index.html#portfolio">Work</a></li>
+    <li><a href="https://moorgraphix.com/services.html">Services</a></li>
+    <li><a href="https://moorgraphix.com/ai-workshop.html">AI Workshop</a></li>
+    <li><a href="https://moorgraphix.com/blog.html">Blog</a></li>
+    <li><a href="https://moorgraphix.com/about.html">About</a></li>
+    <li><a href="https://moorgraphix.com/contact.html">Contact</a></li>
+  </ul>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="nav-pill">
+    <div class="bp"></div>Book Free Consult
+  </a>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="https://moorgraphix.com/index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
+  <a href="https://moorgraphix.com/services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="https://moorgraphix.com/ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
+  <a href="https://moorgraphix.com/blog.html" onclick="toggleMobileMenu()">Blog</a>
+  <a href="https://moorgraphix.com/about.html" onclick="toggleMobileMenu()">About</a>
+  <a href="https://moorgraphix.com/contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="mob-consult" onclick="toggleMobileMenu()">Book Free Consult</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>✦ Harmony N Life</span><span>✦ Rhonda Thomas</span><span>✦ Album Artwork</span><span>✦ CD Cover Design</span><span>✦ Event Flyers</span><span>✦ Concert Promotion</span><span>✦ Independent Label</span><span>✦ Jazz &amp; R&amp;B</span><span>✦ Washington DC</span><span>✦ Atlanta GA</span>
+    <span>✦ Harmony N Life</span><span>✦ Rhonda Thomas</span><span>✦ Album Artwork</span><span>✦ CD Cover Design</span><span>✦ Event Flyers</span><span>✦ Concert Promotion</span><span>✦ Independent Label</span><span>✦ Jazz &amp; R&amp;B</span><span>✦ Washington DC</span><span>✦ Atlanta GA</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img class="hero-img-bg" src="../assets/images/hnl/cd-rhonda-cover.jpg" alt="Rhonda Thomas — Harmony N Life Records" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="pill-label">Case Study — Music &amp; Entertainment Creative</div>
+    <h1>8 years of sound, art, and <em>independent spirit.</em></h1>
+    <p class="hero-deck">Harmony N Life Records is an independent label built around a love of live music and authentic artistry. <strong>Moor Graphix served as the label's creative studio</strong> — designing album covers for vocalist Rhonda Thomas and producing all event marketing and flyer design across an 8-year partnership.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-primary" href="#work">See the Work <span class="btn-icon">↓</span></a>
+      <a class="btn btn-ghost" href="#scope">View Full Scope ↓</a>
+    </div>
+    <div class="meta-strip">
+      <div class="meta-item"><span class="meta-lbl">Client</span><span class="meta-val">Harmony N Life Records</span></div>
+      <div class="meta-item"><span class="meta-lbl">Industry</span><span class="meta-val">Independent Music · Jazz / R&amp;B</span></div>
+      <div class="meta-item"><span class="meta-lbl">Location</span><span class="meta-val">Washington DC / Atlanta GA</span></div>
+      <div class="meta-item"><span class="meta-lbl">Partnership</span><span class="meta-val">2006 – 2014</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES STRIP -->
+<div class="services-strip">
+  <div class="services-inner">
+    <div class="services-label reveal">Services delivered across this partnership</div>
+    <div class="services-scroll reveal d1">
+      <span class="svc-pill">Album Cover Design</span>
+      <span class="svc-pill">CD Artwork</span>
+      <span class="svc-pill">Event Flyer Design</span>
+      <span class="svc-pill">Concert Promotion</span>
+      <span class="svc-pill">Print Design</span>
+      <span class="svc-pill">Label Identity</span>
+      <span class="svc-pill">Music Marketing</span>
+      <span class="svc-pill">Photography Retouching</span>
+      <span class="svc-pill">Poster Design</span>
+      <span class="svc-pill">Tribute Event Creative</span>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SECTION 01 — THE LABEL -->
+<div class="wrap" id="work">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">01 — The Label</div>
+      <h2>An independent label<br>that believed in<br><em>the music.</em></h2>
+      <p class="body-text">Harmony N Life Records built their name on the power of live performance — hosting regular showcases, jam sessions, and ticketed events that brought audiences together around authentic jazz and R&amp;B. From their earliest shows in 2006 through a decade of events, they ran a consistent live music program that demanded consistent, high-quality creative.</p>
+      <p class="body-text"><strong>Moor Graphix became the label's creative partner from the start</strong> — designing monthly event flyers, promotional materials, and building the visual identity that accompanied every show. As the label grew its artist roster, that partnership extended into album design for their flagship vocalist.</p>
+      <p class="body-text">The relationship lasted 8 years. Every flyer, every album, every event — the same standard of creative that honored what the music deserved.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="steps-col">
+        <div class="step">
+          <div class="step-n">01</div>
+          <div>
+            <h3>Monthly event flyers — 2006 through 2009</h3>
+            <p>Designed every monthly event flyer for Harmony N Life's regular live music showcase series — a consistent visual brand that grew the label's audience season over season.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <div>
+            <h3>Album artwork for Rhonda Thomas</h3>
+            <p>Designed the full discography of album covers for Rhonda Thomas, the label's primary recording artist — from concept and layout through press-ready production.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <div>
+            <h3>Specialty event promotion</h3>
+            <p>Produced promotional creative for HNL's landmark events — the Grammy's Night viewing party, Rhonda's DC and Blue Note performances, and the 2014 Prince tribute concert.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">04</div>
+          <div>
+            <h3>Print production &amp; press-ready delivery</h3>
+            <p>Every deliverable produced to professional print standards — PDF press files, color-accurate proofing, and multiple size variants for print, digital, and social distribution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SECTION 02 — RHONDA THOMAS ALBUM ARTWORK -->
+<div class="wrap">
+  <div class="reveal">
+    <div class="sec-label">02 — Album Artwork</div>
+    <h2>A discography<br>designed to<br><em>match the voice.</em></h2>
+    <p class="body-text">Rhonda Thomas is a jazz and R&amp;B vocalist whose recordings carry both intimate vulnerability and commanding presence. Every album cover Moor Graphix designed for her was built to communicate that — art direction, typography, and image treatment that gave each project its own distinct identity while remaining unmistakably Rhonda.</p>
+    <p class="body-text"><strong>Seven distinct album covers produced</strong> — from studio albums to live recordings — each press-ready and print-perfected for CD release and digital distribution.</p>
+  </div>
+
+  <div class="gallery-grid cols-4 reveal d1" id="gallery-albums" style="margin-top:2.5rem;">
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 0)">
+      <img src="../assets/images/hnl/cd-breathe-new-life.jpg" alt="Rhonda Thomas — Breathe New Life Album Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Breathe New Life</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 1)">
+      <img src="../assets/images/hnl/cd-guess-who-i-saw-today.jpg" alt="Rhonda Thomas — Guess Who I Saw Today Album Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Guess Who I Saw Today</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 2)">
+      <img src="../assets/images/hnl/cd-listen.jpg" alt="Rhonda Thomas — Listen Album Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Listen</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 3)">
+      <img src="../assets/images/hnl/cd-little-drummer-girl.jpg" alt="Rhonda Thomas — Little Drummer Girl Album Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Little Drummer Girl</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 4)">
+      <img src="../assets/images/hnl/cd-vinyl-daze.jpg" alt="Rhonda Thomas — Vinyl Daze Album Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Vinyl Daze</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 5)">
+      <img src="../assets/images/hnl/cd-live-atlanta.jpg" alt="Rhonda Thomas — Live at CP Atlanta Album Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Live at CP Atlanta</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 6)">
+      <img src="../assets/images/hnl/cd-rhonda-cover.jpg" alt="Rhonda Thomas — Album Cover" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Rhonda Thomas</div>
+    </div>
+    <div class="gallery-item square" onclick="openLightbox('gallery-albums', 7)">
+      <img src="../assets/images/hnl/cd-listen-back.jpg" alt="Rhonda Thomas — Listen (Back Cover)" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Listen — Back Cover</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SECTION 03 — MONTHLY EVENT FLYERS -->
+<div class="wrap">
+  <div class="two-col">
+    <div class="reveal">
+      <div class="sec-label">03 — Event Marketing</div>
+      <h2>A new flyer<br>every month.<br><em>Every show.</em></h2>
+      <p class="body-text">From September 2006 through 2009, Harmony N Life ran a regular live music event series — and Moor Graphix produced the flyer for every single one. Month after month, season after season, each piece was designed to stop people in their tracks and fill seats.</p>
+      <p class="body-text">The ongoing series required a consistent design language that still felt fresh each month — the same label identity, different energy. <strong>Over 20 unique event flyers produced across the partnership.</strong></p>
+    </div>
+    <div class="reveal d1">
+      <div class="gallery-grid cols-2" id="gallery-flyers-feature" style="margin-top:0;">
+        <div class="gallery-item" onclick="openLightbox('gallery-flyers-feature', 0)">
+          <img src="../assets/images/hnl/flyer-sept-06.jpg" alt="Harmony N Life — September 2006 Event Flyer" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Sept 2006</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('gallery-flyers-feature', 1)">
+          <img src="../assets/images/hnl/flyer-jan-07.jpg" alt="Harmony N Life — January 2007 Event Flyer" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Jan 2007</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('gallery-flyers-feature', 2)">
+          <img src="../assets/images/hnl/flyer-july-07.jpg" alt="Harmony N Life — July 2007 Event Flyer" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">July 2007</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('gallery-flyers-feature', 3)">
+          <img src="../assets/images/hnl/flyer-april-09.jpg" alt="Harmony N Life — April 2009 Event Flyer" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">April 2009</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full flyer gallery -->
+  <div class="sec-label reveal" style="margin-top:4rem;">Full Flyer Series — 2006 to 2009</div>
+  <div class="gallery-grid cols-4 reveal d1" id="gallery-flyers-all">
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 0)">
+      <img src="../assets/images/hnl/flyer-sept-06.jpg" alt="HNL September 2006 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Sept 2006</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 1)">
+      <img src="../assets/images/hnl/flyer-sept-06-2.jpg" alt="HNL September 2006 Flyer Variant" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Sept 2006 — Alt</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 2)">
+      <img src="../assets/images/hnl/flyer-jan-07.jpg" alt="HNL January 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Jan 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 3)">
+      <img src="../assets/images/hnl/flyer-march-07.jpg" alt="HNL March 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">March 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 4)">
+      <img src="../assets/images/hnl/flyer-may-07.jpg" alt="HNL May 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">May 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 5)">
+      <img src="../assets/images/hnl/flyer-july-07.jpg" alt="HNL July 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">July 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 6)">
+      <img src="../assets/images/hnl/flyer-sept-07.jpg" alt="HNL September 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Sept 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 7)">
+      <img src="../assets/images/hnl/flyer-oct-07.jpg" alt="HNL October 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Oct 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 8)">
+      <img src="../assets/images/hnl/flyer-nov-07.jpg" alt="HNL November 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Nov 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 9)">
+      <img src="../assets/images/hnl/flyer-dec-07.jpg" alt="HNL December 2007 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Dec 2007</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 10)">
+      <img src="../assets/images/hnl/flyer-dec-07-2.jpg" alt="HNL December 2007 Flyer Variant" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Dec 2007 — Alt</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 11)">
+      <img src="../assets/images/hnl/flyer-march-08.jpg" alt="HNL March 2008 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">March 2008</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 12)">
+      <img src="../assets/images/hnl/flyer-april-09.jpg" alt="HNL April 2009 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">April 2009</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 13)">
+      <img src="../assets/images/hnl/flyer-april-09-2.jpg" alt="HNL April 2009 Flyer Variant" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">April 2009 — Alt</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 14)">
+      <img src="../assets/images/hnl/flyer-may-09.jpg" alt="HNL May 2009 Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">May 2009</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-flyers-all', 15)">
+      <img src="../assets/images/hnl/flyer-may-09-2.jpg" alt="HNL May 2009 Flyer Variant" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">May 2009 — Alt</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SECTION 04 — FEATURED EVENTS -->
+<div class="wrap">
+  <div class="reveal">
+    <div class="sec-label">04 — Featured Events</div>
+    <h2>Beyond the monthly.<br><em>Special nights</em><br>that demanded more.</h2>
+    <p class="body-text">Alongside the regular monthly event series, Harmony N Life produced marquee events that required their own distinct creative treatment. Moor Graphix designed the promotional materials for each — Grammy's Night 2007, Rhonda Thomas at the Bohemian Caverns in DC, Rhonda at the Blue Note, and the 2014 Prince Tribute Concert.</p>
+  </div>
+
+  <!-- Grammy's Night -->
+  <div class="two-col" style="margin-top:4rem;">
+    <div class="reveal d1">
+      <div class="gallery-grid cols-2" id="gallery-grammys" style="margin-top:0;">
+        <div class="gallery-item" onclick="openLightbox('gallery-grammys', 0)" style="grid-column:span 2;">
+          <img src="../assets/images/hnl/flyer-grammys-07.jpg" alt="Harmony N Life Grammy's Night 2007 Event Flyer" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Grammy's Night — 2007</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="sec-label">Grammy's Night 2007</div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);">Music's biggest night.<br><em>HNL's biggest party.</em></h2>
+      <p class="body-text">Harmony N Life produced their own Grammy's Night viewing party event in 2007 — a live music and watch-party experience that brought their community together around the industry's most celebrated evening. Moor Graphix designed the promotional flyer that got people through the door.</p>
+    </div>
+  </div>
+
+  <!-- Rhonda DC + Blue Note -->
+  <div class="sec-label reveal" style="margin-top:4rem;">Rhonda Thomas Live — DC &amp; Blue Note 2011</div>
+  <div class="gallery-grid reveal d1" id="gallery-rhonda-live" style="margin-top:1rem;">
+    <div class="gallery-item" onclick="openLightbox('gallery-rhonda-live', 0)">
+      <img src="../assets/images/hnl/flyer-rhonda-dc-2011.jpg" alt="Rhonda Thomas Live at Bohemian Caverns DC 2011" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Rhonda Thomas — DC 2011</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-rhonda-live', 1)">
+      <img src="../assets/images/hnl/flyer-rhonda-dc-2011-2.jpg" alt="Rhonda Thomas DC 2011 — Alternate Flyer" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Rhonda Thomas — DC 2011 Alt</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('gallery-rhonda-live', 2)">
+      <img src="../assets/images/hnl/flyer-rhonda-blue-note-2011.jpg" alt="Rhonda Thomas at the Blue Note 2011" loading="lazy">
+      <div class="gallery-zoom-icon">⊕</div>
+      <div class="gallery-caption">Rhonda Thomas — Blue Note 2011</div>
+    </div>
+  </div>
+
+  <!-- Prince Tribute -->
+  <div class="two-col" style="margin-top:4rem;">
+    <div class="reveal">
+      <div class="sec-label">Prince Tribute Concert — 2014</div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);">A tribute worthy<br>of <em>the Purple One.</em></h2>
+      <p class="body-text">In 2014, Harmony N Life produced a Prince tribute concert — a bold event that required creative equal to the legend it honored. Moor Graphix produced the promotional artwork at two sizes, designing around an iconic look-alike portrait to build anticipation and drive ticket sales.</p>
+      <p class="body-text">The piece had to feel like a genuine tribute — not just another event flyer. Every design decision was made in service of that standard.</p>
+    </div>
+    <div class="reveal d1">
+      <div class="gallery-grid cols-2" id="gallery-prince" style="margin-top:0;">
+        <div class="gallery-item" onclick="openLightbox('gallery-prince', 0)">
+          <img src="../assets/images/hnl/flyer-prince-2014.jpg" alt="Harmony N Life Prince Tribute Concert 2014 — Promotional Flyer" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Prince Tribute — 2014</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('gallery-prince', 1)">
+          <img src="../assets/images/hnl/flyer-prince-2014-ltr.jpg" alt="Prince Tribute Concert 2014 — Letter Size Flyer" loading="lazy">
+          <div class="gallery-zoom-icon">⊕</div>
+          <div class="gallery-caption">Prince Tribute — Letter Size</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- SCOPE / BENTO -->
+<div class="wrap" id="scope">
+  <div class="reveal">
+    <div class="sec-label">05 — Full Scope</div>
+    <h2>The complete<br><em>body of work.</em></h2>
+    <p class="body-text">Eight years. One label. One primary artist. Every event, every release, every season.</p>
+  </div>
+  <div class="bento">
+    <div class="bento-card c2 reveal d1">
+      <div class="bento-inner">
+        <div class="big-num">7+</div>
+        <div class="big-lbl">Album covers designed for Rhonda Thomas</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d2">
+      <div class="bento-inner">
+        <div class="big-num">20+</div>
+        <div class="big-lbl">Event flyers produced across the partnership</div>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d3">
+      <div class="bento-inner">
+        <div class="big-num">8</div>
+        <div class="big-lbl">Years of continuous creative partnership</div>
+      </div>
+    </div>
+    <div class="bento-card c3 reveal d1">
+      <div class="bento-inner">
+        <h4>Full discography art direction for Rhonda Thomas</h4>
+        <p>From debut to live recordings — Moor Graphix designed the complete visual library of Rhonda Thomas releases on Harmony N Life Records, each project treated as its own distinct creative statement.</p>
+      </div>
+    </div>
+    <div class="bento-card c3 reveal d2">
+      <div class="bento-inner">
+        <h4>Monthly event series — 2006 through 2009</h4>
+        <p>Three-plus years of monthly event flyers for the label's live music showcase — building a recognizable visual language that audiences came to associate with quality performances and a good night out.</p>
+      </div>
+    </div>
+    <div class="bento-card c2 reveal d1">
+      <div class="bento-inner">
+        <div class="big-num">4</div>
+        <div class="big-lbl">Marquee special events with dedicated creative</div>
+      </div>
+    </div>
+    <div class="bento-card c4 reveal d2">
+      <div class="bento-inner">
+        <h4>Grammy's Night · Rhonda Live DC · Blue Note · Prince Tribute</h4>
+        <p>Each landmark event received its own bespoke design — promotional artwork built to match the scale of the event and the expectations of the audience attending it.</p>
+      </div>
+    </div>
+    <div class="bento-card c6 reveal d1">
+      <div class="bento-inner" style="min-height:auto;">
+        <h4>Independent music deserves independent creative standards</h4>
+        <p>Harmony N Life ran their label on belief — belief in their artists, in their community, and in the power of live music. Moor Graphix brought that same belief to every deliverable: album covers that stood on any shelf, event flyers that sold tickets, and a visual presence that said this label took its work seriously.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE BREAK -->
+<div class="quote-break">
+  <div class="quote-inner">
+    <div class="reveal">
+      <blockquote>"Independent music doesn't get a second chance to make a first impression. Every album cover, every flyer — it had to look like it belonged alongside the best work in the industry, because Rhonda's voice deserved nothing less."</blockquote>
+      <p class="quote-attr">— Sid Washington, Moor Graphix</p>
+    </div>
+    <div class="reveal d1">
+      <div class="sec-label">The Approach</div>
+      <h2>Design that<br><em>elevates</em> the artist.</h2>
+      <p class="body-text">Working with an independent label means the creative has to work harder. There's no major-label marketing machine behind the rollout — the art is often the entire first impression.</p>
+      <p class="body-text">Moor Graphix brought the same level of craft to every Harmony N Life project that a major label would expect from their top agencies — because the music was that good, and the audience deserved to see that from the cover before they ever hit play.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-inner reveal">
+    <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Label or Artist</div>
+    <h2>Ready for cover art and<br>creative that <em>matches your music?</em></h2>
+    <p class="body-text">Whether you're releasing your first project or building out a full label creative program — Moor Graphix delivers album artwork, event promotion, and music marketing design at the level your sound deserves.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
+        Book Free Consultation
+        <span class="btn-icon">↗</span>
+      </a>
+      <a class="btn-outline" href="https://moorgraphix.com/index.html#portfolio">← View All Work</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a class="footer-brand" href="https://moorgraphix.com/index.html">Moor Graphix</a>
+    <a class="footer-back" href="https://moorgraphix.com/index.html#portfolio">← Back to Portfolio</a>
+    <span class="footer-copy">© 2026 Moor Graphix · "Graphic design is the masterful syncopation of text and images."</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
+  <button type="button" class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button type="button" class="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button type="button" class="lightbox-next" onclick="lightboxNav(1)">›</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script>
+  // SCROLL REVEAL
+  const obs = new IntersectionObserver(
+    es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+    { threshold: 0.06 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // MOBILE MENU
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // LIGHTBOX
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  function buildGallery(galleryId) {
+    const container = document.getElementById(galleryId);
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('img')).map(img => ({ src: img.src, alt: img.alt }));
+  }
+
+  function openLightbox(galleryId, index) {
+    currentGallery = buildGallery(galleryId);
+    currentIndex = index;
+    showLightboxImage();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLightboxImage() {
+    const img = document.getElementById('lightbox-img');
+    const counter = document.getElementById('lightbox-counter');
+    const item = currentGallery[currentIndex];
+    img.src = item.src;
+    img.alt = item.alt;
+    counter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
+  }
+
+  function lightboxNav(dir) {
+    currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
+    showLightboxImage();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeLightboxOnBackdrop(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+</script>
+<script src="../assets/js/particles.js"></script>
+</body>
+</html>
