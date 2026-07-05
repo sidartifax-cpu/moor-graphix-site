@@ -9,6 +9,7 @@
   <meta property="og:title" content="Harmony N Life Records — Case Study | Moor Graphix" />
   <meta property="og:description" content="7 album covers. 20+ event flyers. 8 years of independent music creative." />
   <meta property="og:url" content="https://moorgraphix.com/cases/harmony-n-life.html" />
+  <link rel="canonical" href="https://moorgraphix.com/cases/harmony-n-life.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
@@ -208,6 +209,16 @@
       .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
       h1 { font-size: 3rem; }
     }
+    /* FAQ */
+    .faq-wrap { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; }
+    .faq-item { border-top: 1px solid var(--blue-line); padding: 1.5rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--blue-line); }
+    .faq-item summary { cursor: pointer; font-size: 1.05rem; font-weight: 500; color: var(--white); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--blue); font-size: 1.3rem; font-weight: 300; flex-shrink: 0; transition: transform 0.25s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin-top: 1rem; color: var(--muted); line-height: 1.8; max-width: 68ch; }
   </style>
   <script type="application/ld+json">
   {
@@ -219,8 +230,50 @@
     "url": "https://moorgraphix.com/cases/harmony-n-life.html",
     "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
     "about": { "@type": "Organization", "name": "Harmony N Life Records" },
-    "keywords": "album cover design, CD artwork, event flyer design, music promotion, independent label, Rhonda Thomas, jazz, R&B, print design, concert marketing"
+    "keywords": "album cover design, CD artwork, event flyer design, music promotion, independent label, Rhonda Thomas, jazz, R&B, print design, concert marketing",
+    "image": [
+      "https://moorgraphix.com/assets/images/hnl/cd-rhonda-cover.jpg",
+      "https://moorgraphix.com/assets/images/hnl/cd-live-atlanta.jpg",
+      "https://moorgraphix.com/assets/images/hnl/flyer-april-09-2.jpg"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://moorgraphix.com/cases/harmony-n-life.html",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-deck"] }
+    }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Moor Graphix do for Harmony N Life Records?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moor Graphix serves as the label's creative studio, designing album covers for vocalist Rhonda Thomas and producing event marketing and flyer design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has the partnership with Harmony N Life Records lasted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Over 8 years of continuous creative work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of music does Harmony N Life Records release?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Independent jazz and R&B, centered on live music and authentic artistry."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -684,7 +737,28 @@
   </div>
 </div>
 
-<!-- CTA -->
+
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="sec-label">FAQ</div>
+    <h2>Common questions<br><em>about this project.</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What does Moor Graphix do for Harmony N Life Records?</summary>
+        <p>Moor Graphix serves as the label's creative studio, designing album covers for vocalist Rhonda Thomas and producing event marketing and flyer design.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long has the partnership with Harmony N Life Records lasted?</summary>
+        <p>Over 8 years of continuous creative work.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What kind of music does Harmony N Life Records release?</summary>
+        <p>Independent jazz and R&B, centered on live music and authentic artistry.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- CTA -->
 <div class="cta-wrap">
   <div class="cta-inner reveal">
     <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Label or Artist</div>

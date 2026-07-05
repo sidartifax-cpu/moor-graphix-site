@@ -9,6 +9,7 @@
   <meta property="og:title" content="Joyous Ocean Case Study — Moor Graphix" />
   <meta property="og:description" content="Web redesign and commerce integration for a teaching yogini. Products, coaching, and direct checkout — unified in one platform." />
   <meta property="og:url" content="https://moorgraphix.com/cases/joyousocean.html" />
+  <link rel="canonical" href="https://moorgraphix.com/cases/joyousocean.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
@@ -296,6 +297,16 @@
     .gallery-hero { border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--blue-line); }
     .gallery-hero img { width: 100%; display: block; }
     .gallery-cap { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+    /* FAQ */
+    .faq-wrap { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; }
+    .faq-item { border-top: 1px solid var(--blue-line); padding: 1.5rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--blue-line); }
+    .faq-item summary { cursor: pointer; font-size: 1.05rem; font-weight: 500; color: var(--white); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--blue); font-size: 1.3rem; font-weight: 300; flex-shrink: 0; transition: transform 0.25s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin-top: 1rem; color: var(--muted); line-height: 1.8; max-width: 68ch; }
   </style>
   <script type="application/ld+json">
   {
@@ -315,6 +326,38 @@
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-deck"] }
     }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What problem did Joyous Ocean have before working with Moor Graphix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The existing brand and website didn't match the quality of Joyous Ocean's teaching practice, and checkout friction was costing sales — visitors were leaving before completing a purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What did Moor Graphix redesign for Joyous Ocean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moor Graphix redesigned the brand identity and e-commerce platform, streamlining the checkout flow and building a site the founder is proud to promote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What was the outcome of the redesign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A platform that finally matches the founder's practice as a teaching yogini, with reduced checkout friction and a brand she's confident sharing with her audience."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -569,6 +612,27 @@
         <p class="body-text">Every Moor Graphix engagement is driven by one core belief: the most powerful brands are the ones most truthful about who they are. We don't impose a visual style — we extract the authentic identity and encode it into infrastructure that grows.</p>
         <p class="body-text">For Joyous Ocean, that meant stripping the friction between her practice and her platform. The result wasn't just a better website. It was a platform she could finally build on.</p>
       </div>
+    </div>
+  </div>
+
+  
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="sec-label">FAQ</div>
+    <h2>Common questions<br><em>about this project.</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What problem did Joyous Ocean have before working with Moor Graphix?</summary>
+        <p>The existing brand and website didn't match the quality of Joyous Ocean's teaching practice, and checkout friction was costing sales — visitors were leaving before completing a purchase.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What did Moor Graphix redesign for Joyous Ocean?</summary>
+        <p>Moor Graphix redesigned the brand identity and e-commerce platform, streamlining the checkout flow and building a site the founder is proud to promote.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What was the outcome of the redesign?</summary>
+        <p>A platform that finally matches the founder's practice as a teaching yogini, with reduced checkout friction and a brand she's confident sharing with her audience.</p>
+      </details>
     </div>
   </div>
 

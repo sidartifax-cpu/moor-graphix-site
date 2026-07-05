@@ -9,6 +9,7 @@
   <meta property="og:title" content="2 Sports Moms Case Study — Moor Graphix" />
   <meta property="og:description" content="Logo design and website build for a 501(c)(3) nonprofit connecting student-athletes with opportunities and families with resources. Built from zero. Built to last." />
   <meta property="og:url" content="https://moorgraphix.com/cases/2sportsmoms.html" />
+  <link rel="canonical" href="https://moorgraphix.com/cases/2sportsmoms.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
@@ -255,6 +256,16 @@
     .gallery-grid-2 { display: grid; grid-template-columns: 1fr 2fr; gap: 1.25rem; align-items: start; }
     .gallery-grid-2 img { width: 100%; border-radius: 1rem; border: 1px solid var(--blue-line); display: block; background: var(--bg-2); }
     @media (max-width: 760px) { .gallery-grid-2 { grid-template-columns: 1fr; } }
+    /* FAQ */
+    .faq-wrap { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; }
+    .faq-item { border-top: 1px solid var(--blue-line); padding: 1.5rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--blue-line); }
+    .faq-item summary { cursor: pointer; font-size: 1.05rem; font-weight: 500; color: var(--white); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--blue); font-size: 1.3rem; font-weight: 300; flex-shrink: 0; transition: transform 0.25s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin-top: 1rem; color: var(--muted); line-height: 1.8; max-width: 68ch; }
   </style>
   <script type="application/ld+json">
   {
@@ -277,6 +288,38 @@
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-deck"] }
     }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What did Moor Graphix create for 2 Sports Moms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The logo and website for 2 Sports Moms, a 501(c)(3) nonprofit, giving the organization a brand identity and platform for its first year of operation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What type of organization is 2 Sports Moms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A registered 501(c)(3) nonprofit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What did the brand and website need to accomplish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Establish credibility and a clear, mission-driven identity to carry the nonprofit into its first year of fundraising and community outreach."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -575,6 +618,27 @@
         <p class="body-text">For 2 Sports Moms, Cultural Alchemy meant recognizing that the founders' lived experience was the brand. Not a tagline. Not a color palette. The actual brand — two women who had navigated the pipeline and come out the other side with hard-won knowledge.</p>
         <p class="body-text">The logo and site we built encoded that truth into a visual system that could carry a movement into the community, into grant offices, and into the lives of the families they were built to serve.</p>
       </div>
+    </div>
+  </div>
+
+  
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="sec-label">FAQ</div>
+    <h2>Common questions<br><em>about this project.</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What did Moor Graphix create for 2 Sports Moms?</summary>
+        <p>The logo and website for 2 Sports Moms, a 501(c)(3) nonprofit, giving the organization a brand identity and platform for its first year of operation.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What type of organization is 2 Sports Moms?</summary>
+        <p>A registered 501(c)(3) nonprofit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What did the brand and website need to accomplish?</summary>
+        <p>Establish credibility and a clear, mission-driven identity to carry the nonprofit into its first year of fundraising and community outreach.</p>
+      </details>
     </div>
   </div>
 

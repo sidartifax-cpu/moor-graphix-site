@@ -9,6 +9,7 @@
   <meta property="og:title" content="2hands2help / Empower — Case Study | Moor Graphix" />
   <meta property="og:description" content="Logo design. 30+ characters illustrated by Tiffany Housey. 4-unit curriculum layout. Moor Graphix built the complete visual identity of the Empower social-emotional learning program." />
   <meta property="og:url" content="https://moorgraphix.com/cases/2hands2help.html" />
+  <link rel="canonical" href="https://moorgraphix.com/cases/2hands2help.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
@@ -230,6 +231,16 @@
       .bento { grid-template-columns: 1fr; }
       .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
     }
+    /* FAQ */
+    .faq-wrap { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; }
+    .faq-item { border-top: 1px solid var(--blue-line); padding: 1.5rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--blue-line); }
+    .faq-item summary { cursor: pointer; font-size: 1.05rem; font-weight: 500; color: var(--white); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--blue); font-size: 1.3rem; font-weight: 300; flex-shrink: 0; transition: transform 0.25s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin-top: 1rem; color: var(--muted); line-height: 1.8; max-width: 68ch; }
   </style>
   <script type="application/ld+json">
   {
@@ -241,8 +252,50 @@
     "url": "https://moorgraphix.com/cases/2hands2help.html",
     "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
     "about": { "@type": "Organization", "name": "2hands2help / Empower" },
-    "keywords": "curriculum design, logo design, character illustration, education design, social-emotional learning, lesson plan design, nonprofit design, Tiffany Housey"
+    "keywords": "curriculum design, logo design, character illustration, education design, social-emotional learning, lesson plan design, nonprofit design, Tiffany Housey",
+    "image": [
+      "https://moorgraphix.com/assets/images/empower/brand-mockup-1.jpg",
+      "https://moorgraphix.com/assets/images/empower/character-captain-cool.png",
+      "https://moorgraphix.com/assets/images/empower/character-jazzy.png"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://moorgraphix.com/cases/2hands2help.html",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-deck"] }
+    }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Empower curriculum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Empower is a social-emotional learning (SEL) curriculum created by Joelle James and 2hands2help to teach SEL skills to youth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What did Moor Graphix design for Empower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The complete visual identity — logo, brand guidelines, 30+ character illustrations, and full lesson plan layout across 4 units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who illustrated the Empower characters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tiffany Housey illustrated all 30+ characters, based on character sheets provided by the client."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -634,7 +687,28 @@
   </div>
 </div>
 
-<!-- CTA -->
+
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="sec-label">FAQ</div>
+    <h2>Common questions<br><em>about this project.</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is the Empower curriculum?</summary>
+        <p>Empower is a social-emotional learning (SEL) curriculum created by Joelle James and 2hands2help to teach SEL skills to youth.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What did Moor Graphix design for Empower?</summary>
+        <p>The complete visual identity — logo, brand guidelines, 30+ character illustrations, and full lesson plan layout across 4 units.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Who illustrated the Empower characters?</summary>
+        <p>Tiffany Housey illustrated all 30+ characters, based on character sheets provided by the client.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- CTA -->
 <div class="cta-wrap">
   <div class="cta-inner reveal">
     <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Program</div>

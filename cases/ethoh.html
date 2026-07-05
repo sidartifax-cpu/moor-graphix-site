@@ -9,6 +9,7 @@
   <meta property="og:title" content="ETHOH Case Study — Moor Graphix" />
   <meta property="og:description" content="20th Anniversary. 15+ videos. Souvenir journal. Merchandise line. 4 years of creative partnership with Enter The Holy of Holies." />
   <meta property="og:url" content="https://moorgraphix.com/cases/ethoh.html" />
+  <link rel="canonical" href="https://moorgraphix.com/cases/ethoh.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
@@ -288,6 +289,16 @@
       .bento-card.c2,.bento-card.c3,.bento-card.c4,.bento-card.c6 { grid-column: span 1; }
       h1 { font-size: 3rem; }
     }
+    /* FAQ */
+    .faq-wrap { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; }
+    .faq-item { border-top: 1px solid var(--blue-line); padding: 1.5rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--blue-line); }
+    .faq-item summary { cursor: pointer; font-size: 1.05rem; font-weight: 500; color: var(--white); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--blue); font-size: 1.3rem; font-weight: 300; flex-shrink: 0; transition: transform 0.25s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin-top: 1rem; color: var(--muted); line-height: 1.8; max-width: 68ch; }
   </style>
   <script type="application/ld+json">
   {
@@ -299,8 +310,50 @@
     "url": "https://moorgraphix.com/cases/ethoh.html",
     "author": { "@type": "Organization", "name": "Moor Graphix", "url": "https://moorgraphix.com" },
     "about": { "@type": "Organization", "name": "ETHOH — Enter The Holy of Holies" },
-    "keywords": "video production, print design, social media design, nonprofit creative, spiritual wellness, flyer design, merchandise design, fundraising creative"
+    "keywords": "video production, print design, social media design, nonprofit creative, spiritual wellness, flyer design, merchandise design, fundraising creative",
+    "image": [
+      "https://moorgraphix.com/assets/images/ethoh/20th-collage.png",
+      "https://moorgraphix.com/assets/images/ethoh/banner-20th.jpg",
+      "https://moorgraphix.com/assets/images/ethoh/bundle-mockup.jpg"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://moorgraphix.com/cases/ethoh.html",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-deck"] }
+    }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is ETHOH and what did Moor Graphix do for them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ETHOH — Enter The Holy of Holies — is a New York-based spiritual wellness organization led by Reverend Nafisa Sharriff. Moor Graphix served as their complete creative engine for 4+ years, producing videos, campaigns, print, merchandise, and event media."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What was the 20th Anniversary project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A landmark campaign and video production marking ETHOH's 20th Anniversary, including a souvenir journal and merchandise line alongside the core creative work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has Moor Graphix worked with ETHOH?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Over 4 years, across 15+ videos and continuous social media, print, and fundraising creative."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -857,7 +910,28 @@
   </div>
 </div>
 
-<!-- CTA -->
+
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="sec-label">FAQ</div>
+    <h2>Common questions<br><em>about this project.</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is ETHOH and what did Moor Graphix do for them?</summary>
+        <p>ETHOH — Enter The Holy of Holies — is a New York-based spiritual wellness organization led by Reverend Nafisa Sharriff. Moor Graphix served as their complete creative engine for 4+ years, producing videos, campaigns, print, merchandise, and event media.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What was the 20th Anniversary project?</summary>
+        <p>A landmark campaign and video production marking ETHOH's 20th Anniversary, including a souvenir journal and merchandise line alongside the core creative work.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long has Moor Graphix worked with ETHOH?</summary>
+        <p>Over 4 years, across 15+ videos and continuous social media, print, and fundraising creative.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- CTA -->
 <div class="cta-wrap">
   <div class="cta-inner reveal">
     <div class="pill-label" style="width:fit-content;margin:0 auto 2rem;">✦ Your Organization</div>

@@ -9,6 +9,7 @@
   <meta property="og:title" content="93 to 3 — EOI Campaign Case Study | Moor Graphix" />
   <meta property="og:description" content="Top 3 out of 93 national competitors. No ad budget. No outside creative team. This is what happens when your brand has something real to say and the creative to back it up." />
   <meta property="og:url" content="https://moorgraphix.com/cases/eoi-campaign.html" />
+  <link rel="canonical" href="https://moorgraphix.com/cases/eoi-campaign.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
@@ -286,6 +287,16 @@
     .gallery-hero { border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--blue-line); }
     .gallery-hero img { width: 100%; display: block; }
     .gallery-cap { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+    /* FAQ */
+    .faq-wrap { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; }
+    .faq-item { border-top: 1px solid var(--blue-line); padding: 1.5rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--blue-line); }
+    .faq-item summary { cursor: pointer; font-size: 1.05rem; font-weight: 500; color: var(--white); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--blue); font-size: 1.3rem; font-weight: 300; flex-shrink: 0; transition: transform 0.25s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin-top: 1rem; color: var(--muted); line-height: 1.8; max-width: 68ch; }
   </style>
   <script type="application/ld+json">
   {
@@ -304,6 +315,38 @@
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-deck"] }
     }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What was the Entrepreneur of Impact campaign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A grassroots creative and community campaign that helped Moor Graphix place in the Top 3 of 93 entrepreneurs competing in the Entrepreneur of Impact competition — with no paid advertising and no outside agency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How did Moor Graphix reach the Top 3 without ad spend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Through one studio's creative output and a community that showed up organically — direct engagement and content, not paid media."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the EOI result demonstrate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That a focused creative vision and genuine community support can outperform larger, better-funded competitors."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -694,6 +737,27 @@
         <p class="body-text">The EOI campaign wasn't just a competition entry. It was a live test of the Moor Graphix methodology — Cultural Alchemy executed under real competitive conditions with a documented result.</p>
         <p class="body-text">The same principles that moved a community to vote drove a small brand into the Top 3 nationally. Those same principles are what we bring to every client engagement. The difference between brands that win and brands that post is strategy, story, and production quality. All three are what Moor Graphix delivers.</p>
       </div>
+    </div>
+  </div>
+
+  
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="sec-label">FAQ</div>
+    <h2>Common questions<br><em>about this project.</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What was the Entrepreneur of Impact campaign?</summary>
+        <p>A grassroots creative and community campaign that helped Moor Graphix place in the Top 3 of 93 entrepreneurs competing in the Entrepreneur of Impact competition — with no paid advertising and no outside agency.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How did Moor Graphix reach the Top 3 without ad spend?</summary>
+        <p>Through one studio's creative output and a community that showed up organically — direct engagement and content, not paid media.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does the EOI result demonstrate?</summary>
+        <p>That a focused creative vision and genuine community support can outperform larger, better-funded competitors.</p>
+      </details>
     </div>
   </div>
 

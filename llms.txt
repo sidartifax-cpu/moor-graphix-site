@@ -1,0 +1,29 @@
+# Moor Graphix
+
+> Moor Graphix is a Cultural Alchemy brand design and AI systems studio based in Douglasville, GA, serving clients nationwide for 30+ years. The studio builds complete brand ecosystems — logo and identity design, websites, print, video, and AI-powered workflows — for entrepreneurs, nonprofits, musicians, and celebrity brands.
+
+## Company
+
+- [About](https://moorgraphix.com/about.html): Studio background, founder Sid Washington, and the Cultural Alchemy philosophy.
+- [Services](https://moorgraphix.com/services.html): Brand identity, web design, print, video, and AI systems offerings.
+- [AI Workshop](https://moorgraphix.com/ai-workshop.html): AI training and workshops for businesses.
+- [Contact](https://moorgraphix.com/contact.html): Booking and inquiries.
+
+## Case Studies
+
+- [The Evans Guild](https://moorgraphix.com/cases/evansguild.html): Four-brand digital empire built for Celebrity Designer Etu Evans — logo, website, and full brand ecosystem across The Evans Guild, Tu Media, Book of Etu, and Solesville Foundation.
+- [Joyous Ocean](https://moorgraphix.com/cases/joyousocean.html): Brand and e-commerce platform redesign for a teaching yogini, removing checkout friction and elevating her practice.
+- [Harlem Business Directory](https://moorgraphix.com/cases/harlem-directory.html): A 10,000-copy print shopping guide giving 68 Black-owned Harlem businesses visibility before social media and Google Business Profiles existed.
+- [2 Sports Moms](https://moorgraphix.com/cases/2sportsmoms.html): Logo and website launch for a 501(c)(3) nonprofit's first year.
+- [Entrepreneur of Impact (EOI Campaign)](https://moorgraphix.com/cases/eoi-campaign.html): A grassroots creative campaign that placed in the Top 3 of 93 entrants with no ad spend or agency.
+- [ETHOH](https://moorgraphix.com/cases/ethoh.html): Full creative partnership across 4+ years — 20th Anniversary campaign, video production, social media, and merchandise for Enter The Holy of Holies.
+- [2hands2help / Empower](https://moorgraphix.com/cases/2hands2help.html): Complete visual identity for the Empower social-emotional learning curriculum — logo, brand guidelines, 30+ illustrated characters, and 4-unit lesson layout.
+- [Harmony N Life Records](https://moorgraphix.com/cases/harmony-n-life.html): 8 years of album artwork and event flyer design for independent label Harmony N Life Records.
+
+## Blog
+
+- [Blog index](https://moorgraphix.com/blog.html): Articles on branding, SEO, copywriting, and design strategy.
+
+## Optional
+
+- [Sitemap](https://moorgraphix.com/sitemap.xml): Full list of indexed pages.
