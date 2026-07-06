@@ -8,7 +8,7 @@ function shuffle(arr){
 
 // Split PROJECTS into per-section arrays — each section loads from its own folder.
 // To change what appears in each section, edit assets/js/images.js.
-const PORTFOLIO_CATS = ['logos','brand_identity','web_design','event_print','campaign','video'];
+const PORTFOLIO_CATS = ['logos','brand_identity','web_design','event_print','campaign','video','concept'];
 const heroSlides     = PROJECTS.filter(p => p.category === 'hero_slideshow');
 const showcaseItems  = PROJECTS.filter(p => p.category === 'showcase_strip');
 const projects       = shuffle(PROJECTS.filter(p => PORTFOLIO_CATS.includes(p.category)));
@@ -102,6 +102,7 @@ const CAT_CFG={
   event_print:    {icon:'ti-calendar-event',  label:'Event + Print'},
   campaign:       {icon:'ti-speakerphone',    label:'Campaign'},
   video:          {icon:'ti-brand-youtube',   label:'Video'},
+  concept:        {icon:'ti-bulb',            label:'Concept Work'},
 };
 
 // 2-char initials — skip stop words, take first letter of first two significant words
@@ -128,6 +129,7 @@ function buildGrid(cat){
     const mono=getInitials(item.name);
     const origIdx=projects.indexOf(item);
     const hasCaseStudy=!!item.link;
+    const isConcept=item.category==='concept';
 
     const card=document.createElement('div');
     card.className='wg-card'+(hasCaseStudy?' has-case-study':'');
@@ -135,9 +137,9 @@ function buildGrid(cat){
     card.dataset.origIdx=origIdx;
     card.style.setProperty('--entry-delay',(i%3)*0.1+'s');
 
-    // Case study badge — shown on cards that link to a case study
+    // Case study badge — shown on cards that link to a case study (concept work gets its own label)
     const csBadge=hasCaseStudy
-      ? '<div class="wg-card-cs-badge">Case Study ↗</div>'
+      ? '<div class="wg-card-cs-badge">'+(isConcept?'Concept ↗':'Case Study ↗')+'</div>'
       : '';
 
     card.innerHTML=
@@ -152,7 +154,7 @@ function buildGrid(cat){
         '<div class="wg-card-hover-info">'+
           '<div class="wg-card-hover-name">'+item.name+'</div>'+
           '<p class="wg-card-hover-desc">'+item.desc+'</p>'+
-          '<button class="wg-card-view-btn" tabindex="-1">'+(hasCaseStudy?'View Case Study':'View Details')+'</button>'+
+          '<button class="wg-card-view-btn" tabindex="-1">'+(hasCaseStudy?(isConcept?'View Concept':'View Case Study'):'View Details')+'</button>'+
         '</div>'+
       '</div>'+
       '<div class="wg-card-bottom">'+

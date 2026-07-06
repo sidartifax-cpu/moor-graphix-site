@@ -941,6 +941,38 @@ const PROJECTS = [
 
 
   // ══════════════════════════════════════════════════════════════════════════
+  // CONCEPT WORK — self-initiated strategic concept decks (NOT commissioned
+  // client engagements). Clearly labeled as concept/capability demonstrations
+  // on their own pages. Folder: assets/images/portfolio/concept/
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    src:      "assets/images/portfolio/concept/delta-digital-flight-path.jpg",
+    name:     "Precision Aviation & The Digital Flight Path (Concept)",
+    cat:      "Strategic Concept — UX & Digital Transformation",
+    category: "concept",
+    desc:     "A self-initiated strategic concept exploring a unified digital transformation roadmap for airline customer experience — UX strategy, design systems, SEO, and accessibility. Not a commissioned Delta Air Lines engagement.",
+    link:     "cases/delta-digital-flight-path-concept.html"
+  },
+  {
+    src:      "assets/images/portfolio/concept/dms-strategic-marketing-system.jpg",
+    name:     "Delta Material Services Marketing Communications System (Concept)",
+    cat:      "Strategic Concept — B2B Marketing",
+    category: "concept",
+    desc:     "A self-initiated multi-channel B2B marketing communications concept for an aviation parts and leasing enterprise. Not a commissioned Delta Material Services engagement.",
+    link:     "cases/dms-strategic-marketing-system-concept.html"
+  },
+  {
+    src:      "assets/images/portfolio/concept/executive-blueprint.jpg",
+    name:     "The Executive Blueprint — AI-Powered Presentation System",
+    cat:      "Capability Demonstration — AI Presentation Design",
+    category: "concept",
+    desc:     "A capability demonstration of Moor Graphix's AI-assisted, human-in-the-loop executive presentation design system — visual reasoning, brand systems, and workflow methodology.",
+    link:     "cases/executive-blueprint-ai-presentation-system.html"
+  },
+
+
+  // ══════════════════════════════════════════════════════════════════════════
   // SERVICES HERO — slideshow in the services.html page hero
   // Folder: assets/images/services-hero/
   // ══════════════════════════════════════════════════════════════════════════
