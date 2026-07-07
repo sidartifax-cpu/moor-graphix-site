@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/branding/moor-graphix-favicon.png">
+<meta name="description" content="AI Systems services from Moor Graphix — AI workflow consulting, business process automation, document automation, intelligent forms, internal AI assistants, knowledge management, employee training, visual systems design, change management, and executive communication.">
+<meta name="keywords" content="AI workflow consulting, business process automation, document automation, intelligent forms, internal AI assistants, knowledge management, employee training AI, change management, executive communication, Moor Graphix AI systems">
+<meta name="author" content="Sid Washington">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="US-GA">
+<meta name="geo.placename" content="Douglasville, Georgia">
+<meta name="geo.position" content="33.7490;-84.7441">
+<meta name="ICBM" content="33.7490, -84.7441">
+<link rel="canonical" href="https://sidartifax-cpu.github.io/moor-graphix-site/ai-systems.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moor Graphix">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://sidartifax-cpu.github.io/moor-graphix-site/ai-systems.html">
+<meta property="og:title" content="AI Systems &amp; Automation Services | Moor Graphix">
+<meta property="og:description" content="AI workflow consulting, business process automation, document automation, intelligent forms, internal AI assistants, knowledge management, employee training, visual systems design, change management, and executive communication.">
+<meta property="og:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Moor Graphix — Cultural Alchemy + AI Design Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@moorgraphix">
+<meta name="twitter:creator" content="@moorgraphix">
+<meta name="twitter:title" content="AI Systems &amp; Automation Services | Moor Graphix">
+<meta name="twitter:description" content="AI workflow consulting, business process automation, document automation, intelligent forms, internal AI assistants, knowledge management, employee training, visual systems design, change management, and executive communication.">
+<meta name="twitter:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<meta name="twitter:image:alt" content="Moor Graphix — Cultural Alchemy + AI Design Studio">
+<title>AI Systems &amp; Automation Services | Moor Graphix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── AI SYSTEMS PAGE — additional styles ─────────────────────────────────── */
+
+.nav-current a{color:#6AABFF !important}
+.nav-current a::after{width:100% !important}
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.aisys-hero{padding:80px 44px 64px}
+.aisys-hero-inner{max-width:820px}
+.aisys-hero h1 em{font-style:italic;color:var(--blue-lt)}
+.aisys-hero-sub{font-size:clamp(15px,1.35vw,18px);color:rgba(150,180,255,0.6);max-width:640px;margin:22px 0 0;line-height:1.85}
+.aisys-hero-cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:36px}
+.aisys-hero-stats{border-top:0.5px solid rgba(80,140,255,0.1);padding-top:24px;margin-top:40px}
+
+/* ── SECTION WRAPPER (reused pattern) ────────────────────────── */
+.svc-section{padding:80px 44px}
+.svc-section-head{max-width:760px;margin-bottom:52px}
+.svc-section-intro{font-size:clamp(14px,1.3vw,16px);line-height:1.85;max-width:620px;margin-top:14px}
+.sec-light .svc-section-intro{color:var(--text-mid)}
+.sec-dark2 .svc-section-intro{color:rgba(150,180,255,0.55)}
+
+/* ── CAPABILITY CARD GRID (reused .svc-card pattern) ───────────── */
+.svc-card-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{border-radius:6px;padding:36px;display:flex;flex-direction:column;transition:all 0.28s;position:relative}
+.sec-light .svc-card{background:#fff;border:1px solid rgba(48,96,208,0.09)}
+.sec-light .svc-card:hover{border-color:var(--blue);box-shadow:0 8px 36px rgba(48,96,208,0.1);transform:translateY(-3px)}
+.svc-card-icon{font-size:28px;margin-bottom:14px;display:block;color:var(--blue)}
+.svc-card-name{font-size:15px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;color:var(--text-dark)}
+.svc-card-desc{font-size:13.5px;line-height:1.78;flex-grow:1;margin-bottom:20px;color:var(--text-mid)}
+.svc-card-inc-label{font-size:8.5px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:11px;color:var(--blue)}
+.svc-card-inc{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}
+.svc-card-inc li{font-size:12.5px;line-height:1.45;padding-left:18px;position:relative;color:var(--text-mid)}
+.svc-card-inc li::before{content:'✦';position:absolute;left:0;font-size:7px;top:4px;color:var(--blue)}
+.svc-card-cta{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:11.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;transition:opacity 0.25s}
+.svc-card-cta:hover{opacity:0.7}
+.svc-card.has-example{border-color:rgba(48,96,208,0.25)}
+
+/* ── HOW WE WORK ──────────────────────────────────────────────── */
+.hw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.hw-step{background:rgba(80,140,255,0.04);border:0.5px solid rgba(80,140,255,0.12);border-radius:8px;padding:28px 24px}
+.hw-step-n{font-family:'DM Serif Display',serif;font-style:italic;font-size:34px;color:rgba(106,171,255,0.4);line-height:1;margin-bottom:12px}
+.hw-step-name{font-size:15px;font-weight:800;color:#fff;margin-bottom:8px}
+.hw-step-desc{font-size:13px;color:rgba(150,180,255,0.55);line-height:1.65}
+
+@media(max-width:960px){
+  .svc-card-grid-3{grid-template-columns:repeat(2,1fr)}
+  .hw-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .svc-card-grid-3{grid-template-columns:1fr}
+  .hw-grid{grid-template-columns:1fr}
+  .aisys-hero{padding:56px 24px 48px}
+  .svc-section{padding:60px 24px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "AI Systems & Business Automation Consulting",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Moor Graphix",
+    "url": "https://moorgraphix.com"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Moor Graphix AI Systems Capabilities",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Workflow Consulting", "description": "Process and tooling audits, AI readiness assessment, and a prioritized implementation roadmap." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Process Automation", "description": "Workflow mapping and redesign, Make.com and API integration builds, automated reporting and alerts." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Document Automation", "description": "Template and data-merge systems that auto-generate reports, proposals, and contracts consistently." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intelligent Forms", "description": "Adaptive forms with conditional logic, validation, and direct CRM or workflow integration." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Internal AI Assistants", "description": "Custom-trained AI assistants built on internal knowledge, with role-based access and guardrails." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Knowledge Management", "description": "SOP and documentation architecture, searchable knowledge base build-out, AI-ready structured content." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Employee Training", "description": "Live workshop sessions, role-based training tracks, and reference documentation for new systems." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Visual Systems Design", "description": "Brand-consistent templates, UI kits, dashboard design, and design system documentation." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Change Management", "description": "Stakeholder communication planning, phased rollout strategy, and adoption tracking." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive Communication", "description": "Human-in-the-loop AI presentation design, turning dense data into board-ready visual narratives." } }
+    ]
+  }
+}
+</script>
+<link rel="stylesheet" href="assets/css/mobile.css">
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#portfolio">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ai-workshop.html">AI Workshop</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
+    <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
+  </a>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
+  <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
+  <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+  <a href="about.html" onclick="toggleMobileMenu()">About</a>
+  <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="mob-consult" onclick="toggleMobileMenu()">Book Free Consult</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-dark aisys-hero" id="ai-systems-top">
+  <div class="aisys-hero-inner">
+    <div class="eyebrow eyebrow-dark">AI Systems &amp; Automation</div>
+    <h1>We don't just teach AI.<br/><em>We build it into your business.</em></h1>
+    <p class="aisys-hero-sub">From workflow audits to internal AI assistants — Moor Graphix designs and builds the automation, documentation, and communication systems that make AI actually work inside a real business. Not a chatbot bolted onto your website. A system built around how your team already operates.</p>
+    <div class="aisys-hero-cta-row">
+      <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer"><button class="btn-primary">Book Free Consult</button></a>
+      <a href="ai-workshop.html"><button class="btn-ghost">Prefer to learn it yourself? View AI Workshop →</button></a>
+    </div>
+    <div class="stats-row aisys-hero-stats">
+      <div class="stat"><div class="stat-n">10</div><div class="stat-l">Capability Areas</div></div>
+      <div class="stat"><div class="stat-n">3</div><div class="stat-l">Layer AI Model</div></div>
+      <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Agents Live</div></div>
+      <div class="stat"><div class="stat-n">0</div><div class="stat-l">Generic Chatbots</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CAPABILITIES GRID
+═════════════════════════════════════════════════════════════ -->
+<section class="sec-light svc-section" id="capabilities">
+  <div class="svc-section-head">
+    <div class="eyebrow eyebrow-light">What We Build</div>
+    <h2 style="color:var(--text-dark)">Ten ways AI becomes<br/>infrastructure, not a gimmick.</h2>
+    <p class="svc-section-intro">Every engagement starts with the same question we ask about brand work: what does this business actually need, not what's trending. These are the capabilities we build engagements from — mixed and matched to fit your operation, not sold as a one-size-fits-all package.</p>
+  </div>
+
+  <div class="svc-card-grid-3">
+
+    <div class="svc-card">
+      <i class="ti ti-route svc-card-icon"></i>
+      <div class="svc-card-name">AI Workflow Consulting</div>
+      <p class="svc-card-desc">Before any automation gets built, we map how work actually moves through your business — the decisions, handoffs, and bottlenecks a generic AI tool will never see. You leave with a clear-eyed audit and a prioritized roadmap, not a stack of tools nobody asked for.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Process &amp; tooling audit</li>
+        <li>AI readiness assessment</li>
+        <li>Prioritized implementation roadmap</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-settings-automation svc-card-icon"></i>
+      <div class="svc-card-name">Business Process Automation</div>
+      <p class="svc-card-desc">We identify the repeatable work — approvals, scheduling, reporting, follow-up — and build the automations that own it end to end. The goal isn't fewer people; it's fewer hours lost to work a system should already be doing.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Workflow mapping &amp; redesign</li>
+        <li>Make.com &amp; API integration builds</li>
+        <li>Automated reporting &amp; alerts</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-file-text svc-card-icon"></i>
+      <div class="svc-card-name">Document Automation</div>
+      <p class="svc-card-desc">Contracts, proposals, coaching plans, onboarding packets — if it's a document your team rebuilds from scratch every time, we turn it into a system. Structured templates and generative pipelines produce consistent, on-brand output in minutes, not hours.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Template &amp; data-merge systems</li>
+        <li>Auto-generated reports &amp; proposals</li>
+        <li>Brand-consistent output, every time</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-forms svc-card-icon"></i>
+      <div class="svc-card-name">Intelligent Forms</div>
+      <p class="svc-card-desc">Static intake forms create bottlenecks the moment a real answer doesn't fit a dropdown. We design adaptive forms that route, validate, and pre-fill based on what's actually being asked — cutting back-and-forth before a human ever sees the submission.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Conditional logic &amp; routing</li>
+        <li>Validation at the point of entry</li>
+        <li>Direct CRM / workflow integration</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-robot svc-card-icon"></i>
+      <div class="svc-card-name">Internal AI Assistants</div>
+      <p class="svc-card-desc">A custom-trained assistant that knows your business — your policies, your tone, your systems — not a generic chatbot bolted onto your website. Built for your team to use internally, not for the public to poke at.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Trained on your internal knowledge</li>
+        <li>Role-based access &amp; guardrails</li>
+        <li>Deployed where your team already works</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-books svc-card-icon"></i>
+      <div class="svc-card-name">Knowledge Management</div>
+      <p class="svc-card-desc">Institutional knowledge that lives in one person's head is a liability. We structure your documentation, SOPs, and decision history into a searchable system your team — and your AI tools — can actually draw on.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>SOP &amp; documentation architecture</li>
+        <li>Searchable knowledge base build-out</li>
+        <li>AI-ready structured content</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-school svc-card-icon"></i>
+      <div class="svc-card-name">Employee Training</div>
+      <p class="svc-card-desc">Technology only pays off if people actually use it correctly. We build the training — live sessions, workshop curriculum, or embedded documentation — that gets your team fluent in the systems we build together.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Live workshop sessions</li>
+        <li>Role-based training tracks</li>
+        <li>Reference documentation &amp; playbooks</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-palette svc-card-icon"></i>
+      <div class="svc-card-name">Visual Systems Design</div>
+      <p class="svc-card-desc">Every automation, dashboard, and internal tool still has to look like it belongs to your brand. We design the visual system — templates, UI components, brand guidelines — that keeps everything your business produces coherent, not cobbled together.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Brand-consistent templates &amp; UI kits</li>
+        <li>Dashboard &amp; internal tool design</li>
+        <li>Design system documentation</li>
+      </ul>
+    </div>
+
+    <div class="svc-card">
+      <i class="ti ti-affiliate svc-card-icon"></i>
+      <div class="svc-card-name">Change Management</div>
+      <p class="svc-card-desc">New systems fail when the people using them weren't part of the plan. We build the rollout — communication, phased adoption, feedback loops — that gets a team from resistant to bought-in.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Stakeholder communication planning</li>
+        <li>Phased rollout strategy</li>
+        <li>Adoption tracking &amp; feedback loops</li>
+      </ul>
+    </div>
+
+    <div class="svc-card has-example">
+      <i class="ti ti-presentation svc-card-icon"></i>
+      <div class="svc-card-name">Executive Communication</div>
+      <p class="svc-card-desc">Dense data and raw AI-generated drafts don't win board approval — clear, visually reasoned narratives do. We turn research and messy first drafts into board-ready presentations, built on a disciplined, human-governed design system.</p>
+      <div class="svc-card-inc-label">Includes</div>
+      <ul class="svc-card-inc">
+        <li>Human-in-the-loop AI presentation workflow</li>
+        <li>Brand-governed visual systems</li>
+        <li>Board- and investor-ready decks</li>
+      </ul>
+      <a class="svc-card-cta" href="cases/executive-blueprint-ai-presentation-system.html">See the Capability Deck <span>↗</span></a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     HOW WE WORK
+═════════════════════════════════════════════════════════════ -->
+<section class="sec-dark2 svc-section" id="how-we-work">
+  <div class="svc-section-head">
+    <div class="eyebrow eyebrow-dark">The Process</div>
+    <h2 style="color:#fff">From audit to<br/>adoption.</h2>
+    <p class="svc-section-intro">The same four-stage process runs under every engagement, whether it's one automation or a full AI system.</p>
+  </div>
+  <div class="hw-grid">
+    <div class="hw-step">
+      <div class="hw-step-n">01</div>
+      <div class="hw-step-name">Discover</div>
+      <div class="hw-step-desc">Audit your current workflows, tools, and pain points. No recommendations before we understand how your business actually runs.</div>
+    </div>
+    <div class="hw-step">
+      <div class="hw-step-n">02</div>
+      <div class="hw-step-name">Design</div>
+      <div class="hw-step-desc">Map the target system — People, Process, and Infrastructure layers — and prioritize what to build first for the fastest real impact.</div>
+    </div>
+    <div class="hw-step">
+      <div class="hw-step-n">03</div>
+      <div class="hw-step-name">Build</div>
+      <div class="hw-step-desc">Build and integrate the automations, assistants, forms, or documents — tested against your real data, not a demo environment.</div>
+    </div>
+    <div class="hw-step">
+      <div class="hw-step-n">04</div>
+      <div class="hw-step-name">Train &amp; Handoff</div>
+      <div class="hw-step-desc">Train your team, document the system, and manage the rollout — so adoption sticks after we're no longer in the room.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="final-cta sec-red" id="contact">
+  <div class="final-cta-eyebrow">Let's Build Your AI System</div>
+  <h2>Automation is more than a tool.<br/><em>It's infrastructure.</em></h2>
+  <p class="final-cta-sub">Every engagement starts with a free consultation — no generic proposal, no chatbot pitch. Just a clear look at what your business actually needs.</p>
+  <div class="final-cta-btns">
+    <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
+      <button class="btn-primary" style="font-size:14px;padding:17px 34px">Book Free Consultation</button>
+    </a>
+    <a href="https://www.moorgraphix.com/contact-us" target="_blank" rel="noopener noreferrer">
+      <button class="btn-ghost" style="font-size:14px;padding:17px 30px">Send a Project Brief →</button>
+    </a>
+    <a href="services.html">
+      <button class="btn-ghost" style="font-size:14px;padding:17px 30px">View All Services →</button>
+    </a>
+  </div>
+  <div class="cta-contact">
+    <div class="cta-info"><i class="ti ti-phone"></i><a href="tel:4704994407">(470) 499-4407</a></div>
+    <div class="cta-info"><i class="ti ti-mail"></i><a href="mailto:sidart@moorgraphix.com">sidart@moorgraphix.com</a></div>
+    <div class="cta-info"><i class="ti ti-map-pin"></i>Douglasville, GA — Serving Nationwide</div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="sec-dark">
+  <a href="index.html" class="foot-logo">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.tiktok.com/@moorgraphix" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-tiktok"></i></a>
+    <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2026 Moor Graphix &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="sms-terms.html">SMS Terms</a></div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+
+</div><!-- .page -->
+
+<script src="assets/js/particles.js"></script>
+<!-- Moor Graphix AI Concierge -->
+<elevenlabs-convai agent-id="agent_3001knwwzjm9ecw9m8ng3svxhs65" avatar-image-url="https://moorgraphix.com/assets/images/branding/moor-graphix-logo.png"></elevenlabs-convai>
+<script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+<script src="assets/js/mobile-menu.js" defer></script>
+</body>
+</html>
