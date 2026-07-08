@@ -64,6 +64,7 @@
 .bl-hero-cat.bc-organizing{border-color:rgba(0,140,160,0.35);color:rgba(60,200,220,0.7);background:rgba(0,140,160,0.07)}
 .bl-hero-cat.bc-health{border-color:rgba(160,32,80,0.35);color:rgba(240,120,160,0.7);background:rgba(160,32,80,0.07)}
 .bl-hero-cat.bc-spotlight{border-color:rgba(185,120,0,0.35);color:rgba(220,165,50,0.7);background:rgba(185,120,0,0.07)}
+.bl-hero-cat.bc-ai{border-color:rgba(79,70,229,0.35);color:rgba(160,150,255,0.7);background:rgba(79,70,229,0.07)}
 
 /* Hero right visual */
 .bl-hero-visual{position:relative;z-index:1}
@@ -83,6 +84,7 @@
 .bh-dot-business{background:rgba(80,200,140,0.7)}
 .bh-dot-organizing{background:rgba(60,200,220,0.7)}
 .bh-dot-spotlight{background:rgba(220,165,50,0.7)}
+.bh-dot-ai{background:rgba(160,150,255,0.7)}
 .bh-art-title{font-size:13px;font-weight:600;color:rgba(200,220,255,0.85);line-height:1.35;margin-bottom:3px}
 .bh-art-meta{font-size:10px;color:rgba(100,160,255,0.4);letter-spacing:0.06em}
 .bh-chips{display:flex;gap:8px;flex-wrap:wrap}
@@ -93,6 +95,7 @@
 .bh-chip-organizing{border-color:rgba(0,140,160,0.4);color:rgba(60,200,220,0.75);background:rgba(0,140,160,0.08)}
 .bh-chip-health{border-color:rgba(160,32,80,0.4);color:rgba(240,120,160,0.75);background:rgba(160,32,80,0.08)}
 .bh-chip-spotlight{border-color:rgba(185,120,0,0.4);color:rgba(220,165,50,0.75);background:rgba(185,120,0,0.08)}
+.bh-chip-ai{border-color:rgba(79,70,229,0.4);color:rgba(160,150,255,0.75);background:rgba(79,70,229,0.08)}
 @media(max-width:860px){.bl-hero{grid-template-columns:1fr}.bl-hero-visual{display:none}}
 
 /* BLOG GRID */
@@ -135,6 +138,7 @@
 .bl-card-badge.bb-organizing{background:rgba(0,140,160,0.82);color:#80e8f0}
 .bl-card-badge.bb-health{background:rgba(160,32,80,0.82);color:#ffaac8}
 .bl-card-badge.bb-spotlight{background:rgba(185,120,0,0.82);color:#f0d070}
+.bl-card-badge.bb-ai{background:rgba(79,70,229,0.82);color:#c8c4ff}
 
 /* Bottom title overlay (used when text is overlaid on image) */
 .bl-card-img-title{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(transparent,rgba(8,12,24,0.78));z-index:2;overflow:hidden}
@@ -148,6 +152,7 @@
 .bl-card-eyebrow.ey-organizing{color:rgba(0,140,160,0.7)}
 .bl-card-eyebrow.ey-health{color:rgba(160,32,80,0.7)}
 .bl-card-eyebrow.ey-spotlight{color:rgba(185,120,0,0.7)}
+.bl-card-eyebrow.ey-ai{color:rgba(79,70,229,0.8)}
 .bl-card-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--text-dark);margin-bottom:12px;line-height:1.25}
 .bl-card-excerpt{font-size:13.5px;color:var(--text-mid);line-height:1.7;flex:1;margin-bottom:18px}
 .bl-card-meta{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:rgba(58,69,96,0.45);margin-bottom:14px;letter-spacing:0.06em}
@@ -301,6 +306,7 @@
       <span class="bl-hero-cat bc-organizing">Organizing</span>
       <span class="bl-hero-cat bc-health">Health</span>
       <span class="bl-hero-cat bc-spotlight">Entrepreneur Spotlight</span>
+      <span class="bl-hero-cat bc-ai">AI Systems</span>
     </div>
   </div>
 
@@ -322,6 +328,13 @@
     </div>
     <div class="bh-recent">
       <div class="bh-recent-label">Latest Essays</div>
+      <div class="bh-art-row">
+        <span class="bh-cat-dot bh-dot-ai"></span>
+        <div>
+          <div class="bh-art-title">The 10 AI Systems Every Business Needs</div>
+          <div class="bh-art-meta">AI Systems · 9 min</div>
+        </div>
+      </div>
       <div class="bh-art-row">
         <span class="bh-cat-dot bh-dot-business"></span>
         <div>
@@ -358,6 +371,7 @@
       <span class="bh-chip bh-chip-organizing">Organizing</span>
       <span class="bh-chip bh-chip-health">Health</span>
       <span class="bh-chip bh-chip-spotlight">Entrepreneur Spotlight</span>
+      <span class="bh-chip bh-chip-ai">AI Systems</span>
     </div>
   </div>
 
@@ -375,6 +389,7 @@
     <button class="bl-filter" data-cat="organizing">Organizing</button>
     <button class="bl-filter" data-cat="health">Health</button>
     <button class="bl-filter" data-cat="spotlight">Entrepreneur Spotlight</button>
+    <button class="bl-filter" data-cat="ai">AI Systems</button>
   </div>
 
   <!-- Featured Post -->
@@ -393,6 +408,21 @@
 
   <!-- Blog Grid -->
   <div class="bl-grid" id="blogGrid">
+
+    <!-- Post 0 — AI Systems -->
+    <div class="bl-card" data-cat="ai">
+      <div class="bl-card-img">
+        <div class="bl-card-placeholder ph-ai"><span>🤖</span></div>
+        <span class="bl-card-badge bb-ai">AI Systems</span>
+      </div>
+      <div class="bl-card-body">
+        <div class="bl-card-eyebrow ey-ai"><span>AI Systems</span></div>
+        <div class="bl-card-title">The 10 AI Systems Every Business Needs (and Why Most Fail Without Them)</div>
+        <p class="bl-card-excerpt">92% of businesses see zero ROI from AI — not because the technology failed, but because they bought tools without building systems. Here are the ten capabilities that actually work.</p>
+        <div class="bl-card-meta"><span>July 7, 2026 · Sid Washington</span><span>9 min read</span></div>
+        <a href="blog/ai-systems-every-business-needs.html" class="bl-card-cta">Read More →</a>
+      </div>
+    </div>
 
     <!-- Post 1 — Brand Identity -->
     <div class="bl-card" data-cat="brand">
