@@ -6,7 +6,7 @@
 
 - [About](https://moorgraphix.com/about.html): Studio background, founder Sid Washington, and the Cultural Alchemy philosophy.
 - [Services](https://moorgraphix.com/services.html): Brand identity, web design, print, video, and AI systems offerings.
-- [AI Systems](https://moorgraphix.com/ai-systems.html): Done-for-you AI consulting and build services — AI workflow consulting, business process automation, document automation, intelligent forms, internal AI assistants, knowledge management, employee training, visual systems design, change management, and executive communication.
+- [AI Systems](https://moorgraphix.com/ai-systems.html): Tech consulting and AI systems services — AI workflow consulting, business process automation, document automation, intelligent forms, internal AI assistants, knowledge management, employee training, visual systems design, change management, and executive communication.
 - [AI Workshop](https://moorgraphix.com/ai-workshop.html): AI training and workshops for businesses.
 - [Contact](https://moorgraphix.com/contact.html): Booking and inquiries.
 

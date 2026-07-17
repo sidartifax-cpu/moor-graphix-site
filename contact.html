@@ -13,14 +13,14 @@
 <meta name="geo.placename" content="Douglasville, Georgia">
 <meta name="geo.position" content="33.7490;-84.7441">
 <meta name="ICBM" content="33.7490, -84.7441">
-<link rel="canonical" href="https://sidartifax-cpu.github.io/moor-graphix-site/contact.html">
+<link rel="canonical" href="https://moorgraphix.com/contact.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Moor Graphix">
 <meta property="og:locale" content="en_US">
-<meta property="og:url" content="https://sidartifax-cpu.github.io/moor-graphix-site/contact.html">
+<meta property="og:url" content="https://moorgraphix.com/contact.html">
 <meta property="og:title" content="Contact | Moor Graphix — Cultural Alchemy + AI Design Studio">
 <meta property="og:description" content="Contact Moor Graphix — book a free consultation, start a project, or ask a question. Sid Washington, brand design and AI systems, Douglasville, GA.">
-<meta property="og:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<meta property="og:image" content="https://moorgraphix.com/assets/images/branding/moor-graphix-logo.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Moor Graphix — Cultural Alchemy + AI Design Studio">
@@ -29,7 +29,7 @@
 <meta name="twitter:creator" content="@moorgraphix">
 <meta name="twitter:title" content="Contact | Moor Graphix — Cultural Alchemy + AI Design Studio">
 <meta name="twitter:description" content="Contact Moor Graphix — book a free consultation, start a project, or ask a question. Sid Washington, brand design and AI systems, Douglasville, GA.">
-<meta name="twitter:image" content="https://sidartifax-cpu.github.io/moor-graphix-site/assets/images/branding/moor-graphix-logo.png">
+<meta name="twitter:image" content="https://moorgraphix.com/assets/images/branding/moor-graphix-logo.png">
 <meta name="twitter:image:alt" content="Moor Graphix — Cultural Alchemy + AI Design Studio">
 <title>Contact | Moor Graphix — Cultural Alchemy + AI Design Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,7 +139,7 @@
   "@type": "ContactPage",
   "name": "Contact Moor Graphix",
   "description": "Book a free brand consultation with Sid Washington at Moor Graphix. Brand design and AI systems for small businesses nationwide.",
-  "url": "https://sidartifax-cpu.github.io/moor-graphix-site/contact.html",
+  "url": "https://moorgraphix.com/contact.html",
   "mainEntity": {
     "@type": "LocalBusiness",
     "name": "Moor Graphix",
@@ -167,6 +167,54 @@
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1"]
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I get started on a project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The easiest way is to book a free 30-minute consultation using the booking link above. We'll talk about your project, your goals, your timeline, and your budget. From there, Sid will put together a custom proposal — no templates, no generic pricing sheets. Every engagement is scoped specifically for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with clients outside of Georgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Moor Graphix is a remote-first studio. We've delivered projects for clients in New York, Los Angeles, Washington D.C., and cities across the country. All discovery, strategy, and design work happens digitally — which means wherever you are, we can serve you at the same level as any local client."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in the Brand Blueprint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every engagement includes a Brand Blueprint — a complete roadmap for your visual identity, brand voice, and digital presence. It covers how to use your brand consistently across every touchpoint: social media, web, print, email, apparel, and AI. It's the operating manual for your brand, not just a style guide. This is how your investment compounds over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Timelines vary by scope. A logo + brand identity system typically runs 2–4 weeks. A full website project is usually 4–8 weeks depending on complexity and content readiness. AI agent builds and integrations are scoped individually. Rush timelines are available for select projects — ask about availability during your consultation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I don't know exactly what I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That's exactly what the free consultation is for. Come with a direction — even a vague one — and Sid will help you clarify what makes the most sense given your goals, audience, and resources. You don't need a brief. You just need to show up and talk about your vision. We'll figure out the rest together."
+      }
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" href="assets/css/mobile.css">
@@ -302,9 +350,10 @@
         </div>
         <div class="ct-sms-optin">
           <label>
-            <input type="checkbox" name="sms_consent" value="yes">
+            <input type="checkbox" name="sms_consent" value="yes" id="cf-sms-consent">
             By checking this box, I consent to receive recurring SMS text messages from Moor Graphix at the mobile number provided above. Messages may include project updates, appointment reminders, and promotional offers. Message frequency may vary — up to 4 messages/month. Msg &amp; data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help. Consent is not a condition of purchase. View our <a href="sms-terms.html">SMS Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>.
           </label>
+          <input type="hidden" name="sms_consent_timestamp" id="cf-sms-consent-timestamp">
         </div>
         <button type="submit" class="ct-submit" id="ctSubmit"><i class="ti ti-send"></i>Send Message</button>
         <p class="ct-form-note">No spam. No pressure. Sid reads every message personally.</p>
@@ -514,6 +563,9 @@ const cThanks=document.getElementById('contactThanks');
 if(cForm){
   cForm.addEventListener('submit',async function(e){
     e.preventDefault();
+    if(document.getElementById('cf-sms-consent').checked){
+      document.getElementById('cf-sms-consent-timestamp').value=new Date().toISOString();
+    }
     const btn=document.getElementById('ctSubmit');
     const orig=btn.innerHTML;
     btn.innerHTML='<i class="ti ti-loader-2"></i>Sending…';

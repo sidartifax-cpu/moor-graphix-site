@@ -41,4 +41,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://sidartifax-cpu.github.io/moor-graphix-site/sitemap.xml
+Sitemap: https://moorgraphix.com/sitemap.xml
