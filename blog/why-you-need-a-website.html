@@ -56,6 +56,11 @@
 .art-meta{font-size:12px;color:rgba(100,160,255,0.42);letter-spacing:0.06em;margin-bottom:26px}
 .art-meta strong{color:rgba(150,180,255,0.65)}
 .art-lede{font-size:clamp(16px,1.5vw,20px);color:rgba(150,180,255,0.7);line-height:1.8;max-width:660px;border-left:3px solid rgba(80,140,255,0.35);padding-left:20px;margin:0}
+.art-share{display:flex;align-items:center;gap:10px;margin-top:26px}
+.art-share-label{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(100,160,255,0.4);margin-right:4px}
+.art-share-btn{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(80,140,255,0.08);border:0.5px solid rgba(80,140,255,0.18);color:rgba(150,180,255,0.65);font-size:15px;transition:all 0.25s;cursor:pointer;padding:0;position:relative}
+.art-share-btn:hover{background:rgba(80,140,255,0.18);border-color:rgba(80,140,255,0.4);color:#6AABFF;transform:translateY(-2px)}
+.art-share-btn.copied::after{content:'Copied!';position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;letter-spacing:0.05em;background:#0d0d0d;color:#fff;padding:5px 10px;border-radius:4px;white-space:nowrap}
 .art-body-section{padding:60px 44px 72px;background:var(--light1)}
 .art-body{max-width:760px;margin:0 auto}
 .art-body h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,2.6vw,32px);color:var(--text-dark);margin:44px 0 16px;line-height:1.18}
@@ -166,6 +171,13 @@
     <h1 class="art-title">Why You Need a Website for Your Business</h1>
     <p class="art-meta"><strong>Sid Washington</strong> &nbsp;·&nbsp; October 9, 2021</p>
     <p class="art-lede">Social media profiles are rented land. A website is owned property. Here is the definitive case for why every small business — no matter how active on Instagram or Facebook — needs a professionally designed website that works around the clock.</p>
+    <div class="art-share">
+      <span class="art-share-label">Share</span>
+      <button type="button" class="art-share-btn" data-share="facebook" aria-label="Share on Facebook"><i class="ti ti-brand-facebook"></i></button>
+      <button type="button" class="art-share-btn" data-share="x" aria-label="Share on X"><i class="ti ti-brand-x"></i></button>
+      <button type="button" class="art-share-btn" data-share="linkedin" aria-label="Share on LinkedIn"><i class="ti ti-brand-linkedin"></i></button>
+      <button type="button" class="art-share-btn" data-share="copy" aria-label="Copy link"><i class="ti ti-link"></i></button>
+    </div>
   </div>
 </section>
 
@@ -266,5 +278,6 @@
 <elevenlabs-convai agent-id="agent_3001knwwzjm9ecw9m8ng3svxhs65"></elevenlabs-convai>
 <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 <script src="../assets/js/mobile-menu.js" defer></script>
+<script src="../assets/js/social-share.js" defer></script>
 </body>
 </html>
