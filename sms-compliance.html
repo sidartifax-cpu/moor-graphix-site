@@ -35,6 +35,8 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
 /* ── SMS COMPLIANCE PAGE — page-specific styles ── */
+.nav-current a{color:#6AABFF !important}
+.nav-current::after{width:100% !important}
 
 /* HERO */
 .sms-hero{padding:80px 44px 72px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;min-height:520px;position:relative}
@@ -365,6 +367,7 @@
   <ul class="nav-links">
     <li><a href="index.html#portfolio">Work</a></li>
     <li><a href="services.html">Services</a></li>
+    <li class="nav-current"><a href="sms-compliance.html">SMS Compliance</a></li>
     <li><a href="ai-workshop.html">AI Workshop</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="about.html">About</a></li>
@@ -381,6 +384,7 @@
   <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
   <a href="index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
   <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="sms-compliance.html" onclick="toggleMobileMenu()">SMS Compliance</a>
   <a href="ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
   <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
   <a href="about.html" onclick="toggleMobileMenu()">About</a>
