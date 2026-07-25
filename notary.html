@@ -210,6 +210,24 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .meet-copy p{font-size:15.5px;color:var(--ink-secondary);margin:0 0 20px;max-width:520px}
 .meet-copy .cta-row{margin-top:8px}
 
+.service-map{max-width:1200px;margin:0 auto;padding:64px 48px}
+.service-map h2{font-size:32px;font-weight:600;margin:0 0 8px}
+.service-map-intro{color:var(--ink-faint);margin:0 0 32px;max-width:600px}
+.map-embed{border-radius:4px;overflow:hidden;border:1px solid var(--card-border);margin-bottom:24px}
+.map-embed iframe{display:block;width:100%;height:400px;border:0}
+.mileage-tiers{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;gap:16px}
+.mileage-tiers li{display:flex;align-items:center;gap:8px;background:var(--bg-alt);border:1px solid var(--card-border);border-radius:2px;padding:10px 16px;font-size:14.5px}
+.tier-range{color:var(--ink-secondary)}
+.tier-fee{font-weight:600;color:var(--navy)}
+.tier-footnote{font-size:13px;color:var(--ink-muted);margin:0}
+
+.share-section{background:var(--bg-alt);padding:64px 48px;text-align:center}
+.share-inner{max-width:640px;margin:0 auto}
+.share-section h2{font-size:28px;font-weight:600;margin:0 0 12px}
+.share-section p{color:var(--ink-faint);margin:0 0 28px}
+.share-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.share-buttons button{font-family:inherit;cursor:pointer}
+
 .faq{max-width:1200px;margin:0 auto;padding:64px 48px}
 .faq h2{font-size:32px;font-weight:600;margin:0 0 32px}
 .faq-list{display:flex;flex-direction:column;gap:24px}
@@ -236,11 +254,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
   .meet-photo{order:-1;max-width:480px;margin:0 auto}
 }
 @media(max-width:640px){
-  .notary-header,.services-inner,.how-it-works,.closing-cta,.notary-footer,.faq{padding-left:24px;padding-right:24px}
+  .notary-header,.services-inner,.how-it-works,.closing-cta,.notary-footer,.faq,.service-map,.share-section{padding-left:24px;padding-right:24px}
   .hero{padding:32px 24px 56px}
   .services{padding:48px 24px}
   .area-rates{padding:48px 24px}
   .meet-notary{padding:48px 24px}
+  .map-embed iframe{height:280px}
   .how-grid{grid-template-columns:1fr}
 }
 </style>
@@ -389,6 +408,20 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
     </div>
   </section>
 
+  <section class="service-map" aria-labelledby="map-h2">
+    <h2 id="map-h2">Where we travel</h2>
+    <p class="service-map-intro">Based in Douglasville, GA. Travel fees are distance-based from our home base — use the map to gauge roughly where you fall, then call or text to confirm your exact fee.</p>
+    <div class="map-embed">
+      <iframe src="https://maps.google.com/maps?q=Douglasville,GA&z=10&output=embed" loading="lazy" title="Map centered on Douglasville, GA showing the Moor Graphix Notary service area"></iframe>
+    </div>
+    <ul class="mileage-tiers">
+      <li><span class="tier-range">0–10 miles</span><span class="tier-fee">$35</span></li>
+      <li><span class="tier-range">10–20 miles</span><span class="tier-fee">$50</span></li>
+      <li><span class="tier-range">20–30 miles</span><span class="tier-fee">$65</span></li>
+    </ul>
+    <p class="tier-footnote">Outside 30 miles or not sure which tier you're in? Call or text (470) 499-4407 — we'll quote your travel fee before booking.</p>
+  </section>
+
   <section class="faq" aria-labelledby="faq-h2">
     <h2 id="faq-h2">Frequently asked questions</h2>
     <div class="faq-list">
@@ -438,12 +471,43 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
     </div>
   </section>
 
+  <section class="share-section" aria-labelledby="share-h2">
+    <div class="share-inner">
+      <h2 id="share-h2">Know someone who needs a notary?</h2>
+      <p>Share this page to your Instagram or Facebook Story, or send it straight to a friend.</p>
+      <div class="share-buttons">
+        <button type="button" class="btn-filled" id="nativeShareBtn">Share This Page</button>
+        <a class="btn-outline" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmoorgraphix.com%2Fnotary.html" target="_blank" rel="noopener noreferrer">Share on Facebook</a>
+        <a class="btn-outline" href="https://wa.me/?text=Check%20out%20Moor%20Graphix%20Notary%20%E2%80%94%20https%3A%2F%2Fmoorgraphix.com%2Fnotary.html" target="_blank" rel="noopener noreferrer">Share on WhatsApp</a>
+        <a class="btn-outline" href="https://twitter.com/intent/tweet?text=Check%20out%20Moor%20Graphix%20Notary&url=https%3A%2F%2Fmoorgraphix.com%2Fnotary.html" target="_blank" rel="noopener noreferrer">Share on X</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="notary-footer">
   <address>A service by <a href="https://moorgraphix.com">Moor Graphix</a> · Douglasville, GA</address>
   <span>© 2026 Moor Graphix Notary &nbsp;·&nbsp; <a href="https://moorgraphix.com/privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="https://moorgraphix.com/sms-terms.html">SMS Terms</a></span>
 </footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('nativeShareBtn');
+  if(!btn) return;
+  if(navigator.share){
+    btn.addEventListener('click', function(){
+      navigator.share({
+        title: 'Moor Graphix Notary',
+        text: 'Georgia commissioned mobile notary serving Douglas County & Metro Atlanta.',
+        url: 'https://moorgraphix.com/notary.html'
+      }).catch(function(){});
+    });
+  } else {
+    btn.style.display = 'none';
+  }
+})();
+</script>
 
 </body>
 </html>
