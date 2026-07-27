@@ -29,9 +29,15 @@
 <meta property="og:title" content="Mobile Notary Lithia Springs GA | Magic Notary and More">
 <meta property="og:description" content="Georgia commissioned mobile notary and NNA-certified Notary Signing Agent serving Lithia Springs, Douglas County & Metro Atlanta. We come to you — email to schedule.">
 <meta property="og:url" content="https://moorgraphix.com/magic-notary.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://moorgraphix.com/assets/images/notary/robbin-washington-portrait.png">
+<meta property="og:image:width" content="1122">
+<meta property="og:image:height" content="1402">
+<meta property="og:image:alt" content="Robbin Washington, Georgia commissioned notary public">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mobile Notary Lithia Springs GA | Magic Notary and More">
 <meta name="twitter:description" content="Georgia commissioned mobile notary and NNA-certified Notary Signing Agent serving Lithia Springs, Douglas County & Metro Atlanta.">
+<meta name="twitter:image" content="https://moorgraphix.com/assets/images/notary/robbin-washington-portrait.png">
+<meta name="twitter:image:alt" content="Robbin Washington, Georgia commissioned notary public">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,6 +47,7 @@
   "@type": ["LocalBusiness", "Notary"],
   "name": "Magic Notary and More",
   "alternateName": "Magic Professional Services LLC",
+  "image": "https://moorgraphix.com/assets/images/notary/robbin-washington-portrait.png",
   "url": "https://moorgraphix.com/magic-notary.html",
   "email": "magicnotaryllc@gmail.com",
   "priceRange": "$2-$65",
@@ -219,13 +226,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .closing-cta p{color:var(--ink-faint);margin:0 0 32px;max-width:480px;margin-left:auto;margin-right:auto}
 .closing-cta .cta-row{justify-content:center}
 
-.meet-notary{background:var(--bg-alt);padding:64px 48px;text-align:center}
-.meet-notary-inner{max-width:680px;margin:0 auto}
-.meet-notary h2{font-size:32px;font-weight:600;margin:0 0 16px}
-.meet-notary p{font-size:15.5px;color:var(--ink-secondary);margin:0 auto 20px;max-width:560px;text-align:left}
+.meet-notary{background:var(--bg-alt);padding:64px 48px}
+.meet-notary-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center}
+.meet-photo{aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:var(--bg);max-width:380px}
+.meet-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.meet-copy h2{font-size:32px;font-weight:600;margin:0 0 16px}
+.meet-copy p{font-size:15.5px;color:var(--ink-secondary);margin:0 0 20px;max-width:520px}
 .nna-badge{display:inline-block;margin:4px 0 24px}
 .nna-badge img{width:100px;height:100px}
-.meet-notary .cta-row{justify-content:center}
 
 .contact-section{max-width:720px;margin:0 auto;padding:64px 48px}
 .contact-section h2{font-size:32px;font-weight:600;margin:0 0 8px;text-align:center}
@@ -254,6 +262,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 @media(max-width:900px){
   .area-rates-inner{grid-template-columns:1fr}
   .how-grid{grid-template-columns:1fr 1fr}
+  .meet-notary-inner{grid-template-columns:1fr}
+  .meet-photo{order:-1;max-width:320px;margin:0 auto}
 }
 @media(max-width:640px){
   .notary-header,.services-inner,.how-it-works,.closing-cta,.notary-footer,.faq,.service-map,.share-section,.contact-section{padding-left:24px;padding-right:24px}
@@ -452,16 +462,21 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 
   <section class="meet-notary" aria-labelledby="meet-h2">
     <div class="meet-notary-inner">
-      <p class="eyebrow-pill">Meet Your Notary</p>
-      <h2 id="meet-h2">Robbin Washington</h2>
-      <p>Georgia commissioned notary public and NNA-certified Notary Signing Agent — the person who actually shows up. Magic Notary and More runs on a simple standard: every document handled with care, every client treated with respect, and every appointment scheduled around your life — not the other way around.</p>
-      <p>Whether it's a will, a power of attorney, a bedside signing at the hospital, a real estate closing, or a loan signing that can't wait, you're working directly with the notary — no call center, no middleman.</p>
-      <a class="nna-badge" href="https://www.nationalnotary.org/knowledge-center/signing-agent-resources" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.nationalnotary.org/Image%20Library/NNA/membership%20images/nsa_member_badge.png" alt="Certified Notary Signing Agent" width="100" height="100" title="Certified Notary Signing Agent">
-      </a>
-      <div class="cta-row">
-        <a class="btn-filled" href="mailto:magicnotaryllc@gmail.com">Email to Schedule</a>
-        <a class="btn-outline" href="#contact">Get a Quote</a>
+      <div class="meet-photo">
+        <img src="assets/images/notary/robbin-washington-portrait.png" alt="Robbin Washington, Georgia commissioned notary public" width="1122" height="1402" loading="lazy">
+      </div>
+      <div class="meet-copy">
+        <p class="eyebrow-pill">Meet Your Notary</p>
+        <h2 id="meet-h2">Robbin Washington</h2>
+        <p>Georgia commissioned notary public and NNA-certified Notary Signing Agent — the person who actually shows up. Magic Notary and More runs on a simple standard: every document handled with care, every client treated with respect, and every appointment scheduled around your life — not the other way around.</p>
+        <p>Whether it's a will, a power of attorney, a bedside signing at the hospital, a real estate closing, or a loan signing that can't wait, you're working directly with the notary — no call center, no middleman.</p>
+        <a class="nna-badge" href="https://www.nationalnotary.org/knowledge-center/signing-agent-resources" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.nationalnotary.org/Image%20Library/NNA/membership%20images/nsa_member_badge.png" alt="Certified Notary Signing Agent" width="100" height="100" title="Certified Notary Signing Agent">
+        </a>
+        <div class="cta-row">
+          <a class="btn-filled" href="mailto:magicnotaryllc@gmail.com">Email to Schedule</a>
+          <a class="btn-outline" href="#contact">Get a Quote</a>
+        </div>
       </div>
     </div>
   </section>
