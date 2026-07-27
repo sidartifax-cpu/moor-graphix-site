@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <!--
-  TODO once a business phone number is provisioned:
-  1) Replace the mailto: CTAs below with tel:/sms: links (see notary.html for the exact pattern).
-  2) Add an SMS opt-in checkbox to the contact form and register for 10DLC (see magic-notary-sms-terms.html).
-  3) Add "telephone" to the LocalBusiness JSON-LD below.
+  TODO still outstanding:
+  1) Register for 10DLC/carrier campaign approval before sending any automated/bulk SMS
+     (appointment reminders etc). The opt-in checkbox, SMS disclosure section, and sample
+     messages below are already in place to support that registration.
   Also: replace YOUR_FORM_ID in the contact form action with a real Formspree form ID
   (sign up free at formspree.io and verify magicnotaryllc@gmail.com as the recipient).
 -->
@@ -14,7 +14,7 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="assets/images/branding/moor-graphix-favicon.png">
 <title>Mobile Notary Lithia Springs GA | Magic Notary and More</title>
-<meta name="description" content="Georgia commissioned mobile notary and NNA-certified Notary Signing Agent serving Lithia Springs, Douglas County & Metro Atlanta — Douglasville, Villa Rica, Austell, Hiram, and Dallas, GA. Document notarization, loan signings, real estate closings, and apostille help. Email magicnotaryllc@gmail.com to schedule.">
+<meta name="description" content="Georgia commissioned mobile notary and NNA-certified Notary Signing Agent serving Lithia Springs, Douglas County & Metro Atlanta — Douglasville, Villa Rica, Austell, Hiram, and Dallas, GA. Document notarization, loan signings, real estate closings, and apostille help. Call or text (917) 992-1974 to schedule.">
 <meta name="keywords" content="mobile notary Lithia Springs GA, notary public Douglas County GA, traveling notary Metro Atlanta, apostille assistance Georgia, loan signing agent Georgia, Douglasville notary, Villa Rica notary, Austell notary, Hiram notary, Dallas GA notary">
 <meta name="author" content="Robbin Washington">
 <meta name="robots" content="index, follow">
@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="Magic Notary and More">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Mobile Notary Lithia Springs GA | Magic Notary and More">
-<meta property="og:description" content="Georgia commissioned mobile notary and NNA-certified Notary Signing Agent serving Lithia Springs, Douglas County & Metro Atlanta. We come to you — email to schedule.">
+<meta property="og:description" content="Georgia commissioned mobile notary and NNA-certified Notary Signing Agent serving Lithia Springs, Douglas County & Metro Atlanta. We come to you — call or text to schedule.">
 <meta property="og:url" content="https://moorgraphix.com/magic-notary.html">
 <meta property="og:image" content="https://moorgraphix.com/assets/images/notary/robbin-washington-portrait.png">
 <meta property="og:image:width" content="1122">
@@ -49,6 +49,7 @@
   "alternateName": "Magic Professional Services LLC",
   "image": "https://moorgraphix.com/assets/images/notary/robbin-washington-portrait.png",
   "url": "https://moorgraphix.com/magic-notary.html",
+  "telephone": "+19179921974",
   "email": "magicnotaryllc@gmail.com",
   "priceRange": "$2-$65",
   "address": {
@@ -103,7 +104,7 @@
     {
       "@type": "Question",
       "name": "What cities does Magic Notary and More serve besides Lithia Springs?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Magic Notary and More travels throughout Douglas County and neighboring Metro Atlanta communities, including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. Email us to confirm travel to your specific location." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Magic Notary and More travels throughout Douglas County and neighboring Metro Atlanta communities, including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. Call or text (917) 992-1974 to confirm travel to your specific location." }
     }
   ]
 }
@@ -235,6 +236,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .nna-badge{display:inline-block;margin:4px 0 24px}
 .nna-badge img{width:100px;height:100px}
 
+.sms-info{background:var(--bg-alt);padding:56px 48px}
+.sms-info-inner{max-width:720px;margin:0 auto;text-align:center}
+.sms-info h2{font-size:28px;font-weight:600;margin:0 0 16px}
+.sms-info-intro{font-size:15px;color:var(--ink-secondary);margin:0 0 28px}
+.sms-samples{display:flex;flex-direction:column;gap:16px;margin-bottom:24px;text-align:left}
+.sms-sample{background:var(--card-bg);border:1px solid var(--card-border);border-radius:4px;padding:18px 20px}
+.sms-sample-label{font-size:11px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-muted);margin:0 0 8px}
+.sms-sample-text{font-size:14.5px;color:var(--ink);font-style:italic;margin:0}
+.sms-links{font-size:13px;color:var(--ink-muted);margin:0}
+
 .contact-section{max-width:720px;margin:0 auto;padding:64px 48px}
 .contact-section h2{font-size:32px;font-weight:600;margin:0 0 8px;text-align:center}
 .contact-intro{color:var(--ink-faint);margin:0 0 40px;text-align:center}
@@ -247,6 +258,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .contact-submit{margin-top:4px}
 .contact-note{font-size:13px;color:var(--ink-muted);text-align:center;margin-top:4px}
 .contact-alt{font-size:14.5px;color:var(--ink-secondary);text-align:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--card-border)}
+.sms-optin{background:var(--bg-alt);border:1.5px solid var(--card-border);border-radius:4px;padding:16px 18px}
+.sms-optin label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-size:13px;color:var(--ink-secondary);line-height:1.6}
+.sms-optin input[type="checkbox"]{margin-top:3px;flex-shrink:0;accent-color:var(--navy);width:15px;height:15px;cursor:pointer}
+.sms-optin a{color:var(--navy)}
 
 .share-section{background:var(--bg-alt);padding:64px 48px;text-align:center}
 .share-inner{max-width:640px;margin:0 auto}
@@ -280,10 +295,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<p class="visually-hidden">Magic Notary and More (Magic Professional Services LLC) is a Georgia commissioned mobile notary public run by Robbin Washington, serving Lithia Springs, Douglas County, and Metro Atlanta — including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. The notary travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops for general document notarization, apostille assistance, certified loan signings, and real estate closing notarization. Georgia's state notarial fee is $2 to $4 per signature; travel starts at $35 for the first 10 miles, with add-on fees for after-hours, weekend, and emergency appointments. Contact by email at magicnotaryllc@gmail.com.</p>
+<p class="visually-hidden">Magic Notary and More (Magic Professional Services LLC) is a Georgia commissioned mobile notary public run by Robbin Washington, serving Lithia Springs, Douglas County, and Metro Atlanta — including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. The notary travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops for general document notarization, apostille assistance, certified loan signings, and real estate closing notarization. Georgia's state notarial fee is $2 to $4 per signature; travel starts at $35 for the first 10 miles, with add-on fees for after-hours, weekend, and emergency appointments. Contact by phone or text at (917) 992-1974, or by email at magicnotaryllc@gmail.com.</p>
 
-<div class="emergency-banner" role="note" aria-label="Rush notary availability">
-  Need a notary fast? <a href="mailto:magicnotaryllc@gmail.com">Email us</a> — rush requests welcome, based on availability.
+<div class="emergency-banner" role="note" aria-label="Emergency notary availability">
+  Need a notary within the hour? <a href="tel:9179921974">Call (917) 992-1974</a> — emergency service available.
 </div>
 
 <header class="notary-header">
@@ -294,8 +309,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
     </span>
   </a>
   <div class="notary-header-cta">
-    <a class="btn-outline" href="mailto:magicnotaryllc@gmail.com">Email Us</a>
-    <a class="btn-filled" href="#contact">Get a Quote</a>
+    <a class="btn-outline" href="tel:9179921974">Call (917) 992-1974</a>
+    <a class="btn-filled" href="sms:9179921974">Text Us</a>
   </div>
 </header>
 
@@ -306,8 +321,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
     <h1 id="hero-h1">Mobile notary services in Lithia Springs & Douglas County, GA.</h1>
     <p class="hero-sub">We come to your home, office, hospital, nursing home, courthouse, or coffee shop — serving Lithia Springs, Douglas County, and the surrounding Metro Atlanta area, including Douglasville, Villa Rica, Austell, Hiram, and Dallas, GA.</p>
     <div class="cta-row">
-      <a class="btn-filled" href="mailto:magicnotaryllc@gmail.com">Email to Schedule</a>
-      <a class="btn-outline" href="#contact">Get a Quote</a>
+      <a class="btn-filled" href="tel:9179921974">Call (917) 992-1974</a>
+      <a class="btn-outline" href="sms:9179921974">Text to Schedule</a>
     </div>
     <p class="fine-print">Travel starts at $35 · State notarial fees apply separately as required by Georgia law.</p>
   </section>
@@ -371,8 +386,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
     <div class="how-grid">
       <div class="how-step">
         <div class="how-num" aria-hidden="true">01</div>
-        <h3>Reach out</h3>
-        <p>Email us what needs notarizing and where you'd like to meet.</p>
+        <h3>Call or text</h3>
+        <p>Tell us what needs notarizing and where you'd like to meet.</p>
       </div>
       <div class="how-step">
         <div class="how-num" aria-hidden="true">02</div>
@@ -398,7 +413,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
           <li>Courthouses</li>
           <li>Coffee shops &amp; public meeting spots</li>
         </ul>
-        <p class="area-cities"><strong>Cities we regularly serve:</strong> Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. Outside this list? Email us — we're happy to confirm travel to your area.</p>
+        <p class="area-cities"><strong>Cities we regularly serve:</strong> Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. Outside this list? Call or text — we're happy to confirm travel to your area.</p>
       </div>
       <div class="rates-card">
         <h3>Rates</h3>
@@ -417,7 +432,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 
   <section class="service-map" aria-labelledby="map-h2">
     <h2 id="map-h2">Where we travel</h2>
-    <p class="service-map-intro">Based in Lithia Springs, GA. Travel fees are distance-based from our home base — use the map to gauge roughly where you fall, then email us to confirm your exact fee.</p>
+    <p class="service-map-intro">Based in Lithia Springs, GA. Travel fees are distance-based from our home base — use the map to gauge roughly where you fall, then call or text to confirm your exact fee.</p>
     <div class="map-embed">
       <iframe src="https://maps.google.com/maps?q=Lithia+Springs,GA&z=10&output=embed" loading="lazy" title="Map centered on Lithia Springs, GA showing the Magic Notary and More service area"></iframe>
     </div>
@@ -426,7 +441,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
       <li><span class="tier-range">10–20 miles</span><span class="tier-fee">$50</span></li>
       <li><span class="tier-range">20–30 miles</span><span class="tier-fee">$65</span></li>
     </ul>
-    <p class="tier-footnote">Outside 30 miles or not sure which tier you're in? Email <a href="mailto:magicnotaryllc@gmail.com">magicnotaryllc@gmail.com</a> — we'll quote your travel fee before booking.</p>
+    <p class="tier-footnote">Outside 30 miles or not sure which tier you're in? Call or text <a href="tel:9179921974">(917) 992-1974</a> — we'll quote your travel fee before booking.</p>
   </section>
 
   <section class="faq" aria-labelledby="faq-h2">
@@ -446,17 +461,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
       </div>
       <div class="faq-item">
         <h3>What cities does Magic Notary and More serve besides Lithia Springs?</h3>
-        <p>Magic Notary and More travels throughout Douglas County and neighboring Metro Atlanta communities, including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. Email us to confirm travel to your specific location.</p>
+        <p>Magic Notary and More travels throughout Douglas County and neighboring Metro Atlanta communities, including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. Call or text (917) 992-1974 to confirm travel to your specific location.</p>
       </div>
     </div>
   </section>
 
   <section class="closing-cta" aria-labelledby="closing-h2">
     <h2 id="closing-h2">Need something notarized?</h2>
-    <p>Email now — most appointments confirmed within a day.</p>
+    <p>Call or text now — most appointments confirmed same day.</p>
     <div class="cta-row">
-      <a class="btn-filled" href="mailto:magicnotaryllc@gmail.com">Email to Schedule</a>
-      <a class="btn-outline" href="#contact">Get a Quote</a>
+      <a class="btn-filled" href="tel:9179921974">Call (917) 992-1974</a>
+      <a class="btn-outline" href="sms:9179921974">Text to Schedule</a>
     </div>
   </section>
 
@@ -474,16 +489,34 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
           <img src="https://www.nationalnotary.org/Image%20Library/NNA/membership%20images/nsa_member_badge.png" alt="Certified Notary Signing Agent" width="100" height="100" title="Certified Notary Signing Agent">
         </a>
         <div class="cta-row">
-          <a class="btn-filled" href="mailto:magicnotaryllc@gmail.com">Email to Schedule</a>
-          <a class="btn-outline" href="#contact">Get a Quote</a>
+          <a class="btn-filled" href="tel:9179921974">Call (917) 992-1974</a>
+          <a class="btn-outline" href="sms:9179921974">Text to Schedule</a>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="sms-info" aria-labelledby="sms-h2">
+    <div class="sms-info-inner">
+      <h2 id="sms-h2">Text messaging program</h2>
+      <p class="sms-info-intro">When you opt in below, Magic Notary and More (Magic Professional Services LLC) may text you at the mobile number you provide about your specific notary request — appointment confirmations, reminders, and follow-ups. Message frequency varies, up to 4 messages per month. Message and data rates may apply. Reply <strong>STOP</strong> at any time to opt out, or <strong>HELP</strong> for help. Consent is never a condition of purchasing a service.</p>
+      <div class="sms-samples">
+        <div class="sms-sample">
+          <p class="sms-sample-label">Sample message — appointment confirmation</p>
+          <p class="sms-sample-text">"Magic Notary and More: Hi Jordan, this confirms your notary appointment Thu 7/30 at 2:00pm in Lithia Springs, GA. Reply STOP to opt out, HELP for help. Msg&amp;data rates may apply."</p>
+        </div>
+        <div class="sms-sample">
+          <p class="sms-sample-label">Sample message — appointment reminder</p>
+          <p class="sms-sample-text">"Magic Notary and More: Reminder — your notary appointment is tomorrow at 2:00pm. Reply STOP to opt out, HELP for help."</p>
+        </div>
+      </div>
+      <p class="sms-links">See our <a href="magic-notary-privacy-policy.html">Privacy Policy</a>, <a href="magic-notary-terms-of-service.html">Terms of Service</a>, and <a href="magic-notary-sms-terms.html">SMS Terms &amp; Conditions</a> for full program details.</p>
+    </div>
+  </section>
+
   <section class="contact-section" id="contact" aria-labelledby="contact-h2">
     <h2 id="contact-h2">Get a quote</h2>
-    <p class="contact-intro">Tell us what you need notarized and where — we'll follow up by email.</p>
+    <p class="contact-intro">Tell us what you need notarized and where — we'll follow up by phone, text, or email.</p>
     <!-- Sign up free at formspree.io, verify magicnotaryllc@gmail.com, then replace YOUR_FORM_ID below -->
     <form class="contact-form" id="magicContactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="hidden" name="_subject" value="Magic Notary and More — New Inquiry">
@@ -506,10 +539,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
         <label for="mc-message">What do you need notarized?</label>
         <textarea id="mc-message" name="message" placeholder="Document type, preferred date/time, and city or zip code" required></textarea>
       </div>
+      <div class="sms-optin">
+        <label>
+          <input type="checkbox" name="sms_consent" value="yes" id="mc-sms-consent">
+          By checking this box, I consent to receive text messages from Magic Notary and More (Magic Professional Services LLC) at the mobile number provided above, regarding my notary appointment — including confirmations, reminders, and follow-ups. Message frequency varies, up to 4 messages/month. Msg &amp; data rates may apply. Reply STOP to unsubscribe at any time, HELP for help. Consent is not a condition of purchase. View our <a href="magic-notary-sms-terms.html">SMS Terms</a> and <a href="magic-notary-privacy-policy.html">Privacy Policy</a>.
+        </label>
+        <input type="hidden" name="sms_consent_timestamp" id="mc-sms-consent-timestamp">
+      </div>
       <button type="submit" class="btn-filled contact-submit" id="magicSubmit">Send Request</button>
       <p class="contact-note">We reply personally to every inquiry.</p>
     </form>
-    <p class="contact-alt">Prefer email directly? Reach us at <a href="mailto:magicnotaryllc@gmail.com">magicnotaryllc@gmail.com</a>.</p>
+    <p class="contact-alt">Prefer to call or text? Reach us at <a href="tel:9179921974">(917) 992-1974</a>, or email <a href="mailto:magicnotaryllc@gmail.com">magicnotaryllc@gmail.com</a>.</p>
   </section>
 
   <section class="share-section" aria-labelledby="share-h2">
@@ -529,7 +569,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 
 <footer class="notary-footer">
   <address>Magic Professional Services LLC · Lithia Springs, GA</address>
-  <span>© 2026 Magic Notary and More &nbsp;·&nbsp; <a href="magic-notary-privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="magic-notary-sms-terms.html">SMS Terms</a> &nbsp;·&nbsp; Site by <a href="https://moorgraphix.com">Moor Graphix</a></span>
+  <span>© 2026 Magic Notary and More &nbsp;·&nbsp; <a href="magic-notary-privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="magic-notary-terms-of-service.html">Terms of Service</a> &nbsp;·&nbsp; <a href="magic-notary-sms-terms.html">SMS Terms</a> &nbsp;·&nbsp; Site by <a href="https://moorgraphix.com">Moor Graphix</a></span>
 </footer>
 
 <script>
@@ -553,6 +593,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
   if(form){
     form.addEventListener('submit', async function(e){
       e.preventDefault();
+      var smsConsent = document.getElementById('mc-sms-consent');
+      if(smsConsent && smsConsent.checked){
+        document.getElementById('mc-sms-consent-timestamp').value = new Date().toISOString();
+      }
       var submitBtn = document.getElementById('magicSubmit');
       var orig = submitBtn.textContent;
       submitBtn.textContent = 'Sending…';
