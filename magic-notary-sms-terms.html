@@ -94,6 +94,20 @@ a{color:var(--navy)}
 .sample-box p{color:var(--ink-secondary);font-style:italic;margin-bottom:20px}
 .sample-box p:last-child{margin-bottom:0}
 
+.qr-optin-box{display:flex;align-items:center;gap:24px}
+.qr-optin-box img{flex-shrink:0;border-radius:4px;border:1px solid var(--card-border)}
+.qr-optin-box p{font-style:normal;color:var(--ink-secondary);margin:0}
+.checklist{margin:8px 0 16px;padding:0;list-style:none}
+.checklist li{display:flex;gap:10px;margin-bottom:10px;font-size:15px;color:var(--ink-secondary)}
+.checklist li::before{content:'☐';flex-shrink:0;color:var(--gold);font-size:16px;line-height:1.3}
+.reg-ref dt{font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-muted);margin:16px 0 4px}
+.reg-ref dt:first-child{margin-top:0}
+.reg-ref dd{margin:0;font-size:15px;color:var(--ink)}
+
+@media(max-width:500px){
+  .qr-optin-box{flex-direction:column;align-items:flex-start}
+}
+
 .notary-footer{border-top:1px solid var(--card-border);padding:32px 48px;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--ink-muted)}
 .notary-footer address{font-style:normal}
 .notary-footer a{color:var(--navy);font-weight:600}
@@ -162,8 +176,13 @@ a{color:var(--navy)}
   </div>
 
   <h2>2. How to Opt In</h2>
-  <p>You may opt in to receive SMS messages from Magic Notary and More by checking the SMS opt-in checkbox on our <a href="magic-notary.html#contact">contact form</a>, or by providing written consent during scheduling. By opting in, you confirm that you are the authorized account holder of the mobile number provided, that you are 18 years of age or older, and that you consent to receive recurring automated text messages from Magic Notary and More.</p>
+  <p>You may opt in to receive SMS messages from Magic Notary and More by checking the SMS opt-in checkbox on our <a href="magic-notary.html#contact">contact form</a>, by scanning the QR code below during an in-person appointment, or by providing written consent during scheduling. By opting in, you confirm that you are the authorized account holder of the mobile number provided, that you are 18 years of age or older, and that you consent to receive recurring automated text messages from Magic Notary and More.</p>
   <p><strong>Consent to receive SMS messages is not a condition of purchasing any Magic Notary and More service.</strong></p>
+
+  <div class="qr-box sample-box qr-optin-box">
+    <img src="assets/images/notary/magic-notary-text-optin-qr.png" alt="QR code linking to the Magic Notary and More text opt-in page" width="200" height="200">
+    <p>Scan to opt in to text updates, or visit <a href="magic-notary-text-optin.html">moorgraphix.com/magic-notary-text-optin.html</a> directly. Handy for printing on appointment paperwork or business cards.</p>
+  </div>
 
   <h2>3. Message Frequency</h2>
   <p>We send up to 4 messages per month. Frequency may vary depending on your appointment status and the nature of your engagement with our services.</p>
@@ -188,6 +207,58 @@ a{color:var(--navy)}
 
   <h2>10. Governing Law</h2>
   <p>These Terms are governed by the laws of the State of Georgia and applicable federal law, including the Telephone Consumer Protection Act (TCPA), 47 U.S.C. § 227, and the rules and regulations of the Federal Communications Commission (FCC).</p>
+
+  <h2>Client Onboarding Checklist</h2>
+  <p>Steps to follow when a new client wants to receive text updates about their appointment:</p>
+  <ul class="checklist">
+    <li>Confirm the client wants text updates and collect their mobile number</li>
+    <li>Have them check the SMS consent box on the <a href="magic-notary.html#contact">contact form</a>, or scan the QR code above and opt in themselves on their own phone</li>
+    <li>Confirm the opt-in was recorded (Formspree submission includes a consent timestamp)</li>
+    <li>Send the first confirmation text once the appointment is booked</li>
+    <li>Send a reminder text ahead of the scheduled appointment time</li>
+    <li>If a client texts STOP, immediately stop messaging that number and note it — do not text them again unless they opt in again in writing</li>
+    <li>If a client texts HELP, respond directly with appointment status or this page's contact info</li>
+    <li>Keep opt-in records (name, number, timestamp) for at least 4 years per TCPA requirements</li>
+  </ul>
+
+  <h2>A2P 10DLC Campaign Registration Reference</h2>
+  <p>Reference information for registering this messaging program with a carrier / The Campaign Registry (e.g. via Twilio). Have your EIN confirmation letter handy for the fields not listed here.</p>
+  <dl class="reg-ref">
+    <dt>Legal Business Name</dt>
+    <dd>Magic Professional Services LLC</dd>
+    <dt>Brand / DBA</dt>
+    <dd>Magic Notary and More</dd>
+    <dt>Business Type</dt>
+    <dd>Private / Single-Member LLC</dd>
+    <dt>Industry / Vertical</dt>
+    <dd>Professional Services (Notary / Legal Support Services)</dd>
+    <dt>Website</dt>
+    <dd>https://moorgraphix.com/magic-notary.html</dd>
+    <dt>Business Address</dt>
+    <dd>Lithia Springs, GA 30122 (use your full registered street address from your EIN/Secretary of State filing when submitting — not published here for privacy)</dd>
+    <dt>Contact Email</dt>
+    <dd>magicnotaryllc@gmail.com</dd>
+    <dt>Contact Phone</dt>
+    <dd>(917) 992-1974</dd>
+    <dt>Campaign / Use Case Category</dt>
+    <dd>Low Volume Mixed / Account Notifications (appointment confirmations &amp; reminders)</dd>
+    <dt>Campaign Description</dt>
+    <dd>Magic Notary and More sends transactional text messages to clients who have an active or requested mobile notary appointment. Messages include appointment confirmations, appointment reminders, and follow-ups tied to a specific client request. No marketing or promotional blasts are sent.</dd>
+    <dt>Opt-In Method</dt>
+    <dd>Website contact form checkbox (magic-notary.html#contact) and dedicated QR code opt-in page (magic-notary-text-optin.html)</dd>
+    <dt>Opt-In Evidence</dt>
+    <dd>Screenshot the SMS opt-in checkbox and consent text on both magic-notary.html and magic-notary-text-optin.html for the registration form's "opt-in image" field</dd>
+    <dt>Message Frequency</dt>
+    <dd>Up to 4 messages per client per month</dd>
+    <dt>Estimated Volume</dt>
+    <dd>Low volume — solo notary practice</dd>
+    <dt>Sample Message 1</dt>
+    <dd>"Magic Notary and More: Hi Jordan, this confirms your notary appointment Thu 7/30 at 2:00pm in Lithia Springs, GA. Reply STOP to opt out, HELP for help. Msg&amp;data rates may apply."</dd>
+    <dt>Sample Message 2</dt>
+    <dd>"Magic Notary and More: Reminder — your notary appointment is tomorrow at 2:00pm. Reply STOP to opt out, HELP for help."</dd>
+    <dt>Terms &amp; Privacy Links</dt>
+    <dd>https://moorgraphix.com/magic-notary-sms-terms.html &middot; https://moorgraphix.com/magic-notary-privacy-policy.html &middot; https://moorgraphix.com/magic-notary-terms-of-service.html</dd>
+  </dl>
 
   <div class="contact-box">
     <h3>Contact Us</h3>

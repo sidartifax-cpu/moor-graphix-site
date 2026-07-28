@@ -10,6 +10,7 @@
 - [AI Workshop](https://moorgraphix.com/ai-workshop.html): AI training and workshops for businesses.
 - [Notary](https://moorgraphix.com/notary.html): Moor Graphix Notary, run by Morrison Washington — a Georgia commissioned mobile notary public and NNA-certified Notary Signing Agent serving Douglas County and Metro Atlanta (Douglasville, Villa Rica, Lithia Springs, Austell, Hiram, Dallas, GA). Traveling notarization, loan signings, real estate closing notarization, and apostille assistance, all available now.
 - [Magic Notary and More](https://moorgraphix.com/magic-notary.html): A separate notary business (Magic Professional Services LLC) run by Robbin Washington, site built by Moor Graphix — a Georgia commissioned mobile notary public and NNA-certified Notary Signing Agent based in Lithia Springs, GA, serving Douglas County and Metro Atlanta (Douglasville, Villa Rica, Austell, Hiram, Dallas, GA). Traveling notarization, loan signings, real estate closing notarization, and apostille assistance. Call or text (917) 992-1974, or email magicnotaryllc@gmail.com.
+- [Magic Notary Text Opt-In](https://moorgraphix.com/magic-notary-text-optin.html): Dedicated SMS opt-in landing page for Magic Notary and More, meant to be reached via QR code for in-person appointment sign-ups.
 - [Contact](https://moorgraphix.com/contact.html): Booking and inquiries.
 
 ## Case Studies

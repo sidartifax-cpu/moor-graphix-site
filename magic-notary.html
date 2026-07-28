@@ -49,7 +49,6 @@
   "url": "https://moorgraphix.com/magic-notary.html",
   "telephone": "+19179921974",
   "email": "magicnotaryllc@gmail.com",
-  "priceRange": "$2-$65",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lithia Springs",
@@ -71,7 +70,7 @@
   "description": "Georgia commissioned mobile notary public and NNA-certified Notary Signing Agent serving Lithia Springs, Douglas County, and Metro Atlanta. Traveling notary for general documents, apostille assistance, loan signings, and real estate closings.",
   "founder": { "@type": "Person", "name": "Robbin Washington" },
   "makesOffer": [
-    { "@type": "Offer", "name": "Mobile Notarization", "priceCurrency": "USD", "price": "35" },
+    { "@type": "Offer", "name": "Mobile Notarization", "priceCurrency": "USD" },
     { "@type": "Offer", "name": "General Document Notarization", "priceCurrency": "USD" },
     { "@type": "Offer", "name": "Apostille Assistance", "priceCurrency": "USD" },
     { "@type": "Offer", "name": "Loan Signing Services", "priceCurrency": "USD" },
@@ -87,12 +86,12 @@
     {
       "@type": "Question",
       "name": "Does the notary travel to me in Lithia Springs or Douglas County, Georgia?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Magic Notary and More is a mobile notary service that travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops throughout Douglas County and Metro Atlanta. Travel starts at $35." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Magic Notary and More is a mobile notary service that travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops throughout Douglas County and Metro Atlanta." }
     },
     {
       "@type": "Question",
       "name": "What does a Georgia mobile notary cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Georgia's state notarial fee is $2-$4 per signature. Travel fees start at $35 for the first 10 miles, with additional fees for after-hours, weekend, or emergency (within 1 hour) appointments." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Georgia's state notarial fee is set by state law and billed separately from our travel and convenience fees, which vary by distance and appointment type. Call or text (917) 992-1974 for a quote." }
     },
     {
       "@type": "Question",
@@ -187,29 +186,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .how-step p{font-size:14.5px;color:var(--ink-secondary);margin:0}
 
 .area-rates{background:var(--navy);color:var(--on-navy);padding:64px 48px}
-.area-rates-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.area-rates-inner{max-width:800px;margin:0 auto}
 .area-rates h2{font-size:28px;font-weight:600;margin:0 0 16px}
-.area-copy p{font-size:15.5px;color:var(--on-navy-mid);margin:0 0 20px;max-width:460px}
+.area-copy p{font-size:15.5px;color:var(--on-navy-mid);margin:0 0 20px;max-width:560px}
 .area-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;font-size:14.5px}
 .area-cities{font-size:14px;color:var(--on-navy-mid);margin:20px 0 0;padding-top:16px;border-top:1px solid var(--navy-border)}
 .area-cities strong{color:var(--on-navy);font-weight:600}
-.rates-card{background:var(--navy-card);border-radius:4px;padding:32px}
-.rates-card h3{font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 20px;color:var(--gold-light)}
-.rate-row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--navy-border);font-size:14.5px}
-.rate-row:last-of-type{border-bottom:none}
-.rate-service{min-width:0;color:var(--on-navy-mid)}
-.rate-fee{flex-shrink:0;font-weight:600;white-space:nowrap;color:var(--on-navy)}
-.rates-footnote{font-size:12.5px;color:var(--on-navy-faint);margin:16px 0 0}
 
 .service-map{max-width:1200px;margin:0 auto;padding:64px 48px}
 .service-map h2{font-size:32px;font-weight:600;margin:0 0 8px}
 .service-map-intro{color:var(--ink-faint);margin:0 0 32px;max-width:600px}
 .map-embed{border-radius:4px;overflow:hidden;border:1px solid var(--card-border);margin-bottom:24px}
 .map-embed iframe{display:block;width:100%;height:400px;border:0}
-.mileage-tiers{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;gap:16px}
-.mileage-tiers li{display:flex;align-items:center;gap:8px;background:var(--bg-alt);border:1px solid var(--card-border);border-radius:2px;padding:10px 16px;font-size:14.5px}
-.tier-range{color:var(--ink-secondary)}
-.tier-fee{font-weight:600;color:var(--navy)}
 .tier-footnote{font-size:13px;color:var(--ink-muted);margin:0}
 
 .faq{max-width:1200px;margin:0 auto;padding:64px 48px}
@@ -273,7 +261,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .notary-footer a{color:var(--navy);font-weight:600}
 
 @media(max-width:900px){
-  .area-rates-inner{grid-template-columns:1fr}
   .how-grid{grid-template-columns:1fr 1fr}
   .meet-notary-inner{grid-template-columns:1fr}
   .meet-photo{order:-1;max-width:320px;margin:0 auto}
@@ -293,7 +280,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<p class="visually-hidden">Magic Notary and More (Magic Professional Services LLC) is a Georgia commissioned mobile notary public run by Robbin Washington, serving Lithia Springs, Douglas County, and Metro Atlanta — including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. The notary travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops for general document notarization, apostille assistance, certified loan signings, and real estate closing notarization. Georgia's state notarial fee is $2 to $4 per signature; travel starts at $35 for the first 10 miles, with add-on fees for after-hours, weekend, and emergency appointments. Contact by phone or text at (917) 992-1974, or by email at magicnotaryllc@gmail.com.</p>
+<p class="visually-hidden">Magic Notary and More (Magic Professional Services LLC) is a Georgia commissioned mobile notary public run by Robbin Washington, serving Lithia Springs, Douglas County, and Metro Atlanta — including Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. The notary travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops for general document notarization, apostille assistance, certified loan signings, and real estate closing notarization. Call or text for pricing and availability. Contact by phone or text at (917) 992-1974, or by email at magicnotaryllc@gmail.com.</p>
 
 <div class="emergency-banner" role="note" aria-label="Emergency notary availability">
   Need a notary within the hour? <a href="tel:9179921974">Call (917) 992-1974</a> — emergency service available.
@@ -322,7 +309,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
       <a class="btn-filled" href="tel:9179921974">Call (917) 992-1974</a>
       <a class="btn-outline" href="sms:9179921974">Text to Schedule</a>
     </div>
-    <p class="fine-print">Travel starts at $35 · State notarial fees apply separately as required by Georgia law.</p>
+    <p class="fine-print">Call or text for a quote · State notarial fees apply separately as required by Georgia law.</p>
   </section>
 
   <section class="services" aria-labelledby="services-h2">
@@ -413,33 +400,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
         </ul>
         <p class="area-cities"><strong>Cities we regularly serve:</strong> Douglasville, Villa Rica, Austell, Hiram, Dallas, and Atlanta, GA. Outside this list? Call or text — we're happy to confirm travel to your area.</p>
       </div>
-      <div class="rates-card">
-        <h3>Rates</h3>
-        <div class="rate-row"><span class="rate-service">Notary fee (per signature, state-regulated)</span><span class="rate-fee">$2–$4</span></div>
-        <div class="rate-row"><span class="rate-service">Travel — within 10 miles</span><span class="rate-fee">$35</span></div>
-        <div class="rate-row"><span class="rate-service">Travel — 10–20 miles</span><span class="rate-fee">$50</span></div>
-        <div class="rate-row"><span class="rate-service">Travel — 20–30 miles</span><span class="rate-fee">$65</span></div>
-        <div class="rate-row"><span class="rate-service">After-hours (7–9pm)</span><span class="rate-fee">+$25</span></div>
-        <div class="rate-row"><span class="rate-service">Weekend appointment</span><span class="rate-fee">+$20</span></div>
-        <div class="rate-row"><span class="rate-service">Emergency (within 1 hour)</span><span class="rate-fee">+$40</span></div>
-        <div class="rate-row"><span class="rate-service">Printing documents</span><span class="rate-fee">$0.25–$0.50/pg</span></div>
-        <p class="rates-footnote">State notarial fees are regulated by Georgia law and billed separately from travel and convenience fees.</p>
-      </div>
     </div>
   </section>
 
   <section class="service-map" aria-labelledby="map-h2">
     <h2 id="map-h2">Where we travel</h2>
-    <p class="service-map-intro">Based in Lithia Springs, GA. Travel fees are distance-based from our home base — use the map to gauge roughly where you fall, then call or text to confirm your exact fee.</p>
+    <p class="service-map-intro">Based in Lithia Springs, GA — use the map to see if you're in our service area, then call or text to confirm.</p>
     <div class="map-embed">
       <iframe src="https://maps.google.com/maps?q=Lithia+Springs,GA&z=10&output=embed" loading="lazy" title="Map centered on Lithia Springs, GA showing the Magic Notary and More service area"></iframe>
     </div>
-    <ul class="mileage-tiers">
-      <li><span class="tier-range">0–10 miles</span><span class="tier-fee">$35</span></li>
-      <li><span class="tier-range">10–20 miles</span><span class="tier-fee">$50</span></li>
-      <li><span class="tier-range">20–30 miles</span><span class="tier-fee">$65</span></li>
-    </ul>
-    <p class="tier-footnote">Outside 30 miles or not sure which tier you're in? Call or text <a href="tel:9179921974">(917) 992-1974</a> — we'll quote your travel fee before booking.</p>
+    <p class="tier-footnote">Not sure if you're in range? Call or text <a href="tel:9179921974">(917) 992-1974</a> — we'll confirm and give you a quote.</p>
   </section>
 
   <section class="faq" aria-labelledby="faq-h2">
@@ -447,11 +417,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
     <div class="faq-list">
       <div class="faq-item">
         <h3>Does the notary travel to me in Lithia Springs or Douglas County, Georgia?</h3>
-        <p>Yes. Magic Notary and More is a mobile notary service that travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops throughout Douglas County and Metro Atlanta. Travel starts at $35.</p>
+        <p>Yes. Magic Notary and More is a mobile notary service that travels to homes, offices, hospitals, nursing homes, courthouses, and coffee shops throughout Douglas County and Metro Atlanta.</p>
       </div>
       <div class="faq-item">
         <h3>What does a Georgia mobile notary cost?</h3>
-        <p>Georgia's state notarial fee is $2-$4 per signature. Travel fees start at $35 for the first 10 miles, with additional fees for after-hours, weekend, or emergency (within 1 hour) appointments.</p>
+        <p>Georgia's state notarial fee is set by state law and billed separately from our travel and convenience fees, which vary by distance and appointment type. Call or text (917) 992-1974 for a quote.</p>
       </div>
       <div class="faq-item">
         <h3>Does Magic Notary and More handle loan signings and real estate closings?</h3>
@@ -508,7 +478,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
           <p class="sms-sample-text">"Magic Notary and More: Reminder — your notary appointment is tomorrow at 2:00pm. Reply STOP to opt out, HELP for help."</p>
         </div>
       </div>
-      <p class="sms-links">See our <a href="magic-notary-privacy-policy.html">Privacy Policy</a>, <a href="magic-notary-terms-of-service.html">Terms of Service</a>, and <a href="magic-notary-sms-terms.html">SMS Terms &amp; Conditions</a> for full program details.</p>
+      <p class="sms-links">See our <a href="magic-notary-privacy-policy.html">Privacy Policy</a>, <a href="magic-notary-terms-of-service.html">Terms of Service</a>, and <a href="magic-notary-sms-terms.html">SMS Terms &amp; Conditions</a> for full program details, or opt in directly on our <a href="magic-notary-text-optin.html">text opt-in page</a>.</p>
     </div>
   </section>
 
