@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/branding/moor-graphix-favicon.png">
+<meta name="description" content="Need help publishing or improving your book on Amazon? Tell Moor Graphix where you are in your publishing journey. Get help with Kindle, paperback, KDP, book design, author branding, and book marketing.">
+<meta name="robots" content="noindex, follow">
+<meta name="geo.region" content="US-GA">
+<meta name="geo.placename" content="Douglasville, Georgia">
+<link rel="canonical" href="https://moorgraphix.com/author-publishing-intake.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moor Graphix">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://moorgraphix.com/author-publishing-intake.html">
+<meta property="og:title" content="Author Publishing &amp; Amazon KDP Project Intake | Moor Graphix">
+<meta property="og:description" content="Tell Moor Graphix where you are in your publishing journey. Get help with Kindle, paperback, KDP, book design, author branding, and book marketing.">
+<meta property="og:image" content="https://moorgraphix.com/assets/images/branding/moor-graphix-logo.png">
+<title>Author Publishing &amp; Amazon KDP Project Intake | Moor Graphix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── AUTHOR PUBLISHING INTAKE — additional styles ─────────────────────────────────── */
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.api-hero{padding:76px 44px 56px;text-align:center;position:relative;overflow:hidden}
+.api-hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(48,96,208,0.07) 0%,transparent 70%);pointer-events:none}
+.api-hero-inner{max-width:680px;margin:0 auto;position:relative}
+.api-hero h1{margin:0}
+.api-hero-sub{font-size:clamp(15px,1.3vw,17px);color:rgba(150,180,255,0.6);max-width:560px;margin:20px auto 0;line-height:1.85}
+.api-callout{background:var(--blue);color:#fff;border-radius:8px;padding:22px 28px;margin:32px auto 0;max-width:420px}
+.api-callout-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;opacity:0.75;margin-bottom:4px}
+.api-callout-line{font-family:'DM Serif Display',serif;font-style:italic;font-size:26px;line-height:1.1}
+.api-hero-time{font-size:12px;color:rgba(150,180,255,0.5);letter-spacing:0.08em;text-transform:uppercase;margin-top:22px}
+.api-hero-cta{margin-top:20px}
+
+/* ── FORM SHELL ──────────────────────────────────────────────── */
+.api-form-section{padding:0 44px 96px}
+.api-form-wrap{max-width:680px;margin:0 auto}
+.api-progress{margin-bottom:36px}
+.api-progress-label{display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-mid);margin-bottom:10px}
+.api-progress-track{height:5px;background:rgba(48,96,208,0.1);border-radius:3px;overflow:hidden}
+.api-progress-fill{height:100%;background:var(--blue);border-radius:3px;transition:width 0.35s ease}
+.api-panel{background:#fff;border:1px solid rgba(48,96,208,0.1);border-radius:10px;padding:44px 40px;box-shadow:0 10px 40px rgba(20,40,90,0.06)}
+.api-step{display:none}
+.api-step.active{display:block;animation:apiFadeIn 0.3s ease}
+@keyframes apiFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.api-step-title{font-family:'DM Serif Display',serif;font-size:26px;color:var(--text-dark);margin:0 0 6px}
+.api-step-sub{font-size:14px;color:var(--text-mid);margin:0 0 28px;line-height:1.7}
+.api-field{margin-bottom:20px}
+.api-field:last-child{margin-bottom:0}
+.api-field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.api-helper{font-size:12px;color:rgba(58,69,96,0.5);margin-top:6px;line-height:1.6}
+.api-notice{font-size:13px;color:var(--text-mid);background:var(--light2);border-left:3px solid var(--blue);padding:14px 18px;border-radius:0 4px 4px 0;margin-top:8px;line-height:1.7}
+.api-error{display:none;font-size:12px;color:#b01818;margin-top:6px;font-weight:600}
+.api-field.invalid .api-error{display:block}
+.api-field.invalid .ct-input,.api-field.invalid .ct-select,.api-field.invalid .ct-textarea{border-color:#b01818}
+.api-hidden{display:none !important}
+
+/* form inputs — reused .ct-* pattern */
+.ct-label{display:block;font-size:10px;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-mid);margin-bottom:7px}
+.ct-input,.ct-select,.ct-textarea{width:100%;padding:14px 18px;font-size:14px;font-family:'Syne',sans-serif;border:1.5px solid rgba(48,96,208,0.18);border-radius:4px;background:#fff;color:var(--text-dark);outline:none;transition:border-color 0.25s,box-shadow 0.25s;box-sizing:border-box}
+.ct-input:focus,.ct-select:focus,.ct-textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(48,96,208,0.08)}
+.ct-input::placeholder,.ct-textarea::placeholder{color:rgba(58,69,96,0.38)}
+.ct-textarea{resize:vertical;min-height:100px;line-height:1.6}
+.ct-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%233A4560' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px;cursor:pointer}
+
+/* ── OPTION CARDS (single + multi select) ─────────────────────── */
+.api-option-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.api-option-grid.api-option-grid-1{grid-template-columns:1fr}
+.api-option-grid.api-option-grid-3{grid-template-columns:repeat(3,1fr)}
+.api-option{display:none}
+.api-option-label{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1.5px solid rgba(48,96,208,0.16);border-radius:6px;cursor:pointer;transition:all 0.2s;font-size:13.5px;color:var(--text-dark);line-height:1.5}
+.api-option-label:hover{border-color:rgba(48,96,208,0.4)}
+.api-option:checked + .api-option-label{border-color:var(--blue);background:rgba(48,96,208,0.06);box-shadow:0 0 0 1px var(--blue) inset}
+.api-option-mark{width:18px;height:18px;border-radius:4px;border:1.5px solid rgba(48,96,208,0.3);flex-shrink:0;margin-top:1px;position:relative;transition:all 0.2s}
+.api-option[type="radio"] + .api-option-label .api-option-mark{border-radius:50%}
+.api-option:checked + .api-option-label .api-option-mark{background:var(--blue);border-color:var(--blue)}
+.api-option:checked + .api-option-label .api-option-mark::after{content:'';position:absolute;left:5px;top:1px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.api-option[type="radio"]:checked + .api-option-label .api-option-mark::after{left:4px;top:4px;width:8px;height:8px;border:none;border-radius:50%;background:#fff;transform:none}
+.api-option-title{font-weight:700}
+.api-option-sub{font-size:12px;color:var(--text-mid);margin-top:3px;font-weight:400}
+
+/* ── BRANCH CARDS ──────────────────────────────────────────────── */
+.api-branch-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.api-branch-label{display:flex;align-items:flex-start;gap:16px;padding:22px 24px;border:1.5px solid rgba(48,96,208,0.16);border-radius:8px;cursor:pointer;transition:all 0.2s}
+.api-branch-label:hover{border-color:rgba(48,96,208,0.4);transform:translateX(3px)}
+.api-option:checked + .api-branch-label{border-color:var(--blue);background:rgba(48,96,208,0.06)}
+.api-branch-letter{width:34px;height:34px;border-radius:50%;background:rgba(48,96,208,0.08);color:var(--blue);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.api-option:checked + .api-branch-label .api-branch-letter{background:var(--blue);color:#fff}
+.api-branch-title{font-weight:800;font-size:15px;color:var(--text-dark);margin-bottom:4px}
+.api-branch-sub{font-size:13px;color:var(--text-mid);line-height:1.6}
+
+/* ── NAV ROW ──────────────────────────────────────────────────── */
+.api-nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:32px;gap:16px}
+.api-btn-back{background:transparent;border:1.5px solid rgba(48,96,208,0.2);color:var(--text-mid);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px 22px;border-radius:4px;cursor:pointer;transition:all 0.2s}
+.api-btn-back:hover{border-color:var(--blue);color:var(--blue)}
+.api-btn-next{background:var(--blue);color:#fff;border:none;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:15px 30px;border-radius:4px;cursor:pointer;transition:all 0.25s;flex:1;max-width:280px;display:flex;align-items:center;justify-content:center;gap:8px}
+.api-btn-next:hover{background:#1a4ab0;box-shadow:0 6px 20px rgba(48,96,208,0.3)}
+.api-btn-next:disabled{opacity:0.6;cursor:not-allowed}
+
+/* ── REVIEW SCREEN ──────────────────────────────────────────────── */
+.api-review-list{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.api-review-item{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:0.5px solid rgba(48,96,208,0.1);font-size:13.5px}
+.api-review-item:last-child{border-bottom:none}
+.api-review-k{color:var(--text-mid);flex-shrink:0}
+.api-review-v{color:var(--text-dark);font-weight:600;text-align:right}
+.api-consent{display:flex;gap:12px;align-items:flex-start;font-size:12.5px;color:var(--text-mid);line-height:1.6;margin-bottom:14px;cursor:pointer}
+.api-consent input{margin-top:3px;flex-shrink:0;accent-color:var(--blue);width:16px;height:16px;cursor:pointer}
+.api-submit-note{font-size:12px;color:rgba(58,69,96,0.5);text-align:center;margin-top:14px}
+
+/* ── CONFIRMATION ──────────────────────────────────────────────── */
+.api-thanks{display:none;text-align:center;padding:20px 0}
+.api-thanks-icon{width:60px;height:60px;border-radius:50%;background:rgba(48,96,208,0.08);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 20px}
+.api-thanks h2{font-family:'DM Serif Display',serif;font-size:30px;color:var(--text-dark);margin:0 0 14px}
+.api-thanks p{color:var(--text-mid);line-height:1.8;max-width:480px;margin:0 auto 26px}
+.api-thanks-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+@media(max-width:768px){
+  .api-field-row,.api-option-grid{grid-template-columns:1fr}
+  .api-panel{padding:32px 22px}
+  .api-hero{padding:56px 24px 44px}
+  .api-form-section{padding:0 20px 64px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/branding/moor-graphix-logo.png" alt="Moor Graphix Logo">
+    <div class="nav-logo-text">
+      <div class="logo-word">Moor Graphix</div>
+      <div class="logo-sub">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#portfolio">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="sms-compliance.html">SMS Compliance</a></li>
+    <li><a href="ai-workshop.html">AI Workshop</a></li>
+    <li><a href="ai-readiness-assessment.html">Free Assessment</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="notary.html">Notary</a></li>
+  </ul>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer">
+    <div class="nav-pill"><div class="bp"></div>Book Free Consult</div>
+  </a>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="index.html#portfolio" onclick="toggleMobileMenu()">Work</a>
+  <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+  <a href="sms-compliance.html" onclick="toggleMobileMenu()">SMS Compliance</a>
+  <a href="ai-workshop.html" onclick="toggleMobileMenu()">AI Workshop</a>
+  <a href="ai-readiness-assessment.html" onclick="toggleMobileMenu()">Free Assessment</a>
+  <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+  <a href="about.html" onclick="toggleMobileMenu()">About</a>
+  <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <a href="notary.html" onclick="toggleMobileMenu()">Notary</a>
+  <a href="https://calendly.com/moorwashington" target="_blank" rel="noopener noreferrer" class="mob-consult" onclick="toggleMobileMenu()">Book Free Consult</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-light api-hero" id="intake-top">
+  <div class="api-hero-inner">
+    <div class="eyebrow eyebrow-light" style="justify-content:center">Moor Graphix Author Services</div>
+    <h1 style="color:var(--text-dark)">Where are you in your publishing journey?</h1>
+    <p class="api-hero-sub">Whether your manuscript is still sitting on your computer, you're preparing for your first Amazon launch, or your book is already published but isn't getting the attention you expected — we'll help identify the next move.</p>
+    <div class="api-callout">
+      <div class="api-callout-eyebrow">Got a book problem?</div>
+      <div class="api-callout-line">The PHIX is in!</div>
+    </div>
+    <p class="api-hero-sub" style="margin-top:20px">Complete this free project intake so Moor Graphix can understand your book, publishing stage, goals, and where you may need help.</p>
+    <div class="api-hero-time">Approximately 5–8 minutes</div>
+    <div class="api-hero-cta">
+      <button class="btn-primary-light" id="apiStartBtn" type="button">Start My Publishing Intake →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="sec-light api-form-section">
+  <div class="api-form-wrap">
+    <div class="api-progress" id="apiProgress">
+      <div class="api-progress-label">
+        <span id="apiProgressText">Step 1 of 8</span>
+        <span id="apiProgressPct">12%</span>
+      </div>
+      <div class="api-progress-track"><div class="api-progress-fill" id="apiProgressFill" style="width:12%"></div></div>
+    </div>
+
+    <div class="api-panel">
+      <!-- Replace YOUR_FORM_ID with the dedicated Formspree form ID from formspree.io/new -->
+      <form id="intakeForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="hidden" name="_subject" id="apiSubject" value="New Author Publishing Intake">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="lead_classification" id="apiLeadClass">
+        <input type="hidden" name="book_phix_audit_interest" id="apiAuditFlag">
+        <textarea name="internal_summary" id="apiInternalSummary" style="display:none"></textarea>
+
+        <!-- ══════════ STEP: ABOUT YOU ══════════ -->
+        <fieldset class="api-step active" data-step="about">
+          <div class="api-step-title">Let's start with you.</div>
+          <div class="api-field-row">
+            <div class="api-field">
+              <label class="ct-label" for="q-first">First Name</label>
+              <input class="ct-input" type="text" id="q-first" name="first_name" required>
+              <div class="api-error">Please enter your first name.</div>
+            </div>
+            <div class="api-field">
+              <label class="ct-label" for="q-last">Last Name</label>
+              <input class="ct-input" type="text" id="q-last" name="last_name" required>
+              <div class="api-error">Please enter your last name.</div>
+            </div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-pen">Author / Pen Name <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <input class="ct-input" type="text" id="q-pen" name="pen_name">
+            <div class="api-helper">If different from your legal or contact name.</div>
+          </div>
+          <div class="api-field-row">
+            <div class="api-field">
+              <label class="ct-label" for="q-email">Email Address</label>
+              <input class="ct-input" type="email" id="q-email" name="email" required>
+              <div class="api-error">Please enter a valid email address.</div>
+            </div>
+            <div class="api-field">
+              <label class="ct-label" for="q-phone">Phone Number</label>
+              <input class="ct-input" type="tel" id="q-phone" name="phone" required>
+              <div class="api-error">Please enter your phone number.</div>
+            </div>
+          </div>
+          <div class="api-field-row">
+            <div class="api-field">
+              <label class="ct-label" for="q-city">City <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+              <input class="ct-input" type="text" id="q-city" name="city">
+            </div>
+            <div class="api-field">
+              <label class="ct-label" for="q-state">State <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+              <input class="ct-input" type="text" id="q-state" name="state">
+            </div>
+          </div>
+          <div class="api-field-row">
+            <div class="api-field">
+              <label class="ct-label" for="q-website">Website <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+              <input class="ct-input" type="url" id="q-website" name="website" placeholder="https://">
+            </div>
+            <div class="api-field">
+              <label class="ct-label" for="q-social">Social / Author Profile <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+              <input class="ct-input" type="text" id="q-social" name="social_profile">
+            </div>
+          </div>
+          <div class="api-field" data-required-group="preferred_contact">
+            <label class="ct-label">Preferred Contact Method</label>
+            <div class="api-option-grid api-option-grid-3">
+              <input class="api-option" type="radio" name="preferred_contact" id="pc-email" value="Email" required>
+              <label class="api-option-label" for="pc-email"><span class="api-option-mark"></span>Email</label>
+              <input class="api-option" type="radio" name="preferred_contact" id="pc-phone" value="Phone">
+              <label class="api-option-label" for="pc-phone"><span class="api-option-mark"></span>Phone</label>
+              <input class="api-option" type="radio" name="preferred_contact" id="pc-text" value="Text">
+              <label class="api-option-label" for="pc-text"><span class="api-option-mark"></span>Text</label>
+            </div>
+            <div class="api-error">Please choose a preferred contact method.</div>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: YOUR BOOK ══════════ -->
+        <fieldset class="api-step" data-step="book">
+          <div class="api-step-title">Tell us about the work.</div>
+          <div class="api-field">
+            <label class="ct-label" for="q-title">Book Title <span style="font-weight:400;text-transform:none;letter-spacing:0">("Untitled / Working Title" is fine)</span></label>
+            <input class="ct-input" type="text" id="q-title" name="book_title" required>
+            <div class="api-error">Please enter a title — even a working title.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-subtitle">Subtitle <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <input class="ct-input" type="text" id="q-subtitle" name="book_subtitle">
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-type">What type of book is this?</label>
+            <select class="ct-select" id="q-type" name="book_type" required>
+              <option value="" disabled selected>Select one...</option>
+              <option>Fiction</option>
+              <option>Nonfiction</option>
+              <option>Memoir / Autobiography</option>
+              <option>Biography</option>
+              <option>Poetry</option>
+              <option>Children's Book</option>
+              <option>Educational / Workbook</option>
+              <option>Business / Professional</option>
+              <option>Self-Help / Personal Development</option>
+              <option>Spiritual / Inspirational</option>
+              <option>History / Culture</option>
+              <option>Cookbook</option>
+              <option>Art / Photography</option>
+              <option>Journal / Planner</option>
+              <option>Other</option>
+            </select>
+            <div class="api-error">Please select a book type.</div>
+          </div>
+          <div class="api-field api-hidden" id="wrap-type-other">
+            <label class="ct-label" for="q-type-other">Tell us what kind of book you're creating.</label>
+            <input class="ct-input" type="text" id="q-type-other" name="book_type_other">
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-desc">Briefly describe your book.</label>
+            <textarea class="ct-textarea" id="q-desc" name="book_description" placeholder="What is the book about, and what do you want readers to take away from it?" required></textarea>
+            <div class="api-error">Please give us a short description.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-reader">Who is the book for?</label>
+            <textarea class="ct-textarea" id="q-reader" name="target_reader" placeholder="Describe your ideal reader." required></textarea>
+            <div class="api-error">Please describe your ideal reader.</div>
+          </div>
+          <div class="api-field" data-required-group="manuscript_length_type">
+            <label class="ct-label">Approximate manuscript length</label>
+            <div class="api-option-grid api-option-grid-3">
+              <input class="api-option" type="radio" name="manuscript_length_type" id="ml-words" value="Word count" required>
+              <label class="api-option-label" for="ml-words"><span class="api-option-mark"></span>Word count</label>
+              <input class="api-option" type="radio" name="manuscript_length_type" id="ml-pages" value="Page count">
+              <label class="api-option-label" for="ml-pages"><span class="api-option-mark"></span>Page count</label>
+              <input class="api-option" type="radio" name="manuscript_length_type" id="ml-notsure" value="Not sure">
+              <label class="api-option-label" for="ml-notsure"><span class="api-option-mark"></span>Not sure</label>
+            </div>
+            <div class="api-error">Let us know roughly how long the manuscript is.</div>
+          </div>
+          <div class="api-field api-hidden" id="wrap-length-value">
+            <label class="ct-label" for="q-length-value">Approximate count</label>
+            <input class="ct-input" type="text" id="q-length-value" name="manuscript_length_value" placeholder="e.g. 62,000 words or 210 pages">
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: MASTER BRANCH ══════════ -->
+        <fieldset class="api-step" data-step="branch">
+          <div class="api-step-title">Where are you right now?</div>
+          <div class="api-branch-grid" data-required-group="publishing_status">
+            <input class="api-option" type="radio" name="publishing_status" id="ps-a" value="not_published" required>
+            <label class="api-branch-label" for="ps-a">
+              <div class="api-branch-letter">A</div>
+              <div>
+                <div class="api-branch-title">I haven't published yet.</div>
+                <div class="api-branch-sub">I have an idea, manuscript, or completed book and need help getting it ready for publication.</div>
+              </div>
+            </label>
+            <input class="api-option" type="radio" name="publishing_status" id="ps-b" value="published_kdp">
+            <label class="api-branch-label" for="ps-b">
+              <div class="api-branch-letter">B</div>
+              <div>
+                <div class="api-branch-title">I'm already published on Amazon KDP.</div>
+                <div class="api-branch-sub">My book is live or has previously been uploaded to KDP, but I need help fixing, improving, repositioning, or promoting it.</div>
+              </div>
+            </label>
+            <input class="api-option" type="radio" name="publishing_status" id="ps-c" value="kdp_problem">
+            <label class="api-branch-label" for="ps-c">
+              <div class="api-branch-letter">C</div>
+              <div>
+                <div class="api-branch-title">I started KDP but haven't successfully published.</div>
+                <div class="api-branch-sub">I've created or started the KDP process but something is stopping me from completing publication.</div>
+              </div>
+            </label>
+            <input class="api-option" type="radio" name="publishing_status" id="ps-d" value="published_elsewhere">
+            <label class="api-branch-label" for="ps-d">
+              <div class="api-branch-letter">D</div>
+              <div>
+                <div class="api-branch-title">I'm published somewhere else.</div>
+                <div class="api-branch-sub">My book exists through another publisher/platform and I want to explore Amazon KDP or a new edition.</div>
+              </div>
+            </label>
+          </div>
+          <div class="api-error" style="margin-top:10px">Please choose the option that best fits where you are.</div>
+        </fieldset>
+
+        <!-- ══════════ BRANCH A — NOT YET PUBLISHED ══════════ -->
+        <fieldset class="api-step" data-step="branch-a">
+          <div class="api-step-title">Getting your book ready.</div>
+          <div class="api-field">
+            <label class="ct-label" for="q-ms-stage">How far along is your manuscript?</label>
+            <select class="ct-select" id="q-ms-stage" name="manuscript_stage">
+              <option value="" disabled selected>Select one...</option>
+              <option>Just an idea / early development</option>
+              <option>Currently writing</option>
+              <option>First draft complete</option>
+              <option>Revised manuscript complete</option>
+              <option>Professionally edited</option>
+              <option>Proofread and ready for formatting</option>
+              <option>Fully formatted</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="api-field">
+            <label class="ct-label">What publishing formats are you considering?</label>
+            <div class="api-option-grid">
+              <input class="api-option" type="checkbox" name="formats_considering" id="fmt-kindle" value="Kindle eBook">
+              <label class="api-option-label" for="fmt-kindle"><span class="api-option-mark"></span>Kindle eBook</label>
+              <input class="api-option" type="checkbox" name="formats_considering" id="fmt-paper" value="Paperback">
+              <label class="api-option-label" for="fmt-paper"><span class="api-option-mark"></span>Paperback</label>
+              <input class="api-option" type="checkbox" name="formats_considering" id="fmt-hard" value="Hardcover">
+              <label class="api-option-label" for="fmt-hard"><span class="api-option-mark"></span>Hardcover</label>
+              <input class="api-option" type="checkbox" name="formats_considering" id="fmt-kp" value="Kindle + Paperback">
+              <label class="api-option-label" for="fmt-kp"><span class="api-option-mark"></span>Kindle + Paperback</label>
+              <input class="api-option" type="checkbox" name="formats_considering" id="fmt-kph" value="Kindle + Paperback + Hardcover">
+              <label class="api-option-label" for="fmt-kph"><span class="api-option-mark"></span>Kindle + Paperback + Hardcover</label>
+              <input class="api-option" type="checkbox" name="formats_considering" id="fmt-notsure" value="Not sure — recommend the best option">
+              <label class="api-option-label" for="fmt-notsure"><span class="api-option-mark"></span>Not sure — recommend the best option</label>
+            </div>
+          </div>
+          <div class="api-field" data-required-group="cover_status">
+            <label class="ct-label">Do you already have a book cover?</label>
+            <div class="api-option-grid api-option-grid-1">
+              <input class="api-option" type="radio" name="cover_status" id="cov-pro" value="Yes — professionally designed">
+              <label class="api-option-label" for="cov-pro"><span class="api-option-mark"></span>Yes — professionally designed</label>
+              <input class="api-option" type="radio" name="cover_status" id="cov-review" value="Yes — but I want it reviewed">
+              <label class="api-option-label" for="cov-review"><span class="api-option-mark"></span>Yes — but I want it reviewed</label>
+              <input class="api-option" type="radio" name="cover_status" id="cov-redesign" value="Yes — but I want it redesigned">
+              <label class="api-option-label" for="cov-redesign"><span class="api-option-mark"></span>Yes — but I want it redesigned</label>
+              <input class="api-option" type="radio" name="cover_status" id="cov-no" value="No">
+              <label class="api-option-label" for="cov-no"><span class="api-option-mark"></span>No</label>
+              <input class="api-option" type="radio" name="cover_status" id="cov-diy" value="I created one myself / with AI">
+              <label class="api-option-label" for="cov-diy"><span class="api-option-mark"></span>I created one myself / with AI</label>
+            </div>
+            <div class="api-notice api-hidden" id="cover-upload-note">We'll ask you to share your current cover file once we've reviewed your intake — no need to upload anything here.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-edited">Has the manuscript been professionally edited?</label>
+            <select class="ct-select" id="q-edited" name="manuscript_edited">
+              <option value="" disabled selected>Select one...</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Partially</option>
+              <option>I'm editing it myself</option>
+              <option>I need help determining whether it's ready</option>
+            </select>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-interior">Does the interior contain images, illustrations, charts, tables, or graphics?</label>
+            <select class="ct-select" id="q-interior" name="interior_content">
+              <option value="" disabled selected>Select one...</option>
+              <option>No — mostly text</option>
+              <option>Yes — a few</option>
+              <option>Yes — throughout the book</option>
+              <option>Children's / illustrated book</option>
+              <option>Photography / art-heavy</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-bleed">Do any images need to print all the way to the edge of the page?</label>
+            <select class="ct-select" id="q-bleed" name="bleed_images">
+              <option value="" disabled selected>Select one...</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Not sure what that means</option>
+            </select>
+            <div class="api-helper">No worries if you're not sure — that's something we can determine together later.</div>
+          </div>
+          <div class="api-field" data-required-group="book_size">
+            <label class="ct-label">Do you know your desired book size?</label>
+            <div class="api-option-grid">
+              <input class="api-option" type="radio" name="book_size" id="sz-69" value="6 × 9 in">
+              <label class="api-option-label" for="sz-69"><span class="api-option-mark"></span>6 × 9 inches</label>
+              <input class="api-option" type="radio" name="book_size" id="sz-5585" value="5.5 × 8.5 in">
+              <label class="api-option-label" for="sz-5585"><span class="api-option-mark"></span>5.5 × 8.5 inches</label>
+              <input class="api-option" type="radio" name="book_size" id="sz-58" value="5 × 8 in">
+              <label class="api-option-label" for="sz-58"><span class="api-option-mark"></span>5 × 8 inches</label>
+              <input class="api-option" type="radio" name="book_size" id="sz-710" value="7 × 10 in">
+              <label class="api-option-label" for="sz-710"><span class="api-option-mark"></span>7 × 10 inches</label>
+              <input class="api-option" type="radio" name="book_size" id="sz-8511" value="8.5 × 11 in">
+              <label class="api-option-label" for="sz-8511"><span class="api-option-mark"></span>8.5 × 11 inches</label>
+              <input class="api-option" type="radio" name="book_size" id="sz-other" value="Another size">
+              <label class="api-option-label" for="sz-other"><span class="api-option-mark"></span>Another size</label>
+              <input class="api-option" type="radio" name="book_size" id="sz-notsure" value="I don't know — recommend one">
+              <label class="api-option-label" for="sz-notsure"><span class="api-option-mark"></span>I don't know — recommend one</label>
+            </div>
+          </div>
+          <div class="api-field api-hidden" id="wrap-size-other">
+            <label class="ct-label" for="q-size-other">Desired size</label>
+            <input class="ct-input" type="text" id="q-size-other" name="desired_size_other">
+          </div>
+          <div class="api-notice">If your manuscript is ready for review, hold onto it for now — we'll request it securely once we've reviewed your intake. No need to upload anything confidential here.</div>
+        </fieldset>
+
+        <!-- ══════════ BRANCH B — ALREADY PUBLISHED ON KDP ══════════ -->
+        <fieldset class="api-step" data-step="branch-b">
+          <div class="api-step-title">Let's find out what's happening.</div>
+          <div class="api-field">
+            <label class="ct-label" for="q-amazon-url">Amazon Book Link</label>
+            <input class="ct-input" type="url" id="q-amazon-url" name="amazon_url" placeholder="https://amazon.com/dp/..." required>
+            <div class="api-error">Please share a link to your book on Amazon.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-asin">ASIN / ISBN <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <input class="ct-input" type="text" id="q-asin" name="asin_isbn">
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-published-when">When was the book published?</label>
+            <select class="ct-select" id="q-published-when" name="published_when">
+              <option value="" disabled selected>Select one...</option>
+              <option>Within the last 30 days</option>
+              <option>1–3 months ago</option>
+              <option>3–6 months ago</option>
+              <option>6–12 months ago</option>
+              <option>More than one year ago</option>
+            </select>
+          </div>
+          <div class="api-field">
+            <label class="ct-label">Which editions are currently available?</label>
+            <div class="api-option-grid">
+              <input class="api-option" type="checkbox" name="editions_available" id="ed-kindle" value="Kindle">
+              <label class="api-option-label" for="ed-kindle"><span class="api-option-mark"></span>Kindle</label>
+              <input class="api-option" type="checkbox" name="editions_available" id="ed-paper" value="Paperback">
+              <label class="api-option-label" for="ed-paper"><span class="api-option-mark"></span>Paperback</label>
+              <input class="api-option" type="checkbox" name="editions_available" id="ed-hard" value="Hardcover">
+              <label class="api-option-label" for="ed-hard"><span class="api-option-mark"></span>Hardcover</label>
+              <input class="api-option" type="checkbox" name="editions_available" id="ed-audio" value="Audiobook">
+              <label class="api-option-label" for="ed-audio"><span class="api-option-mark"></span>Audiobook</label>
+              <input class="api-option" type="checkbox" name="editions_available" id="ed-other" value="Other" data-reveals="wrap-editions-other">
+              <label class="api-option-label" for="ed-other"><span class="api-option-mark"></span>Other</label>
+            </div>
+          </div>
+          <div class="api-field api-hidden" id="wrap-editions-other">
+            <input class="ct-input" type="text" id="q-editions-other" name="editions_other" placeholder="Tell us the other edition/format">
+          </div>
+          <div class="api-field" data-required-group="biggest_problem">
+            <label class="ct-label">What's the biggest problem right now?</label>
+            <div class="api-option-grid api-option-grid-1">
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-1" value="The book isn't selling" required>
+              <label class="api-option-label" for="bp-1"><span class="api-option-mark"></span>The book isn't selling</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-2" value="Very few people are finding it">
+              <label class="api-option-label" for="bp-2"><span class="api-option-mark"></span>Very few people are finding it</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-3" value="The cover doesn't look professional">
+              <label class="api-option-label" for="bp-3"><span class="api-option-mark"></span>The cover doesn't look professional</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-4" value="The Amazon listing needs improvement">
+              <label class="api-option-label" for="bp-4"><span class="api-option-mark"></span>The Amazon listing needs improvement</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-5" value="The book description needs work">
+              <label class="api-option-label" for="bp-5"><span class="api-option-mark"></span>The book description needs work</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-6" value="I'm unsure about keywords">
+              <label class="api-option-label" for="bp-6"><span class="api-option-mark"></span>I'm unsure about keywords</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-7" value="I'm unsure about categories">
+              <label class="api-option-label" for="bp-7"><span class="api-option-mark"></span>I'm unsure about categories</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-8" value="Interior formatting needs improvement">
+              <label class="api-option-label" for="bp-8"><span class="api-option-mark"></span>Interior formatting needs improvement</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-9" value="I need a new edition">
+              <label class="api-option-label" for="bp-9"><span class="api-option-mark"></span>I need a new edition</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-10" value="I need better author branding">
+              <label class="api-option-label" for="bp-10"><span class="api-option-mark"></span>I need better author branding</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-11" value="I haven't marketed the book">
+              <label class="api-option-label" for="bp-11"><span class="api-option-mark"></span>I haven't marketed the book</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-12" value="My launch didn't perform as expected">
+              <label class="api-option-label" for="bp-12"><span class="api-option-mark"></span>My launch didn't perform as expected</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-13" value="I need promotional materials">
+              <label class="api-option-label" for="bp-13"><span class="api-option-mark"></span>I need promotional materials</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-14" value="I need an author website / landing page">
+              <label class="api-option-label" for="bp-14"><span class="api-option-mark"></span>I need an author website / landing page</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-15" value="I don't know what's wrong">
+              <label class="api-option-label" for="bp-15"><span class="api-option-mark"></span>I don't know what's wrong</label>
+              <input class="api-option" type="checkbox" name="biggest_problem" id="bp-other" value="Other" data-reveals="wrap-problem-other">
+              <label class="api-option-label" for="bp-other"><span class="api-option-mark"></span>Other</label>
+            </div>
+            <div class="api-error">Please select at least one.</div>
+          </div>
+          <div class="api-field api-hidden" id="wrap-problem-other">
+            <label class="ct-label" for="q-problem-other">Tell us what's happening.</label>
+            <input class="ct-input" type="text" id="q-problem-other" name="biggest_problem_other">
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-copies">Approximately how many copies are currently selling? <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <select class="ct-select" id="q-copies" name="copies_selling">
+              <option value="" disabled selected>Select one...</option>
+              <option>None yet</option>
+              <option>1–5 per month</option>
+              <option>6–20 per month</option>
+              <option>21–50 per month</option>
+              <option>51–100 per month</option>
+              <option>100+ per month</option>
+              <option>I don't know</option>
+              <option>Prefer not to say</option>
+            </select>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-marketed">Have you actively marketed the book?</label>
+            <select class="ct-select" id="q-marketed" name="marketed_book">
+              <option value="" disabled selected>Select one...</option>
+              <option value="Yes">Yes</option>
+              <option value="A little">A little</option>
+              <option value="No">No</option>
+              <option value="Not sure what I should be doing">I'm not sure what I should be doing</option>
+            </select>
+          </div>
+          <div class="api-field api-hidden" id="wrap-marketing-tried">
+            <label class="ct-label">What have you tried?</label>
+            <div class="api-option-grid">
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-1" value="Organic social media">
+              <label class="api-option-label" for="mt-1"><span class="api-option-mark"></span>Organic social media</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-2" value="Paid social advertising">
+              <label class="api-option-label" for="mt-2"><span class="api-option-mark"></span>Paid social advertising</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-3" value="Amazon Ads">
+              <label class="api-option-label" for="mt-3"><span class="api-option-mark"></span>Amazon Ads</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-4" value="Email marketing">
+              <label class="api-option-label" for="mt-4"><span class="api-option-mark"></span>Email marketing</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-5" value="Book signings/events">
+              <label class="api-option-label" for="mt-5"><span class="api-option-mark"></span>Book signings/events</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-6" value="Author website">
+              <label class="api-option-label" for="mt-6"><span class="api-option-mark"></span>Author website</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-7" value="Podcasts/interviews">
+              <label class="api-option-label" for="mt-7"><span class="api-option-mark"></span>Podcasts/interviews</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-8" value="Influencer outreach">
+              <label class="api-option-label" for="mt-8"><span class="api-option-mark"></span>Influencer outreach</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-9" value="PR/media outreach">
+              <label class="api-option-label" for="mt-9"><span class="api-option-mark"></span>PR/media outreach</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-10" value="Friends/family/community">
+              <label class="api-option-label" for="mt-10"><span class="api-option-mark"></span>Friends/family/community</label>
+              <input class="api-option" type="checkbox" name="marketing_tried" id="mt-other" value="Other">
+              <label class="api-option-label" for="mt-other"><span class="api-option-mark"></span>Other</label>
+            </div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label">What do you think needs the PHIX?</label>
+            <div class="api-option-grid">
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-cover" value="Cover">
+              <label class="api-option-label" for="nx-cover"><span class="api-option-mark"></span>Cover</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-interior" value="Interior">
+              <label class="api-option-label" for="nx-interior"><span class="api-option-mark"></span>Interior</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-listing" value="Amazon listing">
+              <label class="api-option-label" for="nx-listing"><span class="api-option-mark"></span>Amazon listing</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-kw" value="Keywords/categories">
+              <label class="api-option-label" for="nx-kw"><span class="api-option-mark"></span>Keywords/categories</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-brand" value="Author brand">
+              <label class="api-option-label" for="nx-brand"><span class="api-option-mark"></span>Author brand</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-marketing" value="Marketing">
+              <label class="api-option-label" for="nx-marketing"><span class="api-option-mark"></span>Marketing</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-website" value="Website">
+              <label class="api-option-label" for="nx-website"><span class="api-option-mark"></span>Website</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-launch" value="Launch strategy">
+              <label class="api-option-label" for="nx-launch"><span class="api-option-mark"></span>Launch strategy</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-everything" value="Everything">
+              <label class="api-option-label" for="nx-everything"><span class="api-option-mark"></span>Everything</label>
+              <input class="api-option" type="checkbox" name="needs_phix" id="nx-notsure" value="I'm not sure — diagnose it for me">
+              <label class="api-option-label" for="nx-notsure"><span class="api-option-mark"></span>I'm not sure — diagnose it for me</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ BRANCH C — STARTED KDP / HAVING PROBLEMS ══════════ -->
+        <fieldset class="api-step" data-step="branch-c">
+          <div class="api-step-title">What's stopping publication?</div>
+          <div class="api-field" data-required-group="stopping_publication">
+            <div class="api-option-grid">
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-1" value="Manuscript rejected" required>
+              <label class="api-option-label" for="sp-1"><span class="api-option-mark"></span>Manuscript rejected</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-2" value="Cover rejected">
+              <label class="api-option-label" for="sp-2"><span class="api-option-mark"></span>Cover rejected</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-3" value="Margin error">
+              <label class="api-option-label" for="sp-3"><span class="api-option-mark"></span>Margin error</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-4" value="Bleed error">
+              <label class="api-option-label" for="sp-4"><span class="api-option-mark"></span>Bleed error</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-5" value="Spine issue">
+              <label class="api-option-label" for="sp-5"><span class="api-option-mark"></span>Spine issue</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-6" value="Image-resolution issue">
+              <label class="api-option-label" for="sp-6"><span class="api-option-mark"></span>Image-resolution issue</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-7" value="Font issue">
+              <label class="api-option-label" for="sp-7"><span class="api-option-mark"></span>Font issue</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-8" value="Page-size/trim-size issue">
+              <label class="api-option-label" for="sp-8"><span class="api-option-mark"></span>Page-size/trim-size issue</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-9" value="ISBN issue">
+              <label class="api-option-label" for="sp-9"><span class="api-option-mark"></span>ISBN issue</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-10" value="Metadata issue">
+              <label class="api-option-label" for="sp-10"><span class="api-option-mark"></span>Metadata issue</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-11" value="KDP account/setup confusion">
+              <label class="api-option-label" for="sp-11"><span class="api-option-mark"></span>KDP account/setup confusion</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-12" value="Pricing confusion">
+              <label class="api-option-label" for="sp-12"><span class="api-option-mark"></span>Pricing confusion</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-13" value="Preview doesn't look right">
+              <label class="api-option-label" for="sp-13"><span class="api-option-mark"></span>Preview doesn't look right</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-14" value="I received an Amazon/KDP error message">
+              <label class="api-option-label" for="sp-14"><span class="api-option-mark"></span>I received an Amazon/KDP error message</label>
+              <input class="api-option" type="checkbox" name="stopping_publication" id="sp-15" value="I'm not sure">
+              <label class="api-option-label" for="sp-15"><span class="api-option-mark"></span>I'm not sure</label>
+            </div>
+            <div class="api-error">Please select at least one.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-kdp-error">Paste the KDP error message here. <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <textarea class="ct-textarea" id="q-kdp-error" name="kdp_error_message"></textarea>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-kdp-account">Have you already created your KDP account?</label>
+            <select class="ct-select" id="q-kdp-account" name="kdp_account_created">
+              <option value="" disabled selected>Select one...</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+            <div class="api-notice api-hidden" id="kdp-privacy-notice">Keep your login credentials private. Moor Graphix does not need your Amazon password to evaluate your project.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-target-format">What are you trying to publish?</label>
+            <select class="ct-select" id="q-target-format" name="publishing_target_format">
+              <option value="" disabled selected>Select one...</option>
+              <option>Kindle</option>
+              <option>Paperback</option>
+              <option>Hardcover</option>
+              <option>Multiple formats</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ BRANCH D — PUBLISHED ELSEWHERE ══════════ -->
+        <fieldset class="api-step" data-step="branch-d">
+          <div class="api-step-title">Tell us about the existing edition.</div>
+          <div class="api-field">
+            <label class="ct-label" for="q-current-pub">Where is the book currently published or sold?</label>
+            <select class="ct-select" id="q-current-pub" name="current_publish_location">
+              <option value="" disabled selected>Select one...</option>
+              <option>Traditional publisher</option>
+              <option>IngramSpark</option>
+              <option>Barnes &amp; Noble Press</option>
+              <option>Lulu</option>
+              <option>Personal website</option>
+              <option>Local/direct sales</option>
+              <option value="Other">Other</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-rights">Do you control the publishing rights needed to create another edition?</label>
+            <select class="ct-select" id="q-rights" name="controls_rights">
+              <option value="" disabled selected>Select one...</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Not sure</option>
+            </select>
+            <div class="api-notice api-hidden" id="rights-notice">Before creating a new edition, publishing rights may need to be confirmed. Moor Graphix does not provide legal advice, but we can identify this as an issue to resolve before production begins.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-accomplish">What would you like to accomplish?</label>
+            <select class="ct-select" id="q-accomplish" name="accomplish_goal">
+              <option value="" disabled selected>Select one...</option>
+              <option>Create an Amazon edition</option>
+              <option>Create a Kindle edition</option>
+              <option>Create a new paperback edition</option>
+              <option>Redesign the book</option>
+              <option>Update/revise the existing book</option>
+              <option>Build an author brand</option>
+              <option>Improve marketing</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: UNIVERSAL SERVICES ══════════ -->
+        <fieldset class="api-step" data-step="services">
+          <div class="api-step-title">Where do you need help?</div>
+          <div class="api-step-sub">Select everything that applies — this doesn't lock you into anything.</div>
+          <div class="api-field" data-required-group="services_needed">
+            <div class="api-option-grid">
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-1" value="Publishing consultation" required>
+              <label class="api-option-label" for="sv-1"><span class="api-option-mark"></span>Publishing consultation</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-2" value="Kindle formatting">
+              <label class="api-option-label" for="sv-2"><span class="api-option-mark"></span>Kindle formatting</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-3" value="Paperback formatting">
+              <label class="api-option-label" for="sv-3"><span class="api-option-mark"></span>Paperback formatting</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-4" value="Hardcover preparation">
+              <label class="api-option-label" for="sv-4"><span class="api-option-mark"></span>Hardcover preparation</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-5" value="Book cover design">
+              <label class="api-option-label" for="sv-5"><span class="api-option-mark"></span>Book cover design</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-6" value="Cover redesign">
+              <label class="api-option-label" for="sv-6"><span class="api-option-mark"></span>Cover redesign</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-7" value="Interior book design">
+              <label class="api-option-label" for="sv-7"><span class="api-option-mark"></span>Interior book design</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-8" value="Amazon KDP setup">
+              <label class="api-option-label" for="sv-8"><span class="api-option-mark"></span>Amazon KDP setup</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-9" value="KDP troubleshooting">
+              <label class="api-option-label" for="sv-9"><span class="api-option-mark"></span>KDP troubleshooting</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-10" value="Amazon listing optimization">
+              <label class="api-option-label" for="sv-10"><span class="api-option-mark"></span>Amazon listing optimization</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-11" value="Book description/copy">
+              <label class="api-option-label" for="sv-11"><span class="api-option-mark"></span>Book description/copy</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-12" value="Keyword/category strategy">
+              <label class="api-option-label" for="sv-12"><span class="api-option-mark"></span>Keyword/category strategy</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-13" value="Author branding">
+              <label class="api-option-label" for="sv-13"><span class="api-option-mark"></span>Author branding</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-14" value="Author website / landing page">
+              <label class="api-option-label" for="sv-14"><span class="api-option-mark"></span>Author website / landing page</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-15" value="Book launch graphics">
+              <label class="api-option-label" for="sv-15"><span class="api-option-mark"></span>Book launch graphics</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-16" value="Social media marketing">
+              <label class="api-option-label" for="sv-16"><span class="api-option-mark"></span>Social media marketing</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-17" value="Book trailer / promotional video">
+              <label class="api-option-label" for="sv-17"><span class="api-option-mark"></span>Book trailer / promotional video</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-18" value="Event/signing materials">
+              <label class="api-option-label" for="sv-18"><span class="api-option-mark"></span>Event/signing materials</label>
+              <input class="api-option" type="checkbox" name="services_needed" id="sv-19" value="Not sure — recommend what I need">
+              <label class="api-option-label" for="sv-19"><span class="api-option-mark"></span>Not sure — recommend what I need</label>
+            </div>
+            <div class="api-error">Please select at least one.</div>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: GOALS ══════════ -->
+        <fieldset class="api-step" data-step="goals">
+          <div class="api-step-title">What does success look like for this book?</div>
+          <div class="api-field">
+            <div class="api-option-grid">
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-1" value="Sell books">
+              <label class="api-option-label" for="gl-1"><span class="api-option-mark"></span>Sell books</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-2" value="Build my personal brand">
+              <label class="api-option-label" for="gl-2"><span class="api-option-mark"></span>Build my personal brand</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-3" value="Establish authority/expertise">
+              <label class="api-option-label" for="gl-3"><span class="api-option-mark"></span>Establish authority/expertise</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-4" value="Support my business">
+              <label class="api-option-label" for="gl-4"><span class="api-option-mark"></span>Support my business</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-5" value="Generate speaking opportunities">
+              <label class="api-option-label" for="gl-5"><span class="api-option-mark"></span>Generate speaking opportunities</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-6" value="Build a community">
+              <label class="api-option-label" for="gl-6"><span class="api-option-mark"></span>Build a community</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-7" value="Share my personal story">
+              <label class="api-option-label" for="gl-7"><span class="api-option-mark"></span>Share my personal story</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-8" value="Preserve family/community history">
+              <label class="api-option-label" for="gl-8"><span class="api-option-mark"></span>Preserve family/community history</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-9" value="Educate readers">
+              <label class="api-option-label" for="gl-9"><span class="api-option-mark"></span>Educate readers</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-10" value="Create additional income">
+              <label class="api-option-label" for="gl-10"><span class="api-option-mark"></span>Create additional income</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-11" value="Sell books at events">
+              <label class="api-option-label" for="gl-11"><span class="api-option-mark"></span>Sell books at events</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-12" value="Build intellectual property">
+              <label class="api-option-label" for="gl-12"><span class="api-option-mark"></span>Build intellectual property</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-13" value="Leave a legacy">
+              <label class="api-option-label" for="gl-13"><span class="api-option-mark"></span>Leave a legacy</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-14" value="Prepare for a larger publishing opportunity">
+              <label class="api-option-label" for="gl-14"><span class="api-option-mark"></span>Prepare for a larger publishing opportunity</label>
+              <input class="api-option" type="checkbox" name="goals_success" id="gl-other" value="Other">
+              <label class="api-option-label" for="gl-other"><span class="api-option-mark"></span>Other</label>
+            </div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-primary-goal">What's your #1 goal?</label>
+            <textarea class="ct-textarea" id="q-primary-goal" name="primary_goal" required></textarea>
+            <div class="api-error">Please tell us your top goal for this book.</div>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: TIMELINE + INVESTMENT ══════════ -->
+        <fieldset class="api-step" data-step="timeline">
+          <div class="api-step-title">Timeline &amp; investment.</div>
+          <div class="api-field">
+            <label class="ct-label" for="q-timeline">When would you like the book published or improved?</label>
+            <select class="ct-select" id="q-timeline" name="timeline" required>
+              <option value="" disabled selected>Select one...</option>
+              <option>As soon as possible</option>
+              <option>Within 30 days</option>
+              <option>1–2 months</option>
+              <option>2–3 months</option>
+              <option>3–6 months</option>
+              <option>No specific deadline</option>
+              <option>Already published — I need help now</option>
+            </select>
+            <div class="api-error">Please select a timeline.</div>
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-launch-date">Important Launch / Event Date <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <input class="ct-input" type="date" id="q-launch-date" name="launch_date">
+          </div>
+          <div class="api-field" data-required-group="investment_level">
+            <label class="ct-label">What level of investment are you considering?</label>
+            <div class="api-option-grid api-option-grid-1">
+              <input class="api-option" type="radio" name="investment_level" id="inv-1" value="Under $250" required>
+              <label class="api-option-label" for="inv-1"><span class="api-option-mark"></span>Under $250</label>
+              <input class="api-option" type="radio" name="investment_level" id="inv-2" value="$250–$499">
+              <label class="api-option-label" for="inv-2"><span class="api-option-mark"></span>$250–$499</label>
+              <input class="api-option" type="radio" name="investment_level" id="inv-3" value="$500–$749">
+              <label class="api-option-label" for="inv-3"><span class="api-option-mark"></span>$500–$749</label>
+              <input class="api-option" type="radio" name="investment_level" id="inv-4" value="$750–$1,499">
+              <label class="api-option-label" for="inv-4"><span class="api-option-mark"></span>$750–$1,499</label>
+              <input class="api-option" type="radio" name="investment_level" id="inv-5" value="$1,500–$2,500">
+              <label class="api-option-label" for="inv-5"><span class="api-option-mark"></span>$1,500–$2,500</label>
+              <input class="api-option" type="radio" name="investment_level" id="inv-6" value="$2,500+">
+              <label class="api-option-label" for="inv-6"><span class="api-option-mark"></span>$2,500+</label>
+              <input class="api-option" type="radio" name="investment_level" id="inv-7" value="Not sure yet">
+              <label class="api-option-label" for="inv-7"><span class="api-option-mark"></span>I'm not sure yet</label>
+            </div>
+            <div class="api-helper">This helps Moor Graphix recommend the most realistic solution. It does not commit you to purchasing a service.</div>
+            <div class="api-error">Please select a range.</div>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: BOOK PHIX AUDIT (conditional) ══════════ -->
+        <fieldset class="api-step" data-step="audit">
+          <div class="api-step-title">Want us to take a deeper look?</div>
+          <div class="api-step-sub">Your free intake tells us where you are. The Book PHIX Audit goes deeper — a professional evaluation of your cover presentation, interior, Amazon listing, keywords, categories, author positioning, and KDP setup, with prioritized recommendations for what to address next.</div>
+          <div class="api-notice" style="margin-bottom:20px">
+            <strong style="display:block;font-family:'DM Serif Display',serif;font-style:italic;font-size:17px;color:var(--text-dark);margin-bottom:4px">The Book PHIX Audit</strong>
+            Suggested starting price: $149
+          </div>
+          <div class="api-field" data-required-group="audit_interest">
+            <div class="api-option-grid api-option-grid-1">
+              <input class="api-option" type="radio" name="audit_interest" id="audit-yes" value="Yes — interested in a Book PHIX Audit">
+              <label class="api-option-label" for="audit-yes"><span class="api-option-mark"></span>Yes — I'm interested in a Book PHIX Audit.</label>
+              <input class="api-option" type="radio" name="audit_interest" id="audit-no" value="Not yet — review my free intake first">
+              <label class="api-option-label" for="audit-no"><span class="api-option-mark"></span>Not yet — review my free intake first.</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: FINAL QUESTIONS + CONSENT ══════════ -->
+        <fieldset class="api-step" data-step="final">
+          <div class="api-step-title">Almost done.</div>
+          <div class="api-field">
+            <label class="ct-label" for="q-heard">How did you hear about Moor Graphix?</label>
+            <select class="ct-select" id="q-heard" name="heard_about">
+              <option value="" disabled selected>Select one...</option>
+              <option>Google</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>LinkedIn</option>
+              <option value="Referral">Referral</option>
+              <option>Existing Moor Graphix client</option>
+              <option>Event/networking</option>
+              <option>AI/search assistant</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="api-field api-hidden" id="wrap-referred-by">
+            <label class="ct-label" for="q-referred-by">Who referred you? <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <input class="ct-input" type="text" id="q-referred-by" name="referred_by">
+          </div>
+          <div class="api-field">
+            <label class="ct-label" for="q-anything-else">Anything else we should know? <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+            <textarea class="ct-textarea" id="q-anything-else" name="anything_else" placeholder="Concerns, previous publishing experiences, deadlines, technical problems — anything that helps us understand your project."></textarea>
+          </div>
+          <div class="api-field" style="margin-top:28px">
+            <label class="api-consent">
+              <input type="checkbox" name="consent_no_agreement" required>
+              I understand that submitting this form does not create a publishing agreement or guarantee that Moor Graphix will accept my project.
+            </label>
+            <label class="api-consent">
+              <input type="checkbox" name="consent_ownership" required>
+              I confirm that I own, control, or have permission to share the materials I submit for evaluation.
+            </label>
+            <label class="api-consent">
+              <input type="checkbox" name="marketing_consent" value="yes">
+              I'd like to receive occasional Moor Graphix publishing, branding, and marketing tips.
+            </label>
+            <div class="api-error" id="consent-error">Please confirm both checkboxes above to continue.</div>
+          </div>
+        </fieldset>
+
+        <!-- ══════════ STEP: REVIEW ══════════ -->
+        <fieldset class="api-step" data-step="review">
+          <div class="api-step-title">Review your project.</div>
+          <div class="api-step-sub">Here's what we've got. Hit back on any step to make a change, or send it to the PHIX.</div>
+          <div class="api-review-list" id="apiReviewList"></div>
+        </fieldset>
+
+        <div class="api-nav-row">
+          <button type="button" class="api-btn-back" id="apiBackBtn">← Back</button>
+          <button type="button" class="api-btn-next" id="apiNextBtn">Continue →</button>
+        </div>
+      </form>
+
+      <div class="api-thanks" id="apiThanks">
+        <div class="api-thanks-icon"><i class="ti ti-check"></i></div>
+        <div class="eyebrow eyebrow-light" style="justify-content:center">Your Project Is In</div>
+        <h2>The PHIX is in!</h2>
+        <p>Thanks for telling us about your book. Moor Graphix will review your publishing stage, goals, and areas where you need support, and use that information to determine the most appropriate next step for your project. If your book needs a deeper professional review, we may recommend a Book PHIX Audit before quoting corrective or marketing work.</p>
+        <div class="api-thanks-btns">
+          <a href="index.html"><button class="btn-primary-light">Return to Moor Graphix</button></a>
+          <a href="author-publishing.html"><button class="btn-ghost-light">Explore Author Publishing Services</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sec-dark">
+  <a href="index.html" class="foot-logo">
+    <div>
+      <div style="font-size:14px;font-weight:800;letter-spacing:0.12em;color:#fff;text-transform:uppercase">Moor Graphix</div>
+      <div style="font-size:8.5px;letter-spacing:0.35em;color:rgba(100,160,255,0.4);text-transform:uppercase;margin-top:3px">Cultural Alchemy + AI Systems</div>
+    </div>
+  </a>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/moorthangraphics" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="https://www.instagram.com/moorgraphix/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-instagram"></i></a>
+    <a href="https://www.tiktok.com/@moorgraphix" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-tiktok"></i></a>
+    <a href="https://www.youtube.com/@sidartifax" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-youtube"></i></a>
+  </div>
+  <div class="foot-right">
+    <div class="foot-copy">© 2026 Moor Graphix &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="sms-terms.html">SMS Terms</a></div>
+    <div class="foot-tagline">"Graphic design is the masterful syncopation of text and images."</div>
+  </div>
+</footer>
+
+</div><!-- .page -->
+
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/mobile-menu.js" defer></script>
+<script>
+(function(){
+  var form = document.getElementById('intakeForm');
+  var allSteps = ['about','book','branch','branch-a','branch-b','branch-c','branch-d','services','goals','timeline','audit','final','review'];
+  var branchMap = { not_published:'branch-a', published_kdp:'branch-b', kdp_problem:'branch-c', published_elsewhere:'branch-d' };
+  var current = 0;
+
+  function track(event, extra){
+    try{
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({event:event}, extra||{}));
+    }catch(e){}
+  }
+
+  function getBranch(){
+    var r = form.querySelector('input[name="publishing_status"]:checked');
+    return r ? r.value : null;
+  }
+
+  function auditQualifies(){
+    var branch = getBranch();
+    if(branch === 'published_kdp' || branch === 'kdp_problem') return true;
+    var services = form.querySelectorAll('input[name="services_needed"]:checked');
+    for(var i=0;i<services.length;i++){
+      if(services[i].value === 'Amazon listing optimization' || services[i].value === 'KDP troubleshooting') return true;
+    }
+    var phix = form.querySelectorAll('input[name="needs_phix"]:checked');
+    if(phix.length >= 2) return true;
+    for(var j=0;j<phix.length;j++){
+      if(phix[j].value === "I'm not sure — diagnose it for me") return true;
+    }
+    return false;
+  }
+
+  function shouldShow(stepId){
+    if(stepId === 'branch-a' || stepId === 'branch-b' || stepId === 'branch-c' || stepId === 'branch-d'){
+      return branchMap[getBranch()] === stepId;
+    }
+    if(stepId === 'audit'){
+      return auditQualifies();
+    }
+    return true;
+  }
+
+  function activeSteps(){
+    return allSteps.filter(shouldShow);
+  }
+
+  function stepEl(id){
+    return form.querySelector('.api-step[data-step="'+id+'"]');
+  }
+
+  function showStep(index){
+    var steps = activeSteps();
+    if(index < 0) index = 0;
+    if(index >= steps.length) index = steps.length - 1;
+    current = index;
+    allSteps.forEach(function(id){
+      stepEl(id).classList.remove('active');
+    });
+    var id = steps[current];
+    stepEl(id).classList.add('active');
+
+    document.getElementById('apiBackBtn').style.visibility = current === 0 ? 'hidden' : 'visible';
+    var isLast = current === steps.length - 1;
+    document.getElementById('apiNextBtn').innerHTML = isLast ? 'Send My Book to the PHIX →' : 'Continue →';
+
+    var pct = Math.round(((current+1) / steps.length) * 100);
+    document.getElementById('apiProgressFill').style.width = pct + '%';
+    document.getElementById('apiProgressText').textContent = 'Step ' + (current+1) + ' of ' + steps.length;
+    document.getElementById('apiProgressPct').textContent = pct + '%';
+
+    if(id === 'review') buildReview();
+
+    track('author_intake_step_' + id);
+    if(id === 'branch-a') track('author_status_not_published');
+    if(id === 'branch-b') track('author_status_published_kdp');
+    if(id === 'branch-c') track('author_status_kdp_problem');
+    if(id === 'branch-d') track('author_status_published_elsewhere');
+
+    document.querySelector('.api-panel').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  function clearErrors(container){
+    container.querySelectorAll('.api-field.invalid').forEach(function(f){ f.classList.remove('invalid'); });
+  }
+
+  function markInvalid(field){
+    field.classList.add('invalid');
+  }
+
+  function validateStep(id){
+    var el = stepEl(id);
+    clearErrors(el);
+    var valid = true;
+
+    // native single-value fields
+    var singles = el.querySelectorAll('input[type="text"][required], input[type="email"][required], input[type="tel"][required], input[type="url"][required], select[required], textarea[required]');
+    singles.forEach(function(input){
+      var field = input.closest('.api-field');
+      if(!input.checkValidity()){
+        valid = false;
+        if(field) markInvalid(field);
+      }
+    });
+
+    // required radio/checkbox groups
+    var groups = el.querySelectorAll('[data-required-group]');
+    groups.forEach(function(group){
+      var name = group.getAttribute('data-required-group');
+      var inputs = group.querySelectorAll('input[name="'+name+'"]');
+      if(inputs.length === 0) return;
+      var anyRequired = Array.prototype.some.call(inputs, function(i){ return i.required; });
+      if(!anyRequired) return;
+      var checked = Array.prototype.some.call(inputs, function(i){ return i.checked; });
+      if(!checked){
+        valid = false;
+        markInvalid(group);
+      }
+    });
+
+    // consent checkboxes (final step)
+    if(id === 'final'){
+      var c1 = el.querySelector('input[name="consent_no_agreement"]');
+      var c2 = el.querySelector('input[name="consent_ownership"]');
+      if((c1 && !c1.checked) || (c2 && !c2.checked)){
+        valid = false;
+        document.getElementById('consent-error').style.display = 'block';
+      } else if(document.getElementById('consent-error')){
+        document.getElementById('consent-error').style.display = 'none';
+      }
+    }
+
+    return valid;
+  }
+
+  // conditional field reveals
+  function toggle(el, show){ el.classList.toggle('api-hidden', !show); }
+
+  document.getElementById('q-type').addEventListener('change', function(){
+    toggle(document.getElementById('wrap-type-other'), this.value === 'Other');
+  });
+  form.querySelectorAll('input[name="manuscript_length_type"]').forEach(function(r){
+    r.addEventListener('change', function(){
+      toggle(document.getElementById('wrap-length-value'), this.value !== 'Not sure');
+    });
+  });
+  form.querySelectorAll('input[name="cover_status"]').forEach(function(r){
+    r.addEventListener('change', function(){
+      toggle(document.getElementById('cover-upload-note'), this.value.indexOf('Yes') === 0);
+    });
+  });
+  form.querySelectorAll('input[name="book_size"]').forEach(function(r){
+    r.addEventListener('change', function(){
+      toggle(document.getElementById('wrap-size-other'), this.value === 'Another size');
+    });
+  });
+  document.getElementById('ed-other').addEventListener('change', function(){
+    toggle(document.getElementById('wrap-editions-other'), this.checked);
+  });
+  document.getElementById('bp-other').addEventListener('change', function(){
+    toggle(document.getElementById('wrap-problem-other'), this.checked);
+  });
+  document.getElementById('q-marketed').addEventListener('change', function(){
+    toggle(document.getElementById('wrap-marketing-tried'), this.value === 'Yes' || this.value === 'A little');
+  });
+  document.getElementById('q-kdp-account').addEventListener('change', function(){
+    toggle(document.getElementById('kdp-privacy-notice'), this.value === 'Yes');
+  });
+  document.getElementById('q-rights').addEventListener('change', function(){
+    toggle(document.getElementById('rights-notice'), this.value === 'No' || this.value === 'Not sure');
+  });
+  document.getElementById('q-heard').addEventListener('change', function(){
+    toggle(document.getElementById('wrap-referred-by'), this.value === 'Referral');
+  });
+
+  // lead scoring + internal summary (internal only — never displayed to visitor)
+  function fieldVal(name){
+    var el = form.querySelector('[name="'+name+'"]:checked, select[name="'+name+'"], input[name="'+name+'"]');
+    if(!el) return '';
+    if(el.tagName === 'SELECT') return el.value || '';
+    return el.value || '';
+  }
+  function checkedValues(name){
+    return Array.prototype.map.call(form.querySelectorAll('input[name="'+name+'"]:checked'), function(i){ return i.value; }).join(', ');
+  }
+  function textVal(id){
+    var el = document.getElementById(id);
+    return el ? el.value : '';
+  }
+  function branchLabel(v){
+    return { not_published:"Hasn't published yet", published_kdp:'Already published on KDP', kdp_problem:'Started KDP, hit a problem', published_elsewhere:'Published elsewhere' }[v] || '';
+  }
+
+  function computeLeadClassification(){
+    var tags = [];
+    var branch = getBranch();
+    var investment = fieldVal('investment_level');
+    var manuscriptStage = document.getElementById('q-ms-stage') ? document.getElementById('q-ms-stage').value : '';
+    var formats = checkedValues('formats_considering');
+    var servicesNeeded = checkedValues('services_needed');
+    var manuscriptEdited = document.getElementById('q-edited') ? document.getElementById('q-edited').value : '';
+    var rights = document.getElementById('q-rights') ? document.getElementById('q-rights').value : '';
+    var auditInterest = fieldVal('audit_interest');
+    var problems = checkedValues('biggest_problem');
+    var stopping = checkedValues('stopping_publication');
+
+    var hot = (investment === '$750–$1,499' || investment === '$1,500–$2,500' || investment === '$2,500+')
+      || (manuscriptStage === 'Fully formatted' || manuscriptStage === 'Proofread and ready for formatting')
+      || (formats.indexOf('Kindle + Paperback') !== -1)
+      || servicesNeeded.indexOf('Book cover design') !== -1
+      || servicesNeeded.indexOf('Author branding') !== -1
+      || servicesNeeded.indexOf('Book launch graphics') !== -1
+      || !!textVal('q-launch-date')
+      || (branch === 'published_kdp' && problems.split(', ').length >= 2)
+      || auditInterest.indexOf('Yes') === 0;
+    if(hot) tags.push('HOT LEAD');
+
+    var auditLead = (branch === 'published_kdp' && (problems.indexOf("I don't know what's wrong") !== -1 || problems.indexOf('The book isn\'t selling') !== -1))
+      || servicesNeeded.indexOf('Amazon listing optimization') !== -1
+      || servicesNeeded.indexOf('KDP troubleshooting') !== -1
+      || branch === 'kdp_problem'
+      || servicesNeeded.indexOf('Keyword/category strategy') !== -1;
+    if(auditLead) tags.push('BOOK PHIX AUDIT LEAD');
+
+    var dev = (manuscriptStage === 'Just an idea / early development' || manuscriptStage === 'Currently writing')
+      || manuscriptEdited === 'No'
+      || rights === 'No' || rights === 'Not sure';
+    if(dev) tags.push('DEVELOPMENTAL LEAD');
+
+    return tags.length ? tags.join(', ') : 'UNCLASSIFIED';
+  }
+
+  function buildSummary(){
+    var branch = getBranch();
+    var lines = [
+      'NEW AUTHOR LEAD',
+      '',
+      'Name: ' + textVal('q-first') + ' ' + textVal('q-last'),
+      'Book: ' + textVal('q-title'),
+      'Genre: ' + fieldVal('book_type'),
+      'Publishing Status: ' + branchLabel(branch),
+      'Manuscript Status: ' + (document.getElementById('q-ms-stage') ? document.getElementById('q-ms-stage').value : ''),
+      'Current Formats: ' + checkedValues('editions_available'),
+      'Requested Formats: ' + checkedValues('formats_considering'),
+      'Primary Problem: ' + (checkedValues('biggest_problem') || checkedValues('stopping_publication')),
+      'Services Needed: ' + checkedValues('services_needed'),
+      'Primary Goal: ' + textVal('q-primary-goal'),
+      'Timeline: ' + fieldVal('timeline'),
+      'Budget: ' + fieldVal('investment_level'),
+      'Amazon URL: ' + textVal('q-amazon-url'),
+      'Book PHIX Audit Interest: ' + fieldVal('audit_interest'),
+      'Lead Classification: ' + computeLeadClassification()
+    ];
+    return lines.join('\n');
+  }
+
+  function buildReview(){
+    var branch = getBranch();
+    var rows = [
+      ['Name', textVal('q-first') + ' ' + textVal('q-last')],
+      ['Email', textVal('q-email')],
+      ['Phone', textVal('q-phone')],
+      ['Book Title', textVal('q-title')],
+      ['Book Type', fieldVal('book_type')],
+      ['Publishing Status', branchLabel(branch)],
+      ['Services Needed', checkedValues('services_needed') || '—'],
+      ['Primary Goal', textVal('q-primary-goal')],
+      ['Timeline', fieldVal('timeline')],
+      ['Investment Range', fieldVal('investment_level')],
+      ['Book PHIX Audit', fieldVal('audit_interest') || 'Not shown'],
+    ];
+    var html = rows.map(function(r){
+      return '<div class="api-review-item"><span class="api-review-k">'+r[0]+'</span><span class="api-review-v">'+(r[1]||'—')+'</span></div>';
+    }).join('');
+    document.getElementById('apiReviewList').innerHTML = html;
+  }
+
+  document.getElementById('apiNextBtn').addEventListener('click', function(){
+    var steps = activeSteps();
+    var id = steps[current];
+
+    if(id === 'review'){
+      submitForm();
+      return;
+    }
+
+    if(!validateStep(id)){
+      var firstInvalid = stepEl(id).querySelector('.invalid, #consent-error');
+      if(firstInvalid) firstInvalid.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    showStep(current + 1);
+  });
+
+  document.getElementById('apiBackBtn').addEventListener('click', function(){
+    showStep(current - 1);
+  });
+
+  document.getElementById('apiStartBtn').addEventListener('click', function(){
+    document.querySelector('.api-panel').scrollIntoView({behavior:'smooth', block:'start'});
+    track('author_intake_started');
+  });
+
+  function submitForm(){
+    document.getElementById('apiSubject').value = 'New Author Publishing Intake — ' + textVal('q-first') + ' ' + textVal('q-last') + ' — ' + (textVal('q-title') || 'Untitled');
+    document.getElementById('apiLeadClass').value = computeLeadClassification();
+    document.getElementById('apiAuditFlag').value = fieldVal('audit_interest') || 'Not offered';
+    document.getElementById('apiInternalSummary').value = buildSummary();
+
+    var btn = document.getElementById('apiNextBtn');
+    var orig = btn.innerHTML;
+    btn.innerHTML = 'Sending…';
+    btn.disabled = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    }).then(function(res){
+      if(res.ok){
+        form.style.display = 'none';
+        document.getElementById('apiProgress').style.display = 'none';
+        document.getElementById('apiThanks').style.display = 'block';
+        track('author_intake_completed');
+        if(fieldVal('audit_interest').indexOf('Yes') === 0) track('book_phix_audit_interest');
+      } else {
+        btn.innerHTML = 'Try Again →';
+        btn.disabled = false;
+      }
+    }).catch(function(){
+      btn.innerHTML = 'Try Again →';
+      btn.disabled = false;
+    });
+  }
+
+  showStep(0);
+})();
+</script>
+<!-- Moor Graphix AI Concierge -->
+<elevenlabs-convai agent-id="agent_3001knwwzjm9ecw9m8ng3svxhs65" avatar-image-url="https://moorgraphix.com/assets/images/branding/moor-graphix-logo.png"></elevenlabs-convai>
+<script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+</body>
+</html>
